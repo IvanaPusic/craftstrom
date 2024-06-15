@@ -1,0 +1,178 @@
+@use "../abstracts" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.products {
+  height: 200vh;
+  // overflow: hidden;
+
+  .products-title {
+    color: $white;
+    text-align: center;
+    font-family: $poppins;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .products-wrapper {
+    // overflow: hidden;
+
+    .solar-panels {
+      padding-top: 3.25rem;
+    }
+
+    .battery, .power-meter {
+      padding-top: 4.19rem;
+    }
+
+    .battery {
+      flex-direction: row-reverse;
+
+      .img-wrapper {
+        margin-right: 10px;
+        width: 51.375rem;
+        height: 27.5625rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      .content {
+        margin-right: 4.38rem;
+        overflow: hidden;
+        display: flex;
+        max-width: 25.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5625rem;
+
+        .title {
+          color: $white;
+          font-family: $poppins;
+          font-size: 1.673rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 2.35106rem;
+          text-transform: capitalize;
+        }
+
+        .text {
+          color: $white;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          font-family: $poppins;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          opacity: 0.85;
+
+          span {
+            display: inline-block;
+          }
+        }
+
+        .btn {
+          display: flex;
+          width: 13.5625rem;
+          height: 3.4375rem;
+          padding: 0.90175rem 3.02281rem;
+          justify-content: center;
+          align-items: center;
+          gap: 2.88563rem;
+          flex-shrink: 0;
+          border-radius: 4.8125rem;
+          border: none;
+          outline: none;
+          background: $orange;
+          color: $dark;
+          text-align: center;
+          font-family: $montseratt;
+          font-size: $small;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+
+    .card {
+      overflow: hidden;
+      display: flex;
+      gap: 7.12rem;
+
+      .img-wrapper {
+        width: 51.375rem;
+        height: 27.5625rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      .content {
+        overflow: hidden;
+        display: flex;
+        max-width: 25.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5625rem;
+
+        .title {
+          color: $white;
+          font-family: $poppins;
+          font-size: 1.673rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 2.35106rem;
+          text-transform: capitalize;
+        }
+
+        .text {
+          color: $white;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          font-family: $poppins;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          opacity: 0.85;
+
+          span {
+            display: inline-block;
+          }
+        }
+
+        .btn {
+          display: flex;
+          width: 13.5625rem;
+          height: 3.4375rem;
+          padding: 0.90175rem 3.02281rem;
+          justify-content: center;
+          align-items: center;
+          gap: 2.88563rem;
+          flex-shrink: 0;
+          border-radius: 4.8125rem;
+          border: none;
+          outline: none;
+          background: $orange;
+          color: $dark;
+          text-align: center;
+          font-family: $montseratt;
+          font-size: $small;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

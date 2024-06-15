@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <title>Document</title>
+</head>
+<body style="overflow: hidden;">
+
+  <section class="learn-more" style="overflow: hidden;">
+    <h4 class="title">Learn more with our how-to videos</h4>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="../images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="../images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="../images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-3.png');"></div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="../images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="../images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="../images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-3.png');"></div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="../images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="../images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="../images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('../images/video-3.png');"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination" style="position: absolute; top: 900px;"></div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" id="script-swiper"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        bulletClass: 'swiper-pagination-bullet',
+        bulletActiveClass: 'swiper-pagination-bullet-active',
+      },
+      observer: true,
+      observeParents: true
+    });
+  </script>
+
+</body>
+</html>

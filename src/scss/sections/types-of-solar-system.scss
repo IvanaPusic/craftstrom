@@ -1,0 +1,104 @@
+@use "../abstracts" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.types-of-solar-system {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  height: 90.3vh;
+
+  .main-content {
+    max-width: 24.75rem;
+    background: #262626;
+    min-height: 120vh;
+
+    h4 {
+      padding-left: 3.12rem;
+      padding-right: 5rem;
+      padding-top: 4.25rem;
+      padding-bottom: 1.62rem;
+      color: $white;
+      font-family: $poppins;
+      font-size: 3.67306rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 3.91256rem; /* 106.522% */
+    }
+
+    hr {
+      width: 75%;
+      opacity: 0.7;
+    }
+
+    .card {
+      padding-left: 3.12rem;
+      padding-right: 3.19rem;
+      padding-bottom: 1.31rem;
+
+      .title {
+        display: flex;
+        gap: 0.44rem;
+        color: $orange;
+        opacity: 0.7;
+        font-family: $montseratt;
+        font-size: 1.25rem;
+        font-style: italic;
+        font-weight: 700;
+        line-height: normal;
+
+        span {
+          display: inline-block;
+        }
+
+        .arrow {
+          cursor: pointer;
+        }
+      }
+
+      .content {
+        color: #fff;
+        opacity: 0.7;
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.38256rem; /* 138.258% */
+        display: none;
+      }
+    }
+
+    .on-grid {
+      padding-top: 1.81rem;
+
+      .title {
+        opacity: 1;
+      }
+
+      .content {
+        opacity: 1;
+      }
+    }
+  }
+
+  .image-container {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-top: 6.06rem;
+    padding-left: 3.96rem;
+    padding-bottom: 6.11rem;
+
+    img {
+      max-width: 56.916rem;
+      max-height: 44.266rem;
+      display: block;
+    }
+  }
+}

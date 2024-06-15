@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <title>Popular Kits</title>
+</head>
+<body>
+<section class="popular-kits-section">
+    <h2 class="popular-kits-title">Our Popular Kits</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="popular-kit">
+                    <div class="image-wrapper">
+                        <div style="background-image: url('../images/popular-kits-img.png');"></div>
+                        <div style="background-image: url('../images/popular-kits-img-2.png');"></div>
+                        <div style="background-image: url('../images/popular-kits-img-3.png');"></div>
+                    </div>
+                    <div class="kit-details">
+                        <h3>800 Watt Smart Panel + 1kWh Battery Includes:</h3>
+                        <ul>
+                            <li>4 x 200W Solar Panels</li>
+                            <li>2 x SMART Inverters (with daisy-chain cables)</li>
+                            <li>1 x 1kWh Battery, 1 x SMART Base</li>
+                            <li>1 x 600W Offgrid Inverter</li>
+                            <li>1 x Power Meter</li>
+                            <li>2 x Safety Gate Adapters</li>
+                            <li>1 x DC Solar to Battery Charging Cable</li>
+                            <li>App</li>
+                        </ul>
+                        <a href="#" class="shop-button">Shop now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="popular-kit">
+                    <div class="image-wrapper">
+                        <div style="background-image: url('../images/popular-kits-img.png');"></div>
+                        <div style="background-image: url('../images/popular-kits-img-2.png');"></div>
+                        <div style="background-image: url('../images/popular-kits-img-3.png');"></div>
+                    </div>
+                    <div class="kit-details">
+                        <h3>800 Watt Smart Panel + 1kWh Battery Includes:</h3>
+                        <ul>
+                            <li>4 x 200W Solar Panels</li>
+                            <li>2 x SMART Inverters (with daisy-chain cables)</li>
+                            <li>1 x 1kWh Battery, 1 x SMART Base</li>
+                            <li>1 x 600W Offgrid Inverter</li>
+                            <li>1 x Power Meter</li>
+                            <li>2 x Safety Gate Adapters</li>
+                            <li>1 x DC Solar to Battery Charging Cable</li>
+                            <li>App</li>
+                        </ul>
+                        <a href="#" class="shop-button">Shop now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="popular-kit">
+                    <div class="image-wrapper">
+                        <div style="background-image: url('../images/popular-kits-img.png');"></div>
+                        <div style="background-image: url('../images/popular-kits-img-2.png');"></div>
+                        <div style="background-image: url('../images/popular-kits-img-3.png');"></div>
+                    </div>
+                    <div class="kit-details">
+                        <h3>800 Watt Smart Panel + 1kWh Battery Includes:</h3>
+                        <ul>
+                            <li>4 x 200W Solar Panels</li>
+                            <li>2 x SMART Inverters (with daisy-chain cables)</li>
+                            <li>1 x 1kWh Battery, 1 x SMART Base</li>
+                            <li>1 x 600W Offgrid Inverter</li>
+                            <li>1 x Power Meter</li>
+                            <li>2 x Safety Gate Adapters</li>
+                            <li>1 x DC Solar to Battery Charging Cable</li>
+                            <li>App</li>
+                        </ul>
+                        <a href="#" class="shop-button">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination" style="position: absolute; bottom: 10px;"></div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" id="script-swiper"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        observer: true,
+        observeParents: true
+    });
+</script>
+</body>
+</html>

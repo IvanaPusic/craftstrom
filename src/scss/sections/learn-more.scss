@@ -1,0 +1,79 @@
+@use "../abstracts" as *;
+
+.learn-more {
+  height: 150vh;
+  background-color: $white;
+  position: relative;
+
+  .title {
+    color: #000;
+    text-align: center;
+    padding-top: 5.5rem;
+    font-family: $poppins;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 3.25rem;
+
+    /* Custom pagination bullets */
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: transparent;
+      opacity: 1;
+      border: 2px solid #000;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #f8b400;
+      border: 2px solid #f8b400;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      gap: 1.56rem;
+
+      .video-1,
+      .video-2,
+      .video-3 {
+        .content {
+          padding-bottom: 3.25rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.6rem;
+
+          img,
+          span {
+            display: inline-block;
+          }
+
+          span {
+            width: 12rem;
+            color: #000;
+            font-family: $poppins;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+
+        .video {
+          width: 26.875rem;
+          height: 35.5rem;
+          padding-top: 3.25rem;
+        }
+      }
+    }
+  }
+}

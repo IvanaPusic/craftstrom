@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+.benefits {
+  height: 100vh;
+  width: 100%;
+  background-color: $white;
+
+  .title {
+    color: #000;
+    text-align: center;
+    font-family: $poppins;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 5.44rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.25rem;
+    padding-inline: 3.5rem;
+    gap: 2.25rem;
+
+    .card {
+      max-width: 19.1rem;
+
+      .card-title {
+        color: #000;
+        font-family: $poppins;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-top: 0.63rem;
+        padding-bottom: 0.63rem;
+      }
+
+      .card-text {
+        color: #000;
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

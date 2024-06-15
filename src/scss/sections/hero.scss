@@ -1,0 +1,119 @@
+@use "../abstracts" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 100vh;
+  padding-bottom: 7.03rem;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  object-fit: cover;
+
+  .hero-title,
+  .hero-content {
+    color: $white;
+  }
+
+  .hero-title {
+    text-align: center;
+    font-size: $text-large;
+    font-weight: 500;
+    font-family: $poppins;
+    line-height: 134.2%;
+    padding-bottom: 3.4375rem;
+    margin-top: 17.06rem;
+    max-width: 90rem;
+    height: 58.6875rem;
+  }
+
+  .btn {
+    display: flex;
+    width: 13.5625rem;
+    height: 3.4375rem;
+    padding: 0.90175rem 3.02281rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2.88563rem;
+    flex-shrink: 0;
+    border-radius: 4.8125rem;
+    background: $orange;
+    border: none;
+    outline: none;
+    color: $dark;
+    text-align: center;
+    font-family: $montseratt;
+    font-size: $small;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .btn-link {
+    color: $white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-top: 1.25rem;
+    text-align: center;
+    font-family: $montseratt;
+    font-size: $small;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .hero-content {
+    max-width: 36.125rem;
+    color: $white;
+    text-align: center;
+    font-family: $montseratt;
+    font-size: $base;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160.5%; /* 1.80563rem */
+    padding-top: 3.06rem;
+  }
+
+  .icons,
+  .solar-panel,
+  .battery,
+  .power-meter {
+    display: flex;
+  }
+
+  .icons {
+    padding-top: 3.06rem;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 7rem;
+  }
+
+  .solar-panel,
+  .battery,
+  .power-meter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.52rem;
+
+    img {
+      display: block;
+      height: auto;
+    }
+  }
+
+  .power-meter {
+    gap: 1.3rem;
+  }
+}

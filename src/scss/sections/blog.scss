@@ -1,0 +1,100 @@
+@use "../abstracts" as *;
+
+/* Reset some common elements to avoid unwanted margins and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.blog {
+  height: 100vh;
+  background-color: white;
+
+  .title {
+    padding-top: 2.79rem;
+    color: #000;
+    text-align: center;
+    font-family: $poppins;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .content {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 3.31rem;
+    padding-left: 3.06rem;
+    padding-right: 3.19rem;
+
+    .article {
+      .img-wrapper {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .article-content {
+        padding-top: 1.25rem;
+
+        .date {
+          color: $orange;
+          font-family: $poppins;
+          font-size: 0.8125rem;
+          font-style: normal;
+          font-weight: 400;
+          padding-bottom: 0.81rem;
+          line-height: normal;
+        }
+
+        .article-title {
+          padding-bottom: 1.81rem;
+          color: #000;
+          font-family: $poppins;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 1.625rem; /* 130% */
+        }
+
+        .article-text {
+          color: #000;
+          font-family: $montseratt;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 1.25rem; /* 125% */
+        }
+      }
+    }
+
+    .first-article, .fourth-article {
+      .img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26.875rem;
+        height: 38.625rem;
+
+        .play-btn {
+          display: inline-block;
+        }
+      }
+    }
+
+    .article-wrapper {
+      .second-article {
+        padding-bottom: 1rem;
+      }
+
+      .second-article, .third-article {
+        .img-wrapper {
+          width: 26.9375rem;
+          height: 18.75rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <title>Document</title>
+</head>
+<body style="overflow: hidden;">
+  <section class="features">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide plug-and-play" style="background-image: url('../images/plugs-and-play.png');"></div>
+        <div class="swiper-slide" style="background-image: url('../images/smart-technology.png');"></div>
+        <div class="swiper-slide" style="background-image: url('../images/setup-at-home.png');"></div>
+        <div class="swiper-slide" style="background-image: url('../images/power-supply.png');"></div>
+      </div>
+      <div class="content" style="position: absolute; top: 38.94rem; left: 3.44rem; right: 3.5rem; z-index: 10;">
+        <div class="card plug-and-play">
+          <div class="img-line-wrapper">
+            <img class="line-image" src="../images/orange-line.svg" alt="orange-line">
+          </div>
+          <h4 class="title">Plug&Play</h4>
+          <p class="text">Our solar sets and batteries are fully plug&play, meaning you don't need anything but an outlet. </p>
+        </div>
+        <div class="card smart-technology">
+          <div class="img-line-wrapper">
+            <img class="line-image" src="../images/gray-line.svg" alt="gray-line">
+          </div>
+          <h4 class="title">Smart Technology</h4>
+          <p class="text">We were the first to fully integrate our solar and battery system with a powermeter. This way, you can accurately control every aspect in Milliseconds.</p>
+        </div>
+        <div class="card home-setup">
+          <div class="img-line-wrapper">
+            <img class="line-image" src="../images/gray-line.svg" alt="gray-line">
+          </div>
+          <h4 class="title">Setup at Home</h4>
+          <p class="text">Our solar and battery system are not connected directly. Instead, they use your home power grid to exchange power when needed. You can place your battery wherever you like it best. </p>
+        </div>
+        <div class="card power-supply">
+          <div class="img-line-wrapper">
+            <img class="line-image" src="../images/gray-line.svg" alt="orange-line">
+          </div>
+          <h4 class="title">Uninterruptible Power Supply</h4>
+          <p class="text">Place our battery anywhere in your home for convenient access during power outages. Plug your fridge or medical devices into the off-grid inverter on top, and keep the battery connected to an outlet. This ensures your appliances automatically draw power from the battery when the power goes out.</p>
+        </div>
+      </div>
+      <div class="swiper-pagination" style="position: absolute; top: 60rem;"></div>
+    </div>
+  </section>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>
