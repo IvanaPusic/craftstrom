@@ -1,5 +1,13 @@
 @use "../abstracts" as *;
 
+iframe {
+  border:none; 
+  display: block;
+  padding:0; 
+  margin:0; 
+  height: 90.3vh; 
+  overflow: hidden;
+}
 .benefits {
   height: 100vh;
   width: 100%;
@@ -17,9 +25,7 @@
   }
 
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     padding-top: 3.25rem;
     padding-inline: 3.5rem;
     gap: 2.25rem;

@@ -1,5 +1,14 @@
 @use "../abstracts" as *;
 
+iframe {
+  height: 90.3vh;
+  border:none; 
+  display: block; 
+  padding:0; 
+  margin:0; 
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +23,7 @@
 
   .main-content {
     max-width: 24.75rem;
-    background: #262626;
+    background: $dark-gray;
     min-height: 120vh;
 
     h4 {
@@ -61,7 +70,7 @@
       }
 
       .content {
-        color: #fff;
+        color: $white;
         opacity: 0.7;
         font-family: $poppins;
         font-size: 1rem;
@@ -86,19 +95,31 @@
   }
 
   .image-container {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+   height: 44.266rem;
+   width: 56.916rem;
+    @include img-contain(center);
     padding-top: 6.06rem;
     padding-left: 3.96rem;
     padding-bottom: 6.11rem;
 
-    img {
-      max-width: 56.916rem;
-      max-height: 44.266rem;
+    .solar-type-img {
+      max-width: 100% ;
+      max-height: 100% ;
       display: block;
     }
+  }
+}
+
+@media screen and (min-width: 1500px){
+  .types-of-solar-system {
+    .image-container {
+      margin-left: 10rem;
+    }
+  }
+}
+
+@media screen and (max-height: 708px) {
+   iframe {
+    height: 170vh;
   }
 }

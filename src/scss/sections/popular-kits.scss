@@ -1,15 +1,25 @@
+@use "../abstracts" as *;
+
+iframe {
+  border:none; 
+  display: block; 
+  padding:0; 
+  margin:0; 
+  height: 150vh; 
+  overflow: hidden;
+}
+
 .popular-kits-section {
   overflow: hidden;
   height: 100vh;
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
 
   .popular-kits-title {
-    color: #FFF;
+    color: $white;
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: $poppins;
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 500;
@@ -23,9 +33,7 @@
 
     .swiper-wrapper {
       .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
         height: 100%;
 
         .popular-kit {
@@ -46,9 +54,7 @@
               max-width: 51.0625rem;
               min-height: 3rem;
               max-height: 17.0625rem;
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
+              @include img-cover(center);
             }
           }
 
@@ -62,8 +68,8 @@
             padding-left: 4.13rem;
 
             h3 {
-              color: #F9A41A;
-              font-family: "Poppins", sans-serif;
+              color: $orange;
+              font-family: $poppins;
               font-size: 1.86006rem;
               font-style: normal;
               font-weight: 600;
@@ -78,8 +84,8 @@
               li {
                 margin-bottom: 10px;
                 max-width: 22.75rem;
-                color: #FFF;
-                font-family: "Poppins", sans-serif;
+                color: $white;
+                font-family: $poppins;
                 font-size: 1.46369rem;
                 font-style: normal;
                 font-weight: 300;
@@ -88,22 +94,7 @@
             }
 
             .shop-button {
-              display: flex;
-              width: 13.5625rem;
-              height: 3.4375rem;
-              justify-content: center;
-              align-items: center;
-              flex-shrink: 0;
-              border-radius: 4.8125rem;
-              background: #F9A41A;
-              color: #131111;
-              text-align: center;
-              font-family: "Montserrat", sans-serif;
-              font-size: 0.98213rem;
-              font-style: normal;
-              font-weight: 700;
-              line-height: normal;
-              text-decoration: none;
+              @include btn;
               margin-top: 1.62rem;
             }
           }
@@ -117,14 +108,20 @@
       height: 12px;
       background-color: transparent;
       opacity: 1;
-      border: 2px solid #fff;
+      border: 2px solid $white;
       border-radius: 50%;
       margin: 0 5px;
     }
 
     .swiper-pagination-bullet-active {
-      background-color: #f8b400;
-      border: 2px solid #f8b400;
+      background-color: $orange;
+      border: 2px solid $orange;
     }
+  }
+}
+
+@media screen and (max-height: 708px) {
+  iframe {
+    height: 200vh;
   }
 }

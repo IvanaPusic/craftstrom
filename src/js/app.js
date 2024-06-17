@@ -12,7 +12,8 @@ const swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   observer: true,
-  observeParents: true
+  observeParents: true,
+  spaceBetween: 20,
 });
 
 console.log(swiper);

@@ -1,6 +1,5 @@
 {
     "/dist/js/app.js": "/dist/js/app.js",
-    "/dist/css/app.css": "/dist/css/app.css",
     "/dist/images/affordable.svg": "/dist/images/affordable.svg",
     "/dist/images/arrow_drop_down.svg": "/dist/images/arrow_drop_down.svg",
     "/dist/images/arrow_up.svg": "/dist/images/arrow_up.svg",
@@ -39,5 +38,6 @@
     "/dist/images/video-2.png": "/dist/images/video-2.png",
     "/dist/images/video-3.png": "/dist/images/video-3.png",
     "/dist/images/video-4.png": "/dist/images/video-4.png",
-    "/dist/images/video.png": "/dist/images/video.png"
+    "/dist/images/video.png": "/dist/images/video.png",
+    "/dist/css/app.css": "/dist/css/app.css"
 }

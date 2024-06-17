@@ -4,16 +4,27 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+
+}
+
+
+iframe {
+  height: 127vh;
+  border:none; 
+  display: block; 
+  padding:0; 
+  margin:0; 
+  overflow: hidden;
 }
 
 .blog {
-  height: 100vh;
-  background-color: white;
+  overflow: hidden;
+  min-height: 127vh;
+  background-color: $white;
 
   .title {
     padding-top: 2.79rem;
-    color: #000;
+    color: black;
     text-align: center;
     font-family: $poppins;
     font-size: 2.25rem;
@@ -31,9 +42,7 @@ html, body {
 
     .article {
       .img-wrapper {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        @include img-cover(center);
       }
 
       .article-content {
@@ -51,7 +60,7 @@ html, body {
 
         .article-title {
           padding-bottom: 1.81rem;
-          color: #000;
+          color: black;
           font-family: $poppins;
           font-size: 1.25rem;
           font-style: normal;
@@ -60,7 +69,7 @@ html, body {
         }
 
         .article-text {
-          color: #000;
+          color: black;
           font-family: $montseratt;
           font-size: 1rem;
           font-style: normal;
@@ -72,10 +81,8 @@ html, body {
 
     .first-article, .fourth-article {
       .img-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 26.875rem;
+        @include flex-center;
+        max-width: 26.875rem;
         height: 38.625rem;
 
         .play-btn {
@@ -91,10 +98,16 @@ html, body {
 
       .second-article, .third-article {
         .img-wrapper {
-          width: 26.9375rem;
+          max-width: 26.9375rem;
           height: 18.75rem;
         }
       }
     }
+  }
+}
+
+@media screen and (max-height: 708px) {
+  iframe {
+    height: 180vh;
   }
 }

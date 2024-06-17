@@ -10,8 +10,6 @@
   overflow: hidden;
   height: 81vh;
   flex-shrink: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
+  @include img-contain(left);
   object-fit: cover;
 }

@@ -1,0 +1,41 @@
+@use 'variables' as *;
+@use 'colors' as *;
+
+@mixin btn {
+  display: flex;
+  width: 13.5625rem;
+  height: 3.4375rem;
+  padding: 0.90175rem 3.02281rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2.88563rem;
+  flex-shrink: 0;
+  border-radius: 4.8125rem;
+  background: $orange;
+  color: $dark;
+  text-align: center;
+  font-family: $montseratt;
+  font-size: 0.98213rem;
+  font-style: normal;
+  font-weight: 700;
+  border:none;
+  line-height: normal;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin img-cover ($position) {
+  background-repeat: no-repeat;
+  background-position: $position;
+  background-size: cover;
+}
+
+@mixin img-contain($position) {
+  background-repeat: no-repeat;
+  background-position: $position;
+  background-size: contain;
+}

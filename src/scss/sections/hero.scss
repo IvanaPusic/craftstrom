@@ -15,9 +15,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
+  @include img-cover(top);
   object-fit: cover;
 
   .hero-title,
@@ -38,25 +36,7 @@
   }
 
   .btn {
-    display: flex;
-    width: 13.5625rem;
-    height: 3.4375rem;
-    padding: 0.90175rem 3.02281rem;
-    justify-content: center;
-    align-items: center;
-    gap: 2.88563rem;
-    flex-shrink: 0;
-    border-radius: 4.8125rem;
-    background: $orange;
-    border: none;
-    outline: none;
-    color: $dark;
-    text-align: center;
-    font-family: $montseratt;
-    font-size: $small;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include btn;
   }
 
   .btn-link {
@@ -85,29 +65,35 @@
     padding-top: 3.06rem;
   }
 
-  .icons,
-  .solar-panel,
-  .battery,
-  .power-meter {
-    display: flex;
-  }
-
   .icons {
+    display: flex;
     padding-top: 3.06rem;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 7rem;
-  }
+    gap: 3.99rem;
 
   .solar-panel,
   .battery,
   .power-meter {
+    margin: 0 auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.52rem;
 
+    h3 {
+      color: $white;
+      text-align: center;
+      font-family: $poppins;
+      font-size: 0.88819rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.7315rem; /* 194.951% */
+      text-transform: capitalize;
+    }
     img {
+      margin: 0 auto;
       display: block;
       height: auto;
     }
@@ -116,4 +102,7 @@
   .power-meter {
     gap: 1.3rem;
   }
+  }
+
+ 
 }

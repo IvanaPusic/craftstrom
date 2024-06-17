@@ -1,5 +1,14 @@
 @use "../abstracts" as *;
 
+iframe {
+  border:none; 
+  display: block; 
+  padding:0; 
+  margin:0; 
+  height: 170vh; 
+  overflow: hidden;
+}
+
 .features {
   overflow: hidden;
   height: 103vh;
@@ -16,14 +25,14 @@
       height: 12px;
       background-color: transparent;
       opacity: 1;
-      border: 2px solid #fff;
+      border: 2px solid $white;
       border-radius: 50%;
       margin: 0 5px;
     }
 
     .swiper-pagination-bullet-active {
-      background-color: #f8b400;
-      border: 2px solid #f8b400;
+      background-color: $orange;
+      border: 2px solid $orange;
     }
 
     .swiper,
@@ -34,20 +43,28 @@
       .swiper-slide {
         height: 48.6vh;
         width: 83.75rem;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        @include img-contain(center);
       }
     }
 
+    .swiper-pagination {
+      position: absolute;
+      top: 60rem;
+    }
     .content {
       display: flex;
       gap: 2.25rem;
       justify-content: center;
+      position: absolute; 
+      top: 38.94rem; 
+      left: 3.44rem; 
+      right: 3.5rem; 
+      z-index: 10;
 
       .card {
+        max-width: 19rem;
         .title {
-          color: #fff;
+          color: $white;
           opacity: 0.7;
           font-family: $poppins;
           font-size: 1.25rem;
@@ -64,7 +81,7 @@
           font-family: $poppins;
           font-size: 1rem;
           font-style: normal;
-          width: 19rem;
+          width: 100%;
           font-weight: 400;
           line-height: normal;
         }
@@ -87,4 +104,48 @@
       }
     }
   }
+}
+
+
+
+@media screen and (min-height: 800px) {
+
+  .features {
+    .swiper {
+      .content {
+        top: 40rem;
+      }
+      .swiper-pagination {
+        top: 60rem;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-height: 600px) {
+
+  .features {
+    .swiper {
+      .content {
+        top: 20rem;
+      }
+      .swiper-pagination {
+        top: 45rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-height: 1000px){
+  .features {
+    .swiper {
+      .content {
+        gap:3rem;
+      }
+    }
+  }
+
 }
