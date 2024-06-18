@@ -1,5 +1,6 @@
 {
     "/dist/js/app.js": "/dist/js/app.js",
+    "/dist/css/app.css": "/dist/css/app.css",
     "/dist/images/affordable.svg": "/dist/images/affordable.svg",
     "/dist/images/arrow_drop_down.svg": "/dist/images/arrow_drop_down.svg",
     "/dist/images/arrow_up.svg": "/dist/images/arrow_up.svg",
@@ -11,6 +12,7 @@
     "/dist/images/blog-img-4.png": "/dist/images/blog-img-4.png",
     "/dist/images/gray-line.svg": "/dist/images/gray-line.svg",
     "/dist/images/hero.png": "/dist/images/hero.png",
+    "/dist/images/how-it-works-hero.png": "/dist/images/how-it-works-hero.png",
     "/dist/images/integration.svg": "/dist/images/integration.svg",
     "/dist/images/off-grid-img.png": "/dist/images/off-grid-img.png",
     "/dist/images/on-grid-day-img.png": "/dist/images/on-grid-day-img.png",
@@ -38,6 +40,5 @@
     "/dist/images/video-2.png": "/dist/images/video-2.png",
     "/dist/images/video-3.png": "/dist/images/video-3.png",
     "/dist/images/video-4.png": "/dist/images/video-4.png",
-    "/dist/images/video.png": "/dist/images/video.png",
-    "/dist/css/app.css": "/dist/css/app.css"
+    "/dist/images/video.png": "/dist/images/video.png"
 }

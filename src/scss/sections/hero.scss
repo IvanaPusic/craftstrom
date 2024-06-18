@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 .hero {
   height: 100vh;
   padding-bottom: 7.03rem;
@@ -103,6 +104,9 @@
     gap: 1.3rem;
   }
   }
-
  
+}
+
+.how-it-works-hero {
+  @include img-cover(bottom);
 }
