@@ -7,9 +7,16 @@
 }
 
 .video {
+  width: 100%;
   overflow: hidden;
   height: 81vh;
   flex-shrink: 0;
   @include img-contain(left);
   object-fit: cover;
+}
+
+.how-it-works-video {
+  width: 100%;
+  @include img-contain(left);
+
 }
