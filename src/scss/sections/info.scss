@@ -1,0 +1,415 @@
+@use "../abstracts" as *;
+
+.info {
+  padding-left: 3.12rem;
+  padding-right: 2.44rem;
+  scroll-behavior: smooth;
+  #choose,#plug-in,#produce,#save {
+    display: flex;
+    gap: 4.5rem;
+    padding-bottom: 7.94rem;
+    .choose-links-wrapper,
+    .plugin-links-wrapper,
+    .produce-links-wrapper,
+    .save-links-wrapper {
+      .choose-list,
+      .plugin-list,
+      .produce-list,
+      .save-list {
+        display: flex;
+        flex-direction: column; 
+        gap: 0.38rem;
+        list-style-type: none;
+        width: 9.6875rem;
+        .choose-list-item,
+        .plugin-list-item,
+        .produce-list-item,
+        .save-list-item {
+
+          .active {
+          color: $white;
+          font-family: $poppins;
+          font-size: 1.875rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          }
+           a {
+            display: inline-block;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.40);
+            font-family: $poppins;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+  #choose {
+    .content {
+      .requirements {
+        display: flex;
+        align-items: center;
+        gap: 14.375rem;
+        .requirements-content {
+          padding-bottom: 2.19rem;
+          width: 28.25rem;
+          .title {
+            color: $white;
+            /* headlines */
+            font-family:$poppins;
+            font-size: 1.5625rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 131%; /* 2.04688rem */
+          }
+          .list {
+            margin-left:1.5rem;
+            // list-style-type: circle;
+            .list-item {
+              color: #FFF;
+              font-family: $poppins;
+              font-size: 1rem;
+              font-style: normal;
+              opacity: 0.8;
+              padding-bottom:0.15rem;
+              font-weight: 300;
+              line-height: normal;
+            }
+          }
+        }
+        .requirements-img-wrapper {
+          width: 15.389rem;
+          height: 6rem;
+          @include img-contain(center);
+        }
+      }
+
+    }
+    .calculator {
+      display: flex;
+      align-items: center;
+      gap: 8.5625rem;
+      .calculator-content {
+        padding-top: 2.19rem;
+        padding-bottom: 2.19rem;
+        display: flex;
+        width: 34.0625rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1875rem;
+
+        .title {
+          color: #FFF;
+          /* headlines */
+          font-family: $poppins;
+          font-size: 1.5625rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 131%; /* 2.04688rem */
+          padding-bottom: 0.19rem;
+        }
+        .text {
+          width: 28.25rem;
+          color: $white;
+          font-family: $poppins;
+          opacity: 0.8;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          padding-bottom: 0.81rem;
+        }
+        .btn {
+          display: flex;
+          width: 13.5625rem;
+          height: 3.4375rem;
+          padding: 0.90175rem 3.02281rem;
+          justify-content: center;
+          align-items: center;
+          gap: 2.88563rem;
+          flex-shrink: 0;
+          border-radius: 4.8125rem;
+          border:none;
+          outline: none;
+          background: $orange;
+          color: $dark;
+          text-align: center;
+          font-family: $montseratt;
+          font-size: 0.98213rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+
+      .calculator-list {
+        .list {
+          list-style-type: none;
+          .list-item {
+            padding-bottom: 0.32rem;
+            span {
+              display: inline-block;
+            }
+            .number {
+              color: $orange;
+              font-family: $poppins;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 800;
+              line-height: normal;
+            }
+            .title {
+              color: $white;
+              font-family: $poppins;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
+    .configurator {
+      display: flex;
+      align-items: center;
+      gap: 8.5625rem;
+      .configurator-content {
+        padding-top: 2.19rem;
+        display: flex;
+        width: 34.0625rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1875rem;
+
+        .title {
+          color: $white;
+          /* headlines */
+          font-family: $poppins;
+          font-size: 1.5625rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 131%; /* 2.04688rem */
+          padding-bottom: 0.19rem;
+        }
+        .text{
+          color: $white;
+          /* body */
+          font-family: $poppins;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          padding-bottom: 0.81rem;
+          opacity: 0.8;
+        }
+
+         .btn {
+          display: flex;
+          width: 13.5625rem;
+          height: 3.4375rem;
+          padding: 0.90175rem 3.02281rem;
+          justify-content: center;
+          align-items: center;
+          gap: 2.88563rem;
+          flex-shrink: 0;
+          border-radius: 4.8125rem;
+          border:none;
+          outline: none;
+          background: $orange;
+          color: $dark;
+          text-align: center;
+          font-family: $montseratt;
+          font-size: 0.98213rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+      .configurator-list {
+        .list {
+          list-style-type: none;
+          .list-item {
+            padding-bottom: 0.32rem;
+            .number {
+              color: $orange;
+              font-family: $poppins;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 800;
+              line-height: normal;
+            }
+            .title {
+              color: $white;
+              font-family: $poppins;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #plug-in {
+    width: 100%;
+    .content {
+      width: 100%;
+      .solar-panels,.install-power-meter,.store-power {
+        display: inline-flex;
+        justify-content: center;
+        // align-items: center;
+        gap: 0.8125rem;
+      }
+      .solar-panels,.install-power-meter,.store-power{
+        padding-bottom: 5.37rem;
+        .content {
+          display: flex;
+          width: 28.1875rem;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.1875rem;
+
+          .title {
+            color: $white;
+            /* headlines */
+            font-family: $poppins;
+            font-size: 1.5625rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 131%; /* 2.04688rem */
+            padding-bottom: 0.19rem;
+          }
+          .text {
+            color: $white;
+            /* body */
+            font-family: $poppins;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            padding-bottom:1rem;
+            opacity: 0.8;
+          }
+        }
+        .img-wrapper {
+          width: 41.25rem;
+          height: 14.1875rem;
+          @include img-contain(center);
+        }
+      }
+      .solar-panels,.install-power-meter,.store-power {
+        gap: 2rem;
+      }
+
+    }
+  }
+
+  #produce {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.125rem;
+    .content {
+      display: flex;
+      padding-left: 3.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.1875rem;
+      width: 27rem;
+      .title {
+        color: $white;
+        /* headlines */
+        width: 19.75rem;
+        font-family: $poppins;
+        font-size: 1.5625rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 131%; /* 2.04688rem */
+        padding-bottom: 0.19rem;
+      }
+
+      .text {
+        color: $white;
+        /* body */
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        opacity: 0.8;
+      }
+    }
+
+    .img-wrapper {
+      width: 42.0625rem;
+      height: 14.1875rem;
+      flex-shrink: 0;
+      @include img-contain(center);
+    }
+  }
+
+  #save {
+  
+    .content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.375rem;
+      // padding-left: 4.5rem;
+      .title {
+        color: $white;
+        padding-bottom: 0.19rem;
+        /* headlines */
+        font-family: $poppins;
+        width: 25.6875rem;
+        height: 4.4375rem;
+        font-size: 1.5625rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 131%; /* 2.04688rem */
+      }
+      .text {
+        color: $white;
+        /* body */
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        width: 27rem;
+        font-weight: 300;
+        line-height: normal;
+      }
+
+      
+    .img-wrapper {
+      display: flex;
+      gap: 1.85rem;
+      .new-schedule,.battery-mode,.your-schedule {
+        @include img-contain(center);
+      }
+      .new-schedule {
+        width: 10.73375rem;
+        height: 22.02556rem;
+        flex-shrink: 0;
+      }
+      .battery-mode {
+        width: 11.98994rem;
+        height: 10.19144rem;
+        flex-shrink: 0;
+      }
+      .your-schedule {
+        width: 10.73375rem;
+        height: 8.46888rem;
+        flex-shrink: 0;
+      }
+    }
+    }
+
+  }
+}

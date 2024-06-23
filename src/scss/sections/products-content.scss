@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+
+.products-content {
+  @include flex-center;
+  .content-wrapper {
+    padding-top: 7.19rem;
+    max-width: 30.25rem;
+  
+    p{
+      color: $white;
+      text-align: center;
+      /* body */
+      font-family: $poppins;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      padding-bottom: 1rem;
+    }
+  }
+}
