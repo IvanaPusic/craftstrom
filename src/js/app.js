@@ -1,10 +1,7 @@
 import { addColor, removeColor } from './features.js';
-
 const titles = document.querySelectorAll('.title');
 const texts = document.querySelectorAll('.text');
 const images = document.querySelectorAll('.line-image');
-
-console.log(images);
 
 const swiper = new Swiper(".mySwiper", {
   pagination: {
@@ -56,3 +53,5 @@ swiper.on('slideChange', function (e) {
     removeColor(titles[1], titles[2], titles[3], texts[1], texts[2], texts[3]);
   }
 });
+
+
