@@ -1,6 +1,16 @@
 @use "../abstracts" as *;
 
+body {
+
+}
+.mobile-info {
+  display: none;
+}
 .info {
+  padding-top: 2.63rem;
+  .swiper {
+    display: none;
+  }
   padding-left: 3.12rem;
   padding-right: 2.44rem;
   scroll-behavior: smooth;
@@ -50,13 +60,14 @@
   }
   #choose {
     .content {
+      width:100%;
       .requirements {
         display: flex;
         align-items: center;
         gap: 14.375rem;
         .requirements-content {
           padding-bottom: 2.19rem;
-          width: 28.25rem;
+          max-width: 28.25rem;
           .title {
             color: $white;
             /* headlines */
@@ -260,18 +271,16 @@
   #plug-in {
     width: 100%;
     .content {
-      width: 100%;
+      // width: 100%;
       .solar-panels,.install-power-meter,.store-power {
         display: inline-flex;
-        justify-content: center;
-        // align-items: center;
         gap: 0.8125rem;
       }
       .solar-panels,.install-power-meter,.store-power{
         padding-bottom: 5.37rem;
         .content {
           display: flex;
-          width: 28.1875rem;
+          max-width: 28.1875rem;
           flex-direction: column;
           align-items: flex-start;
           gap: 0.1875rem;
@@ -318,7 +327,6 @@
     gap: 1.125rem;
     .content {
       display: flex;
-      padding-left: 3.5rem;
       flex-direction: column;
       align-items: flex-start;
       gap: 0.1875rem;
@@ -326,7 +334,7 @@
       .title {
         color: $white;
         /* headlines */
-        width: 19.75rem;
+        max-width: 19.75rem;
         font-family: $poppins;
         font-size: 1.5625rem;
         font-style: normal;
@@ -412,4 +420,906 @@
     }
 
   }
+}
+// @media screen and (max-width: 920px) {
+//   .info {
+//     display: none;
+//   }
+// }
+
+@media screen and (max-width: 679px) {
+  body {
+    overflow-x: hidden;
+  }
+  .info {
+    padding:0;
+    .swiper {
+      display: block;
+      height: 4rem;
+      .swiper-wrapper {
+        background-color: $orange;
+        display: flex;
+        height: 100%;
+        .swiper-slide {
+          height: 100%;
+          // height: 3rem;
+          width:100%;
+          background-color: $orange;
+          padding: 0.9375rem 0.67538rem;
+          // height: 2rem;
+          border:none;
+            .active {
+          color: $white;
+          font-family: $poppins;
+          font-size: 1.3125rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          }
+          a {
+            display: inline-block;
+            margin-bottom:2rem;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.40);
+            font-family: $poppins;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+      .swiper-button-next {
+        // background-image: url("../../images/chevron_right.svg") !important;
+        color: $dark;
+      }
+    }
+    padding-left:0;
+     #choose,#plug-in,#produce,#save {
+      display: flex;
+      gap: 4.5rem;
+      padding-bottom: 7.94rem;
+      .choose-links-wrapper,
+      .plugin-links-wrapper,
+      .produce-links-wrapper,
+      .save-links-wrapper {
+        display: none;
+      }
+      .content {
+          // width: 100%;
+          //  padding-left: 1rem;
+
+        .requirements,.calculator,.configurator {
+
+          flex-direction: column;
+          align-items: flex-start;
+          gap:1rem;
+          padding-bottom:1.19rem;
+          .requirements-content,.calculator-content,.configurator-content {
+            .title {
+              padding-top:2.37rem;
+              padding-left: 1rem;
+              max-width: 20.5rem;
+              font-size: 1.5625rem;
+              padding-bottom: 1.25rem;
+            }
+            .text {
+              font-size: 1rem;
+              padding-left: 1rem;
+              width: 20.5rem;
+              span {
+                font-size: 1rem;
+                max-width: 20.5rem;
+              }
+            }
+            .list {
+              .list-item {
+                font-size: 1rem;
+              }
+            }
+          }
+          .calculator-list,.configurator-list {
+            .list {
+              .list-item {
+                span {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #choose {
+      .requirements,.calculator,.configurator {
+        padding-left:1rem;
+      }
+    }
+  #plug-in {
+    width: 100%;
+    .content {
+      width: 100%;
+      .solar-panels,.install-power-meter,.store-power {
+        display: inline-flex;
+        // justify-content: center;
+        // align-items: center;
+        flex-direction: column-reverse;
+        gap: 0.8125rem;
+      }
+      .solar-panels,.install-power-meter,.store-power{
+        padding-bottom: 5.37rem;
+        .content {
+          padding-left:1rem;
+          display: flex;
+          max-width: 20.5rem;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.1875rem;
+        }
+        .img-wrapper {
+          // width: 100%;
+          height: 14.1875rem;
+          @include img-cover(center);
+        }
+      }
+      .solar-panels,.install-power-meter,.store-power {
+        gap: 2rem;
+      }
+
+    }
+  }
+    #produce{
+    display: inline-flex;
+    flex-direction: column-reverse;
+    gap: 1.125rem;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.1875rem;
+      max-width: 27rem;
+      .title {
+        color: $white;
+        /* headlines */
+        padding-left:1rem;
+        width: 19.75rem;
+        font-family: $poppins;
+        font-size: 1.5625rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 131%; /* 2.04688rem */
+        padding-bottom: 0.19rem;
+      }
+
+      .text {
+        color: $white;
+        /* body */
+        padding-left:1rem;
+        max-width:20.5rem;
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        opacity: 0.8;
+      }
+    }
+
+    .img-wrapper {
+      // width: 100%;
+      height: 14.1875rem;
+      flex-shrink: 0;
+      @include img-contain(center);
+      padding-left:1rem;
+    }
+  }
+   #save {
+  
+    .content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    padding-left:1rem;
+    gap: 1.375rem;
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.19rem;
+        .title {
+          max-width: 19.125rem;
+        }
+        .text {
+          padding-top: 2rem;
+          max-width: 20.5rem;
+        }
+      }
+      
+    .img-wrapper {
+      display: flex;
+      gap: 1.85rem;
+      margin: 0 auto;
+      // .new-schedule,.battery-mode,.your-schedule {
+      //   @include img-contain(center);
+      // }
+      .new-schedule {
+        width: 5.95688rem;
+        height: 12.2235rem;
+        flex-shrink: 0;
+      }
+      .battery-mode {
+        width: 6.654rem;
+        height: 5.65594rem;
+        flex-shrink: 0;
+      }
+      .your-schedule {
+        width: 5.95688rem;
+        height: 4.69994rem;
+        flex-shrink: 0;
+      }
+    }
+    }
+
+  }
+  }
+}
+
+@media screen and (min-width: 680px) and (max-width: 800px){
+  body {
+    overflow-x: hidden;
+  }
+  .info {
+    padding:0;
+    .swiper {
+      display: block;
+      height: 4rem;
+      .swiper-wrapper {
+        background-color: $orange;
+        display: flex;
+        height: 100%;
+        .swiper-slide {
+          height: 100%;
+          // height: 3rem;
+          width:100%;
+          background-color: $orange;
+          padding: 0.9375rem 0.67538rem;
+          // height: 2rem;
+          border:none;
+            .active {
+          color: $white;
+          font-family: $poppins;
+          font-size: 1.3125rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          }
+          a {
+            display: inline-block;
+            margin-bottom:2rem;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.40);
+            font-family: $poppins;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+      .swiper-button-next {
+        // background-image: url("../../images/chevron_right.svg") !important;
+        color: $dark;
+      }
+    }
+    padding-left:0;
+     #choose,#plug-in,#produce,#save {
+      display: flex;
+      gap: 4.5rem;
+      padding-bottom: 7.94rem;
+      .choose-links-wrapper,
+      .plugin-links-wrapper,
+      .produce-links-wrapper,
+      .save-links-wrapper {
+        display: none;
+      }
+      .content {
+        .requirements,.calculator,.configurator {
+
+          flex-direction: row;
+          align-items:center;
+          gap:1rem;
+          padding-bottom:1.19rem;
+          .requirements-content,.calculator-content,.configurator-content {
+            .title {
+              padding-top:2.37rem;
+              padding-left: 1rem;
+              max-width: 20.5rem;
+              font-size: 1.5625rem;
+              padding-bottom: 1.25rem;
+            }
+            .text {
+              font-size: 1rem;
+              padding-left: 1rem;
+              width: 20.5rem;
+              span {
+                font-size: 1rem;
+                max-width: 20.5rem;
+              }
+            }
+            .list {
+              .list-item {
+                font-size: 1rem;
+              }
+            }
+          }
+          .calculator-content,.configurator-content,.requirements-content {
+            max-width: 25rem;
+          }
+          .calculator-list,.configurator-list {
+            .list {
+              .list-item {
+                span {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #choose {
+      .requirements,.calculator,.configurator {
+        padding-left:1rem;
+      }
+    }
+  #plug-in {
+    width: 100%;
+    .content {
+      width: 100%;
+      .solar-panels,.install-power-meter,.store-power {
+        padding-top: 1.5rem;
+        // padding-right:1rem;
+        display: inline-flex;
+        // justify-content: center;
+        // align-items: center;
+        flex-direction: row;
+        gap: 0.8125rem;
+      }
+      .solar-panels,.install-power-meter,.store-power{
+        padding-bottom: 5.37rem;
+        .content {
+          padding-left:1rem;
+          display: flex;
+          max-width: 20.5rem;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.1875rem;
+        }
+        .img-wrapper {
+          // width: 100%;
+          height: 14.1875rem;
+          @include img-cover(center);
+        }
+      }
+      .solar-panels,.install-power-meter,.store-power {
+        gap: 2rem;
+      }
+
+    }
+  }
+    #produce{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1.125rem;
+    margin-left: 11rem;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.1875rem;
+      max-width: 22rem;
+      .title {
+        color: $white;
+        /* headlines */
+        // padding-left:1rem;
+        width: 19.75rem;
+        font-family: $poppins;
+        font-size: 1.5625rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 131%; /* 2.04688rem */
+        padding-bottom: 0.19rem;
+      }
+
+      .text {
+        color: $white;
+        /* body */
+        // padding-left:1rem;
+        max-width:20.5rem;
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        opacity: 0.8;
+      }
+    }
+
+    .img-wrapper {
+      width: 100%;
+      height: 14.1875rem;
+      flex-shrink: 0;
+      @include img-contain(center);
+      padding-left:1rem;
+    }
+  }
+   #save {
+  
+    .content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-left:1rem;
+    gap: 1.375rem;
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.19rem;
+        .title {
+          max-width: 19.125rem;
+        }
+        .text {
+          padding-top: 2rem;
+          max-width: 20.5rem;
+        }
+      }
+      
+    .img-wrapper {
+      display: flex;
+      gap: 1.85rem;
+      margin: 0 auto;
+      // .new-schedule,.battery-mode,.your-schedule {
+      //   @include img-contain(center);
+      // }
+      .new-schedule {
+        width: 5.95688rem;
+        height: 12.2235rem;
+        flex-shrink: 0;
+      }
+      .battery-mode {
+        width: 6.654rem;
+        height: 5.65594rem;
+        flex-shrink: 0;
+      }
+      .your-schedule {
+        width: 5.95688rem;
+        height: 4.69994rem;
+        flex-shrink: 0;
+      }
+    }
+    }
+
+  }
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 950px){
+ .info {
+  padding-top: 2.63rem;
+  .swiper {
+    display: none;
+  }
+  padding-left: 3.12rem;
+  padding-right: 2.44rem;
+  scroll-behavior: smooth;
+  #choose,#plug-in,#produce,#save {
+    display: flex;
+    gap: 1rem !important;
+    padding-bottom: 7.94rem;
+    .choose-links-wrapper,
+    .plugin-links-wrapper,
+    .produce-links-wrapper,
+    .save-links-wrapper {
+      .choose-list,
+      .plugin-list,
+      .produce-list,
+      .save-list {
+        display: flex;
+        flex-direction: column; 
+        gap: 0.38rem;
+        list-style-type: none;
+        width: 9.6875rem;
+        .choose-list-item,
+        .plugin-list-item,
+        .produce-list-item,
+        .save-list-item {
+
+          .active {
+          color: $white;
+          font-family: $poppins;
+          font-size: 1.875rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          }
+           a {
+            display: inline-block;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.40);
+            font-family: $poppins;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+  #choose {
+    .content {
+      width:100%;
+      .requirements {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .requirements-content {
+          padding-bottom: 2.19rem;
+          max-width: 28.25rem;
+          .title {
+            color: $white;
+            /* headlines */
+            font-family:$poppins;
+            font-size: 1.5625rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 131%; /* 2.04688rem */
+          }
+          .list {
+            margin-left:1.5rem;
+            // list-style-type: circle;
+            .list-item {
+              color: #FFF;
+              font-family: $poppins;
+              font-size: 1rem;
+              font-style: normal;
+              opacity: 0.8;
+              padding-bottom:0.15rem;
+              font-weight: 300;
+              line-height: normal;
+            }
+          }
+        }
+        .requirements-img-wrapper {
+          width: 15.389rem;
+          height: 6rem;
+          @include img-contain(center);
+        }
+      }
+
+    }
+    .calculator {
+      display: flex;
+      align-items: center;
+      gap:1rem;
+      .calculator-content {
+        padding-top: 2.19rem;
+        padding-bottom: 2.19rem;
+        display: flex;
+        width: 34.0625rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1875rem;
+
+        .title {
+          color: #FFF;
+          /* headlines */
+          font-family: $poppins;
+          font-size: 1.5625rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 131%; /* 2.04688rem */
+          padding-bottom: 0.19rem;
+        }
+        .text {
+          width: 28.25rem;
+          color: $white;
+          font-family: $poppins;
+          opacity: 0.8;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          padding-bottom: 0.81rem;
+        }
+        .btn {
+          display: flex;
+          width: 13.5625rem;
+          height: 3.4375rem;
+          padding: 0.90175rem 3.02281rem;
+          justify-content: center;
+          align-items: center;
+          gap: 2.88563rem;
+          flex-shrink: 0;
+          border-radius: 4.8125rem;
+          border:none;
+          outline: none;
+          background: $orange;
+          color: $dark;
+          text-align: center;
+          font-family: $montseratt;
+          font-size: 0.98213rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+
+      .calculator-list {
+        .list {
+          list-style-type: none;
+          .list-item {
+            padding-bottom: 0.32rem;
+            span {
+              display: inline-block;
+            }
+            .number {
+              color: $orange;
+              font-family: $poppins;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 800;
+              line-height: normal;
+            }
+            .title {
+              color: $white;
+              font-family: $poppins;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
+    .configurator {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .configurator-content {
+        padding-top: 2.19rem;
+        display: flex;
+        width: 34.0625rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1875rem;
+
+        .title {
+          color: $white;
+          /* headlines */
+          font-family: $poppins;
+          font-size: 1.5625rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 131%; /* 2.04688rem */
+          padding-bottom: 0.19rem;
+        }
+        .text{
+          color: $white;
+          /* body */
+          font-family: $poppins;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          padding-bottom: 0.81rem;
+          opacity: 0.8;
+        }
+
+         .btn {
+          display: flex;
+          width: 13.5625rem;
+          height: 3.4375rem;
+          padding: 0.90175rem 3.02281rem;
+          justify-content: center;
+          align-items: center;
+          gap: 2.88563rem;
+          flex-shrink: 0;
+          border-radius: 4.8125rem;
+          border:none;
+          outline: none;
+          background: $orange;
+          color: $dark;
+          text-align: center;
+          font-family: $montseratt;
+          font-size: 0.98213rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+      .configurator-list {
+        .list {
+          list-style-type: none;
+          .list-item {
+            padding-bottom: 0.32rem;
+            .number {
+              color: $orange;
+              font-family: $poppins;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 800;
+              line-height: normal;
+            }
+            .title {
+              color: $white;
+              font-family: $poppins;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #plug-in {
+    width: 100%;
+    .content {
+      // width: 100%;
+      .solar-panels,.install-power-meter,.store-power {
+        display: inline-flex;
+        gap: 0.8125rem;
+      }
+      .solar-panels,.install-power-meter,.store-power{
+        padding-bottom: 5.37rem;
+        .content {
+          display: flex;
+          max-width: 28.1875rem;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.1875rem;
+
+          .title {
+            color: $white;
+            /* headlines */
+            font-family: $poppins;
+            font-size: 1.5625rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 131%; /* 2.04688rem */
+            padding-bottom: 0.19rem;
+          }
+          .text {
+            color: $white;
+            /* body */
+            font-family: $poppins;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            padding-bottom:1rem;
+            opacity: 0.8;
+          }
+        }
+        .img-wrapper {
+          width: 41.25rem;
+          height: 14.1875rem;
+          @include img-contain(center);
+        }
+      }
+      .solar-panels,.install-power-meter,.store-power {
+        gap: 2rem;
+      }
+
+    }
+  }
+
+  #produce {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    // flex-direction: column;
+    gap: 1.125rem;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.1875rem;
+      width: 27rem;
+      .title {
+        color: $white;
+        /* headlines */
+        max-width: 19.75rem;
+        font-family: $poppins;
+        font-size: 1.5625rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 131%; /* 2.04688rem */
+        padding-bottom: 0.19rem;
+      }
+
+      .text {
+        color: $white;
+        /* body */
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        opacity: 0.8;
+      }
+    }
+
+    .img-wrapper {
+      width: 42.0625rem;
+      height: 14.1875rem;
+      flex-shrink: 0;
+      @include img-contain(center);
+    }
+  }
+
+  #save {
+    
+    .content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.375rem;
+      padding-left: 4.5rem;
+      .title {
+        color: $white;
+        padding-bottom: 0.19rem;
+        /* headlines */
+        font-family: $poppins;
+        width: 25.6875rem;
+        height: 4.4375rem;
+        font-size: 1.5625rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 131%; /* 2.04688rem */
+      }
+      .text {
+        color: $white;
+        /* body */
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        width: 27rem;
+        font-weight: 300;
+        line-height: normal;
+      }
+
+      
+    .img-wrapper {
+      display: flex;
+      gap: 1.85rem;
+      .new-schedule,.battery-mode,.your-schedule {
+        @include img-contain(center);
+      }
+      .new-schedule {
+        width: 10.73375rem;
+        height: 22.02556rem;
+        flex-shrink: 0;
+      }
+      .battery-mode {
+        width: 11.98994rem;
+        height: 10.19144rem;
+        flex-shrink: 0;
+      }
+      .your-schedule {
+        width: 10.73375rem;
+        height: 8.46888rem;
+        flex-shrink: 0;
+      }
+    }
+    }
+
+  }
+}
 }

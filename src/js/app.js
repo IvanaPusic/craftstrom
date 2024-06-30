@@ -1,57 +1,109 @@
 import { addColor, removeColor } from './features.js';
-const titles = document.querySelectorAll('.title');
-const texts = document.querySelectorAll('.text');
-const images = document.querySelectorAll('.line-image');
 
-const swiper = new Swiper(".mySwiper", {
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  observer: true,
-  observeParents: true,
-  spaceBetween: 20,
-});
+let titles ;
+let texts ;
+let images;
+let mobileTitles;
+let mobileTexts;
+let mobileImages;
 
-console.log(swiper);
-
-if (swiper.activeIndex === 0) {
-  addColor(titles[0], texts[0]);
+async function loadTemplate(part, elementId) {
+  try {
+    const response = await fetch(`./src/template-parts/${part}.html`);
+    const content = await response.text();
+    console.log('test: ' , elementId)
+    // console.log('res: ', content);
+    //console.log( document.getElementsByClassName(elementId))
+    document.getElementById(elementId).innerHTML = content;
+  } catch (error) {
+    console.error(`Error loading ${part}:`, error);
+  }
 }
 
-swiper.on('slideChange', function (e) {
-  if (swiper.activeIndex === 1) {
-    images[0].src = '../images/gray-line.svg';
-    images[2].src = '../images/gray-line.svg';
-    images[3].src = '../images/gray-line.svg';
-    images[1].src = '../images/orange-line.svg';
-    removeColor(titles[0], titles[2], titles[3], texts[0], texts[2], texts[3]);
-    addColor(titles[1], texts[1]);
+window.addEventListener('load', async () => {
+  // Load templates
+  if(location.pathname =='/index.html') {
+    await loadTemplate('hero', 'hero');
+    await loadTemplate('video', 'video');
+    await loadTemplate('products', 'products');
+    await loadTemplate('features', 'features');
+    await loadTemplate('types-of-solar-system', 'types-of-solar-system');
+    await loadTemplate('popular-kits', 'popular-kits');
+    await loadTemplate('benefits', 'benefits');
+    await loadTemplate('configure-solar-and-battery', 'configure-solar-and-battery');
+    await loadTemplate('learn-more', 'learn-more');
+    await loadTemplate('blog', 'blog');
+    titles = document.querySelectorAll('.title');
+    texts = document.querySelectorAll('.text');
+    images = document.querySelectorAll('.line-image');
+    mobileTitles = document.querySelectorAll('.mobile-title');
+    mobileTexts = document.querySelectorAll('.mobile-text');
+    mobileImages = document.querySelectorAll('.mobile-line-image');
+
+      // Initialize Swiper instances
+    const swiper = new Swiper('.mySwiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      observer: true,
+      observeParents: true,
+      spaceBetween: 20,
+    });
+
+    const mobileSwiper = new Swiper('.mobileSwiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      observer: true,
+      observeParents: true,
+      spaceBetween: 20,
+    });
+
+    console.log(swiper);
+
+    if (swiper.activeIndex === 0 || mobileSwiper.activeIndex === 0) {
+      addColor(titles[0], texts[0]);
+      addColor(mobileTitles[0], mobileTexts[0]);
+    }
+
+    swiper.on('slideChange', function () {
+      handleSlideChange(swiper, titles, texts, images);
+    });
+
+    mobileSwiper.on('slideChange', function () {
+      handleSlideChange(mobileSwiper, mobileTitles, mobileTexts, mobileImages);
+    });
   }
-  if (swiper.activeIndex === 2) {
-    images[0].src = '../images/gray-line.svg';
-    images[1].src = '../images/gray-line.svg';
-    images[3].src = '../images/gray-line.svg';
-    images[2].src = '../images/orange-line.svg';
-    removeColor(titles[0], titles[1], titles[3], texts[0], texts[1], texts[3]);
-    addColor(titles[2], texts[2]);
+  console.log(location.pathname );
+  if(location.href=='/how-it-works.html') {
+    loadTemplate('how-it-works-hero', 'how-it-works-hero');
+    loadTemplate('video', 'video');
+    loadTemplate('info', 'info');
+    loadTemplate('types-of-solar-system', 'types-of-solar-system');
+    loadTemplate('how-to-videos', 'how-to-videos');
   }
-  if (swiper.activeIndex === 3) {
-    images[0].src = '../images/gray-line.svg';
-    images[1].src = '../images/gray-line.svg';
-    images[2].src = '../images/gray-line.svg';
-    images[3].src = '../images/orange-line.svg';
-    removeColor(titles[2], titles[1], titles[0], texts[2], texts[1], texts[0]);
-    addColor(titles[3], texts[3]);
+
+  if(location.pathname == '/products.html') {
+    loadTemplate('products-hero', 'products-hero');
+    loadTemplate('products-content', 'products-content');
+    loadTemplate('products-links', 'products-links');
   }
-  if (swiper.activeIndex === 0) {
-    images[1].src = '../images/gray-line.svg';
-    images[2].src = '../images/gray-line.svg';
-    images[3].src = '../images/gray-line.svg';
-    images[0].src = '../images/orange-line.svg';
-    addColor(titles[0], texts[0]);
-    removeColor(titles[1], titles[2], titles[3], texts[1], texts[2], texts[3]);
-  }
+  
 });
 
+function handleSlideChange(swiperInstance, titlesArray, textsArray, imagesArray) {
+  const activeIndex = swiperInstance.activeIndex;
 
+  imagesArray.forEach((img, index) => {
+    img.src = './src/images/gray-line.svg';
+  });
+
+  imagesArray[activeIndex].src = './src/images/orange-line.svg';
+
+  removeColor(...titlesArray);
+  removeColor(...textsArray);
+
+  addColor(titlesArray[activeIndex], textsArray[activeIndex]);
+}

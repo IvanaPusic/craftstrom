@@ -39,6 +39,29 @@
     .btn {
       @include btn;
       margin: 0 auto;
+      @include flex-center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 920px) {
+  .solar-and-battery {
+    .content {
+      .title {
+        font-size: 1.625rem;
+        max-width: 22.5rem;
+      }
+      .text {
+        max-width: 17.625rem;
+        font-size: 1.1875rem;
+      }
+      .btn {
+        margin-top: 3.5rem;
+      }
+      .title,.text,.btn {
+        padding-bottom: 1.5rem;
+      }
     }
   }
 }

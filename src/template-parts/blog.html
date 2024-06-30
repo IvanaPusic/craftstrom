@@ -4,15 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../dist/css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <title>Blog</title>
 </head>
 <body style="overflow: hidden;">
   <section class="blog" style="overflow: hidden;">
     <h4 class="title">Blog</h4>
+        <div class="swiper blogSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-wrapper" style="background-image: url('./src/images/blog-img-1.png');">
+                <img src="./src/images/play-btn.png" alt="play-btn">
+              </div>
+              <div class="article-content">
+                <p class="date">Fri November 2022, admin</p>
+                <h5 class="article-title">Which permits do I require to install solar?</h5>
+                <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrapper" style="background-image: url('./src/images/blog-img-2.png');">
+                <img src="./src/images/play-btn.png" alt="play-btn">
+              </div>
+              <div class="article-content">
+                <p class="date">Fri November 2022, admin</p>
+                <h5 class="article-title">Which permits do I require to install solar?</h5>
+                <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrapper" style="background-image: url('./src/images/blog-img-3.png');">
+                <img src="./src/images/play-btn.png" alt="play-btn">
+              </div>
+              <div class="article-content">
+                <p class="date">Fri November 2022, admin</p>
+                <h5 class="article-title">Which permits do I require to install solar?</h5>
+                <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrapper" style="background-image: url('./src/images/blog-img-4.png');">
+                <img src="./src/images/play-btn.png" alt="play-btn">
+              </div>
+            <div class="article-content">
+              <p class="date">Fri November 2022, admin</p>
+              <h5 class="article-title">Which permits do I require to install solar?</h5>
+              <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+            </div>
+            </div>
+          </div>
+        </div>
     <div class="content">
       <article class="article first-article">
-        <div class="img-wrapper" style="background-image: url('../images/blog-img-1.png');">
-          <img src="../images/play-btn.png" alt="play-btn">
+        <div class="img-wrapper" style="background-image: url('./src/images/blog-img-1.png');">
+          <img src="./src/images/play-btn.png" alt="play-btn">
         </div>
         <div class="article-content">
           <p class="date">Fri November 2022, admin</p>
@@ -22,7 +67,7 @@
       </article>
       <div class="article-wrapper">
         <article class="article second-article">
-          <div class="img-wrapper" style="background-image: url('../images/blog-img-2.png');"></div>
+          <div class="img-wrapper" style="background-image: url('./src/images/blog-img-2.png');"></div>
           <div class="article-content">
             <p class="date">Fri November 2022, admin</p>
             <h5 class="article-title">Which permits do I require to install solar?</h5>
@@ -30,7 +75,7 @@
           </div>
         </article>
         <article class="article third-article">
-          <div class="img-wrapper" style="background-image: url('../images/blog-img-3.png');"></div>
+          <div class="img-wrapper" style="background-image: url('./src/images/blog-img-3.png');"></div>
           <div class="article-content">
             <p class="date">Fri November 2022, admin</p>
             <h5 class="article-title">Which permits do I require to install solar?</h5>
@@ -39,8 +84,8 @@
         </article>
       </div>
       <article class="article fourth-article">
-        <div class="img-wrapper" style="background-image: url('../images/blog-img-4.png');">
-          <img src="../images/play-btn.png" alt="play-btn">
+        <div class="img-wrapper" style="background-image: url('./src/images/blog-img-4.png');">
+          <img src="./src/images/play-btn.png" alt="play-btn">
         </div>
         <div class="article-content">
           <p class="date">Fri November 2022, admin</p>
@@ -50,5 +95,18 @@
       </article>
     </div>
   </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" id="script-swiper"></script>
+
+  <script>
+    const blogSwiper = new Swiper('.blogSwiper', {
+      slidesPerView:1,
+      breakpoints: {
+        768: {
+          slidesPerView:2,
+        }
+      }
+    });
+
+  </script>
 </body>
 </html>

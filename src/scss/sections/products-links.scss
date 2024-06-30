@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
+
 .products-links {
-  height: 161vh;
   overflow: hidden;
   scroll-behavior: smooth;
   .wrapper {
@@ -45,13 +45,30 @@
   }
   .main-content {
     display: none;
-    #solar-panels {
-      height: 17vh;
-    }
-    #battery {
-      height: 30vh;
-    }
+    // #solar-panels, #inverter, #battery {
+    //   height: 30vh;
+    // }
+    // // #battery {
+    // //   height: 30vh;
+    // // }
+    // #power-meter {
+    //   padding-top: 6.25rem;
+    //   height: 20vh;
+    // }
+    // #safety-gate-adapter {
+    //   padding-top: 6.25rem;
+    //   height: 5vh;
+    // }
+    // // #inverter {
+    // //   padding-top: 6.25rem;
+    // //   height: 18vh;
+    // // }
+    // #smart-pv-plug,#our-app {
+    //   padding-top: 6.25rem;
+    //   height: 5vh;
+    // }
     article {
+      padding-top: 6.25rem;
       padding-inline: 3.12rem;
       display: flex;
       gap: 1.37rem;
@@ -62,15 +79,6 @@
         gap: 0.38rem;
         .link-item {
 
-          .active {
-            color: $white;
-            text-align: center;
-            font-family: $poppins;
-            font-size: 1.875rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
           .link {
             color: rgba(255, 255, 255, 0.40);
             text-align: center;
@@ -80,6 +88,15 @@
             font-weight: 500;
             line-height: normal;
             text-decoration: none;
+          }
+          .active {
+            color: $white;
+            text-align: center;
+            font-family: $poppins;
+            font-size: 1.875rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
           }
         }
 
@@ -136,7 +153,7 @@
             background-color: $white;
             display: flex;
             gap: 1.37rem;
-            
+            // margin-top:2.19rem;
             min-height: 26.25rem;
             padding-top: 2.19rem;
             padding-left: 4.44rem;
@@ -219,6 +236,7 @@
 
           .design,.features,.warranty-and-manual {
             padding-top: 1.75rem;
+            padding-inline: 0;
             border-bottom: 1px solid $white;
             .title {
               color: $white;
@@ -278,21 +296,22 @@
               }
             }
           }
+          .features {
+            max-height: 138.38px;
+          }
           .warranty-and-manual {
             border-top: 1px solid $white;
           }
         }
-
         .how-it-works {
           width: 72.6875rem;
-          height: 45.1875rem;
+          // height: 50rem;
           display: flex;
           justify-content: space-between;
           background-color: $white;
           position:relative;
           flex-direction: row-reverse;
           .content {
-            padding-top: 6.25rem;
             max-width: 28.625rem;
             max-width: 35rem;
             padding-top: 4.56rem;
@@ -372,6 +391,7 @@
               padding-top: 1.25rem;
               display: flex;
               gap:1.75rem;
+              padding-bottom: 3rem;
               .how-it-works-btn {
                 @include btn;
               }
@@ -387,11 +407,13 @@
             height: 100%;
             position:absolute;
             top:0;
-            right:0;
+            right:10px;
             .swiper-wrapper {
               width: 34rem;
-                height: 45.1875rem;
+              min-height: 50rem;
               .swiper-slide {
+                margin-right:20px;
+                @include img-cover(center);
                 width:100%;
                 height: 100%;
                 flex-shrink: 0;
@@ -403,11 +425,11 @@
     }
 
     #battery {
-      padding-top: 6.25rem;
-
+      // padding-top: 6.25rem;
+      margin-top:6.25rem;
       .battery-content {
         width: 69.5625rem;
-          min-height: 26.9375rem;
+        min-height: 26.9375rem;
         .img-wrapper {
           width: 69.5625rem;
           height: 26.9375rem;
@@ -592,7 +614,8 @@
 
           .design,.features,.warranty-and-manual {
             padding-top: 1.75rem;
-            border-bottom: 1px solid $white;
+            padding-inline: 0;
+            border-top: 1px solid $white;
             .title {
               color: $white;
               /* headlines */
@@ -612,6 +635,7 @@
               .materials,
               .wattage,
               .operating-temperature,
+              .off-grid-inverter-output,
               .certification,
               .warranty,
               .manual {
@@ -625,12 +649,26 @@
                   line-height: normal;
                 }
                 .text {
-                  color: $white;
-                  font-family: $poppins;
-                  font-size: 0.875rem;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: normal;
+                      color: $white;
+                    font-family: $poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                .dimensions-text-content{
+                  padding-bottom: 1rem;
+                  .text {
+                    .bold {
+                      font-weight: 600;
+                    }
+                    color: $white;
+                    font-family: $poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
                 }
                 .link {
                   color: $white;
@@ -651,11 +689,333 @@
               }
             }
           }
+          .features {
+            max-height: 138.38px;
+          }
+          // .warranty-and-manual {
+          //   border-top: 1px solid $white;
+          //   border-bottom: none;
+          // }
+        }
+        .how-it-works {
+          width: 72.6875rem;
+          display: flex;
+          justify-content: space-between;
+          background-color: $white;
+          position:relative;
+          flex-direction: row-reverse;
+          .content {
+            max-width: 28.625rem;
+            max-width: 35rem;
+            padding-top: 4.56rem;
+            padding-left: 5.44rem;
+            padding-right: 4.81rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .title {
+              color: $dark;
+              font-family: $poppins;
+              font-size: 1.875rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
+            .guide {
+              padding-top:1.25rem;
+              display: flex;
+              flex-direction: column;
+              gap: 0.63rem;
+              .text {
+                span {
+                  color: $orange;
+                  font-family: $poppins;
+                  font-size: 1.0625rem;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: normal;
+                }
+
+                color: $dark;
+                font-family: $poppins;
+                font-size: 1.0625rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+              }
+            }
+
+            .information {
+              padding-top:1.25rem;
+              display: flex;
+              flex-direction: column;
+              gap: 0.63rem;
+
+              .text {
+                 .link {
+                  color: #131111;
+                  font-style: italic;
+                  font-weight: 600;
+                }
+                color: $dark;
+                font-family: $poppins;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+               
+              }
+              .text-bold {
+                color: $dark;
+                font-family: $poppins;
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 131%; /* 1.47375rem */
+
+                .bold {
+                  font-style: italic;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .btn-container {
+              padding-top: 1.25rem;
+              display: flex;
+              gap:1.75rem;
+              padding-bottom: 3rem;
+              .how-it-works-btn {
+                @include btn;
+              }
+              .consultation-btn {
+                @include btn;
+                background: transparent;
+                border:2px solid $orange;
+              }
+            }
+          }
+          .swiper {
+            width:50%;
+            height: 100%;
+            position:absolute;
+            top:0;
+            right:-20px;
+            .swiper-wrapper {
+              width: 34rem;
+              min-height: 50rem;
+              .swiper-slide {
+                margin-right:20px;
+                
+                width:100%;
+                height: 100%;
+                flex-shrink: 0;
+              }
+            }
+          }
+        }
+    }
+
+    #power-meter {
+      margin-top: 6.25rem;
+      .power-meter-content {
+        width: 69.5625rem;
+        padding-top:6.25rem;
+
+        // min-height: 26.9375rem;
+       .showcase {
+          // margin-top: 6.25rem;
+          .img-wrapper {
+             position:relative;
+              @include flex-center;
+              width: 69.5625rem;
+              height: 18.6875rem;
+              flex-shrink: 0;
+            }
+          .shop-now-btn {
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            width: 13.5625rem;
+            height: 3.4375rem;
+            padding: 0.90175rem 3.02281rem;
+            justify-content: center;
+            align-items: center;
+            gap: 2.88563rem;
+            flex-shrink: 0;
+            border-radius: 4.8125rem;
+            background-color: transparent;
+            border: 2px solid $white;
+            color: #FFF;
+            text-align: center;
+            font-family: $montseratt;
+            font-size: 0.98213rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+          }
+          .shop-now-btn:hover {
+            background-color: $white;
+            color: $dark;
+          }
+          .content {
+            background-color: $white;
+            display: flex;
+            gap: 1.37rem;
+            
+            min-height: 26.25rem;
+            padding-top: 2.19rem;
+            padding-left: 4.44rem;
+            padding-right: 4.5rem;
+
+            .simple-design,.measures-following,.easy-install {
+              display: flex;
+              flex-direction: column;
+              gap: 0.62;
+              border-top: 1px solid $dark;
+              .title {
+                color: $dark;
+                font-family: $poppins;
+                padding-top: 0.63rem;
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 131%; /* 1.47375rem */
+              }
+              .simple-design-text-wrapper,
+              .measures-following-text-wrapper,
+              .easy-install-text-wrapper {
+                display: flex;
+                padding-top: 0.62rem;
+                flex-direction: column;
+                gap: 0.65rem;
+
+                .text {
+                  .bold {
+                    font-weight: 700;
+                  }
+                  color: $dark;
+                  /* body */
+                  font-family: $poppins;
+                  font-size: 1rem;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: normal;
+                }
+              }
+            }
+            .simple-design {
+              max-width: 14.375rem;
+            }
+            .measures-following {
+              min-width: 13.3125rem;
+            }
+
+            .easy-install {
+              max-width: 13.5rem;
+            }
+          }
+        }
+        // product info
+        .product-info {
+          padding-top: 6.25rem;
+          .about{
+            border-bottom: 1px solid $white;
+            
+            .title {
+              color: $white;
+              /* headlines */
+              font-family: $poppins;
+              font-size: 1.5625rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 131%; /* 2.04688rem */
+            }
+            .text {
+              color: $white;
+              font-family: $poppins;
+              font-size: 1rem;
+              font-style: normal;
+              font-weight: 300;
+              line-height: normal;
+              padding-bottom: 1.75rem;
+              padding-top: 0.63rem;
+            }
+          }
+
+          .design,.features,.warranty-and-manual {
+            padding-top: 1.75rem;
+            border-bottom: 1px solid $white;
+            .title {
+              color: $white;
+              /* headlines */
+              font-family: $poppins;
+              font-size: 1.5625rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 131%; /* 2.04688rem */
+            }
+            .design-content,.features-content,.warranty-manual-content {
+              display: flex;
+              gap: 2.19rem;
+              padding-bottom: 1.75rem;
+              padding-top: 0.63rem;
+              .dimensions,
+              .weight,
+              .wattage,
+              .communication,
+              .operating-temperature,
+              .certification,
+              .warranty,
+              .manual {
+                .title {
+                  color: $orange;
+                  font-family: $poppins;
+                  font-size: 0.875rem;
+                  font-style: normal;
+                  font-weight: 300;
+                  padding-bottom: 0.19rem;
+                  line-height: normal;
+                }
+                .text {
+                      color: $white;
+                    font-family: $poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                .link {
+                  color: $white;
+                  font-family: $poppins;
+                  font-size: 0.875rem;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  text-decoration-line: underline;
+                }
+              }
+            }
+            .design-content {
+              .materials {
+                .text {
+                  max-width: 18rem;;
+                }
+              }
+            }
+          }
+          .features {
+            max-height: 138.38px;
+          }
           .warranty-and-manual {
             border-top: 1px solid $white;
           }
         }
-         .how-it-works {
+
+        // how it works
+        .how-it-works {
           width: 72.6875rem;
           height: 45.1875rem;
           display: flex;
@@ -771,6 +1131,522 @@
             }
           }
         }
+      }
+    }
+
+    #safety-gate-adapter {
+      .safety-gate-content {
+        width: 69.5625rem;
+
+        // showacase
+
+        .showcase {
+          // margin-top: 6.25rem;
+          .img-wrapper {
+              @include flex-center;
+              width: 69.5625rem;
+              height: 18.6875rem;
+              flex-shrink: 0;
+            }
+          .content {
+            background-color: $white;
+            display: flex;
+            gap: 1.37rem;
+            min-height: 17.5625rem;
+            padding-top: 2.81rem;
+            padding-left: 4.44rem;
+            padding-right: 4.5rem;
+
+            .simple-design {
+              display: flex;
+              flex-direction: column;
+              gap: 0.62;
+              // border-top: 1px solid $dark;
+              // .border-img {
+              //   display: inline-block;
+              //   width: 50%;
+              //   height: 1px;
+              //   margin-right: 3rem;
+              // }
+              .title {
+                border-top: 1px solid $dark;
+                max-width: 17.125rem;
+                color: $dark;
+                font-family: $poppins;
+                padding-top: 0.63rem;
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 131%; /* 1.47375rem */
+              }
+              .simple-design-text-wrapper{
+                display: flex;
+                padding-top: 0.62rem;
+                flex-direction: column;
+                gap: 0.65rem;
+
+                .text {
+                  max-width: 59.625rem;
+                  .bold {
+                    font-weight: 700;
+                  }
+                  color: $dark;
+                  /* body */
+                  font-family: $poppins;
+                  font-size: 1rem;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: normal;
+                  padding-bottom:1.31rem;
+                }
+              }
+              .buy-now {
+                @include btn;
+              }
+            }
+          }
+        }
+      }
+    }
+    #inverter {
+      .inverter-content {
+        width: 69.5625rem;
+        .showcase {
+          .img-wrapper {
+             position:relative;
+              @include flex-center;
+              width: 69.5625rem;
+              height: 18.6875rem;
+              flex-shrink: 0;
+            }
+          .shop-now-btn {
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            width: 13.5625rem;
+            height: 3.4375rem;
+            padding: 0.90175rem 3.02281rem;
+            justify-content: center;
+            align-items: center;
+            gap: 2.88563rem;
+            flex-shrink: 0;
+            border-radius: 4.8125rem;
+            background-color: transparent;
+            border: 2px solid $white;
+            color: #FFF;
+            text-align: center;
+            font-family: $montseratt;
+            font-size: 0.98213rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+          }
+          .shop-now-btn:hover {
+            background-color: $white;
+            color: $dark;
+          }
+          .content {
+            background-color: $white;
+            display: flex;
+            gap: 1.37rem;
+            
+            min-height: 26.25rem;
+            padding-top: 2.19rem;
+            padding-left: 4.44rem;
+            padding-right: 4.5rem;
+
+            .monitoring,.grid-connection,.modular,.safety-features {
+              display: flex;
+              flex-direction: column;
+              gap: 0.62;
+              border-top: 1px solid $dark;
+              .title {
+                color: $dark;
+                font-family: $poppins;
+                padding-top: 0.63rem;
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 131%; /* 1.47375rem */
+              }
+              .monitoring-text-wrapper,
+              .grid-connection-text-wrapper,
+              .modular-text-wrapper,
+              .safety-features-text-wrapper {
+                display: flex;
+                padding-top: 0.62rem;
+                flex-direction: column;
+                gap: 0.65rem;
+
+                .text {
+                  .bold {
+                    font-weight: 700;
+                  }
+                  color: $dark;
+                  /* body */
+                  font-family: $poppins;
+                  font-size: 1rem;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: normal;
+                }
+              }
+            }
+            .monitoring {
+              max-width: 13.3125rem;
+            }
+            .grid-connection {
+              max-width: 14.375rem;
+            }
+
+            .modular {
+              max-width: 13.5rem;
+            }
+            .safety-features {
+              max-width: 13.5rem;
+            }
+          }
+        }
+
+        .product-info {
+          padding-top: 6.25rem;
+          .about{
+            border-bottom: 1px solid $white;
+            
+            .title {
+              color: $white;
+              /* headlines */
+              font-family: $poppins;
+              font-size: 1.5625rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 131%; /* 2.04688rem */
+            }
+            .text {
+              color: $white;
+              font-family: $poppins;
+              font-size: 1rem;
+              font-style: normal;
+              font-weight: 300;
+              line-height: normal;
+              padding-bottom: 1.75rem;
+              padding-top: 0.63rem;
+            }
+          }
+
+          .design,.features,.warranty-and-manual {
+            padding-top: 1.75rem;
+            border-top: 1px solid $white;
+            .title {
+              color: $white;
+              /* headlines */
+              font-family: $poppins;
+              font-size: 1.5625rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 131%; /* 2.04688rem */
+            }
+            .design-content,.features-content,.warranty-manual-content {
+              display: flex;
+              gap: 2.19rem;
+              padding-bottom: 1.75rem;
+              padding-top: 0.63rem;
+              .dimensions,
+              .weight,
+              .ports,
+              .wattage,
+              .operating-temperature,
+              .certification,
+              .warranty,
+              .manual {
+                .title {
+                  color: $orange;
+                  font-family: $poppins;
+                  font-size: 0.875rem;
+                  font-style: normal;
+                  font-weight: 300;
+                  padding-bottom: 0.19rem;
+                  line-height: normal;
+                }
+                .text {
+                  color: $white;
+                  font-family: $poppins;
+                  font-size: 0.875rem;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+                .text-ports {
+                  padding-bottom: 0.65rem;
+                }
+                .link {
+                  color: $white;
+                  font-family: $poppins;
+                  font-size: 0.875rem;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  text-decoration-line: underline;
+                }
+              }
+            }
+            .design-content {
+              .materials {
+                .text {
+                  max-width: 18rem;;
+                }
+              }
+            }
+          }
+          .features {
+            max-height: 138.38px;
+          }
+          .warranty-and-manual {
+            border-top: 1px solid $white;
+          }
+        }
+        .how-it-works {
+          width: 72.6875rem;
+          min-height: 50rem;
+          display: flex;
+          justify-content: space-between;
+          background-color: $white;
+          position:relative;
+          flex-direction: row-reverse;
+          .content {
+            padding-top: 6.25rem;
+            max-width: 28.625rem;
+            max-width: 35rem;
+            padding-top: 2.56rem;
+            padding-left: 5.44rem;
+            padding-right: 4.81rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .title {
+              color: $dark;
+              font-family: $poppins;
+              font-size: 1.875rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
+            .guide {
+              padding-top:1.25rem;
+              display: flex;
+              flex-direction: column;
+              gap: 0.63rem;
+              .text {
+                span {
+                  color: $orange;
+                  font-family: $poppins;
+                  font-size: 1.0625rem;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: normal;
+                }
+
+                color: $dark;
+                font-family: $poppins;
+                font-size: 1.0625rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+              }
+            }
+
+            .information {
+              padding-top:1.25rem;
+              display: flex;
+              flex-direction: column;
+              gap: 0.63rem;
+
+              .text {
+                 .link {
+                  color: #131111;
+                  font-style: italic;
+                  font-weight: 600;
+                }
+                color: $dark;
+                font-family: $poppins;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+               
+              }
+              .text-bold {
+                color: $dark;
+                font-family: $poppins;
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 131%; /* 1.47375rem */
+
+                .bold {
+                  font-style: italic;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .btn-container {
+              padding-top: 1.25rem;
+              display: flex;
+              gap:1.75rem;
+              padding-bottom: 5.31rem;
+              .how-it-works-btn {
+                @include btn;
+              }
+              .consultation-btn {
+                @include btn;
+                background: transparent;
+                border:2px solid $orange;
+              }
+            }
+          }
+          .img-container {
+            width:50%;
+            height: 100%;
+            position:absolute;
+            top:0;
+            right:0;
+            @include img-cover(center);
+          }
+        }
+      }
+    }
+
+    #smart-pv-plug, #our-app {
+        margin-top:6.25rem;
+
+      .smart-pv-plug-content {
+        padding-top: 6.25rem;
+      }
+      .smart-pv-plug-content,.app-content {
+        max-width: 69.5625rem;
+
+        .showcase {
+          .img-wrapper {
+              @include flex-center;
+              width: 69.5625rem;
+              height: 18.6875rem;
+              flex-shrink: 0;
+              background: #C4C4C4;;
+            }
+          .content {
+            background-color: $white;
+            display: flex;
+            gap: 1.37rem;
+            min-height: 17.5625rem;
+            padding-top: 2.81rem;
+            padding-left: 4.44rem;
+            padding-right: 4.5rem;
+            padding-bottom: 2.75rem;
+            .simple-design,.our-app {
+              display: flex;
+              flex-direction: column;
+              gap: 0.62;
+              .title {
+                border-top: 1px solid $dark;
+                max-width: 17.125rem;
+                color: $dark;
+                font-family: $poppins;
+                padding-top: 0.63rem;
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 131%; /* 1.47375rem */
+              }
+              .app-title {
+                max-width: 37.4375rem;
+              }
+              .simple-design-text-wrapper,.our-app-text-wrapper{
+                display: flex;
+                padding-top: 0.62rem;
+                flex-direction: column;
+                gap: 0.65rem;
+
+                .text {
+                  max-width: 59.625rem;
+                  .bold {
+                    font-weight: 700;
+                  }
+                  .italic {
+                    font-style: italic;
+                  }
+                  color: $dark;
+                  /* body */
+                  font-family: $poppins;
+                  font-size: 1rem;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: normal;
+                  padding-bottom:1.31rem;
+                }
+              }
+
+              .buy-now {
+                @include btn;
+              }
+
+            }
+          }
+          .app-content {
+            padding-bottom: 2.75rem;
+          }
+        }
+      }
     }
   }
+  #our-app {
+    padding-bottom: 6.37rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products-links {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  .wrapper {
+  .solar-panels-wrapper,
+  .battery-wrapper,
+  .power-meter-wrapper,
+  .safety-gate-adapter-wrapper,
+  .inverter-wrapper,
+  .smart-pv-plug-wrapper,
+  .our-app-wrapper {
+    @include img-cover(center);
+    height: 14.375rem;
+
+    .content {
+      padding-top: 4.44rem;
+      padding-left: 3.5rem;
+
+      .title {
+        color: $white;
+        font-family: $poppins;
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .content-link {
+        display: inline-block;
+        color: #FFF;
+        font-family: $montseratt;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+        margin-top: 0.94rem;
+      }
+    }
+   }
+  }
+ }
 }

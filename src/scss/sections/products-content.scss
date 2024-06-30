@@ -20,3 +20,17 @@
     }
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .products-content {
+    
+    .content-wrapper {
+      padding:0;
+      p {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+      }
+    }
+  }
+}

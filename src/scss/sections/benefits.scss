@@ -12,8 +12,62 @@ iframe {
   height: 100vh;
   width: 100%;
   background-color: $white;
-
+  .content {
+    display: none;
+  }
   .title {
+    color: #000;
+    text-align: center;
+    font-family: $poppins;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 5.44rem;
+  }
+  .benefitsSwiper {
+    display: block;
+    height: 100%;
+    .swiper-wrapper {
+      height: 100%;
+      padding-inline: 1rem;
+      padding-top: 2.06rem;
+      width: 100%;
+      display: flex;
+      gap: 0.4375rem;
+      .swiper-slide{
+        max-width: 19.0625rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.62rem;
+        .card-title {
+          color: #000;
+          font-family: $poppins;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .card-text {
+          color: #000;
+          font-family: $poppins;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 920px) {
+  .benefits {
+    .benefitsSwiper {
+      display: none;
+    }
+     .title {
     color: #000;
     text-align: center;
     font-family: $poppins;
@@ -53,5 +107,6 @@ iframe {
         line-height: normal;
       }
     }
+  }
   }
 }

@@ -4,41 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../dist/css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <title>Document</title>
 </head>
 <body style="overflow: hidden;">
   <section class="benefits">
     <h4 class="title">Our Benefits</h4>
+    <div class="swiper benefitsSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="img-wrapper">
+          <img src="./src/images/time.svg" alt="time">
+        </div>
+        <h5 class="card-title">No wait times</h5>
+        <p class="card-text">We address the challenges posed by a shortage of qualified installers and lengthy interconnection approval processes, empowering our customers to take charge of their solar projects independently.</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper">
+          <img src="./src/images/affordable.svg" alt="time">
+        </div>
+        <h5 class="card-title">Affordability</h5>
+        <p class="card-text">Oversized solar systems that feed back to the utility have up to 30 year payback periods. Our Solar kits payoff time can be as short as 2 years.</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper">
+          <img src="./src/images/integration.svg" alt="time">
+        </div>
+        <h5 class="card-title">Flawless integration</h5>
+        <p class="card-text">We turned Home Solar and Storage into an appliance! The Installation of our modular and 'non permanent' solar & battery systems is now an option for all types of buildings, apartments & even rentals.</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper">
+          <img src="./src/images/plugsvg.svg" alt="time">
+        </div>
+        <h5 class="card-title">Ease of installation</h5>
+        <p class="card-text">Our patented Plug & Play technology provides a simple and affordable way to integrate energy storage into your home without the high costs typically associated with such installations.</p>
+        </div>
+      </div>
+    </div>
     <div class="content">
       <div class="card">
         <div class="img-wrapper">
-          <img src="../images/time.svg" alt="time">
+          <img src="./src/images/time.svg" alt="time">
         </div>
         <h5 class="card-title">No wait times</h5>
         <p class="card-text">We address the challenges posed by a shortage of qualified installers and lengthy interconnection approval processes, empowering our customers to take charge of their solar projects independently.</p>
       </div>
       <div class="card">
         <div class="img-wrapper">
-          <img src="../images/affordable.svg" alt="time">
+          <img src="./src/images/affordable.svg" alt="time">
         </div>
         <h5 class="card-title">Affordability</h5>
         <p class="card-text">Oversized solar systems that feed back to the utility have up to 30 year payback periods. Our Solar kits payoff time can be as short as 2 years.</p>
       </div>
       <div class="card">
         <div class="img-wrapper">
-          <img src="../images/integration.svg" alt="time">
+          <img src="./src/images/integration.svg" alt="time">
         </div>
         <h5 class="card-title">Flawless integration</h5>
         <p class="card-text">We turned Home Solar and Storage into an appliance! The Installation of our modular and 'non permanent' solar & battery systems is now an option for all types of buildings, apartments & even rentals.</p>
       </div>
       <div class="card">
         <div class="img-wrapper">
-          <img src="../images/plugsvg.svg" alt="time">
+          <img src="./src/images/plugsvg.svg" alt="time">
         </div>
         <h5 class="card-title">Ease of installation</h5>
         <p class="card-text">Our patented Plug & Play technology provides a simple and affordable way to integrate energy storage into your home without the high costs typically associated with such installations.</p>
       </div>
     </div>
+
   </section>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="../js/benefits.js"></script>
 </body>
 </html>

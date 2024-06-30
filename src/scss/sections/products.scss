@@ -1,24 +1,18 @@
 @use "../abstracts" as *;
 
-iframe {
-  border:none; 
-  display: block; 
-  padding:0; 
-  margin:0; 
-  height: 300vh; 
-  overflow: hidden;
-}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  }
+  
+
+
 
 .products {
-  height: 200vh;
   // overflow: hidden;
-
+  padding-bottom: 12rem;
   .products-title {
     color: $white;
     text-align: center;
@@ -94,7 +88,7 @@ iframe {
       overflow: hidden;
       display: flex;
       gap: 7.12rem;
-
+      // flex-direction: column;
       .img-wrapper {
         width: 51.375rem;
         height: 27.5625rem;
@@ -143,3 +137,25 @@ iframe {
     }
   }
 }
+
+
+@media screen and (max-width: 920px) {
+  .products {
+    .products-wrapper {
+      .card {
+        flex-direction: column;
+        .content {
+          padding-inline: 1rem;
+
+        }
+      }
+    }
+  }
+}
+
+
+//   @media screen and (min-width: 1200px) {
+//   iframe {
+//     height: 250vh !important;
+//   }
+// }

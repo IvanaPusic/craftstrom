@@ -6,12 +6,12 @@ iframe {
   display: block; 
   padding:0; 
   margin:0; 
-  height: 120vh; 
+  height: 160vh !important; 
   overflow: hidden;
 }
 
 .learn-more {
-  height: 150vh;
+  height: 160vh;
   background-color: $white;
   position: relative;
 
@@ -47,7 +47,10 @@ iframe {
       border: 2px solid $orange;
     }
 
-    .swiper-slide {
+    .swiper-wrapper {
+      width:100%;
+      height: 100%;
+      .swiper-slide {
       display: flex;
       justify-content: center;
       gap: 1.56rem;
@@ -83,9 +86,70 @@ iframe {
         }
       }
     }
+    }
   }
 }
+ @media screen and (max-width: 768px) {
+  .learn-more {
+    .title {
+      color: #000;
+      text-align: center;
+      font-family: $poppins;
+      font-size: 1.5rem;
+      font-style: normal;
+      margin: 0 auto;
+      font-weight: 500;
+      max-width: 15.0625rem;
+      line-height: normal;
+    }
+    .desktop-swiper {
+      display: none;
+    }
+    .learnMore {
+      position: relative;
+      display: block;
+       width:100%;
+        height: 100%;
+        .swiper-pagination {
+          position: absolute;
+          bottom: 190px;
+        }
+      .swiper-wrapper {
+        display: flex;
+        gap:1;
+        width:100%;
+        height: 100%;
+        .swiper-slide {
+          .video-1,
+          .video-2,
+          .video-3 {
+            .content {
+              span {
+                font-size: 1.04938rem;
+              }
+            }
 
+            .video {
+              width: 26.875rem;
+              height: 35.5rem;
+              padding-top: 3.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+ }
+ @media screen and (min-width: 1201px) {
+  .learn-more {
+    .desktop-swiper {
+      display: block;
+    }
+    .learnMore {
+      display: none;
+    }
+  }
+ }
 
 @media screen and (max-height: 708px) {
   iframe {

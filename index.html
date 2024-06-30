@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>Homepage</title>
   <style>
     body {
@@ -18,16 +20,523 @@
   </style>
 </head>
 <body>
-  <iframe src="./src/template-parts/hero.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 100vh; overflow: hidden;"></iframe>
+  <!-- Hero -->
+  <section class="hero" style="background-image: url('./src/images/hero.png');">
+    <h1 class="hero-title">Solar and Battery Plug & Play Kits for your home</h1>
+    <button class="btn">Buy now</button>
+    <button class="btn-link">Configure now</button>
+    <h2 class="hero-content">Innovative solar systems for generating electricity. Our unique solutions include patented flexible battery storage and top-tier solar panels, offering easy installation and cost savings.
+      For the first time even renters can join us in this revolution! Reduce your carbon footprint and monthly bills effortlessly.</h2>
+    <div class="icons">
+      <div class="solar-panel">
+        <img src="./src/images/solar-panels.svg" alt="solar-panels">
+        <h3 class="icon-title">Solar Panels</h3>
+      </div>
+      <div class="battery">
+        <img src="./src/images/battery.svg" alt="battery">
+        <h3 class="icon-title">Battery</h3>
+      </div>
+      <div class="power-meter">
+        <img src="./src/images/power-meter.svg" alt="power-meter">
+        <h3 class="icon-title">Power Meter</h3>
+      </div>
+    </div>
+    <div class="mobile-content">
+       <p class="mobile-hero-content"><span class="bold">Innovative solar systems for generating electricity.</span> Our unique solutions include patented flexible battery storage and top-tier solar panels, offering easy installation and cost savings.
+       </p>
+       <p class="mobile-hero-content"><span class="bold">For the first time even renters can join us in this revolution!</span> Reduce your carbon footprint and monthly bills effortlessly.</p>
+    </div>
+  </section>
+  <!-- Video -->
+  <section class="video how-it-works-video" style="background-image: url('./src/images/video.png');"></section>
+  <!-- Products -->
+   <section class="products">
+  <h3 class="products-title">Our products</h3>
+  <main class="products-wrapper">
+    <div class="card solar-panels">
+      <div class="img-wrapper" style="background-image: url('./src/images/solar-panel-img.png');"></div>
+      <div class="content">
+        <div class="content-img">
+          <img src="./src/images/solar-panels.svg" alt="solar-panel">
+        </div>
+        <h4 class="title">Meet The Solar Panels</h4>
+        <p class="text">
+          <span>Ultra thin Panels with Smart Inverter.</span>
+          <span>Lightweight (3kg), Semi-flexible and Bi-facial.</span>
+          <span>Completely Modular, in steps of 400Watt (400W - 800W - 1200W -1600W - 2000W).</span>
+          <span>Solar production will reduce if excess generation exceeds household usage to prevent feeding electricity back to the utility grid.</span>
+        </p>
+        <button class="btn">Learn more</button>
+      </div>
+    </div>
+    <div class="card battery">
+      <div class="img-wrapper" style="background-image: url('./src/images/battery-img.png');"></div>
+      <div class="content">
+        <div class="content-img">
+          <img src="./src/images/battery.svg" alt="battery">
+        </div>
+        <h4 class="title">Meet the Battery</h4>
+        <p class="text">
+          <span>On-grid and off-grid capabilities.</span>
+          <span>Store your power for when you need it most.</span>
+          <span>Plug into any standard wall outlet in your home and it communicates with your solar system.</span>
+          <span>During a power outage or for portable use, easily detach the battery from the smart base and place it where needed.</span>
+        </p>
+        <button class="btn">Learn more</button>
+      </div>
+    </div>
+    <div class="card power-meter">
+      <div class="img-wrapper" style="background-image: url('./src/images/power-meter-img.png');"></div>
+      <div class="content">
+        <div class="content-img">
+          <img src="./src/images/power-meter.svg" alt="power-meter">
+        </div>
+        <h4 class="title">Meet the Power meter</h4>
+        <p class="text">
+          <span>Measures home usage, enabling solar panels to offset purchased electricity.</span>
+          <span>Ensures optimal energy balancing between solar and battery through communication.</span>
+          <span>Utilizes Wi-Fi and MHz communication for reliable connectivity.</span>
+          <span>Maintains communication during Wi-Fi interruptions or low signal.</span>
+        </p>
+        <button class="btn">Learn more</button>
+      </div>
+    </div>
+  </main>
+</section>
+<!-- Features -->
+   <section class="features">
+    <div class="swiper mobileSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="img-wrapper" style="background-image: url('./src/images/plugs-and-play.png')"></div>
+          <div class="mobile-card mobile-plug-and-play">
+            <div class="img-line-wrapper">
+              <img class="mobile-line-image" src="./src/images/orange-line.svg" alt="orange-line">
+            </div>
+            <h4 class="mobile-title">Plug&Play</h4>
+            <p class="mobile-text">Our solar sets and batteries are fully plug&play, meaning you don't need anything but an outlet.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper" style="background-image: url('./src/images/smart-technology.png')"></div>
+          <div class="mobile-card mobile-smart-technology">
+            <div class="img-line-wrapper">
+              <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="gray-line">
+            </div>
+            <h4 class="mobile-title">Smart Technology</h4>
+            <p class="mobile-text">We were the first to fully integrate our solar and battery system with a powermeter. This way, you can accurately control every aspect in milliseconds.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper" style="background-image: url('./src/images/setup-at-home.png')"></div>
+          <div class="mobile-card mobile-home-setup">
+            <div class="img-line-wrapper">
+              <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="gray-line">
+            </div>
+            <h4 class="mobile-title">Setup at Home</h4>
+            <p class="mobile-text">Our solar and battery system are not connected directly. Instead, they use your home power grid to exchange power when needed. You can place your battery wherever you like it best.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper" style="background-image: url('./src/images/power-supply.png')"></div>
+          <div class="mobile-card mobilepower-supply">
+            <div class="img-line-wrapper">
+              <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+            </div>
+            <h4 class="mobile-title">Uninterruptible Power Supply</h4>
+            <p class="mobile-text">Place our battery anywhere in your home for convenient access during power outages. Plug your fridge or medical devices into the off-grid inverter on top, and keep the battery connected to an outlet. This ensures your appliances automatically draw power from the battery when the power goes out.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide plug-and-play" style="background-image: url('./src/images/plugs-and-play.png');"></div>
+        <div class="swiper-slide" style="background-image: url('./src/images/smart-technology.png');"></div>
+        <div class="swiper-slide" style="background-image: url('./src/images/setup-at-home.png');"></div>
+        <div class="swiper-slide" style="background-image: url('./src/images/power-supply.png');"></div>
+      </div>
+      <div class="content">
+        <div class="card plug-and-play">
+          <div class="img-line-wrapper">
+            <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
+          </div>
+          <h4 class="desktop-title">Plug&Play</h4>
+          <p class="desktop-text">Our solar sets and batteries are fully plug&play, meaning you don't need anything but an outlet.</p>
+        </div>
+        <div class="card smart-technology">
+          <div class="img-line-wrapper">
+            <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+          </div>
+          <h4 class="desktop-title">Smart Technology</h4>
+          <p class="desktop-text">We were the first to fully integrate our solar and battery system with a powermeter. This way, you can accurately control every aspect in milliseconds.</p>
+        </div>
+        <div class="card home-setup">
+          <div class="img-line-wrapper">
+            <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+          </div>
+          <h4 class="desktop-title">Setup at Home</h4>
+          <p class="desktop-text">Our solar and battery system are not connected directly. Instead, they use your home power grid to exchange power when needed. You can place your battery wherever you like it best.</p>
+        </div>
+        <div class="card power-supply">
+          <div class="img-line-wrapper">
+            <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
+          </div>
+          <h4 class="desktop-title">Uninterruptible Power Supply</h4>
+          <p class="desktop-text">Place our battery anywhere in your home for convenient access during power outages. Plug your fridge or medical devices into the off-grid inverter on top, and keep the battery connected to an outlet. This ensures your appliances automatically draw power from the battery when the power goes out.</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+<!-- Types of solar system -->
+ <section class="types-of-solar-system">
+  <div class="main-content">
+    <h4>Types of our solar system</h4>
+    <hr>
+    <div class="card on-grid">
+      <h5 class="solar-system-title">
+        <span>ON GRID- DAY TIME</span>
+        <span class="arrow-1">
+          <img class="arrow-1-img" src="./src/images/arrow_drop_down.svg" alt="arrow-up">
+        </span>
+      </h5>
+      <p class="content content-1">
+        On grid solar system during the day is connected to the power grid. The energy produced by the solar panels can be used immediately in the household, and the excess energy is stored in batteries.
+      </p>
+      <div class="on-grid-img-container" style="background-image: url('./src/images/on-grid-day-img.png');"></div>
+    </div>
+
+    <div class="card on-grid-night">
+      <h5 class="solar-system-title">
+        <span>ON GRID- NIGHT TIME</span>
+        <span class="arrow-2">
+          <img class="arrow-2-img" src="./src/images/arrow_drop_down.svg" alt="arrow-down">
+        </span>
+      </h5>
+      <p class="content content-2">
+        On grid solar system during the night is not connected to the power grid. The energy produced by the solar panels, which was stored in batteries during the day powers your home through the batteries at night.
+      </p>
+      <div class="on-grid-night-img-container" style="background-image: url('./src/images/on-grid-night-img.png');"></div>
+
+    </div>
+
+    <div class="card off-grid">
+      <h5 class="solar-system-title">
+        <span>OFF GRID</span>
+        <span class="arrow-3">
+          <img class="arrow-3-img" src="./src/images/arrow_drop_down.svg" alt="arrow-down">
+        </span>
+      </h5>
+      <p class="content content-3">
+        An off-grid solar system is a stand-alone power system that operates independently from the public electricity grid. 
+      </p>
+      <div class="off-grid-img-container" style="background-image: url('./src/images/off-grid-img.png');"></div>
+    </div>  
+  </div>
+  <div class="image-container">
+    <img class="solar-type-img" src="./src/images/on-grid-day-img.png" alt="type-solar-img">
+  </div>
+</section>
+<section class="popular-kits-section" style="overflow: hidden;">
+    <h2 class="popular-kits-title">Our Popular Kits</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="popular-kit">
+                    <div class="image-wrapper">
+                        <div style="background-image: url('./src/images/popular-kits-new-img.png');"></div>
+                    </div>
+                    <div class="kit-details">
+                        <h3>800 Watt Smart Panel + 1kWh Battery Includes:</h3>
+                        <ul>
+                            <li>4 x 200W Solar Panels</li>
+                            <li>2 x SMART Inverters (with daisy-chain cables)</li>
+                            <li>1 x 1kWh Battery, 1 x SMART Base</li>
+                            <li>1 x 600W Offgrid Inverter</li>
+                            <li>1 x Power Meter</li>
+                            <li>2 x Safety Gate Adapters</li>
+                            <li>1 x DC Solar to Battery Charging Cable</li>
+                            <li>App</li>
+                        </ul>
+                        <a href="#" class="shop-button">Shop now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="popular-kit">
+                    <div class="image-wrapper">
+                        <div style="background-image: url('./src/images/popular-kits-new-img.png');"></div>
+                    </div>
+                    <div class="kit-details">
+                        <h3>800 Watt Smart Panel + 1kWh Battery Includes:</h3>
+                        <ul>
+                            <li>4 x 200W Solar Panels</li>
+                            <li>2 x SMART Inverters (with daisy-chain cables)</li>
+                            <li>1 x 1kWh Battery, 1 x SMART Base</li>
+                            <li>1 x 600W Offgrid Inverter</li>
+                            <li>1 x Power Meter</li>
+                            <li>2 x Safety Gate Adapters</li>
+                            <li>1 x DC Solar to Battery Charging Cable</li>
+                            <li>App</li>
+                        </ul>
+                        <a href="#" class="shop-button">Shop now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="popular-kit">
+                    <div class="image-wrapper">
+                        <div style="background-image: url('./src/images/popular-kits-new-img.png');"></div>
+                    </div>
+                    <div class="kit-details">
+                        <h3>800 Watt Smart Panel + 1kWh Battery Includes:</h3>
+                        <ul>
+                            <li>4 x 200W Solar Panels</li>
+                            <li>2 x SMART Inverters (with daisy-chain cables)</li>
+                            <li>1 x 1kWh Battery, 1 x SMART Base</li>
+                            <li>1 x 600W Offgrid Inverter</li>
+                            <li>1 x Power Meter</li>
+                            <li>2 x Safety Gate Adapters</li>
+                            <li>1 x DC Solar to Battery Charging Cable</li>
+                            <li>App</li>
+                        </ul>
+                        <a href="#" class="shop-button">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+  <!-- Learn more -->
+     <section class="learn-more" style="overflow: hidden;">
+    <h4 class="title">Learn more with our how-to videos</h4>
+    <div class="learnMore swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+           <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+        </div>
+      </div>
+            <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-container desktop-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- Blog -->
+     <section class="blog" style="overflow: hidden;">
+    <h4 class="title">Blog</h4>
+        <div class="swiper blogSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-wrapper" style="background-image: url('./src/images/blog-img-1.png');">
+                <img src="./src/images/play-btn.png" alt="play-btn">
+              </div>
+              <div class="article-content">
+                <p class="date">Fri November 2022, admin</p>
+                <h5 class="article-title">Which permits do I require to install solar?</h5>
+                <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrapper" style="background-image: url('./src/images/blog-img-2.png');">
+                <img src="./src/images/play-btn.png" alt="play-btn">
+              </div>
+              <div class="article-content">
+                <p class="date">Fri November 2022, admin</p>
+                <h5 class="article-title">Which permits do I require to install solar?</h5>
+                <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrapper" style="background-image: url('./src/images/blog-img-3.png');">
+                <img src="./src/images/play-btn.png" alt="play-btn">
+              </div>
+              <div class="article-content">
+                <p class="date">Fri November 2022, admin</p>
+                <h5 class="article-title">Which permits do I require to install solar?</h5>
+                <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrapper" style="background-image: url('./src/images/blog-img-4.png');">
+                <img src="./src/images/play-btn.png" alt="play-btn">
+              </div>
+            <div class="article-content">
+              <p class="date">Fri November 2022, admin</p>
+              <h5 class="article-title">Which permits do I require to install solar?</h5>
+              <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+            </div>
+            </div>
+          </div>
+        </div>
+    <div class="content">
+      <article class="article first-article">
+        <div class="img-wrapper" style="background-image: url('./src/images/blog-img-1.png');">
+          <img src="./src/images/play-btn.png" alt="play-btn">
+        </div>
+        <div class="article-content">
+          <p class="date">Fri November 2022, admin</p>
+          <h5 class="article-title">Which permits do I require to install solar?</h5>
+          <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+        </div>
+      </article>
+      <div class="article-wrapper">
+        <article class="article second-article">
+          <div class="img-wrapper" style="background-image: url('./src/images/blog-img-2.png');"></div>
+          <div class="article-content">
+            <p class="date">Fri November 2022, admin</p>
+            <h5 class="article-title">Which permits do I require to install solar?</h5>
+            <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+          </div>
+        </article>
+        <article class="article third-article">
+          <div class="img-wrapper" style="background-image: url('./src/images/blog-img-3.png');"></div>
+          <div class="article-content">
+            <p class="date">Fri November 2022, admin</p>
+            <h5 class="article-title">Which permits do I require to install solar?</h5>
+            <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+          </div>
+        </article>
+      </div>
+      <article class="article fourth-article">
+        <div class="img-wrapper" style="background-image: url('./src/images/blog-img-4.png');">
+          <img src="./src/images/play-btn.png" alt="play-btn">
+        </div>
+        <div class="article-content">
+          <p class="date">Fri November 2022, admin</p>
+          <h5 class="article-title">Which permits do I require to install solar?</h5>
+          <p class="article-text">To evaluate this question, we need to look at who has any say on what you do with or on your house. We also need to look at the size and type of installation you’re considering. Type is crucial for us, here at CraftStrom...</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- <div id="video"></div>
+  <div id="products"></div>
+  <div id="features"></div>
+  <div id="types-of-solar-system"></div>
+  <div id="popular-kits"></div>
+  <div id="benefits"></div>
+  <div id="configure-solar-and-battery"></div>
+  <div id="learn-more"></div>
+  <div id="blog"></div> -->
+  <!-- <iframe src="./src/template-parts/hero.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height:120vh; overflow: hidden;"></iframe>
   <iframe src="./src/template-parts/video.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 81vh; overflow: hidden;"></iframe>
-  <iframe src="./src/template-parts/products.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 220vh; overflow: hidden; "></iframe>
+  <iframe src="./src/template-parts/products.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 380vh;  overflow: hidden; "></iframe>
   <iframe src="./src/template-parts/features.html" frameborder="0" width="100%" height="100%"></iframe>
-  <iframe src="./src/template-parts/types-of-solar-system.html" frameborder="0" width="100%" height="100%"></iframe>
-  <iframe src="./src/template-parts/popular-kits.html" frameborder="0" width="100%" height="100%"></iframe>
+  <iframe src="./src/template-parts/types-of-solar-system.html" frameborder="0" width="100%" height="100%" style="height: 250vh;"></iframe>
+  <iframe src="./src/template-parts/popular-kits.html" frameborder="0" width="100%" height="100%" style="overflow: hidden; height: 180vh;"></iframe>
   <iframe src="./src/template-parts/benefits.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 90.3vh; overflow: hidden;"></iframe>
-  <iframe src="./src/template-parts/configure-solar-and-battery.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 90.3vh; overflow: hidden;"></iframe>
-  <iframe src="./src/template-parts/learn-more.html" frameborder="0" width="100%" height="100%"></iframe>
-  <iframe src="./src/template-parts/blog.html" frameborder="0" width="100%" height="100%"></iframe>
-  <script type="module" src="./src/js/app.js"></script>
+  <iframe src="./src/template-parts/configure-solar-and-battery.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 90.3vh; overflow: hidden;"></iframe> -->
+  <!-- <iframe src="./src/template-parts/learn-more.html" frameborder="0" width="100%" height="100%"></iframe>
+  <iframe src="./src/template-parts/blog.html" frameborder="0" width="100%" height="100%"></iframe> -->
+  <!-- <script type="module" src="./src/js/app.js"></script> -->
+    <script type="module" src="./src/js/homepage.js"></script>
 </body>
 </html>

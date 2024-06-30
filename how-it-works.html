@@ -7,23 +7,471 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>How it works</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      /* min-height: 100vh; */
+      overflow-x: hidden;
       background: #131111;
-
-
     }
   </style>
 </head>
-<body>
-  <iframe src="./src/template-parts/how-it-works-hero.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 50.3vh; overflow: hidden;"></iframe>
-  <iframe src="./src/template-parts/video.html" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 81vh; overflow: hidden;"></iframe>
-  <iframe src="./src/template-parts/info.html" id="infoIframe" frameborder="0" width="100%" height="100%" style="border:none; display: block; padding:0; margin:0; height: 400vh;"></iframe>
-  <iframe src="./src/template-parts/types-of-solar-system.html" frameborder="0" width="100%" height="100%"></iframe>
-  <iframe src="./src/template-parts/how-to-videos.html" frameborder="0" width="100%" height="100%"></iframe>
+<body style="overflow-x: hidden;">
+  <!-- Hero -->
+    <section class="hero how-it-works-hero" style="background-image: url('./src/images/how-it-works-hero.png');">
+    <h1 class="hero-title">Energy Independence Through Innovation</h1>
+    <p class="hero-text">Feed Your Appliances Not The Utility</p>
+    <div class="icons">
+      <div class="solar-panel">
+        <img src="./src/images/solar-panels.svg" alt="solar-panels">
+        <h3 class="icon-title">Solar Panels</h3>
+      </div>
+      <div class="battery">
+        <img src="./src/images/battery.svg" alt="battery">
+        <h3 class="icon-title">Battery</h3>
+      </div>
+      <div class="power-meter">
+        <img src="./src/images/power-meter.svg" alt="power-meter">
+        <h3 class="icon-title">Power Meter</h3>
+      </div>
+    </div>
+  </section>
+  <!-- Video -->
+  <section class="video how-it-works-video" style="background-image: url('./src/images/video.png');"></section>
+  <!-- info -->
+    <section class="info">
+    <!-- Choose section -->
+     <!-- swiper -->
+      <div class="swiper infoSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <a class ="choose" href="#choose"> 01 Choose</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="plug-in" href="#plug-in">02 Plug in</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="produce" href="#produce"> 03 Produce</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="save" href="#save"> 04 Save</a>
+          </div>
+        </div>
+      <div class="swiper-button-next"></div>
+
+      </div>
+      <article id="choose">
+        <div class="choose-links-wrapper">
+          <ul class="save-list">
+          <li class = "save-list-item">
+            <a class="choose" href="#choose"> 01 Choose</a>
+          </li>
+          <li class = "save-list-item">
+            <a class="plug-in" href="#plug-in"> 02 Plug in</a>
+          </li>
+          <li class = "save-list-item">
+            <a class= "produce" href="#produce"> 03 Produce</a>
+          </li>
+          <li class = "save-list-item">
+            <a class= "save" href="#save"> 04 Save</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="requirements">
+          <div class="requirements-content">
+            <h2 class="title">Requirements</h2>
+            <ul class="list">
+              <li class="list-item">A sunny spot to mount the solar panels a designated outdoor outlet for the Solar kit. Outlets on separate circuits to add Smart Batteries. Access to your breaker box & a WiFi Connection.</li>
+              <li class="list-item">Outlets on separate circuits to add Smart Batteries.</li>
+              <li class="list-item">Access to your breaker box & a WiFi Connection.</li>
+            </ul>
+          </div>
+          <div class="requirements-img-wrapper" style = "background-image: url('./src/images/requirements.svg');"></div>
+        </div>
+        <hr>
+        <div class="calculator">
+          <div class="calculator-content">
+            <h2 class="title">Calculator</h2>
+            <p class="text">Use our online solar calculator to plan the size you need for your home and location through only 3 steps!</p>
+            <button class="btn">Calculate now</button>
+          </div>
+          <div class="calculator-list">
+            <ul class="list">
+              <li class = "list-item">
+                <span class="number">01</span>
+                <span class="title">Your Address</span>
+              </li>
+              <li class = "list-item">
+                <span class="number">02</span>
+                <span class="title">Usage or Sample Home Type</span>
+              </li>
+              <li class = "list-item">
+                <span class="number">03</span>
+                <span class="title">Orientation & Inclination</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="configurator">
+          <div class="configurator-content">
+            <h2 class="title">Configurator</h2>
+            <p class="text">
+              <span>Let us help you configure your Solar & Battery kit through 5 steps! We’ll recommend a set for you, based on your electricity usage. Start small.</span>
+              <span>Don’t worry, you can always upgrade your system – everything is modular.</span>
+            </p>
+            <button class="btn">Configure now</button>
+          </div>
+          <div class="configurator-list">
+            <ul class="list">
+              <li class = "list-item">
+                <span class="number">01</span>
+                <span class="title">Solar Set</span>
+              </li>
+              <li class = "list-item">
+                <span class="number">02</span>
+                <span class="title">Solar Battery Set</span>
+              </li>
+              <li class = "list-item">
+                <span class="number">03</span>
+                <span class="title">Offgrid Battery Inverter</span>
+              </li>
+              <li class = "list-item">
+                <span class="number">04</span>
+                <span class="title">Power Meter</span>
+              </li>
+              <li class = "list-item">
+                <span class="number">05</span>
+                <span class="title">Safety Gate Adapter</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+          <div class="swiper infoSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <a class ="choose" href="#choose"> 01 Choose</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="plug-in" href="#plug-in">02 Plug in</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="produce" href="#produce"> 03 Produce</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="save" href="#save"> 04 Save</a>
+          </div>
+        </div>
+      <div class="swiper-button-next"></div>
+
+      </div>
+     <!-- Plug in section -->
+    <article id="plug-in">
+      <div class="plugin-links-wrapper">
+          <ul class="save-list">
+          <li class = "save-list-item">
+            <a class="choose" href="#choose"> 01 Choose</a>
+          </li>
+          <li class = "save-list-item">
+            <a class="plug-in" href="#plug-in"> 02 Plug in</a>
+          </li>
+          <li class = "save-list-item">
+            <a class= "produce" href="#produce"> 03 Produce</a>
+          </li>
+          <li class = "save-list-item">
+            <a class= "save" href="#save"> 04 Save</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="solar-panels">
+          <div class="content">
+            <h2 class="title">Install Solar Panels</h2>
+            <p class="text">Unbox your light-weight solar panels and plug them into a standard power outlet. Solar production starts immediately.</p>
+            <p class="text">Our solar calculator showed you how to set your system up to maximize your profits.</p>
+          </div>
+          <div class="img-wrapper" style="background-image: url('./src/images/plug-in-img-1.png')"></div>
+        </div>
+        <div class="install-power-meter">
+          <div class="content">
+            <h2 class="title">Install Power Meter</h2>
+            <p class="text">Power meter measures appliance power usage, enabling permit-free solar system operation by balancing solar production with    consumption.
+            </p>
+            <p class="text">It monitors home usage, allowing solar panels to reduce purchased electricity accordingly.</p>
+            <p class="text">Excess solar production is managed by adjusting inverter output or instructing the Smart Battery to store surplus energy.</p>
+          </div>
+          <div class="img-wrapper" style="background-image: url('./src/images/plug-in-img-2.png')"></div>
+        </div>
+        <div class="store-power">
+          <div class="content">
+            <h2 class="title">Store your power for when you need it most.</h2>
+            <p class="text">Your battery plugs into a standard wall outlet anywhere in your home and communicates with your solar system. They’ll automatically become best friends and start cooperating.
+            </p>
+            <p class="text"> In the event of a power outage or you want to run products on the go, simply pull the battery out of the smart base and place it where you need it most.</p>
+          </div>
+          <div class="img-wrapper" style="background-image: url('./src/images/plug-in-img-3.png')"></div>
+        </div>
+      </div>
+    </article>
+     <!-- Produce section -->
+    <article id="produce">
+      <div class="produce-links-wrapper">
+        <ul class="produce-list">
+          <li class = "produce-list-item">
+            <a class="choose" href="#choose"> 01 Choose</a>
+          </li>
+          <li class = "produce-list-item">
+            <a class="plug-in" href="#plug-in"> 02 Plug in</a>
+          </li>
+          <li class = "produce-list-item">
+            <a class = 'produce' href="#produce"> 03 Produce</a>
+          </li>
+          <li class = "produce-list-item">
+            <a class="save" href="#save"> 04 Save</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <h2 class="title">CONGRATS! It’s that easy to produce your own solar power.</h2>
+        <p class="text">You are now minimizing your electricity bill. Check every facet of your new solar installation in detail or enjoy the overview in our App.</p>
+      </div>
+      <div class="img-wrapper" style="background-image: url('./src/images/produce-img.png');"></div>
+    </article>
+     <!-- Save section -->
+    <article id="save">
+      <div class="save-links-wrapper">
+        <ul class="save-list">
+          <li class = "save-list-item">
+            <a class="choose" href="#choose"> 01 Choose</a>
+          </li>
+          <li class = "save-list-item">
+            <a class="plug-in" href="#plug-in"> 02 Plug in</a>
+          </li>
+          <li class = "save-list-item">
+            <a class= "produce" href="#produce"> 03 Produce</a>
+          </li>
+          <li class = "save-list-item">
+            <a class= "save" href="#save"> 04 Save</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="content-wrapper">
+            <h2 class="title">Our App will help you optimize your home energy balance.</h2>
+        <p class="text">Better understand when you can save money and how to do it easily. Use AI mode and let us help you save energy when you can and provide energy when you need it. Or manually choose when to store your power and for when. It’s all up to you, but in the easiest way possible.</p>
+        </div>
+        <div class="img-wrapper">
+        <div class="new-schedule" style = "background-image: url('./src/images/save-img-1.png');"></div>
+        <div class="battery-mode" style = "background-image: url('./src/images/save-img-2.png');"></div>
+        <div class="your-schedule" style = "background-image: url('./src/images/save-img-3.png');"></div>
+      </div>
+      </div>   
+    </article>
+  </section>
+  <!-- Types of solar system -->
+   <section class="types-of-solar-system">
+  <div class="main-content">
+    <h4>Types of our solar system</h4>
+    <hr>
+    <div class="card on-grid">
+      <h5 class="solar-system-title">
+        <span>ON GRID- DAY TIME</span>
+        <span class="arrow-1">
+          <img class="arrow-1-img" src="./src/images/arrow_drop_down.svg" alt="arrow-up">
+        </span>
+      </h5>
+      <p class="content content-1">
+        On grid solar system during the day is connected to the power grid. The energy produced by the solar panels can be used immediately in the household, and the excess energy is stored in batteries.
+      </p>
+      <div class="on-grid-img-container" style="background-image: url('./src/images/on-grid-day-img.png');"></div>
+    </div>
+
+    <div class="card on-grid-night">
+      <h5 class="solar-system-title">
+        <span>ON GRID- NIGHT TIME</span>
+        <span class="arrow-2">
+          <img class="arrow-2-img" src="./src/images/arrow_drop_down.svg" alt="arrow-down">
+        </span>
+      </h5>
+      <p class="content content-2">
+        On grid solar system during the night is not connected to the power grid. The energy produced by the solar panels, which was stored in batteries during the day powers your home through the batteries at night.
+      </p>
+      <div class="on-grid-night-img-container" style="background-image: url('./src/images/on-grid-night-img.png');"></div>
+
+    </div>
+
+    <div class="card off-grid">
+      <h5 class="solar-system-title">
+        <span>OFF GRID</span>
+        <span class="arrow-3">
+          <img class="arrow-3-img" src="./src/images/arrow_drop_down.svg" alt="arrow-down">
+        </span>
+      </h5>
+      <p class="content content-3">
+        An off-grid solar system is a stand-alone power system that operates independently from the public electricity grid. 
+      </p>
+      <div class="off-grid-img-container" style="background-image: url('./src/images/off-grid-img.png');"></div>
+    </div>  
+  </div>
+  <div class="image-container">
+    <img class="solar-type-img" src="./src/images/on-grid-day-img.png" alt="type-solar-img">
+  </div>
+</section>
+<!-- how to videos -->
+   <section class="learn-more" style="overflow: hidden;">
+    <h4 class="title">Learn more with our how-to videos</h4>
+    <div class="learnMore swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+           <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+        </div>
+      </div>
+            <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-container desktop-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+          <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+          <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- <section class="how-to-video" style="overflow: hidden;">
+    <h4 class="title">Learn more with our how-to videos</h4>
+    <div class="container">
+          <div class="slide">
+                 <div class="video-1">
+            <p class="content">
+              <img src="./src/images/one.svg" alt="">
+              <span>How to install solar panels & inverters </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
+          </div>
+          </div>
+         <div class="slide">
+           <div class="video-2">
+            <p class="content">
+              <img src="./src/images/two.svg" alt="">
+              <span>How to install power meter </span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
+          </div>
+         </div>
+          <div class="slide">
+            <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How to install our app</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
+          </div>
+          </div>
+    </div>
+  </section> -->
+  <script type="module" src="./src/js/how-it-works.js"></script>
+
 </body>
 </html>

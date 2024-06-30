@@ -1,14 +1,5 @@
 @use "../abstracts" as *;
 
-iframe {
-  height: 90.3vh;
-  border:none; 
-  display: block; 
-  padding:0; 
-  margin:0; 
-  overflow: hidden;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -16,15 +7,15 @@ iframe {
 }
 
 .types-of-solar-system {
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   display: flex;
-  height: 90.3vh;
+  // height: 250vh;
 
   .main-content {
-    max-width: 24.75rem;
+    width:100%;
     background: $dark-gray;
-    min-height: 120vh;
+    // min-height: 250vh;
 
     h4 {
       padding-left: 3.12rem;
@@ -48,8 +39,31 @@ iframe {
       padding-left: 3.12rem;
       padding-right: 3.19rem;
       padding-bottom: 1.31rem;
-
-      .title {
+      .on-grid-img-container {
+        // background-color: $dark;
+        // min-width: 20.375rem;
+        // padding-left: 0.875rem;
+        // padding-right: 1.375rem;
+        // @include img-contain(center);
+        // min-height: 49.154375rem;
+        display: none;
+      }
+      .on-grid-night-img-container {
+        // width:100%;
+        // background-color: $dark;
+        // min-width: 20.375rem;
+        // @include img-contain(center);
+        // min-height: 32.3775rem;
+        display: none;
+      }
+      .off-grid-img-container {
+        // background-color: $dark;
+        // min-width: 20.375rem;
+        // min-height: 35.20875rem;
+        // @include img-contain(center);
+        display: none;
+      }
+      .solar-system-title {
         display: flex;
         gap: 0.44rem;
         color: $orange;
@@ -84,7 +98,127 @@ iframe {
     .on-grid {
       padding-top: 1.81rem;
 
-      .title {
+      .solar-system-title {
+        opacity: 1;
+      }
+
+      .content {
+        opacity: 1;
+      }
+    }
+  }
+  .image-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .types-of-solar-system {
+    .main-content {
+      .card {
+        .on-grid-img-container {
+          margin-top:1rem;
+          background-color: $dark;
+          min-width: 20.375rem;
+          padding-left: 0.875rem;
+          padding-right: 1.375rem;
+          @include img-contain(center);
+          min-height: 49.154375rem;
+        }
+        .on-grid-night-img-container {
+          margin-top:1rem;
+          width:100%;
+          background-color: $dark;
+          min-width: 20.375rem;
+          @include img-contain(center);
+          min-height: 32.3775rem;
+        }
+        .off-grid-img-container  {
+          margin-top:1rem;
+          background-color: $dark;
+          min-width: 20.375rem;
+          min-height: 35.20875rem;
+          @include img-contain(center);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .types-of-solar-system {
+
+  position: relative;
+  display: flex;
+
+  .main-content {
+    max-width: 24.75rem;
+    background: $dark-gray;
+    min-height: 150vh;
+
+    h4 {
+      padding-left: 3.12rem;
+      padding-right: 5rem;
+      padding-top: 4.25rem;
+      padding-bottom: 1.62rem;
+      color: $white;
+      font-family: $poppins;
+      font-size: 3.67306rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 3.91256rem; /* 106.522% */
+    }
+
+    hr {
+      width: 75%;
+      opacity: 0.7;
+    }
+
+    .card {
+      padding-left: 3.12rem;
+      padding-right: 3.19rem;
+      padding-bottom: 1.31rem;
+      .on-grid-img-container, 
+      .on-grid-night-img-container,
+      .off-grid-img-container {
+        display: none;
+      }
+      .solar-system-title {
+        display: flex;
+        gap: 0.44rem;
+        color: $orange;
+        opacity: 0.7;
+        font-family: $montseratt;
+        font-size: 1.25rem;
+        font-style: italic;
+        font-weight: 700;
+        line-height: normal;
+
+        span {
+          display: inline-block;
+        }
+
+        .arrow {
+          cursor: pointer;
+        }
+      }
+
+      .content {
+        color: $white;
+        opacity: 0.7;
+        font-family: $poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.38256rem; /* 138.258% */
+        display: none;
+      }
+
+    }
+
+    .on-grid {
+      padding-top: 1.81rem;
+
+      .solar-system-title {
         opacity: 1;
       }
 
@@ -95,6 +229,7 @@ iframe {
   }
 
   .image-container {
+    display: block;
    height: 44.266rem;
    width: 56.916rem;
     @include img-contain(center);
@@ -109,17 +244,22 @@ iframe {
     }
   }
 }
-
-@media screen and (min-width: 1500px){
-  .types-of-solar-system {
-    .image-container {
-      margin-left: 10rem;
-    }
-  }
 }
 
-@media screen and (max-height: 708px) {
-   iframe {
-    height: 170vh;
-  }
+@media screen and (min-width: 900px) {
+  
 }
+
+// @media screen and (min-width: 1500px){
+//   .types-of-solar-system {
+//     .image-container {
+//       margin-left: 10rem;
+//     }
+//   }
+// }
+
+// @media screen and (max-height: 708px) {
+//    iframe {
+//     height: 170vh;
+//   }
+// }
