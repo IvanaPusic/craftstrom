@@ -3,6 +3,7 @@
   display: none;
 }
 .info {
+  // position: relative;
   scroll-behavior: smooth;
   padding-bottom: 9.04rem;
   .swiper {
@@ -10,6 +11,8 @@
       display: none;
       padding-top:2.62rem;
     }
+    position:sticky;
+    top:0;
     height: 4.125rem;
     width: 100%;
     background: $orange;
@@ -39,20 +42,13 @@
       }
     }
   }
-  #choose,#plug-in,#produce,#save {
-    padding-bottom:2.19rem;
-    padding-left: 1rem;
-    padding-right: 2rem;
-    @media screen and (min-width: 1200px) {
-      display: flex;
-    }
-    .choose-links-wrapper,
-    .plugin-links-wrapper,
-    .produce-links-wrapper,
-    .save-links-wrapper {
+      .choose-links-wrapper {
       display: none;
       @media screen and (min-width: 1200px) {
         display: block;
+        position: sticky;
+        top:0;
+        left:0;
         width: 15%;
         padding-left:3.13rem;
         padding-right:4.15rem;
@@ -70,11 +66,13 @@
             line-height: normal;
             display: inline-block;
             text-decoration: none;
+            cursor: pointer;
+            // width: 4rem;
           }
           .active {
             color: $white;
             font-family: $poppins;
-            font-size: 1.875rem;
+            font-size: 1.675rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -82,8 +80,19 @@
         }
       }
     }
+  #choose,#plug-in,#produce,#save {
+    
+    padding-bottom:2.19rem;
+    // padding-left: 1rem;
+    padding-right: 2rem;
+    position:relative;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-left:14.24rem;
+    }
+
     .produce-content {
-      padding-left:1rem;
+      // padding-left:14.25rem;
       padding-right: 2rem;
       @media screen and (min-width: 1200px) {
         width: 40%;
@@ -285,18 +294,22 @@
     }
   }
   #plug-in, #produce, #save {
-    padding-inline: 0;
     padding-top:0;
   }
   #produce {
     display: flex;
     flex-direction: column-reverse;
     gap: 1.88rem;
+    
     .img-wrapper {
       height: 14.1875rem;
       @include img-cover(center);
       @media screen and (min-width:1200px) {
-        width: 50%;
+        width: 44%;
+      // width:  42.0625rem;
+
+      margin-left:4.5rem;
+
       }
     }
     @media screen and (min-width: 1200px) {

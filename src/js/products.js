@@ -42,9 +42,9 @@ const ourAppArticle = document.getElementById('our-app');
     const contentSwiper = new Swiper('.contentSwiper', {
          slidesPerView:1.7,
          direction: 'horizontal',
-          
-            type: "progressbar"
-    })
+        type: "progressbar"
+    });
+    const productSwiper = new Swiper('.product-content-swiper',{})
 window.addEventListener("DOMContentLoaded", function() {
     const mainContentDiv = document.querySelector(".main-content");
     const productLinks = document.querySelectorAll(".content-link");
