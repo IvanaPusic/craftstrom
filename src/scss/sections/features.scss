@@ -1,33 +1,128 @@
 @use "../abstracts" as *;
 
 
-.features {
-  // overflow: hidden;
-  position: relative;
-  min-height: 150vh;
+.features-section {
+  padding-inline:2.81rem;
+  @media screen and (min-width: 1200px){
+    padding-inline: 3.12rem;
+    padding-bottom: 6.23rem;
+  }
+  .mainSwiper {
+    width:100%;
+    height: 100%; 
+    .swiper-pagination {
+      margin-top: 7rem;
+    }
+     /* Custom pagination bullets */
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: transparent;
+      opacity: 1;
+      border: 2px solid $white;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $orange;
+      border: 2px solid $orange;
+    }
+    .swiper-wrapper {
+      width:100%;
+      height: 100%;
+      .firstSwiper,.secondSwiper,.thirdSwiper,.fourthSwiper {
+        @media screen and (max-width:1200px) {
+          display:none
+        }
+        width:100%;
+        height: 100%;
+        .mySwiper {
+          width:100%;
+          height: 100%;
+          .first-swiper-wrapper,.second-swiper-wrapper,.third-swiper-wrapper,.fourth-swiper-wrapper {
+             height: 100%;
+             .plug-and-play-slide,
+             .smart-technology-slide,
+             .setup-at-home-slide,
+             .power-supply-slide,
+             .system-reaction-slide,
+             .no-interconnection-slide,
+             .code-safe-slide,
+             .flexibility-slide,
+             .open-api-slide,
+             .communication-safety-slide,
+             .mobility-slide,
+             .no-adventures-slide,
+             .life-battery-slide,
+             .no-cobalt-slide,
+             .aluminum-slide,
+             .no-energy-slide {
+                min-height: 30.375rem;
+                @media screen and (min-width: 1200px) {
+                   @include img-cover(center);
+                }
+             }
+          }
+          .content {
+            width: 100%;
+              display: flex;
+              justify-content: center;
+              padding-top: 2.94rem;
+              gap: 2.25rem;
+              .card {
+                .desktop-title {
+                  color:$white;
+                  opacity: 0.75;
+                  font-family: $poppins;
+                  font-size: 1.25rem;
+                  font-style: normal;
+                  font-weight: 600;
+                  padding-top:0.62rem;
+                  padding-bottom: 0.62rem;
+                  line-height: normal;
+                  max-width: 19.0625rem;
+                }
+                .desktop-text {
+                  color: $white;
+                  opacity: 0.75;
+                  font-family: $poppins;
+                  font-size: 1rem;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  max-width: 19.125rem;
+                }
+              }
+          }
+        }
+      }
+    }
+  }
   .mobileSwiper {
-    position: absolute;
-    margin-top: 5.67rem;
     width: 100%;
     height: 100%;
+    @media screen and (min-width:1200px) {
+      display: none;
+    }
     .swiper-wrapper {
       width: 100%;
       height: 100%;
       display: flex;
-      gap:1rem;
       .swiper-slide {
         display: flex;
         flex-direction: column;
-        padding-inline: 1rem;
         .img-wrapper {
           min-width: 20.5rem;
-          max-width: 25rem;
           height: 22.125rem;
           flex-shrink: 0;
           @include img-cover(center);
         }
         .mobile-card {
           padding-top: 2.16rem;
+          @media screen and (min-width:768px) {
+            width: 75%;
+          }
           .mobile-title {
             color: $white;
             font-family: $poppins;
@@ -48,268 +143,12 @@
             font-weight: 400;
             line-height: normal;
             max-width: 19rem;
+            @media screen and (min-width:768px) {
+              max-width: 75%;
+            }
           }
         }
       }
     }
   }
-
-}
-
-@media screen and (max-width: 1200px) {
-  .mySwiper {
-    display: none;
-  }
-  .mobileSwiper {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features {
-    .mobileSwiper {
-    display: none;
-  }
-  .mySwiper {
-    display: block;
-  }
-
-    .mySwiper {
-    position: relative;
-    top: 40px;
-    width: 100%;
-    height: 150vh;
-
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background-color: transparent;
-      opacity: 1;
-      border: 2px solid $white;
-      border-radius: 50%;
-      margin: 0 5px;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: $orange;
-      border: 2px solid $orange;
-    }
-
-    .swiper,
-    .swiper-wrapper {
-      width: 100%;
-      height: 100%;
-
-      .swiper-slide {
-        height: 48.6vh;
-        width: 83.75rem;
-        @include img-cover(center);
-      }
-    }
-
-    .swiper-pagination {
-      position: absolute;
-      top: 50rem;
-    }
-    .content {
-      display: flex;
-      gap: 2.5rem;
-      justify-content: center;
-      position: absolute; 
-      top: 30rem; 
-      left: 3.44rem; 
-      right: 3.5rem; 
-      z-index: 10;
-
-      .card {
-        max-width: 17rem;
-
-        .desktop-title {
-          color: $white;
-          opacity: 0.7;
-          font-family: $poppins;
-          font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          padding-top: 0.62rem;
-          padding-bottom: 0.62rem;
-        }
-
-        .desktop-text {
-          color: $white;
-          opacity: 0.7;
-          font-family: $poppins;
-          font-size: 1rem;
-          font-style: normal;
-          width: 100%;
-          font-weight: 400;
-          line-height: normal;
-        }
-      }
-
-      .plug-and-play {
-        margin-top: 1rem;
-      }
-
-      .smart-technology {
-        margin-top: 1rem;
-      }
-
-      .home-setup {
-        margin-top: 1rem;
-      }
-
-      .power-supply {
-        margin-top: 1rem;
-      }
-    }
-  }
-  }
-  
-}
-
-@media screen and (min-width: 1300px) {
-  .features {
-    padding-inline:3.12rem;
-    .mobileSwiper {
-    display: none;
-  }
-  .mySwiper {
-    display: block;
-  }
-
-    .mySwiper {
-    position: relative;
-    top: 40px;
-    width: 100%;
-    height: 150vh;
-
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background-color: transparent;
-      opacity: 1;
-      border: 2px solid $white;
-      border-radius: 50%;
-      margin: 0 5px;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: $orange;
-      border: 2px solid $orange;
-    }
-
-    .swiper,
-    .swiper-wrapper {
-      width: 100%;
-      height: 100%;
-
-      .swiper-slide {
-        height: 48.6vh;
-        width: 83.75rem;
-        @include img-cover(center);
-      }
-    }
-
-    .swiper-pagination {
-      position: absolute;
-      top: 50rem;
-    }
-    .content {
-      display: flex;
-      gap: 2.25rem;
-      justify-content: center;
-      position: absolute; 
-      top: 30rem; 
-      left: 3.44rem; 
-      right: 3.5rem; 
-      z-index: 10;
-
-      .card {
-        max-width: 19rem;
-        .desktop-title {
-          color: $white;
-          opacity: 0.7;
-          font-family: $poppins;
-          font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          padding-top: 0.62rem;
-          padding-bottom: 0.62rem;
-        }
-
-        .desktop-text {
-          color: $white;
-          opacity: 0.7;
-          font-family: $poppins;
-          font-size: 1rem;
-          font-style: normal;
-          width: 100%;
-          font-weight: 400;
-          line-height: normal;
-        }
-      }
-
-      .plug-and-play {
-        margin-top: 1rem;
-      }
-
-      .smart-technology {
-        margin-top: 1rem;
-      }
-
-      .home-setup {
-        margin-top: 1rem;
-      }
-
-      .power-supply {
-        margin-top: 1rem;
-      }
-    }
-  }
-  }
-}
-
-// @media screen and (min-height: 800px) {
-
-//   .features {
-//     .swiper {
-//       .content {
-//         top: 40rem;
-//       }
-//       .swiper-pagination {
-//         top: 60rem;
-//       }
-//     }
-//   }
-
-// }
-
-
-// @media screen and (max-height: 600px) {
-
-//   .features {
-//     .swiper {
-//       .content {
-//         top: 20rem;
-//       }
-//       .swiper-pagination {
-//         top: 45rem;
-//       }
-//     }
-//   }
-
-// }
-
-@media screen and (min-height: 1000px){
-  .features {
-    .swiper {
-      .content {
-        gap:3rem;
-      }
-    }
-  }
-
 }

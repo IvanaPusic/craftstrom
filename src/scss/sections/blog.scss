@@ -38,6 +38,7 @@ iframe {
   .content {
     display: flex;
     gap: 1.5rem;
+    justify-content: center;
     padding-top: 3.31rem;
     padding-left: 3.06rem;
     padding-right: 3.19rem;
@@ -75,6 +76,7 @@ iframe {
           font-family: $montseratt;
           font-size: 1rem;
           font-style: normal;
+          max-width: 26.5rem;
           font-weight: 300;
           line-height: 1.25rem; /* 125% */
         }
@@ -108,12 +110,6 @@ iframe {
   }
 }
 
-@media screen and (max-height: 708px) {
-  iframe {
-    height: 180vh;
-  }
-}
-
 @media screen and (max-width:768px){
   .blog {
     .content {
@@ -122,8 +118,8 @@ iframe {
      .swiper {
       padding-top:1.25rem;
       display: block;
-    width:100%;
-    height: 100%;
+      width:100%;
+      height: 100%;
     .swiper-wrapper {
       padding-inline: 1rem;
       width: 100%;

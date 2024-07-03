@@ -1,19 +1,48 @@
 @use "../abstracts" as *;
 
-iframe {
-  border:none; 
-  display: block;
-  padding:0; 
-  margin:0; 
-  height: 90.3vh; 
-  overflow: hidden;
-}
+
 .benefits {
-  height: 100vh;
-  width: 100%;
   background-color: $white;
+  padding-bottom:2.49rem;
+  @media screen and (min-width:1200px) {
+    padding-bottom: 6.24rem;
+  }
   .content {
     display: none;
+    @media screen and (min-width: 920px){
+      @include flex-center;
+      padding-top: 3.25rem;
+      padding-inline: 3.5rem;
+      gap: 2.25rem;
+      .card {
+        @media screen and (min-width:920px) {
+           max-width: 19.1rem;
+          .card-title {
+           @media screen and (min-width:920px) {
+              color: #000;
+              font-family: $poppins;
+              font-size: 1.25rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              padding-top: 0.63rem;
+              padding-bottom: 0.63rem;
+           }
+          }
+          .card-text {
+            @media screen and (min-width:920px) {
+              color: #000;
+              font-family: $poppins;
+              font-size: 1rem;
+              font-style: normal;
+              height: 5rem;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
   }
   .title {
     color: #000;
@@ -28,6 +57,9 @@ iframe {
   .benefitsSwiper {
     display: block;
     height: 100%;
+    @media screen  and (min-width:920px) {
+      display: none;
+    }
     .swiper-wrapper {
       height: 100%;
       padding-inline: 1rem;
@@ -61,52 +93,3 @@ iframe {
   }
 }
 
-
-@media screen and (min-width: 920px) {
-  .benefits {
-    .benefitsSwiper {
-      display: none;
-    }
-     .title {
-    color: #000;
-    text-align: center;
-    font-family: $poppins;
-    font-size: 2.25rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding-top: 5.44rem;
-  }
-
-  .content {
-    @include flex-center;
-    padding-top: 3.25rem;
-    padding-inline: 3.5rem;
-    gap: 2.25rem;
-
-    .card {
-      max-width: 19.1rem;
-
-      .card-title {
-        color: #000;
-        font-family: $poppins;
-        font-size: 1.25rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        padding-top: 0.63rem;
-        padding-bottom: 0.63rem;
-      }
-
-      .card-text {
-        color: #000;
-        font-family: $poppins;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
-  }
-  }
-}

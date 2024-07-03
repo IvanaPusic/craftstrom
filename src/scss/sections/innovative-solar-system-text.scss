@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.innovative-solar-system {
+  background-color: $white;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-inline: 0.91rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @media screen and (min-width: 900px) {
+    padding-top: 3.87rem;
+    padding-bottom: 3.81rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .innovative-solar-system-text {
+    color: $dark;
+    font-family: $montseratt;
+    font-size: 1rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    .bold {
+      font-weight: 600;
+    }
+    @media screen and (min-width: 900px) {
+      max-width: 36.125rem;
+    }
+  }
+}

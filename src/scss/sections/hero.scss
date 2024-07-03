@@ -6,77 +6,87 @@
   box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-}
-.hero {
-  display: flex;
-  gap:2.81rem;
-  justify-content: center;
-  align-items: center;
+
+.hero,.how-it-works-hero {
+  @include img-cover(center);
+  @include flex-center;
   flex-direction: column;
-  @include img-cover(top);
-  position: relative;
-  object-fit: cover;
-
-  .hero-title,
+  gap:2.81rem;
+  padding-top: 7.56rem;
+  padding-bottom: 3.72rem;
+  padding-inline: 3.96rem;
+  @media screen and (min-width:900px) {
+    padding-top: 17.6rem;
+    padding-bottom: 7.03rem;
+  }
   .hero-content {
-    color: $white;
-  }
-
-  .hero-title {
-    padding-inline: 3.72rem;
-    text-align: center;
-    font-size: $text-large;
-    font-weight: 500;
-    font-family: $poppins;
-    line-height: 134.2%;
-    margin-top: 7.56rem;
-    max-width: 90rem;
-  }
-
-  .btn {
-    @include btn;
-  }
-
-  .btn-link {
-    color: $white;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding-top: 1.25rem;
-    text-align: center;
-    font-family: $montseratt;
-    font-size: $small;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: underline;
-  }
-
-  .hero-content {
-    display: none;
-  }
-
-  .icons {
-    display: flex;
-    padding-top: 3.06rem;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 7rem;
-    gap: 1.75rem;
-    
-
-  .solar-panel,
-  .battery,
-  .power-meter {
-    margin: 0 auto;
+    @include flex-center;
+    gap:2.81rem;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.52rem;
-
-    h3 {
+    .hero-title {
+      color: $white;
+      text-align: center;
+      font-family: $poppins;
+      font-size: 1.5625rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 134.2%; /* 2.09688rem */
+      @media screen and (min-width:1200px) {
+        font-size: 2.25rem;
+      }
+    }
+    .hero-text {
+      color: $white;
+      text-align: center;
+      font-family: $poppins;
+      font-size: 0.9375rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 134.2%; /* 1.25813rem */
+    }
+    .hero-btn-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap:1.25rem;
+      @media screen and (min-width: 900px) {
+        flex-direction: row;
+      }
+      .buy-now-btn,.configure-now-btn {
+        cursor: pointer;
+      }
+      .buy-now-btn {
+        @include btn;
+      }
+      .configure-now-btn {
+        color: #FFF;
+        text-align: center;
+        font-family: $montseratt;
+        background-color: transparent;
+        border:none; 
+        outline: none;
+        font-size: 0.98213rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        @media  screen and (min-width: 900px) {
+          @include btn;
+          background: transparent;
+          color: $white;
+          border:1px solid $white;
+          text-decoration: none;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+  .hero-icons {
+    @include flex-center;
+    @media screen and (min-width: 900px) {
+      padding-top: 8.95rem;
+    }
+    gap:1.75rem;
+    .icon-title {
       color: $white;
       text-align: center;
       font-family: $poppins;
@@ -85,106 +95,10 @@ body {
       font-weight: 500;
       line-height: 1.7315rem; /* 194.951% */
       text-transform: capitalize;
-    }
-    img {
-      margin: 0 auto;
-      display: block;
-      height: auto;
-    }
-  }
-
-  .power-meter {
-    gap: 1.3rem;
-  }
-  }
- 
-  .mobile-content {
-    background-color: $white;
-    display: block;
-    display: flex;
-    flex-direction: column;
-    gap:1rem;
-    // height: 24vh;
-  
-    padding-inline: 0.91rem;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-
-    .mobile-hero-content {
-      color: $dark;
-      font-family: $montseratt;
-      font-size: 1rem;
-      font-style: normal;
-      text-align: center;
-      font-weight: 400;
-      line-height: 1.5rem;
-      .bold {
-        font-weight: 600;
+      &.power-meter-title {
+        padding-top:0.54rem;
       }
     }
   }
 }
 
-.how-it-works-hero {
-  @include img-cover(bottom);
-  width:100%;
-  .hero-title {
-    max-width: 23.25rem;
-    // max-width: 33.0625rem;
-    color: $white;
-    text-align: center;
-    font-family: $poppins;
-    font-size: 2.25rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 134.2%; /* 3.0195rem */
-  }
-  .hero-text {
-    color: #FFF;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 0.9375rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 134.2%; /* 1.25813rem */
-  }
-}
-
-@media  screen and (min-width: 768px) {
-  .hero {
-    padding-bottom: 7.03rem;
-
-    .hero-title {
-      padding:0;
-      text-align: center;
-      font-size: $text-large;
-      font-weight: 500;
-      font-family: $poppins;
-      line-height: 134.2%;
-      margin-top: 17.06rem;
-      padding-bottom: 3.4375rem;
-      max-width: 90rem;
-      // height: 58.6875rem;
-    }
-    .hero-content{
-      display: block;
-      max-width: 36.125rem;
-      color: $white;
-      text-align: center;
-      font-family: $montseratt;
-      font-size: $base;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160.5%; /* 1.80563rem */
-      padding-top: 3.06rem;
-    }
-
-    .icons {
-      gap: 3.99rem;
-    }
-
-    .mobile-content {
-      display: none;
-    }
-  }
-}

@@ -1,36 +1,36 @@
 @use "../abstracts" as *;
 
-
-iframe {
-  border:none; 
-  display: block; 
-  padding:0; 
-  margin:0; 
-  height: 160vh !important; 
-  overflow: hidden;
-}
-
 .learn-more {
-  height: 160vh;
   background-color: $white;
   position: relative;
-
+  padding-bottom: 5.05rem;
+  @media screen and (min-width:1200px) {
+    padding-bottom: 6.05rem; 
+  }
   .title {
-    color: black;
-    text-align: center;
-    padding-top: 5.5rem;
-    font-family: $poppins;
-    font-size: 2.25rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+      color: #000;
+      text-align: center;
+      font-family: $poppins;
+      font-size: 1.5rem;
+      font-style: normal;
+      margin: 0 auto;
+      padding-top: 2rem;
+      font-weight: 500;
+      line-height: normal;
+      @media screen and (min-width: 1200px) {
+        padding-top: 5.5rem;
+        font-size: 2.25rem;
+      }
   }
 
-  .swiper-container {
+  .learnMore {
     width: 100%;
     height: 100%;
     padding-top: 3.25rem;
-
+      display: block;
+    .video-pagination {
+      display: inline-block;
+    }
     /* Custom pagination bullets */
     .swiper-pagination-bullet {
       width: 12px;
@@ -48,44 +48,51 @@ iframe {
     }
 
     .swiper-wrapper {
-      width:100%;
-      height: 100%;
+        display: flex;
+        gap:1;
+        width:100%;
+        height: 100%;
       .swiper-slide {
-      display: flex;
-      justify-content: center;
-      gap: 1.56rem;
+        display: flex;
+        justify-content: center;
+        gap: 1.56rem;
 
-      .video-1,
-      .video-2,
-      .video-3 {
-        .content {
-          padding-bottom: 3.25rem;
-          @include flex-center;
-          gap: 0.6rem;
+        .video-1,
+        .video-2,
+        .video-3 {
+          .content {
+            @include flex-center;
+            gap: 0.6rem;
+            img,
+            span {
+              display: inline-block;
+              padding-bottom:1.27rem;
+            }
+            span {
+              width: 12rem;
+              color: black;
+              font-family: $poppins;
+              font-size: 1.25rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              max-width: 10.23131rem;
+              @media screen and (min-width:1200px) {
+                max-width: 12.1875rem;
+                padding-bottom:0;
 
-          img,
-          span {
-            display: inline-block;
+              }
+            }
           }
-
-          span {
-            width: 12rem;
-            color: black;
-            font-family: $poppins;
-            font-size: 1.25rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+          .video {
+            max-width: 26.875rem;
+            min-width: 26.875rem;
+            height: 35.5rem;
+            // padding-top: 3.25rem;
+            @include img-contain(center);
           }
-        }
-
-        .video {
-          width: 26.875rem;
-          height: 35.5rem;
-          padding-top: 3.25rem;
         }
       }
-    }
     }
   }
 }
@@ -106,19 +113,18 @@ iframe {
       display: none;
     }
     .learnMore {
-      position: relative;
-      display: block;
-       width:100%;
-        height: 100%;
-        .swiper-pagination {
-          position: absolute;
-          bottom: 190px;
-        }
+      // position: relative;
+      // display: block;
+      // width:100%;
+      // height: 100%;
+      //   .swiper-pagination {
+      //     margin-top:12rem;
+      //   }
       .swiper-wrapper {
-        display: flex;
-        gap:1;
-        width:100%;
-        height: 100%;
+        // display: flex;
+        // gap:1;
+        // width:100%;
+        // height: 100%;
         .swiper-slide {
           .video-1,
           .video-2,
@@ -140,19 +146,3 @@ iframe {
     }
   }
  }
- @media screen and (min-width: 1201px) {
-  .learn-more {
-    .desktop-swiper {
-      display: block;
-    }
-    .learnMore {
-      display: none;
-    }
-  }
- }
-
-@media screen and (max-height: 708px) {
-  iframe {
-    height: 130vh;
-  }
-}
