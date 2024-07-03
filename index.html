@@ -22,12 +22,14 @@
 <body>
   <!-- Hero -->
   <section class="hero" style="background-image: url('./src/images/hero.png');">
-    <h1 class="hero-title">Solar and Battery Plug & Play Kits for your home</h1>
-    <button class="btn">Buy now</button>
-    <button class="btn-link">Configure now</button>
-    <h2 class="hero-content">Innovative solar systems for generating electricity. Our unique solutions include patented flexible battery storage and top-tier solar panels, offering easy installation and cost savings.
-      For the first time even renters can join us in this revolution! Reduce your carbon footprint and monthly bills effortlessly.</h2>
-    <div class="icons">
+      <div class="hero-content">
+        <h1 class="hero-title">A New Era of Plug & Play Solar and Battery kits</h1>
+        <div class="hero-btn-wrapper">
+          <button class="buy-now-btn">Buy now</button>
+          <button class="configure-now-btn">Configure now</button>
+        </div>
+      </div>
+    <div class="hero-icons">
       <div class="solar-panel">
         <img src="./src/images/solar-panels.svg" alt="solar-panels">
         <h3 class="icon-title">Solar Panels</h3>
@@ -38,15 +40,16 @@
       </div>
       <div class="power-meter">
         <img src="./src/images/power-meter.svg" alt="power-meter">
-        <h3 class="icon-title">Power Meter</h3>
+        <h3 class="icon-title power-meter-title">Power Meter</h3>
       </div>
     </div>
-    <div class="mobile-content">
-       <p class="mobile-hero-content"><span class="bold">Innovative solar systems for generating electricity.</span> Our unique solutions include patented flexible battery storage and top-tier solar panels, offering easy installation and cost savings.
-       </p>
-       <p class="mobile-hero-content"><span class="bold">For the first time even renters can join us in this revolution!</span> Reduce your carbon footprint and monthly bills effortlessly.</p>
-    </div>
   </section>
+  <!-- Innovative solar system -->
+  <div class="innovative-solar-system">
+    <p class="innovative-solar-system-text"><span class="bold">Innovative solar systems for generating electricity.</span> Our unique solutions include patented flexible battery storage and top-tier solar panels, offering easy installation and cost savings.
+    </p>
+    <p class="innovative-solar-system-text"><span class="bold">For the first time even renters can join us in this revolution!</span> Reduce your carbon footprint and monthly bills effortlessly.</p>
+  </div>
   <!-- Video -->
   <section class="video how-it-works-video" style="background-image: url('./src/images/video.png');"></section>
   <!-- Products -->
@@ -104,99 +107,353 @@
   </main>
 </section>
 <!-- Features -->
-   <section class="features">
-    <div class="swiper mobileSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="img-wrapper" style="background-image: url('./src/images/plugs-and-play.png')"></div>
-          <div class="mobile-card mobile-plug-and-play">
-            <div class="img-line-wrapper">
-              <img class="mobile-line-image" src="./src/images/orange-line.svg" alt="orange-line">
+   <section class="features-section">
+      <div class="swiper mobileSwiper">
+        <div class="swiper-wrapper">
+          <!-- first swiper on mobile -->
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/plugs-and-play.png')"></div>
+            <div class="mobile-card mobile-plug-and-play">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/orange-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">Plug&Play</h4>
+              <p class="mobile-text">Our solar sets and batteries are fully plug&play, meaning you don't need anything but an outlet.</p>
             </div>
-            <h4 class="mobile-title">Plug&Play</h4>
-            <p class="mobile-text">Our solar sets and batteries are fully plug&play, meaning you don't need anything but an outlet.</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/smart-technology.png')"></div>
+            <div class="mobile-card mobile-smart-technology">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="gray-line">
+              </div>
+              <h4 class="mobile-title">Smart Technology</h4>
+              <p class="mobile-text">We were the first to fully integrate our solar and battery system with a powermeter. This way, you can accurately control every aspect in milliseconds.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/setup-at-home.png')"></div>
+            <div class="mobile-card mobile-home-setup">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="gray-line">
+              </div>
+              <h4 class="mobile-title">Setup at Home</h4>
+              <p class="mobile-text">Our solar and battery system are not connected directly. Instead, they use your home power grid to exchange power when needed. You can place your battery wherever you like it best.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/power-supply.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">Uninterruptible Power Supply</h4>
+              <p class="mobile-text">Place our battery anywhere in your home for convenient access during power outages. Plug your fridge or medical devices into the off-grid inverter on top, and keep the battery connected to an outlet. This ensures your appliances automatically draw power from the battery when the power goes out.</p>
+            </div>
+          </div>
+          <!-- second swiper on mobile -->
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/system-reaction.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">System reaction time of <1 second for accuracy</h4>
+              <p class="mobile-text">Unlike competitors in the market, our products use our proprietary communication system to talk to each other, sending data every 0.1 seconds. This ensures that you won’t accidentally use or transmit power when you don’t want to.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/no-interconnection.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">No Interconnection Agreement via Zero-Export Functionality</h4>
+              <p class="mobile-text">Our products communicate every 0.1 seconds, eliminating the need for an interconnection agreement by avoiding power export. Unlike slow WiFi, our direct communication ensures instant control.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/code-safe.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">National Electric Code Safe</h4>
+              <p class="mobile-text">We have designed the Safety Gate Adapter, which is an intelligent breaker. Use this, if you don’t have a dedicated outlet (leading directly to the breaker box without any other outlets). It constantly monitors that line and turns off our products, if you need more power than is advisable in connection with solar input.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/flexibility.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">Extreme Flexibility in Your Use via the App</h4>
+              <p class="mobile-text">Our app offers flexible control over your charging cycles and power. To save on your power bill, use our auto algorithm to optimise charging and discharging. For quick readiness, charge your battery immediately. For arbitrage savings, schedule different charging times each day using the calendar function.</p>
+            </div>
+          </div>
+          <!-- third mobile swiper -->
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/open-api.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">Open API</h4>
+              <p class="mobile-text">Since we’re all geeks here, we have, of course, opened up our software to you, the user. This allows you to pull your own data and connect with your devices.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/communication-safety.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">Communication Safety</h4>
+              <p class="mobile-text">CraftStrom products do not require your home WiFi to balance your energy household. Once you setup all your devices at home, they will create their own communication network that can’t be hacked through your home internet.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/mobility.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">Mobility</h4>
+              <p class="mobile-text">We believe in empowering our customers to live whatever lifestyle suits you best. This includes the design and setup of our products. Because life sometimes takes you places, for work or leisure, rest assured, you can take all our products with you in a matter of minutes.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/no-adventures.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">No Adventures without Power</h4>
+              <p class="mobile-text">Since we live in a time where everything is powered by electricity, we made sure that you can use our products completely offgrid. When you’re not at home, simply take our battery out of its smart base and bring the solar panels with you. You can plug 3 panels directly in our battery and charge it full in 2 hours. </p>
+            </div>
+          </div>
+          <!-- Fourth mobile -->
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/lifepo4-battery.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">Super stable LiFePO4 battery cells won’t catch on fire</h4>
+              <p class="mobile-text">Unlike Lithium cells used in your cell phone, this type of cells is stable and won’t catch fire when dropped or otherwise damaged.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/no-cobalt.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">No Cobalt in our battery cells</h4>
+              <p class="mobile-text">Our battery cells don’t contain any Cobalt, which is typically mined by child labor in unsecured, illegal mines in the Congo. </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/aluminum.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">Aluminum Body</h4>
+              <p class="mobile-text">We believe in using only the best materials. Our product bodies are all made from high grade Alu for feel and safety. No more cheap, cracked plastic housings. The Alu body of the battery will keep you safe!</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper" style="background-image: url('./src/images/no-energy.png')"></div>
+            <div class="mobile-card mobilepower-supply">
+              <div class="img-line-wrapper">
+                <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
+              </div>
+              <h4 class="mobile-title">No Energy Losses For Heating or Cooling</h4>
+              <p class="mobile-text">Since your can place your battery anywhere in your home, it doesn’t require internal heating or cooling systems that draw massive power away from where you need it most - at home!</p>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="img-wrapper" style="background-image: url('./src/images/smart-technology.png')"></div>
-          <div class="mobile-card mobile-smart-technology">
-            <div class="img-line-wrapper">
-              <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="gray-line">
-            </div>
-            <h4 class="mobile-title">Smart Technology</h4>
-            <p class="mobile-text">We were the first to fully integrate our solar and battery system with a powermeter. This way, you can accurately control every aspect in milliseconds.</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="img-wrapper" style="background-image: url('./src/images/setup-at-home.png')"></div>
-          <div class="mobile-card mobile-home-setup">
-            <div class="img-line-wrapper">
-              <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="gray-line">
-            </div>
-            <h4 class="mobile-title">Setup at Home</h4>
-            <p class="mobile-text">Our solar and battery system are not connected directly. Instead, they use your home power grid to exchange power when needed. You can place your battery wherever you like it best.</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="img-wrapper" style="background-image: url('./src/images/power-supply.png')"></div>
-          <div class="mobile-card mobilepower-supply">
-            <div class="img-line-wrapper">
-              <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
-            </div>
-            <h4 class="mobile-title">Uninterruptible Power Supply</h4>
-            <p class="mobile-text">Place our battery anywhere in your home for convenient access during power outages. Plug your fridge or medical devices into the off-grid inverter on top, and keep the battery connected to an outlet. This ensures your appliances automatically draw power from the battery when the power goes out.</p>
-          </div>
-        </div>
-      </div>
     </div>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide plug-and-play" style="background-image: url('./src/images/plugs-and-play.png');"></div>
-        <div class="swiper-slide" style="background-image: url('./src/images/smart-technology.png');"></div>
-        <div class="swiper-slide" style="background-image: url('./src/images/setup-at-home.png');"></div>
-        <div class="swiper-slide" style="background-image: url('./src/images/power-supply.png');"></div>
+      <div class="swiper mainSwiper">
+        <div class="swiper-wrapper">
+          <!-- first swiper -->
+          <div class="swiper-slide firstSwiper">
+            <div class="swiper mySwiper first-swiper">
+            <div class="swiper-wrapper first-swiper-wrapper">
+              <div class="swiper-slide plug-and-play-slide" style="background-image: url('./src/images/plugs-and-play.png');"></div>
+              <div class="swiper-slide smart-technology-slide" style="background-image: url('./src/images/smart-technology.png');"></div>
+              <div class="swiper-slide setup-at-home-slide" style="background-image: url('./src/images/setup-at-home.png');"></div>
+              <div class="swiper-slide power-supply-slide" style="background-image: url('./src/images/power-supply.png');"></div>
+            </div>
+            <div class="content">
+              <div class="card plug-and-play">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
+                </div>
+                <h4 class="desktop-title">Plug&Play</h4>
+                <p class="desktop-text">Our solar sets and batteries are fully plug&play, meaning you don't need anything but an outlet.</p>
+              </div>
+              <div class="card smart-technology">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+                </div>
+                <h4 class="desktop-title">Smart Technology</h4>
+                <p class="desktop-text">We were the first to fully integrate our solar and battery system with a powermeter. This way, you can accurately control every aspect in milliseconds.</p>
+              </div>
+              <div class="card home-setup">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+                </div>
+                <h4 class="desktop-title">Setup at Home</h4>
+                <p class="desktop-text">Our solar and battery system are not connected directly. Instead, they use your home power grid to exchange power when needed. You can place your battery wherever you like it best.</p>
+              </div>
+              <div class="card power-supply">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
+                </div>
+                <h4 class="desktop-title">Uninterruptible Power Supply</h4>
+                <p class="desktop-text">Place our battery anywhere in your home for convenient access during power outages. Plug your fridge or medical devices into the off-grid inverter on top, and keep the battery connected to an outlet. This ensures your appliances automatically draw power from the battery when the power goes out.</p>
+              </div>
+           </div>
+         </div>
+        </div>
+        <!-- second slider -->
+          <div class="swiper-slide secondSwiper">
+            <div class="swiper mySwiper second-swiper">
+            <div class="swiper-wrapper second-swiper-wrapper">
+              <div class="swiper-slide system-reaction-slide" style="background-image: url('./src/images/system-reaction.png');"></div>
+              <div class="swiper-slide no-interconnection-slide" style="background-image: url('./src/images/no-interconnection.png');"></div>
+              <div class="swiper-slide code-safe-slide" style="background-image: url('./src/images/code-safe.png');"></div>
+              <div class="swiper-slide flexibility-slide" style="background-image: url('./src/images/flexibility.png');"></div>
+            </div>
+            <div class="content">
+              <div class="card system-reaction">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
+                </div>
+                <h4 class="desktop-title">System reaction time of <1 second for accuracy</h4>
+                <p class="desktop-text">Unlike competitors in the market, our products use our proprietary communication system to talk to each other, sending data every 0.1 seconds. This ensures that you won’t accidentally use or transmit power when you don’t want to.</p>
+              </div>
+              <div class="card no-interconnection">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+                </div>
+                <h4 class="desktop-title">No Interconnection Agreement via Zero-Export Functionality</h4>
+                <p class="desktop-text">Our products communicate every 0.1 seconds, eliminating the need for an interconnection agreement by avoiding power export. Unlike slow WiFi, our direct communication ensures instant control.</p>
+              </div>
+              <div class="card code-safe">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+                </div>
+                <h4 class="desktop-title">National Electric Code Safe</h4>
+                <p class="desktop-text">We have designed the Safety Gate Adapter, which is an intelligent breaker. Use this, if you don’t have a dedicated outlet (leading directly to the breaker box without any other outlets). It constantly monitors that line and turns off our products, if you need more power than is advisable in connection with solar input.</p>
+              </div>
+              <div class="card flexibility">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
+                </div>
+                <h4 class="desktop-title">Extreme Flexibility in Your Use via the App</h4>
+                <p class="desktop-text">Our app offers flexible control over your charging cycles and power. To save on your power bill, use our auto algorithm to optimise charging and discharging. For quick readiness, charge your battery immediately. For arbitrage savings, schedule different charging times each day using the calendar function.</p>
+              </div>
+           </div>
+         </div>
+        </div>
+        <!-- third slider -->
+          <div class="swiper-slide thirdSwiper">
+            <div class="swiper mySwiper third-swiper">
+            <div class="swiper-wrapper third-swiper-wrapper">
+              <div class="swiper-slide open-api-slide" style="background-image: url('./src/images/open-api.png');"></div>
+              <div class="swiper-slide communication-safety-slide" style="background-image: url('./src/images/communication-safety.png');"></div>
+              <div class="swiper-slide mobility-slide" style="background-image: url('./src/images/mobility.png');"></div>
+              <div class="swiper-slide no-adventures-slide" style="background-image: url('./src/images/no-adventures.png');"></div>
+            </div>
+            <div class="content">
+              <div class="card open-api">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
+                </div>
+                <h4 class="desktop-title">Open API</h4>
+                <p class="desktop-text">Since we’re all geeks here, we have, of course, opened up our software to you, the user. This allows you to pull your own data and connect with your devices.</p>
+              </div>
+              <div class="card communication-safety">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+                </div>
+                <h4 class="desktop-title">Communication Safety</h4>
+                <p class="desktop-text">CraftStrom products do not require your home WiFi to balance your energy household. Once you setup all your devices at home, they will create their own communication network that can’t be hacked through your home internet.</p>
+              </div>
+              <div class="card mobility">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+                </div>
+                <h4 class="desktop-title">Mobility</h4>
+                <p class="desktop-text">We believe in empowering our customers to live whatever lifestyle suits you best. This includes the design and setup of our products. Because life sometimes takes you places, for work or leisure, rest assured, you can take all our products with you in a matter of minutes.</p>
+              </div>
+              <div class="card no-adventures">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
+                </div>
+                <h4 class="desktop-title">No Adventures without Power</h4>
+                <p class="desktop-text">Since we live in a time where everything is powered by electricity, we made sure that you can use our products completely offgrid. When you’re not at home, simply take our battery out of its smart base and bring the solar panels with you. You can plug 3 panels directly in our battery and charge it full in 2 hours. </p>
+              </div>
+           </div>
+         </div>
+        </div>
+        <!-- fourth slider -->
+          <div class="swiper-slide fourthSwiper">
+            <div class="swiper mySwiper fourth-swiper">
+            <div class="swiper-wrapper fourth-swiper-wrapper">
+              <div class="swiper-slide life-battery-slide" style="background-image: url('./src/images/lifepo4-battery.png');"></div>
+              <div class="swiper-slide no-cobalt-slide" style="background-image: url('./src/images/no-cobalt.png');"></div>
+              <div class="swiper-slide aluminum-slide" style="background-image: url('./src/images/aluminum.png');"></div>
+              <div class="swiper-slide no-energy-slide" style="background-image: url('./src/images/no-energy.png');"></div>
+            </div>
+            <div class="content">
+              <div class="card life-battery">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
+                </div>
+                <h4 class="desktop-title">Super stable LiFePO4 battery cells won’t catch on fire</h4>
+                <p class="desktop-text">Unlike Lithium cells used in your cell phone, this type of cells is stable and won’t catch fire when dropped or otherwise damaged.</p>
+              </div>
+              <div class="card no-cobalt">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+                </div>
+                <h4 class="desktop-title">No Cobalt in our battery cells</h4>
+                <p class="desktop-text">Our battery cells don’t contain any Cobalt, which is typically mined by child labor in unsecured, illegal mines in the Congo. </p>
+              </div>
+              <div class="card aluminum">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
+                </div>
+                <h4 class="desktop-title">Aluminum Body</h4>
+                <p class="desktop-text">We believe in using only the best materials. Our product bodies are all made from high grade Alu for feel and safety. No more cheap, cracked plastic housings. The Alu body of the battery will keep you safe!</p>
+              </div>
+              <div class="card no-energy">
+                <div class="img-line-wrapper">
+                  <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
+                </div>
+                <h4 class="desktop-title">No Energy Losses For Heating or Cooling</h4>
+                <p class="desktop-text">Since your can place your battery anywhere in your home, it doesn’t require internal heating or cooling systems that draw massive power away from where you need it most - at home!</p>
+              </div>
+           </div>
+         </div>
+        </div>
       </div>
-      <div class="content">
-        <div class="card plug-and-play">
-          <div class="img-line-wrapper">
-            <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
-          </div>
-          <h4 class="desktop-title">Plug&Play</h4>
-          <p class="desktop-text">Our solar sets and batteries are fully plug&play, meaning you don't need anything but an outlet.</p>
-        </div>
-        <div class="card smart-technology">
-          <div class="img-line-wrapper">
-            <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
-          </div>
-          <h4 class="desktop-title">Smart Technology</h4>
-          <p class="desktop-text">We were the first to fully integrate our solar and battery system with a powermeter. This way, you can accurately control every aspect in milliseconds.</p>
-        </div>
-        <div class="card home-setup">
-          <div class="img-line-wrapper">
-            <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
-          </div>
-          <h4 class="desktop-title">Setup at Home</h4>
-          <p class="desktop-text">Our solar and battery system are not connected directly. Instead, they use your home power grid to exchange power when needed. You can place your battery wherever you like it best.</p>
-        </div>
-        <div class="card power-supply">
-          <div class="img-line-wrapper">
-            <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
-          </div>
-          <h4 class="desktop-title">Uninterruptible Power Supply</h4>
-          <p class="desktop-text">Place our battery anywhere in your home for convenient access during power outages. Plug your fridge or medical devices into the off-grid inverter on top, and keep the battery connected to an outlet. This ensures your appliances automatically draw power from the battery when the power goes out.</p>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
+        <div class="swiper-pagination"></div>
     </div>
   </section>
 <!-- Types of solar system -->
  <section class="types-of-solar-system">
   <div class="main-content">
-    <h4>Types of our solar system</h4>
+    <h4 class="main-content-title">Types of our solar system</h4>
     <hr>
     <div class="card on-grid">
       <h5 class="solar-system-title">
-        <span>ON GRID- DAY TIME</span>
+        <span class="title-1">ON GRID- DAY TIME</span>
         <span class="arrow-1">
           <img class="arrow-1-img" src="./src/images/arrow_drop_down.svg" alt="arrow-up">
         </span>
@@ -209,7 +466,7 @@
 
     <div class="card on-grid-night">
       <h5 class="solar-system-title">
-        <span>ON GRID- NIGHT TIME</span>
+        <span class="title-2">ON GRID- NIGHT TIME</span>
         <span class="arrow-2">
           <img class="arrow-2-img" src="./src/images/arrow_drop_down.svg" alt="arrow-down">
         </span>
@@ -223,7 +480,7 @@
 
     <div class="card off-grid">
       <h5 class="solar-system-title">
-        <span>OFF GRID</span>
+        <span class="title-3">OFF GRID</span>
         <span class="arrow-3">
           <img class="arrow-3-img" src="./src/images/arrow_drop_down.svg" alt="arrow-down">
         </span>
@@ -238,9 +495,10 @@
     <img class="solar-type-img" src="./src/images/on-grid-day-img.png" alt="type-solar-img">
   </div>
 </section>
+<!-- Popular kits -->
 <section class="popular-kits-section" style="overflow: hidden;">
     <h2 class="popular-kits-title">Our Popular Kits</h2>
-    <div class="swiper-container">
+    <div class="popularKitsSwiper swiper-container">
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">
@@ -309,13 +567,87 @@
                 </div>
             </div>
         </div>
-
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination popular-kits-pagination"></div>
     </div>
 </section>
+  <!-- Benefits -->
+     <section class="benefits">
+    <h4 class="title">Our Benefits</h4>
+    <div class="swiper benefitsSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="img-wrapper">
+          <img src="./src/images/time.svg" alt="time">
+        </div>
+        <h5 class="card-title">No wait times</h5>
+        <p class="card-text">We address the challenges posed by a shortage of qualified installers and lengthy interconnection approval processes, empowering our customers to take charge of their solar projects independently.</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper">
+          <img src="./src/images/affordable.svg" alt="time">
+        </div>
+        <h5 class="card-title">Affordability</h5>
+        <p class="card-text">Oversized solar systems that feed back to the utility have up to 30 year payback periods. Our Solar kits payoff time can be as short as 2 years.</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper">
+          <img src="./src/images/integration.svg" alt="time">
+        </div>
+        <h5 class="card-title">Flawless integration</h5>
+        <p class="card-text">We turned Home Solar and Storage into an appliance! The Installation of our modular and 'non permanent' solar & battery systems is now an option for all types of buildings, apartments & even rentals.</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="img-wrapper">
+          <img src="./src/images/plugsvg.svg" alt="time">
+        </div>
+        <h5 class="card-title">Ease of installation</h5>
+        <p class="card-text">Our patented Plug & Play technology provides a simple and affordable way to integrate energy storage into your home without the high costs typically associated with such installations.</p>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card">
+        <div class="img-wrapper">
+          <img src="./src/images/time.svg" alt="time">
+        </div>
+        <h5 class="card-title">No wait times</h5>
+        <p class="card-text">We address the challenges posed by a shortage of qualified installers and lengthy interconnection approval processes, empowering our customers to take charge of their solar projects independently.</p>
+      </div>
+      <div class="card">
+        <div class="img-wrapper">
+          <img src="./src/images/affordable.svg" alt="time">
+        </div>
+        <h5 class="card-title">Affordability</h5>
+        <p class="card-text">Oversized solar systems that feed back to the utility have up to 30 year payback periods. Our Solar kits payoff time can be as short as 2 years.</p>
+      </div>
+      <div class="card">
+        <div class="img-wrapper">
+          <img src="./src/images/integration.svg" alt="time">
+        </div>
+        <h5 class="card-title">Flawless integration</h5>
+        <p class="card-text">We turned Home Solar and Storage into an appliance! The Installation of our modular and 'non permanent' solar & battery systems is now an option for all types of buildings, apartments & even rentals.</p>
+      </div>
+      <div class="card">
+        <div class="img-wrapper">
+          <img src="./src/images/plugsvg.svg" alt="time">
+        </div>
+        <h5 class="card-title">Ease of installation</h5>
+        <p class="card-text">Our patented Plug & Play technology provides a simple and affordable way to integrate energy storage into your home without the high costs typically associated with such installations.</p>
+      </div>
+    </div>
+
+  </section>
+  <!-- configure solar and battery -->
+     <section class="solar-and-battery" style="background-image: url('./src/images/solar-and-battery.png');">
+    <div class="content">
+      <h4 class="title">Configure your Solar & Battery kit through 5 steps!</h4>
+      <p class="text">Choose your ideal Solar Panel Kit and Home Battery Kit. All cables and products to complete the installation are included!</p>
+      <button class="btn">Learn more</button>
+    </div>
+  </section>
   <!-- Learn more -->
-     <section class="learn-more" style="overflow: hidden;">
+  <section class="learn-more" style="overflow: hidden;">
     <h4 class="title">Learn more with our how-to videos</h4>
     <div class="learnMore swiper-container">
       <div class="swiper-wrapper">
@@ -346,14 +678,23 @@
             <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
           </div>
         </div>
+        <div class="swiper-slide">
+           <div class="video-3">
+            <p class="content">
+              <img src="./src/images/three.svg" alt="">
+              <span>How the battery works</span>
+            </p>
+            <div class="video" style="background-image: url('./src/images/learn-video-4.png');"></div>
+          </div>
+        </div>
       </div>
-            <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
+        <!-- Add Pagination -->
+      <div class="swiper-pagination video-pagination"></div>
     </div>
-    <div class="swiper-container desktop-swiper">
-      <div class="swiper-wrapper">
+    <!-- <div class="swiper-container desktop-swiper">
+      <div class="swiper-wrapper"> -->
         <!-- Slide 1 -->
-        <div class="swiper-slide">
+        <!-- <div class="swiper-slide">
           <div class="video-1">
             <p class="content">
               <img src="./src/images/one.svg" alt="">
@@ -376,8 +717,8 @@
             <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
           </div>
         </div>
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
+        <! Slide 2 -->
+        <!-- <div class="swiper-slide">
           <div class="video-1">
             <p class="content">
               <img src="./src/images/one.svg" alt="">
@@ -399,9 +740,9 @@
             </p>
             <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
           </div>
-        </div>
+        </div> -->
         <!-- Slide 3 -->
-        <div class="swiper-slide">
+        <!-- <div class="swiper-slide">
           <div class="video-1">
             <p class="content">
               <img src="./src/images/one.svg" alt="">
@@ -424,10 +765,10 @@
             <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-    </div>
+      <!-- <div class="swiper-pagination"></div> -->
+    <!-- </div>  -->
   </section>
   <!-- Blog -->
      <section class="blog" style="overflow: hidden;">
