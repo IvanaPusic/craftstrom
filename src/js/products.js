@@ -32,6 +32,19 @@ const ourAppArticle = document.getElementById('our-app');
         disableOnInteraction: false,
       },
    });
+     const infoswiper = new Swiper('.infoSwiper', {
+      slidesPerView:1.7,
+      navigation: {
+        nextEl: ".swiper-button-next",
+      },
+      
+    })
+    const contentSwiper = new Swiper('.contentSwiper', {
+         slidesPerView:1.7,
+         direction: 'horizontal',
+          
+            type: "progressbar"
+    })
 window.addEventListener("DOMContentLoaded", function() {
     const mainContentDiv = document.querySelector(".main-content");
     const productLinks = document.querySelectorAll(".content-link");

@@ -17,84 +17,107 @@ const arrow3 = document.querySelector('.arrow-3');
 const arrow1Img = document.querySelector('.arrow-1-img');
 const arrow2Img = document.querySelector('.arrow-2-img');
 const arrow3Img = document.querySelector('.arrow-3-img');
+
 let solarImg = document.querySelector('.solar-type-img');
-const content1 = document.querySelector('.content-1');
-const content2 = document.querySelector('.content-2');
-const content3 = document.querySelector('.content-3');
 const solarSystemTitles = document.querySelectorAll('.solar-system-title');
+
 const onGridImgContainer = document.querySelector('.on-grid-img-container');
 const onGridNightImgContainer = document.querySelector('.on-grid-night-img-container');
 const offGridImgContainer = document.querySelector('.off-grid-img-container');
+
+const content1 = document.querySelector('.content-1');
+const content2 = document.querySelector('.content-2');
+const content3 = document.querySelector('.content-3');
+
+const title1 = document.querySelector('.title-1');
+const title2 = document.querySelector('.title-2');
+const title3 = document.querySelector('.title-3');
 
 onGridImgContainer.style.display = 'none';
 onGridNightImgContainer.style.display = 'none';
 offGridImgContainer.style.display = 'none';
 
-  if(window.innerWidth >= 900) {
-    console.log(window.innerWidth)
-    onGridImgContainer.style.display = 'none';
-    onGridNightImgContainer.style.display = 'none';
-    offGridImgContainer.style.display = 'none';
-  }
-arrow1.addEventListener('click', function() {
+
+title1.addEventListener('click', function () {
   content1.style.display = 'block';
   solarImg.src = './src/images/on-grid-day-img.png';
   arrow1Img.src = './src/images/arrow_up.svg';
-  solarSystemTitles[0].style.opacity = 1;
-
+  title1.style.color = "#F9A41A";
   onGridImgContainer.style.display = 'block';
-
+  offGridImgContainer.style.display = 'none';
+  onGridNightImgContainer.style.display = 'none';
+  content2.style.display = 'none';
+  content3.style.display = 'none';
 });
 
-arrow2.addEventListener('click', function() {
+title2.addEventListener('click', function () {
   content2.style.display = 'block';
   solarImg.src = './src/images/on-grid-night-img.png';
   arrow2Img.src = './src/images/arrow_up.svg';
-  solarSystemTitles[1].style.opacity = 1;
+  title2.style.color = "#F9A41A";
   onGridNightImgContainer.style.display = 'block';
+  onGridImgContainer.style.display = 'none';
+  offGridImgContainer.style.display = 'none';
+  content1.style.display = 'none';
+  content3.style.display = 'none';
 });
 
-arrow3.addEventListener('click', function() {
+title3.addEventListener('click', function () {
   content3.style.display = 'block';
   solarImg.src = './src/images/off-grid-img.png';
   arrow3Img.src = './src/images/arrow_up.svg';
- solarSystemTitles[2].style.opacity = 1;
- offGridImgContainer.style.display = 'block';
+  title3.style.color = "#F9A41A";
+  offGridImgContainer.style.display = 'block';
+  onGridNightImgContainer.style.display = 'none';
+  onGridImgContainer.style.display = 'none';
+  content2.style.display = 'none';
+  content1.style.display = 'none';
 });
 
-content1.addEventListener('click', function() {
+content1.addEventListener('click', function () {
   content1.style.display = 'none';
   arrow1Img.src = './src/images/arrow_drop_down.svg';
   solarSystemTitles[0].style.opacity = 0.7;
   onGridImgContainer.style.display = 'none';
-
 });
 
-content2.addEventListener('click', function() {
+content2.addEventListener('click', function () {
   content2.style.display = 'none';
   arrow2Img.src = './src/images/arrow_drop_down.svg';
   solarSystemTitles[1].style.opacity = 0.7;
   onGridNightImgContainer.style.display = 'none';
-
 });
 
-content3.addEventListener('click', function() {
+content3.addEventListener('click', function () {
   content3.style.display = 'none';
   arrow3Img.src = './src/images/arrow_drop_down.svg';
- solarSystemTitles[2].style.opacity = 0.7;
+  solarSystemTitles[2].style.opacity = 0.7;
   offGridImgContainer.style.display = 'none';
-
 });
 
 
   const swiper = new Swiper('.infoSwiper', {
-      slidesPerView:1.2,
+      slidesPerView:1.7,
       navigation: {
         nextEl: ".swiper-button-next",
       },
       
     })
-    const learnMoreSwiper = new Swiper('.learnMore', {});
+    const learnMoreSwiper = new Swiper('.learnMore', {
+       slidesPerView:1,
+  spaceBetween:20,
+  breakpoints: {
+    768: {
+      slidesPerView:3,
+    },
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    bulletClass: 'swiper-pagination-bullet',
+    bulletActiveClass: 'swiper-pagination-bullet-active',
+  },
+  }
+    });
 
   window.parent.addEventListener("scroll", () => {
      var current = "";
