@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>Shop</title>
+
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero" style="background-image: url('./src/images/shop-hero.png');">
+      <div class="hero-content">
+        <h1 class="hero-title">Engineered Products For Your Safety and Comfort</h1>
+      </div>
+    <div class="hero-icons">
+      <div class="solar-panel">
+        <img src="./src/images/solar-panels.svg" alt="solar-panels">
+        <h3 class="icon-title">Solar Panels</h3>
+      </div>
+      <div class="battery">
+        <img src="./src/images/battery.svg" alt="battery">
+        <h3 class="icon-title">Battery</h3>
+      </div>
+      <div class="power-meter">
+        <img src="./src/images/power-meter.svg" alt="power-meter">
+        <h3 class="icon-title power-meter-title">Power Meter</h3>
+      </div>
+    </div>
+  </section>
+  <!-- select section -->
+   <section class="select-section">
+    <div class="custom-select-wrapper">
+    <select class="custom-select">
+        <option value="kits">Kits</option>
+        <option value="individual-products">Individual Products</option>
+    </select>
+    <div class="custom-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18.2949 7.70492L16.8849 6.29492L12.2949 10.8749L7.70492 6.29492L6.29492 7.70492L12.2949 13.7049L18.2949 7.70492Z" fill="#2F2C2C"/>
+        </svg>
+    </div>
+  </div>
+    <div class="shop-links-wrapper">
+      <a class="kits-link" href="#kits">Kits</a>
+      <span class="divider">|</span>
+      <a class="individual-products-link" href="#individual-products">Individual Products</a>
+    </div>
+   </section>
+   <section id="kits" class="kits">
+      <div class="swiper kitsLinksSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <a class ="solar-kits-link active" href="#solar-kits">Solar Kits</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="battery-kits-link" href="#battery-kits">Battery Kits</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="solar-battery-kits-link" href="#solar-battery-kits">Solar + Battery kits</a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <main class="kits-main">
+        <div class="kits-links-wrapper">
+            <ul class="kits-list">
+            <li class = "kits-list-item">
+              <a class="solar-kits-link active" href="#solar-kits">Solar Kits</a>
+            </li>
+            <li class = "kits-list-item">
+              <a class="battery-kits-link" href="#battery-kits">Battery Kits</a>
+            </li>
+            <li class = "kits-list-item">
+              <a class="solar-battery-kits-link" href="#solar-battery-kits">Solar + Battery Kits</a>
+            </li>
+          </ul>
+        </div>
+        <div class="kits-wrapper-content">
+          <div id="solar-kits">
+            <article class="card">
+              <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-kits-card.png');"></div>
+              <div class="card-content">
+                <h3 class="card-title">400 Watt Smart Panel kit</h3>
+                <div class="card-text-wrapper">
+                  <p class="card-text">2 x 200W Solar Panels</p>
+                  <p class="card-text">1 x SMART Inverters with AC cable</p>
+                  <p class="card-text">1 x Power Meter</p>
+                  <p class="card-text">App</p>
+                </div>
+                <button class="card-btn">999$ Buy now</button>
+              </div>
+          </article>
+          <article class="card">
+            <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-kits-card.png');"></div>
+            <div class="card-content">
+              <h3 class="card-title">800 Watt Smart Panel kit</h3>
+              <div class="card-text-wrapper">
+                <p class="card-text">4 x 200W Solar Panels</p>
+                <p class="card-text">2 x SMART Inverters with Daisy Chain cable & AC cable</p>
+                <p class="card-text">1 x Power Meter</p>
+                <p class="card-text">App</p>
+              </div>
+              <button class="card-btn">999$ Buy now</button>
+            </div>
+          </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">1200 Watt Smart Panel kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">6 x 200W Solar Panels</p>
+              <p class="card-text">3 x SMART Inverters with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">1600 Watt Smart Panel kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">8 x 200W Solar Panels</p>
+              <p class="card-text">4 x SMART Inverters with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">2000 Watt Smart Panel kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">10 x 200W Solar Panels</p>
+              <p class="card-text">5 x SMART Inverters with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+      </div>
+      <div id="battery-kits">
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/battery-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">1kWh Smart Battery kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">1 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/battery-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">2kWh Smart Battery kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">2 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">1 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/battery-kits-card-2.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">3kWh Smart Battery kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">3 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">2 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/battery-kits-card-3.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">4 kWh Smart Battery kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">4 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">3 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn"> Buy now</button>
+          </div>
+        </article>
+      </div>
+      <div id="solar-battery-kits">
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-battery-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">800 Watt Smart Panel kit +2 kWh Smart Battery</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">4 x 200W Solar Panels</p>
+              <p class="card-text">2 x SMART Inverters</p>
+              <p class="card-text">with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">2 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">1 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-battery-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">1200 Watt Smart Panel kit +2 kWh Smart Battery</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">6 x 200W Solar Panels</p>
+              <p class="card-text">3 x SMART Inverters</p>
+              <p class="card-text">with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">2 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">1 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-battery-kits-2.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">1600 Watt Smart Panel kit +3 kWh Smart Battery</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">8 x 200W Solar Panels</p>
+              <p class="card-text">4 x SMART Inverters</p>
+              <p class="card-text">with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">3 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">2 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-battery-kits-3.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <span>1600 Watt Smart Panel kit</span>
+              <span class="italic">(2 Smart Batteries with 1 extension battery each!)</span>
+            </h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">10 x 200W Solar Panels</p>
+              <p class="card-text">5 x SMART Inverters</p>
+              <p class="card-text">with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">4 x 1kWh Battery, 2 x SMART Base</p>
+              <p class="card-text">2 x Extension Base</p>
+              <p class="card-text">2 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">Buy now</button>
+          </div>
+        </article>
+      </div>
+    </div>
+    </main>
+   </section>
+   <section id="individual-products" class="individual-products">
+      <div class="swiper individualProductsLinksSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <a class ="solar-panels-link active" href="#solar-panels">Solar Panels</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="battery-link" href="#battery">Battery</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="power-meter-link" href="#power-meter">Power meter</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="safety-gate-adapter-link" href="#safety-gate-adapter">Safety Gate Adapter</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="inverter-link" href="#inverter">Inverter</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="smart-pv-plug-link" href="#smart-pv-plug">Smart Pv Plug</a>
+          </div>
+          <div class="swiper-slide">
+              <a class="cables-link" href="#cables">Cables</a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <main class="individual-products-main">
+        <div class="individual-products-links-wrapper">
+            <ul class="individual-products-list">
+            <li class = "individual-list-item">
+               <a class ="solar-panels-link active" href="#solar-panels">Solar Panels</a>
+            </li>
+            <li class = "individual-list-item">
+                <a class="battery-link" href="#battery">Battery</a>
+            </li>
+            <li class = "individual-list-item">
+              <a class="power-meter-link" href="#power-meter">Power meter</a>
+            </li>
+            <li class = "individual-list-item">
+              <a class="safety-gate-adapter-link" href="#safety-gate-adapter">Safety Gate Adapter</a>
+            </li>
+            <li class = "individual-list-item">
+              <a class="inverter-link" href="#inverter">Inverter</a>
+            </li>
+            <li class = "individual-list-item">
+              <a class="smart-pv-plug-link" href="#smart-pv-plug">Smart Pv Plug</a>
+            </li>
+            <li class = "individual-list-item">
+              <a class="cables-link" href="#cables">Cables</a>
+            </li>
+          </ul>
+        </div>
+        <div class="individual-wrapper-content">
+          <div id="solar-panels">
+            <article class="card">
+              <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-kits-card.png');"></div>
+              <div class="card-content">
+                <h3 class="card-title">200 Watt Solar Panel</h3>
+                  <p class="card-text">Our ultra-lightweight solar panels can be easily mounted on the inside of a window with suction cups or on our ground mount.</p>         
+                <div class="card-btn-wrapper">
+                  <button class="card-btn">
+                    <a href="#">999$ Buy now</a>
+                  </button>
+                  <button class="card-btn learn-more">
+                    <a href="#">Learn about product</a>
+                  </button>
+                </div>
+              </div>
+          </article>
+      </div>
+      <div id="battery-kits">
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/battery-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">1kWh Smart Battery kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">1 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/battery-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">2kWh Smart Battery kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">2 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">1 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/battery-kits-card-2.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">3kWh Smart Battery kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">3 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">2 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/battery-kits-card-3.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">4 kWh Smart Battery kit</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">4 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">3 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn"> Buy now</button>
+          </div>
+        </article>
+      </div>
+      <div id="solar-battery-kits">
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-battery-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">800 Watt Smart Panel kit +2 kWh Smart Battery</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">4 x 200W Solar Panels</p>
+              <p class="card-text">2 x SMART Inverters</p>
+              <p class="card-text">with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">2 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">1 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">999$ Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-battery-kits-card.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">1200 Watt Smart Panel kit +2 kWh Smart Battery</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">6 x 200W Solar Panels</p>
+              <p class="card-text">3 x SMART Inverters</p>
+              <p class="card-text">with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">2 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">1 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-battery-kits-2.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">1600 Watt Smart Panel kit +3 kWh Smart Battery</h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">8 x 200W Solar Panels</p>
+              <p class="card-text">4 x SMART Inverters</p>
+              <p class="card-text">with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">3 x 1kWh Battery, 1 x SMART Base</p>
+              <p class="card-text">2 x Extension Base</p>
+              <p class="card-text">1 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">Buy now</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrapper" style = "background-image: url('./src/images/solar-battery-kits-3.png');"></div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <span>1600 Watt Smart Panel kit</span>
+              <span class="italic">(2 Smart Batteries with 1 extension battery each!)</span>
+            </h3>
+            <div class="card-text-wrapper">
+              <p class="card-text">10 x 200W Solar Panels</p>
+              <p class="card-text">5 x SMART Inverters</p>
+              <p class="card-text">with Daisy Chain cable & AC cable</p>
+              <p class="card-text">1 x Power Meter</p>
+              <p class="card-text">4 x 1kWh Battery, 2 x SMART Base</p>
+              <p class="card-text">2 x Extension Base</p>
+              <p class="card-text">2 x 600W Offgrid Inverter</p>
+              <p class="card-text">1 x Safety Gate Adapters</p>
+              <p class="card-text">App</p>
+            </div>
+            <button class="card-btn">Buy now</button>
+          </div>
+        </article>
+      </div>
+    </div>
+    </main>
+   </section>
+  <script type="module" src="./src/js/shop.js"></script>
+</body>
+</html>

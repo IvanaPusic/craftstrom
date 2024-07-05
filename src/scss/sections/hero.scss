@@ -6,7 +6,11 @@
   box-sizing: border-box;
 }
 
-
+body {
+  margin: 0;
+  padding: 0;
+  background: #131111;
+}
 .hero,.how-it-works-hero {
   @include img-cover(center);
   @include flex-center;

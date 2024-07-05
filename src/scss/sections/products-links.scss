@@ -1,6 +1,10 @@
 @use "../abstracts" as *;
 
-
+body {
+  margin: 0;
+  padding: 0;
+  background: #131111;
+}
 .products-links {
   // overflow: hidden;
   position: relative;
@@ -96,40 +100,40 @@
       }
     }
     .productLinksSwiper {
-    @media screen and (min-width: 1200px) {
-      display: none;
-      padding-top:2.62rem;
-    }
-    height: 4.125rem;
-    width: 100%;
-    position:sticky;
-    top:0;
-    left:0;
-    z-index: 10;
-    background: $orange;
-    .swiper-button-next {
-      color:$dark;
-    }
-    .swiper-wrapper {
-      height: 100%;
+      @media screen and (min-width: 1200px) {
+        display: none;
+        padding-top:2.62rem;
+      }
+      height: 4.125rem;
       width: 100%;
-      padding-inline: 0.68rem;
-      padding-top:0.94rem;
-      padding-bottom: 0.94rem;
-      .swiper-slide {
-        a {
-          color: rgba(255, 255, 255, 0.40);
-          font-family: $poppins;
-          font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-          text-decoration: none;
-        }
-        .active {
-          color: #FFF;
-          font-size: 1.3125rem;
-        }
+      position:sticky;
+      top:0;
+      left:0;
+      z-index: 10;
+      background: $orange;
+      .swiper-button-next {
+        color:$dark;
+      }
+      .swiper-wrapper {
+        height: 100%;
+        width: 100%;
+        padding-inline: 0.68rem;
+        padding-top:0.94rem;
+        padding-bottom: 0.94rem;
+        .swiper-slide {
+          a {
+            color: rgba(255, 255, 255, 0.40);
+            font-family: $poppins;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration: none;
+          }
+          .active {
+            color: #FFF;
+            font-size: 1.3125rem;
+          }
       }
     }
   }

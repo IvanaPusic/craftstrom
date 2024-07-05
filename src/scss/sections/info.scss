@@ -1,4 +1,12 @@
 @use "../abstracts" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #131111;
+}
+
+
 .mobile-info {
   display: none;
 }

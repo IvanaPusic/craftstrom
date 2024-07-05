@@ -1,5 +1,9 @@
 @use "../abstracts" as *;
-
+body {
+  margin: 0;
+  padding: 0;
+  background: #131111;
+}
 .learn-more {
   background-color: $white;
   position: relative;

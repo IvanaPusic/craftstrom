@@ -1,15 +1,11 @@
 @use "../abstracts" as *;
 
 
-iframe {
-  border:none; 
-  display: block; 
-  padding:0; 
-  margin:0; 
-  height: 120vh; 
-  overflow: hidden;
+body {
+  margin: 0;
+  padding: 0;
+  background: #131111;
 }
-
 .how-to-video {
   height: 150vh;
   background-color: $white;

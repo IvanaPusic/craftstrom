@@ -5,7 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  margin: 0;
+  padding: 0;
+  background: #131111;
+}
 .video {
   width: 100%;
   border-bottom: 1px solid $white;
@@ -22,15 +26,3 @@
   @include img-contain(center);
 
 }
-
-// @media screen and (min-width: 1200px) {
-//   .video {
-//     width: 100%;
-//     overflow: hidden;
-//     height: 81vh;
-//     border:none;
-//     flex-shrink: 0;
-//     @include img-contain(center);
-//     object-fit: cover;
-//   }
-// }

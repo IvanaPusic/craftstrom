@@ -1,6 +1,10 @@
 @use "../abstracts" as *;
 
-
+body {
+  margin: 0;
+  padding: 0;
+  background: #131111;
+}
 .features-section {
   padding-inline:2.81rem;
   @media screen and (min-width: 1200px){

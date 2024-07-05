@@ -1,0 +1,88 @@
+@use "../abstracts" as *;
+body {
+  margin: 0;
+  padding: 0;
+  background: #131111;
+}
+.select-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:1.81rem;
+  padding-inline: 1rem;
+  padding-bottom: 2.81rem;
+
+  .custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    @media screen and (min-width:1200px) {
+    display: none;
+    }
+    .custom-select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 0.588rem 2.5rem 0.588rem 0.588rem; 
+      font-size: 1rem; 
+      border-radius: 0.4375rem;
+      background-color: white;
+      background-image: none;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+        border-color: $blue; 
+      }
+    }
+
+    .custom-arrow {
+      position: absolute;
+      top: 1.5rem;
+      right: 1rem; // 2.19px in rem
+      transform: translateY(-50%);
+      pointer-events: none; // Allow clicks to pass through
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: $dark; // Change color as needed
+      }
+    }
+
+    // Dropdown styling
+    .custom-select option {
+      padding: 0.588rem; // 18.81px in rem
+      line-height: 20px;
+    }
+  }
+  .shop-links-wrapper {
+    display: none;
+    @media screen and (min-width:1200px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:1rem;
+      .divider {
+        font-weight: 300;
+      }
+       a,.divider{
+        display: inline-block;
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 1.82963rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: none;
+       }
+       a:active, a:focus{
+        padding-bottom: 0.55rem;
+        border-bottom: 1px solid $orange;
+       }
+       .active {
+        padding-bottom: 0.55rem;
+        border-bottom: 1px solid $orange;
+       }
+    }
+  }
+}
