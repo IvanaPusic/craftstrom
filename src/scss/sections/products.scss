@@ -15,7 +15,6 @@ body {
 }
 
 .products {
-  // overflow: hidden;
   padding-bottom: 12rem;
   .products-title {
     color: $white;
@@ -28,75 +27,25 @@ body {
   }
 
   .products-wrapper {
-    .solar-panels {
-      padding-top: 3.25rem;
-    }
-
-    .battery, .power-meter {
-      padding-top: 4.19rem;
-    }
-
-    .battery {
-      flex-direction: row-reverse;
-
-      .img-wrapper {
-        margin-right: 10px;
-        width: 51.375rem;
-        height: 27.5625rem;
-        @include img-contain(center);
-      }
-
-      .content {
-        margin-right: 4.38rem;
-        overflow: hidden;
-        display: flex;
-        max-width: 25.5rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5625rem;
-
-        .title {
-          color: $white;
-          font-family: $poppins;
-          font-size: 1.673rem;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 2.35106rem;
-          text-transform: capitalize;
-        }
-
-        .text {
-          color: $white;
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          font-family: $poppins;
-          font-size: 1rem;
-          font-style: normal;
-          font-weight: 300;
-          line-height: normal;
-          opacity: 0.85;
-
-          span {
-            display: inline-block;
-          }
-        }
-
-        .btn {
-          @include btn;
-        }
-      }
-    }
 
     .card {
-      overflow: hidden;
       display: flex;
-      gap: 7.12rem;
-      // flex-direction: column;
+      flex-direction: column;
+      gap: 1.88rem;
+      @media screen and (min-width:1024px) {
+        flex-direction: row;
+        padding-top: 4.19rem;
+        &.card-reverse {
+          flex-direction: row-reverse;
+        }
+      }
       .img-wrapper {
-        width: 51.375rem;
-        height: 27.5625rem;
+        width: 100%;
+        min-height: 18.75rem;
         @include img-contain(center);
+        @media screen and (min-width:1024px) {
+          max-width: 51.375rem;
+        }
       }
 
       .content {
@@ -141,25 +90,3 @@ body {
     }
   }
 }
-
-
-@media screen and (max-width: 920px) {
-  .products {
-    .products-wrapper {
-      .card {
-        flex-direction: column;
-        .content {
-          padding-inline: 1rem;
-
-        }
-      }
-    }
-  }
-}
-
-
-//   @media screen and (min-width: 1200px) {
-//   iframe {
-//     height: 250vh !important;
-//   }
-// }

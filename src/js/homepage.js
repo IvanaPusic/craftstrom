@@ -8,14 +8,11 @@ const mobileTitles = document.querySelectorAll('.mobile-title');
 const mobileTexts = document.querySelectorAll('.mobile-text');
 const mobileImages = document.querySelectorAll('.mobile-line-image');
 
-const arrow1 = document.querySelector('.arrow-1');
-const arrow2 = document.querySelector('.arrow-2');
-const arrow3 = document.querySelector('.arrow-3');
 const arrow1Img = document.querySelector('.arrow-1-img');
 const arrow2Img = document.querySelector('.arrow-2-img');
 const arrow3Img = document.querySelector('.arrow-3-img');
 
-let solarImg = document.querySelector('.solar-type-img');
+const solarImg = document.querySelector('.solar-type-img');
 const solarSystemTitles = document.querySelectorAll('.solar-system-title');
 
 const onGridImgContainer = document.querySelector('.on-grid-img-container');
@@ -33,8 +30,8 @@ const title3 = document.querySelector('.title-3');
 onGridImgContainer.style.display = 'none';
 onGridNightImgContainer.style.display = 'none';
 offGridImgContainer.style.display = 'none';
-content1.style.display ='block'
-title1.style.color = '#F9A41A'
+content1.style.display = 'block';
+title1.style.color = '#F9A41A';
 arrow1Img.src = './src/images/arrow_up.svg';
 
 const mainSwiper = new Swiper('.mainSwiper', {
@@ -101,18 +98,6 @@ const fourthSwiper = new Swiper(".fourth-swiper", {
   }
 });
 
-const swiper = new Swiper(".mySwiper", {
-  observer: true,
-  observeParents: true,
-  spaceBetween: 20,
-  nested: true,
-  breakPoints: {
-    400: {
-      slidesPerView: 1,
-    }
-  }
-});
-
 const mobileSwiper = new Swiper(".mobileSwiper", {
   slidesPerView: 1,
   spaceBetween: 5,
@@ -126,7 +111,7 @@ const mobileSwiper = new Swiper(".mobileSwiper", {
 });
 
 const learnMoreSwiper = new Swiper('.learnMore', {
-  slidesPerView:1.2,
+  slidesPerView:1,
   spaceBetween:20,
   breakpoints: {
     1024: {
@@ -164,20 +149,21 @@ const blogSwiper = new Swiper('.blogSwiper', {
     }
   }
 });
-if(mobileSwiper.activeIndex ===0) {
-  addColor(mobileTitles[0], mobileTexts[0])
+
+if (mobileSwiper.activeIndex === 0) {
+  addColor(mobileTitles[0], mobileTexts[0]);
 }
 if (firstSwiper.activeIndex === 0) {
   addColor(titles[0], texts[0]);
 }
-if(secondSwiper.activeIndex === 0) {
-  addColor(titles[4], texts[4])
+if (secondSwiper.activeIndex === 0) {
+  addColor(titles[4], texts[4]);
 }
-if(thirdSwiper.activeIndex === 0) {
-  addColor(titles[8], texts[8])
+if (thirdSwiper.activeIndex === 0) {
+  addColor(titles[8], texts[8]);
 }
-if(fourthSwiper.activeIndex === 0) {
-  addColor(titles[12], texts[12])
+if (fourthSwiper.activeIndex === 0) {
+  addColor(titles[12], texts[12]);
 }
 
 function updateActiveState(activeIndex, offset) {
@@ -187,8 +173,6 @@ function updateActiveState(activeIndex, offset) {
   images.forEach((img, index) => {
     if (index >= offset && index < offset + 4) {
       img.src = (index - offset === activeIndex) ? activeImage : inactiveImage;
-    } else {
-      img.src = inactiveImage;
     }
   });
 

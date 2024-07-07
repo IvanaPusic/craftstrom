@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #131111;
-}
 .hero,.how-it-works-hero {
   @include img-cover(center);
   @include flex-center;
@@ -57,9 +52,20 @@ body {
       }
       .buy-now-btn,.configure-now-btn {
         cursor: pointer;
+        a {
+          text-decoration: none;
+        }
       }
       .buy-now-btn {
         @include btn;
+        a {
+          color:$dark;
+        }
+      }
+      .configure-now-btn {
+        a {
+          color: $white;
+        }
       }
       .configure-now-btn {
         color: #FFF;
@@ -99,8 +105,8 @@ body {
       font-weight: 500;
       line-height: 1.7315rem; /* 194.951% */
       text-transform: capitalize;
-      &.power-meter-title {
-        padding-top:0.54rem;
+      &.last-title {
+        padding-top: 0.54rem;
       }
     }
   }

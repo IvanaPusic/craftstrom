@@ -17,13 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const smartPvArticle = document.getElementById('smart-pv-plug');
   const ourAppArticle = document.getElementById('our-app');
 
-  const productContentSwiper = new Swiper('.product-content-swiper', {
-     pagination: {
-        type: "progressbar",
-      }
+  const showcaseSwiper = new Swiper('.showcase-swiper',{
+    spaceBetween: 20,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
   });
-  const howItWorksswiper = new Swiper(".howItWorksSwiper", {
-    spaceBetween: 10,
+  const howItWorksSwiper = new Swiper('.how-it-works-swiper',{
+    spaceBetween: 20,
     centeredSlides: true,
     autoplay: {
       delay: 2500,
@@ -36,12 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".swiper-button-next",
     },
   });
-  const contentSwiper = new Swiper('.contentSwiper', {
+  const contentSwiper = new Swiper('.content-swiper', {
     slidesPerView: 1.2,
-    direction: 'horizontal',
-     pagination: {
+    // direction: 'horizontal',
+    pagination: {
+        el: ".swiper-pagination",
         type: "progressbar",
-      }
+      },
   });
 
   const getInitialSlideIndex = () => {

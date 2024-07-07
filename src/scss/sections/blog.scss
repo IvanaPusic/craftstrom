@@ -1,26 +1,14 @@
 @use "../abstracts" as *;
 
-/* Reset some common elements to avoid unwanted margins and padding */
 html, body {
   margin: 0;
   padding: 0;
-
-}
-
-
-iframe {
-  height: 127vh;
-  border:none; 
-  display: block; 
-  padding:0; 
-  margin:0; 
-  overflow: hidden;
 }
 
 .blog {
   padding-bottom: 6.25rem;
-  min-height: 127vh;
   background-color: $white;
+
   .title {
     padding-top: 2.79rem;
     color: black;
@@ -33,15 +21,82 @@ iframe {
   }
 
   .swiper {
-    display: none;
+    padding-top: 1.25rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    @media screen and (min-width:1024px){
+      display: none;
+    }
+    .swiper-wrapper {
+      padding-inline: 1rem;
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      height: 100%;
+
+      .swiper-slide {
+        max-width: 20.21394rem;
+
+        .img-wrapper {
+          @include img-cover(center);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20.5rem;
+          height: 29.46281rem;
+          flex-shrink: 0;
+        }
+
+        .article-content {
+          padding-top: 1.25rem;
+
+          .date {
+            color: $orange;
+            font-family: $poppins;
+            font-size: 0.8125rem;
+            font-style: normal;
+            font-weight: 400;
+            padding-bottom: 0.81rem;
+            line-height: normal;
+          }
+
+          .article-title {
+            padding-bottom: 1.81rem;
+            color: black;
+            font-family: $poppins;
+            max-width: 18.307rem;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.625rem; /* 130% */
+          }
+
+          .article-text {
+            color: black;
+            font-family: $montseratt;
+            font-size: 1rem;
+            max-width: 20.21394rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 1.25rem; /* 125% */
+          }
+        }
+      }
+    }
   }
+
   .content {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    padding-top: 3.31rem;
-    padding-left: 3.06rem;
-    padding-right: 3.19rem;
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      padding-top: 3.31rem;
+      padding-left: 3.06rem;
+      padding-right: 3.19rem;
+    }
 
     .article {
       .img-wrapper {
@@ -107,73 +162,5 @@ iframe {
         }
       }
     }
-  }
-}
-
-@media screen and (max-width:768px){
-  .blog {
-    .content {
-      display: none;
-    }
-     .swiper {
-      padding-top:1.25rem;
-      display: block;
-      width:100%;
-      height: 100%;
-    .swiper-wrapper {
-      padding-inline: 1rem;
-      width: 100%;
-      display: flex;
-      gap:1rem;
-      height: 100%;
-      .swiper-slide {
-        max-width: 20.21394rem;
-        .img-wrapper {
-          @include img-cover(center);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 20.5rem;
-          height: 29.46281rem;
-          flex-shrink: 0;
-        }
-
-      .article-content {
-        padding-top: 1.25rem;
-
-        .date {
-          color: $orange;
-          font-family: $poppins;
-          font-size: 0.8125rem;
-          font-style: normal;
-          font-weight: 400;
-          padding-bottom: 0.81rem;
-          line-height: normal;
-        }
-
-        .article-title {
-          padding-bottom: 1.81rem;
-          color: black;
-          font-family: $poppins;
-          max-width: 18.307rem;
-          font-size: 1rem;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 1.625rem; /* 130% */
-        }
-
-        .article-text {
-          color: black;
-          font-family: $montseratt;
-          font-size: 1rem;
-          max-width: 20.21394rem;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 1.25rem; /* 125% */
-        }
-      }
-      }
-    }
-  }
   }
 }

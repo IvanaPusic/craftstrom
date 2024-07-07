@@ -1,329 +1,238 @@
 @use "../abstracts" as *;
-
 body {
   margin: 0;
   padding: 0;
   background: #131111;
 }
-
-
-.mobile-info {
-  display: none;
-}
 .info {
-  // position: relative;
+  position:relative;
+  padding-top: 1.81rem;
   scroll-behavior: smooth;
-  padding-bottom: 9.04rem;
-  .swiper {
-    @media screen and (min-width: 1200px) {
-      display: none;
-      padding-top:2.62rem;
-    }
-    position:sticky;
-    top:0;
-    height: 4.125rem;
-    width: 100%;
-    background: $orange;
-    .swiper-button-next {
-      color:$dark;
-    }
-    .swiper-wrapper {
-      height: 100%;
-      width: 100%;
-      padding-inline: 0.68rem;
-      padding-top:0.94rem;
-      padding-bottom: 0.94rem;
-      .swiper-slide {
-        a {
-          color: rgba(255, 255, 255, 0.40);
-          font-family: $poppins;
-          font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-          text-decoration: none;
-        }
-        .active {
-          color: #FFF;
-          font-size: 1.3125rem;
-        }
-      }
-    }
-  }
-      .choose-links-wrapper {
-      display: none;
+  padding-bottom: 4.56rem;
+   .infoSwiper {
       @media screen and (min-width: 1200px) {
-        display: block;
-        position: sticky;
-        top:0;
-        left:0;
-        width: 15%;
-        padding-left:3.13rem;
-        padding-right:4.15rem;
-        padding-top: 4rem;
+        display: none;
+        padding-top:2.62rem;
       }
-      .save-list {
-        list-style: none;
-        .save-list-item {
-          .choose,.plug-in,.produce,.save {
+      height: 4.125rem;
+      width: 100%;
+      position:sticky;
+      top:0;
+      left:0;
+      z-index: 10;
+      background: $orange;
+      .swiper-button-next {
+        color:$dark;
+      }
+      .swiper-wrapper {
+        height: 100%;
+        width: 100%;
+        padding-inline: 0.68rem;
+        padding-top:0.94rem;
+        padding-bottom: 0.94rem;
+        .swiper-slide {
+          a {
             color: rgba(255, 255, 255, 0.40);
-            font-family: Poppins;
+            font-family: $poppins;
             font-size: 1.25rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
-            display: inline-block;
             text-decoration: none;
-            cursor: pointer;
-            // width: 4rem;
+          }
+          .active {
+            color: #FFF;
+            font-size: 1.3125rem;
+          }
+      }
+    }
+  }
+  .info-main{
+    display: flex;
+    position:relative;
+    .info-links-wrapper  {
+      display: none;
+      @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        position:sticky;
+        top: 0;
+        margin-top: 1rem;
+        // position:relative;
+        height: 100%;
+      }
+      .info-list {
+        list-style-type: none;
+        .info-list-item {
+          .choose,
+          .plug-in,
+          .produce,
+          .save {
+            color: rgba(255, 255, 255, 0.40);
+            text-align: center;
+            font-family: $poppins;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration: none;
           }
           .active {
             color: $white;
-            font-family: $poppins;
-            font-size: 1.675rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+            font-size: 1.875rem;
           }
         }
       }
     }
-  #choose,#plug-in,#produce,#save {
-    
-    padding-bottom:2.19rem;
-    // padding-left: 1rem;
-    padding-right: 2rem;
-    position:relative;
-    @media screen and (min-width: 1200px) {
-      display: flex;
-      margin-left:14.24rem;
-    }
-
-    .produce-content {
-      // padding-left:14.25rem;
-      padding-right: 2rem;
-      @media screen and (min-width: 1200px) {
-        width: 40%;
+   .info-wrapper-content {
+      width: 100%;
+      padding-top: 1.44rem;
+      @media screen and (min-width: 1024px) {
+        padding-left: 4.5rem;
       }
-      .title {
-        color: #FFF;
-         /* headlines */
-        font-family: $poppins;
-        font-size: 1.5625rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 131%; /* 2.04688rem */
-        padding-bottom: 1.25rem;
-      }
-      .text {
-        color: #FFF;
-        font-family: $poppins;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        padding-bottom: 0.63rem;
-      }
-    }
-    .save-content-wrapper {
-
-      padding-left: 1rem;
-      padding-right: 2rem;
-      @media screen and (min-width:1200px) {
-        flex-direction: row;
-
-      }
-      .save-content {
-        @media screen and (min-width:1200px) {
-        width: 30%;
-        }
-        .title {
-        color: #FFF;
-         /* headlines */
-        font-family: $poppins;
-        font-size: 1.5625rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 131%; /* 2.04688rem */
-        padding-bottom: 1.25rem;
-        }
-        .text {
-          color: #FFF;
-          font-family: $poppins;
-          font-size: 1rem;
-          font-style: normal;
-          font-weight: 300;
-          line-height: normal;
-          padding-bottom: 0.63rem;
-        }
-      }
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 1.88rem;
-      .img-wrapper {
-        height: 14.1875rem;
-        display: flex;
-        gap:1.03rem;
-        @media screen and (min-width:1200px) {
-          width: 50%;
-          justify-content: center;  
-        }
-        .new-schedule {
-          width: 5.956875rem;
-          height: 12.22375rem;
-          @include img-contain(center);
-        }
-        .battery-mode {
-          width: 6.65375rem;
-          height: 5.655625rem;
-          @include img-contain(center);
-        }
-        .your-schedule {
-          width: 5.956875rem;
-          height: 4.7rem;
-          @include img-contain(center);
-        }
-      }
-    }
-    .content {
-      .requirements,
-      .calculator,
-      .configurator,
-      .solar-panels,
-      .install-power-meter,
-      .store-power {
-        padding-bottom: 2.19rem;
-        padding-top: 2.19rem;
-        border-bottom: 1px solid $white;
+      #choose,#plug-in,#produce,#save {
+        padding-left:1.37rem;
+        padding-right: 1.31rem;
         @media screen and (min-width: 1200px) {
-          // padding-left:17rem;
           display: flex;
-          justify-content: space-between;
-          align-items: center;
+          flex-direction: column;
+          gap: 1.5rem;
         }
-        .requirements-content,
-        .calculator-content,
-        .configurator-content,
-        .solar-panels-content,
-        .power-meter-content,
-        .store-power-content {
-          padding-left: 1rem;
-          padding-right: 2rem;
-          @media screen and (min-width:1200px) {
-            max-width: 50%;
+        .card {
+          border-bottom: 1px solid $white;
+          padding-bottom: 2.19rem;
+          @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
           }
-          .title {
-            color: #FFF;
-            /* headlines */
-            font-family: $poppins;
-            font-size: 1.5625rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 131%; /* 2.04688rem */
-            padding-bottom: 1.25rem;
+          &.configure-card {
+            border-bottom: none;
           }
-          .text {
-            color: #FFF;
-            font-family: $poppins;
-            font-size: 1rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            padding-bottom: 0.63rem;
+          &.plugin-card, &.produce-card, &.save-card {
+            @media screen and (min-width: 1024px) {
+              flex-direction: row-reverse;
+            }
           }
-          .list {
-            padding-left:1rem;
-            padding-bottom: 0.64rem;
-            .list-item {
-              color: #FFF;
+         .card-content {
+            padding-inline: 1rem;
+            .card-title {
+              color: $white;
+              /* headlines */
+              padding-bottom: 1.25rem;
               font-family: $poppins;
-              font-size: 1rem;
+              font-size: 1.5625rem;
               font-style: normal;
-              font-weight: 300;
-              line-height: normal;
+              font-weight: 500;
+              line-height: 131%; /* 2.04688rem */
+              &.calculator-title,&.configurator-title {
+                padding-top: 2.19rem;
+              }
+              
+            }
+            .card-text-wrapper {
+              li,.card-text{
+                color: #FFF;
+                font-family: $poppins;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 147.405%; /* 1.47406rem */
+                padding-bottom: 0.63rem;
+              }
+              &.requirements-text-wrapper,
+              &.calculator-text-wrapper,
+              &.configurator-text-wrapper {
+                @media screen and (min-width:1024px) {
+                  max-width: 28.25rem;
+                }
+              }
+            }
+          }
+         .card-img-wrapper {
+            @include img-contain(left);
+            min-height: 4.29rem;
+            margin-left:1rem;
+            @media screen and (min-width:1024px) {
+              min-width: 15.389375rem;
+              margin-right:11.55rem;
+            }
+             &.plugin-img,&.produce-img, &.save-img {
+              @media screen and (min-width:1024px) {
+                margin-right: 2.44rem;
+                max-width: 41.25rem;
+              }
             }
           }
           .btn {
             @include btn;
-          }
-          .content-btn {
-            @include btn;
-            display: none;
-            @media screen and (min-width:1200px) {
-              display: block;
+            margin-top:1.25rem;
+            a {
+              text-decoration: none;
+              color: #131111;
+              text-align: center;
+              font-size: 0.88213rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
+            &.card-btn-mobile,&.card-btn-desktop {
+              @include btn;
+              margin-top:1.25rem;
+              a {
+                text-decoration: none;
+                color: #131111;
+                text-align: center;
+                font-size: 0.88213rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              }
+            }
+            &.card-btn-mobile {
+              @media screen and (min-width: 1024px) {
+                display: none;
+              }
+            }
+            &.card-btn-desktop {
+              display: none;
+              @media screen and (min-width: 1024px) {
+                display: block;
+              }
             }
           }
         }
-        .requirements-img-wrapper,.calculator-image,.configurator-image {
-          @include img-contain(left);
-          height: 4.29rem;
-          margin-left:1rem;
-          @media screen and (min-width: 1200px) {
-            width: 50%;
-          @include img-contain(center);
+      }
+      #plug-in,#produce,#save {
+        padding-left:0;
+        padding-right: 0;
+        .card {
+          border-bottom: none;
+          .card-content {
+           .card-title {
+             padding-top: 1.88rem;
+           }
+           .card-text-wrapper {
+            @media screen and (min-width:1024px) {
+              width: 65%;
+            }
+           }
           }
-        }
-        .configurator-image {
-          height: 8.6475rem;
-          @media screen and (min-width:1200px) {
-            height: 10.25rem;
-          }
-        }
-        .mobile-btn {
-          @include btn;
-          &.configure-btn {
-            font-weight: 600;
-          }
-          margin-top:1.25rem;
-          @media screen and (min-width: 1200px) {
-            display: none;
+          .card-img-wrapper {
+            width:100%;
+            margin-left:0;
+            min-height: 14.1875rem;
+            @include img-cover(center);
+            &.save-img {
+              @include img-contain(center);
+            }
           }
         }
       }
-      .configurator,.solar-panels,.install-power-meter,.store-power {
-        border-bottom: none;
-      }
-      .solar-panels,.install-power-meter,.store-power {
-        padding-top:0;
-        display: flex;
-        flex-direction: column-reverse;
-        gap:1.88rem;
-        .img-wrapper {
-          height: 14.1875rem;
-          @include img-cover(center);
-          @media screen and (min-width:1200px) {
-            width: 50%;
-          }
-        }
-        @media screen and (min-width: 1200px) {
-          flex-direction: row;
-        }
-      }
-    }
+   }
   }
-  #plug-in, #produce, #save {
-    padding-top:0;
-  }
-  #produce {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 1.88rem;
-    
-    .img-wrapper {
-      height: 14.1875rem;
-      @include img-cover(center);
-      @media screen and (min-width:1200px) {
-        width: 44%;
-      // width:  42.0625rem;
 
-      margin-left:4.5rem;
-
-      }
-    }
-    @media screen and (min-width: 1200px) {
-      flex-direction: row;
-    }
-  }
 }
 
+.individual-products {
 
+}

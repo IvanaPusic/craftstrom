@@ -8,13 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const produceDiv = document.getElementById("produce");
   const saveDiv = document.getElementById("save");
   const articles = document.querySelectorAll("article");
-  const links = document.querySelectorAll(".choose-links-wrapper .save-list a");
-  const info = document.querySelector('.info');
-  const body = document.querySelector("body");
+  const links = document.querySelectorAll(".info-links-wrapper .info-list a");
 
-  const arrow1 = document.querySelector('.arrow-1');
-  const arrow2 = document.querySelector('.arrow-2');
-  const arrow3 = document.querySelector('.arrow-3');
   const arrow1Img = document.querySelector('.arrow-1-img');
   const arrow2Img = document.querySelector('.arrow-2-img');
   const arrow3Img = document.querySelector('.arrow-3-img');
@@ -37,11 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
   onGridImgContainer.style.display = 'none';
   onGridNightImgContainer.style.display = 'none';
   offGridImgContainer.style.display = 'none';
-  content1.style.display ='block'
-  title1.style.color = '#F9A41A'
+  content1.style.display = 'block';
+  title1.style.color = '#F9A41A';
   arrow1Img.src = './src/images/arrow_up.svg';
 
-  console.log(chooseLinks)
   title1.addEventListener('click', function () {
     content1.style.display = 'block';
     solarImg.src = './src/images/on-grid-day-img.png';
@@ -122,26 +116,27 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".swiper-button-next",
     },
   });
+
   const productContentSwiper = new Swiper('.product-content-swiper', {});
 
-const learnMoreSwiper = new Swiper('.learnMore', {
-  slidesPerView:1.2,
-  spaceBetween:20,
-  breakpoints: {
-    1024: {
-      slidesPerView:3,
-      spaceBetween:5,
+  const learnMoreSwiper = new Swiper('.learnMore', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 5,
+      },
     },
-  },
     pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    bulletClass: 'swiper-pagination-bullet',
-    bulletActiveClass: 'swiper-pagination-bullet-active',
-  }
-});
+      el: '.swiper-pagination',
+      clickable: true,
+      bulletClass: 'swiper-pagination-bullet',
+      bulletActiveClass: 'swiper-pagination-bullet-active',
+    }
+  });
 
-window.parent.addEventListener("scroll", () => {
+  window.parent.addEventListener("scroll", () => {
     let current = "";
     const pageYOffset = window.parent.scrollY;
 
@@ -149,7 +144,7 @@ window.parent.addEventListener("scroll", () => {
     articles.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight / 2;
-      if (sectionTop <= pageYOffset && sectionTop + sectionHeight > pageYOffset) {
+      if (sectionTop <= pageYOffset) {
         current = section.getAttribute("id");
       }
     });
@@ -178,8 +173,8 @@ window.parent.addEventListener("scroll", () => {
     sections.forEach((section, index) => {
       if (section.id === current) {
         swiper.slideTo(index);
-        if(section.id === 'choose') {
-           chooseLinks.forEach(item => {
+        if (section.id === 'choose') {
+          chooseLinks.forEach(item => {
             item.classList.add("active");
             chooseDiv.scrollIntoView({ behavior: "smooth", block: "start" });
           });
@@ -193,12 +188,12 @@ window.parent.addEventListener("scroll", () => {
             item.classList.remove("active");
           });
         }
-        if(section.id === 'plug-in') {
-           plugInLinks.forEach(item => {
+        if (section.id === 'plug-in') {
+          plugInLinks.forEach(item => {
             item.classList.add("active");
             pluginDiv.scrollIntoView({ behavior: "smooth", block: "start" });
           });
-           chooseLinks.forEach(item => {
+          chooseLinks.forEach(item => {
             item.classList.remove("active");
           });
           produceLinks.forEach(item => {
@@ -208,7 +203,7 @@ window.parent.addEventListener("scroll", () => {
             item.classList.remove("active");
           });
         }
-        if(section.id === 'produce') {
+        if (section.id === 'produce') {
           produceLinks.forEach(item => {
             item.classList.add("active");
             produceDiv.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -223,7 +218,7 @@ window.parent.addEventListener("scroll", () => {
             item.classList.remove("active");
           });
         }
-        if(section.id === 'save') {
+        if (section.id === 'save') {
           produceLinks.forEach(item => {
             item.classList.remove("active");
             produceDiv.scrollIntoView({ behavior: "smooth", block: "start" });

@@ -5,121 +5,80 @@ body {
   padding: 0;
   background: #131111;
 }
+
 .products-links {
   // overflow: hidden;
   position: relative;
   scroll-behavior: smooth;
+
   .wrapper {
-  .solar-panels-wrapper,
-  .battery-wrapper,
-  .power-meter-wrapper,
-  .safety-gate-adapter-wrapper,
-  .inverter-wrapper,
-  .smart-pv-plug-wrapper,
-  .our-app-wrapper {
-    @include img-cover(center);
-    // height: 14.375rem;
+    .card {
+      @include img-cover(center);
+      // height: 14.375rem;
 
-    .content {
-      padding-top: 4.44rem;
-      padding-left: 3.5rem;
-      padding-bottom: 4.44rem;
-      @media screen and (min-width: 1200px){
-        padding-left: 14.44rem;
-      }
-      .title {
-        color: $white;
-        font-family: $poppins;
-        font-size: 2.25rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-      }
+      .content {
+        padding-top: 4.44rem;
+        padding-left: 3.5rem;
+        padding-bottom: 4.44rem;
 
-      .content-link {
-        display: inline-block;
-        color: #FFF;
-        font-family: $montseratt;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-decoration-line: underline;
-        margin-top: 0.94rem;
+        @media screen and (min-width: 1200px) {
+          padding-left: 14.44rem;
+        }
+
+        .title {
+          color: $white;
+          font-family: $poppins;
+          font-size: 2.25rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        .content-link {
+          display: inline-block;
+          color: #FFF;
+          font-family: $montseratt;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-decoration-line: underline;
+          margin-top: 0.94rem;
+        }
       }
     }
-  }
-
   }
 
   .main-content {
-    display: none;
-    // scroll-behavior: smooth;
-    // position: relative;
-    article {
-      padding:0;
-      position:relative;
-      @media screen and (min-width: 1200px) {
-        padding-top: 6.25rem;
-        padding-inline: 3.12rem;
-        display: flex;
-        gap: 1.37rem;
-      }
-      .links-wrapper {
-        display: none;
-        @media screen and (min-width:1200px) {
-          list-style-type: none;
-          display: flex;
-          flex-direction: column;
-          position:sticky;
-          top:0;
-          gap: 0.38rem;
-        }
-        .link-item {
+    position: relative;
+    padding-top: 1.81rem;
+    scroll-behavior: smooth;
+    padding-bottom: 4.56rem;
 
-          .link {
-            color: rgba(255, 255, 255, 0.40);
-            text-align: center;
-            font-family: $poppins;
-            font-size: 1.25rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            text-decoration: none;
-          }
-          .active {
-            color: $white;
-            text-align: center;
-            font-family: $poppins;
-            font-size: 1.875rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-        }
-      }
-    }
     .productLinksSwiper {
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1300px) {
         display: none;
-        padding-top:2.62rem;
+        padding-top: 2.62rem;
       }
       height: 4.125rem;
       width: 100%;
-      position:sticky;
-      top:0;
-      left:0;
+      position: sticky;
+      top: 0;
+      left: 0;
       z-index: 10;
       background: $orange;
+
       .swiper-button-next {
-        color:$dark;
+        color: $dark;
       }
+
       .swiper-wrapper {
         height: 100%;
         width: 100%;
         padding-inline: 0.68rem;
-        padding-top:0.94rem;
+        padding-top: 0.94rem;
         padding-bottom: 0.94rem;
+
         .swiper-slide {
           a {
             color: rgba(255, 255, 255, 0.40);
@@ -130,111 +89,262 @@ body {
             line-height: normal;
             text-decoration: none;
           }
+
           .active {
             color: #FFF;
             font-size: 1.3125rem;
           }
+        }
       }
     }
-  }
-  #solar-panels, #battery, #power-meter, #inverter,#smart-pv-plug,#safety-gate-adapter, #our-app {
-    position: relative;
-  }
-  #battery, #power-meter, #inverter,#smart-pv-plug,#safety-gate-adapter, #our-app {
-    @media screen and (min-width:1200px) {
-      margin-left: 14rem;
-    }
-  }
-    #solar-panels, #battery,#power-meter,#inverter {
-      position:relative;
-      .solar-panels-content,.battery-content,.power-meter-content,.inverter-content{
-        width:100%;
 
-        @media screen and (min-width:1200px) {
-          max-width: 69.5625rem;
-          
+    .products-main {
+      display: flex;
+      position: relative;
+
+      .products-links-wrapper {
+        display: none;
+
+        @media screen and (min-width: 1300px) {
+          display: flex;
+          flex-direction: column;
+          position: sticky;
+          top: 0;
+          // margin-top: 4rem;
+          // position: relative;
+          height: 100%;
         }
-        .showcase {
-          &.battery-showcase {
-            .img-wrapper {
-              min-height: 18.6875rem;
-              max-height:18.6875rem;
+
+        .products-list {
+          list-style-type: none;
+
+          .products-list-item {
+            padding-left: 3.13rem;
+
+            .solar-panels-link,
+            .battery-link,
+            .safety-gate-link,
+            .power-meter-link,
+            .smart-pv-link,
+            .safety-gate-adapter-link,
+            .inverter-link,
+            .app-link {
+              color: rgba(255, 255, 255, 0.40);
+              text-align: center;
+              font-family: $poppins;
+              font-size: 1.25rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              text-decoration: none;
+            }
+
+            .active {
+              color: $white;
+              font-size: 1.875rem;
+            }
+          }
+        }
+      }
+
+      .products-wrapper-content {
+        width: 100%;
+
+        #solar-panels,#battery,#power-meter,#safety-gate-adapter,#inverter,#smart-pv-plug, #app {
+            @media screen and (min-width:1200px){
+              margin-bottom: 6.25rem;
+            }
+          // --------------SHOWCASE -----------------------
+          .showcase {
+            @media screen and (min-width: 1024px) {
+              max-width: 69.5625rem;
+            }
+             &.battery-showcase {
+              @media screen and (min-width: 1200px) {
+                margin-top: 6.25rem;
+              }
+            }
+            .img-wrapper,.battery-video {
+              width: 100%;
+              min-height: 18.75rem;
               display: flex;
               justify-content: center;
               align-items: center;
+              @include img-cover(center);
+                .btn {
+                  @include btn;
+                  background-color: transparent;
+                  border: 2px solid $white;
+                    a {
+                      text-decoration: none;
+                      color: $white;
+                      text-align: center;
+                      font-family: $montseratt;
+                      font-size: 0.98213rem;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: normal;
+                    }
+                  }
             }
-          }
-          .showcaseSwiper {
-            border:none;
-            width: 100%;
-            height: 100%;
-            .swiper-wrapper {
-              .swiper-slide {
-               @include flex-center;
-                width: 69.5625rem;
-                height: 18.6875rem;
-                flex-shrink: 0;
+            .showcase-swiper,
+            .content-swiper {
+              width: 100%;
+              height: 100%;
+
+              .swiper-wrapper {
+                width: 100%;
+                height: 100%;
               }
             }
-          }
-          .shop-now-btn {
-            display: flex;
-            width: 13.5625rem;
-            height: 3.4375rem;
-            margin: 0 auto;
-            padding: 0.90175rem 3.02281rem;
-            justify-content: center;
-            align-items: center;
-            gap: 2.88563rem;
-            flex-shrink: 0;
-            border-radius: 4.8125rem;
-            background-color: transparent;
-            border: 2px solid $white;
-            color: #FFF;
-            text-align: center;
-            font-family: $montseratt;
-            font-size: 0.98213rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            cursor: pointer;
-            transition: all 300ms ease-in-out;
-          }
-          .shop-now-btn:hover {
-            background-color: $white;
-            color: $dark;
-          }
-          .contentSwiper {
-            width:100%;
-            height: 100%;
-            background-color: $white;
-            @media screen and (min-width: 1200px) {
-              display: none;
+
+            .showcase-swiper {
+              .swiper-wrapper {
+                .swiper-slide {
+                  min-height: 18.75rem;
+                  @include img-cover(center);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  .btn {
+                    @include btn;
+                    background-color: transparent;
+                    border: 2px solid $white;
+
+                    a {
+                      text-decoration: none;
+                      color: $white;
+                      text-align: center;
+                      font-family: $montseratt;
+                      font-size: 0.98213rem;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: normal;
+                    }
+                  }
+                }
+              }
             }
-            .content-swiper-wrapper {
-              width:100%;
-              height: 100%;
+
+            .content-swiper {
+              background-color: $white;
+              padding-bottom: 3rem;
               display: flex;
-              gap: 1.37rem;
-              padding-left: 4.44rem;
-              padding-top:2.13rem;
-              padding-bottom: 7.94rem;
-              .swiper-slide {
+              flex-direction: column-reverse;
+
+              @media screen and (min-width: 1024px) {
+                display: none;
+              }
+
+              .swiper-wrapper {
+                display: flex;
+
+                .swiper-slide {
+                  display: flex;
+                  padding-top: 2.19rem;
+                  flex-direction: column;
+                  gap: 0.62rem;
+                  padding-left: 4.44rem;
+                  padding-bottom: 5.44rem;
+                  .label {
+                    color: $orange;
+                    font-family: $poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                  }
+                  .battery-title,.title {
+                    color: $dark;
+                    font-family: $poppins;
+                    font-size: 1.125rem;
+                    padding-top: 0.62rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 131%; /* 1.47375rem */
+                  }
+                  .title {
+                    border-top: 1px solid $dark;
+                  }
+
+                  .text-wrapper {
+                    .text {
+                      color: $dark;
+                      /* body */
+                      font-family: $poppins;
+                      font-size: 1rem;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: normal;
+
+                      .bold {
+                        font-weight: 700;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .swiper-horizontal > .swiper-pagination-progressbar,
+              .swiper-pagination-progressbar.swiper-pagination-horizontal {
+                top: auto;
+                bottom: 2.06rem;
+                width: 50%;
+                border-radius: 0.53125rem;
+                margin: 0 auto;
+                right: 0;
+                min-width: 16.4375rem;
+                max-width: 16.4375rem;
+                background: #D9D8D8;
+
+                .swiper-pagination-progressbar-fill {
+                  background-color: $dark;
+                  min-width: 4.8125rem;
+                  border-radius: 0.53125rem;
+                }
+              }
+            }
+
+            .content {
+              display: none;
+              &.safety-gate-content {
+                display: block;
+              }
+              @media screen and (min-width: 1024px) {
+                width: 100%;
                 background-color: $white;
                 display: flex;
-                flex-direction: column;
-                gap:0.63rem;
+                gap: 1.38rem;
+                padding-top: 2.19rem;
+                padding-bottom: 1.94rem;
+                padding-inline: 4.44rem;
+              }
+
+              .card {
+                min-width: 13.3125rem;
                 max-width: 14.375rem;
-                .title {
-                  padding-top:0.63rem;
-                  border-top:1px solid $dark;
+                .label {
+                  color: $orange;
+                  font-family: $poppins;
+                  font-size: 0.875rem;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                }
+                .battery-title,.title {
                   color: $dark;
                   font-family: $poppins;
                   font-size: 1.125rem;
+                  padding-top: 0.62rem;
                   font-style: normal;
                   font-weight: 500;
                   line-height: 131%; /* 1.47375rem */
                 }
+                .title {
+                  border-top: 1px solid $dark;
+                }
+
                 .text-wrapper {
                   .text {
                     color: $dark;
@@ -244,829 +354,191 @@ body {
                     font-style: normal;
                     font-weight: 300;
                     line-height: normal;
+
                     .bold {
                       font-weight: 700;
                     }
+                    &.safety-gate-text {
+                      @media screen and (min-width:1200px) {
+                        width:100%;
+                      }
+                    }
                   }
                 }
-              }
-            }
-          }
-          .content {
-            display: none;
-            @media screen and (min-width:1200px) {
-              background-color: $white;
-              display: flex;
-              gap: 1.37rem;
-              // margin-top:2.19rem;
-              min-height: 26.25rem;
-              padding-top: 2.19rem;
-              padding-left: 4.44rem;
-              padding-right: 4.5rem;
-            }
-            .simple-design,.weather-resistant,.convenience,.modular {
-              display: none;
-              @media screen and (min-width:1200px) {
-                display: flex;
-                flex-direction: column;
-                gap: 0.62;
-              }
-              border-top: 1px solid $dark;
-              .title {
-                color: $dark;
-                font-family: $poppins;
-                padding-top: 0.63rem;
-                font-size: 1.125rem;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 131%; /* 1.47375rem */
-              }
-              .simple-design-text-wrapper,
-              .weather-resistant-text-wrapper,
-              .convenience-text-wrapper,
-              .modular-text-wrapper {
-                display: flex;
-                padding-top: 0.62rem;
-                flex-direction: column;
-                gap: 0.65rem;
-
-                .text {
-                  .bold{
-                    font-weight: 700;
-                  }
-                  color: $dark;
-                  /* body */
-                  font-family: $poppins;
-                  font-size: 1rem;
-                  font-style: normal;
-                  font-weight: 300;
-                  line-height: normal;
+                .btn {
+                  @include btn;
                 }
               }
-            }
-            .simple-design {
-              max-width: 14.375rem;
-            }
-            .weather-resistant {
-              min-width: 13.3125rem;
-            }
-
-            .convenience {
-              max-width: 13.75rem;
             }
           }
         }
-        .product-info {
+
+        // -------------- SPECIFICATION -----------------------
+        .specification {
+          padding-inline: 1rem;
           padding-top: 2.5rem;
-          @media screen and (min-width: 1200px) {
-            padding-inline:0;
-          }
-          .about{
+          .specification-category {
+          
             border-bottom: 1px solid $white;
-            padding-left:1rem;
+            padding-bottom: 1.75rem;
             .title {
+              padding-bottom: 0.63rem;
+              padding-top: 1.75rem;
+            }
+            .title,.text {
               color: $white;
               /* headlines */
               font-family: $poppins;
               font-size: 1.5625rem;
               font-style: normal;
-              font-weight: 700;
+              font-weight: 500;
               line-height: 131%; /* 2.04688rem */
             }
             .text {
-              color: $white;
-              font-family: $poppins;
               font-size: 1rem;
-              font-style: normal;
               font-weight: 300;
               line-height: normal;
-              padding-bottom: 1.75rem;
-              padding-top: 0.63rem;
-            }
-          }
-
-          .design,.solar-panels-features,.features,.battery-features,.warranty-and-manual{
-            padding-top: 1.75rem;
-            padding-inline: 1rem;
-            border-bottom: 1px solid $white;
-            .title {
-              color: $white;
-              /* headlines */
-              font-family: $poppins;
-              font-size: 1.5625rem;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 131%; /* 2.04688rem */
-            }
-            .design-content,.features-content {
-              display: flex;
-              gap: 2.19rem;
-              padding-bottom: 1.75rem;
-              padding-top: 0.63rem;
-              flex-direction: column;
               @media screen and (min-width:1200px) {
-                flex-direction: row;
+                max-width: 69.0625rem;
               }
-              .dimensions,
-              .weight,
-              .materials,
-              .wattage,
-              .operating-temperature,
-              .certification,
-              .warranty,
-              .manual {
-              .dimensions-content {
+            }
+            .category-wrapper {
+               padding-bottom: 0.81rem;
+               @media screen and (min-width: 1200px){
+                  display: flex;
+                  gap:2.19rem;
+                  
+                }
+              .category {
+                .container {
                   display: flex;
                   flex-direction: column;
-                  gap: 0.81rem;
-                  .dimensions-content-first,.dimensions-content-second {
-                    .text {
-                       color: $white;
-                       font-family: $poppins;
-                       font-size: 0.875rem;
-                       font-style: normal;
-                       font-weight: 400;
-                       line-height: normal;
-                    }
-                    .bold {
-                      font-weight: 600;
-                    }
+                  // gap: 0.63rem;
+                  .text {
+                    color: $white;
+                    font-family: $poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    padding-bottom: 0.63rem;
+                  }
+                  .bold {
+                    font-weight: 700;
                   }
                 }
-                .title {
-                  color: $orange !important;
+                .category-title {
+                  color: $orange;
                   font-family: $poppins;
                   font-size: 0.875rem;
                   font-style: normal;
                   font-weight: 300;
+                  line-height: normal;
                   padding-bottom: 0.19rem;
-                  line-height: normal;
                 }
-                .text {
+                .category-text, a {
                   color: $white;
                   font-family: $poppins;
                   font-size: 0.875rem;
                   font-style: normal;
                   font-weight: 400;
                   line-height: normal;
-                }
-                .link {
-                  color: $white;
-                  font-family: $poppins;
-                  font-size: 0.875rem;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: normal;
-                  text-decoration-line: underline;
+                  @media screen and (min-width:1200px) {
+                    max-width: 18rem;
+                  }
                 }
               }
             }
-            .design-content {
-              .materials {
-                .text {
-                  max-width: 18rem;;
-                }
-              }
-            }
-          }
-          .warranty-and-manual {
-            border-bottom: none;
-            .warranty-manual-content {
-            flex-direction: row;
-
+            &.warranty-manual {
+              border-bottom: none;
             }
           }
         }
+        // --------------------- HOW IT WORKS --------------------------
         .how-it-works {
-          width: 100%;
-          display: flex;
-          flex-direction: column-reverse;
-          @media screen and (min-width: 1200px) {
-            flex-direction: row;
-            justify-content: space-between;
-          }
-          background-color: $white;
-          .content {
+          @media screen and (min-width:1200px) {
+            max-width:72.6875rem;
             display: flex;
-            flex-direction: column;
-            gap:2.5rem;
-            padding-left:1.09rem;
-            padding-right: 1.65rem;
+            flex-direction: row-reverse;
+          }
+          .how-it-works-swiper {
+            width: 100%;
+            height: 100%;
             @media screen and (min-width: 1200px) {
-              padding-top: 4.56rem;
-              padding-left: 5.44rem;
-              padding-right: 4.81rem;
-              gap:0;
-              display: flex;
-              flex-direction: column;
-              width: 60%;
-              justify-content: flex-start;
+              height: inherit;
+              width: 45%;
+            }
+            .swiper-wrapper {
+              width:100%;
+              height: 100%;
+              .swiper-slide {
+                min-height: 18.75rem;
+                @include img-cover(center);
+                @media screen and (min-width:1200px) {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .how-it-works-content {
+            padding-inline: 1.09rem;
+            padding-top: 2.5rem;
+            padding-bottom:2.5rem;
+            background-color: $white;
+            @media screen and (min-width: 1200px) {
+              width: 55%;
             }
             .title {
-              padding-top:2.5rem;
               color: $dark;
               font-family: $poppins;
               font-size: 1.875rem;
-              text-align: center;
               font-style: normal;
               font-weight: 500;
               line-height: normal;
-              @media screen and (min-width:1200px) {
-                text-align: left;
-              font-weight: 700;
-
-              }
+              text-align: center;
+              padding-bottom: 2.5rem;
             }
-            .guide {
-              padding-top:1.25rem;
-              display: flex;
-              flex-direction: column;
-              gap: 0.63rem;
+            .content-wrapper {
               .text {
-                span {
-                  color: $orange;
-                  font-family: $poppins;
-                  font-size: 1.0625rem;
-                  font-style: normal;
-                  font-weight: 700;
-                  line-height: normal;
-                }
-
-                color: $dark;
-                font-family: $poppins;
-                font-size: 1.0625rem;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-              }
-            }
-
-            .information {
-              padding-top:1.25rem;
-              display: flex;
-              flex-direction: column;
-              gap: 0.63rem;
-
-              .text {
-                 .link {
-                  color: #131111;
-                  font-style: italic;
-                  font-weight: 600;
-                }
                 color: $dark;
                 font-family: $poppins;
                 font-size: 1rem;
                 font-style: normal;
                 font-weight: 300;
                 line-height: normal;
-               
-              }
-              .text-bold {
-                color: $dark;
-                font-family: $poppins;
-                font-size: 1.125rem;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 131%; /* 1.47375rem */
-
-                .bold {
-                  font-style: italic;
-                  font-weight: 700;
-                }
-              }
-            }
-
-            .btn-container {
-              padding-top: 1.25rem;
-              display: flex;
-              gap:1.75rem;
-              padding-bottom: 3rem;
-              .how-it-works-btn {
-                @include btn;
-              }
-              .consultation-btn {
-                @include btn;
-                background: transparent;
-                border:2px solid $orange;
-              }
-            }
-          }
-          .swiper {
-            width: 100%;
-            height: 100%;
-            .swiper-wrapper {
-              width: 100%;
-              height: 100%;
-              .swiper-slide {
-                height: 18.75rem;
-
-                @media screen and (min-width:1200px) {
-                  // &.battery-slide {
-                  //  height: 70rem;
-                  // }
-                  min-height: 60rem; 
-                  max-height: 70rem;
-                }
-                width:100%;
-                @include img-cover(center);
-                width:100%;
-                flex-shrink: 0;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    #battery {
-      // margin-top:6.25rem;
-      .battery-content {
-        width: 100%;
-
-        .product {
-          .img-wrapper {
-            width: 100%;
-            height: 26.9375rem;
-            flex-shrink: 0;
-            @include img-cover(center);
-          }
-          .product-content-swiper {
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            @media screen and (min-width:1200px) {
-              display: none;
-            }
-            .product-wrapper {
-              width:100%;
-              height: 100%;
-              padding-left:1.94rem;
-              padding-top:2.19rem;
-              padding-bottom: 6.31rem;
-              display: flex;
-              gap: 3.69rem;
-              .swiper-slide {
-                max-width: 17.5625rem;
-                
-                .label {
-                  color: #DC9119;
-                  font-family: $poppins;
-                  font-size: 0.875rem;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: normal;
-                }
-                .title {
-                  color: #131111;
-                  font-family: $poppins;
-                  font-size: 1.3125rem;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 131%; /* 1.71938rem */
-                }
-                .product-content-text {
-
-                  .text {
-                    padding-top: 0.63rem;
-                    color: #131111;
-                    /* body */
-                    font-family: $poppins;
-                    font-size: 1rem;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: normal;
-                  }
-                }
-              }
-            }
-          }
-        }
-        .product-content {
-          display: none;
-          @media screen and (min-width: 1200px) {
-            margin-bottom: 6.25rem;
-            display: flex;
-            justify-content: space-around;
-            padding-right: 2.87rem;
-            padding-bottom: 2.5rem;
-            background-color: $white;
-            padding-left: 4.44rem;
-            padding-top: 2.19rem;
-            .label {
-                  color: #DC9119;
-                  font-family: $poppins;
-                  font-size: 0.875rem;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: normal;
-                }
-                .title {
-                  color: #131111;
-                  font-family: $poppins;
-                  font-size: 1.3125rem;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 131%; /* 1.71938rem */
-                }
-                .product-content-text {
-                  max-width: 17.5625rem;
-                  .text {
-                    padding-top: 0.63rem;
-                    color: #131111;
-                    /* body */
-                    font-family: $poppins;
-                    font-size: 1rem;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: normal;
-                  }
-                }
-
-          }
-        }
-        
-      }
-    }
-
-   #power-meter, #inverter,#battery, #solar-panels {
-    .power-meter-content,.inverter-content,.battery-content,.solar-panels-content {
-     .product-info {
-          padding-top: 6.25rem;
-          .about{
-            border-bottom: 1px solid $white;
-            
-            .title {
-              color: $white;
-              /* headlines */
-              font-family: $poppins;
-              font-size: 1.5625rem;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 131%; /* 2.04688rem */
-            }
-            .text {
-              color: $white;
-              font-family: $poppins;
-              font-size: 1rem;
-              font-style: normal;
-              font-weight: 300;
-              line-height: normal;
-              padding-bottom: 1.75rem;
-              padding-top: 0.63rem;
-            }
-          }
-
-          .design,.solar-panels-features,.battery-features,.features,.warranty-and-manual {
-            padding-top: 1.75rem;
-            border-top: 1px solid $white;
-            .title {
-              color: $white;
-              /* headlines */
-              font-family: $poppins;
-              font-size: 1.5625rem;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 131%; /* 2.04688rem */
-            }
-            .design-content,.features-content,.warranty-manual-content {
-              display: flex;
-              gap: 2.19rem;
-              padding-bottom: 1.75rem;
-              padding-top: 0.63rem;
-              .dimensions,
-              .weight,
-              .ports,
-              .wattage,
-              .operating-temperature,
-              .certification,
-              .warranty,
-              .manual {
-                .title {
+                padding-bottom:2.5rem;
+                .orange,&.bold {
                   color: $orange;
-                  font-family: $poppins;
-                  font-size: 0.875rem;
-                  font-style: normal;
-                  font-weight: 300;
-                  padding-bottom: 0.19rem;
-                  line-height: normal;
-                }
-                .text {
-                  color: $white;
-                  font-family: $poppins;
-                  font-size: 0.875rem;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: normal;
-                }
-                .text-ports {
-                  padding-bottom: 0.65rem;
-                }
-                .link {
-                  color: $white;
-                  font-family: $poppins;
-                  font-size: 0.875rem;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: normal;
-                  text-decoration-line: underline;
-                }
-              }
-            }
-            .design-content {
-              .materials {
-                .text {
-                  max-width: 18rem;;
-                }
-              }
-            }
-          }
-          .features {
-            max-height: 138.38px;
-          }
-          .warranty-and-manual {
-            border-top: 1px solid $white;
-          }
-        }
-    }
-   }
-    #safety-gate-adapter {
-      .safety-gate-content {
-        width:100%;
-        @media screen and (min-width:1200px) {
-          width: 69.5625rem; 
-        }
-        // showacase
-        .showcase {
-          // margin-top: 6.25rem;
-          .img-wrapper {
-              @include flex-center;
-              width: 100%;
-              min-height: 18.6875rem;
-              max-height: 18.6875rem;
-              flex-shrink: 0;
-              @include img-cover(center);
-            }
-          .content {
-            background-color: $white;
-            display: flex;
-            gap: 1.37rem;
-            min-height: 17.5625rem;
-            padding-top: 2.81rem;
-            padding-left: 4.44rem;
-            padding-right: 4.5rem;
-
-            .simple-design {
-              display: flex;
-              flex-direction: column;
-              gap: 0.62;
-              .title {
-                border-top: 1px solid $dark;
-                max-width: 17.125rem;
-                color: $dark;
-                font-family: $poppins;
-                padding-top: 0.63rem;
-                font-size: 1.125rem;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 131%; /* 1.47375rem */
-              }
-              .simple-design-text-wrapper{
-                display: flex;
-                padding-top: 0.62rem;
-                flex-direction: column;
-                gap: 0.65rem;
-                padding-bottom:2rem;
-                .text {
-                  max-width: 59.625rem;
-                  .bold {
-                    font-weight: 700;
-                  }
-                  color: $dark;
-                  /* body */
-                  font-family: $poppins;
-                  font-size: 1rem;
-                  font-style: normal;
-                  font-weight: 300;
-                  line-height: normal;
-                  padding-bottom:1.31rem;
-                }
-              }
-              .buy-now {
-                @include btn;
-              }
-            }
-          }
-        }
-      }
-    }
-    #inverter {
-      .inverter-content {
-        width:100%;
-        @media screen and (min-width:1200px) {
-          max-width: 69.5625rem;
-        }
-        .how-it-works {
-          width:100%;
-          display: flex;
-          flex-direction: column-reverse;
-          justify-content: space-between;
-          background-color: $white;
-          position:relative;
-
-          @media screen and (min-width:1200px) {
-            max-width: 72.6875rem;
-            flex-direction: row;
-          }
-          .content {
-            padding-top: 2.56rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding-inline: 1.09rem;
-            @media screen and (min-width: 1200px) {
-              padding-left: 4.44rem;
-              padding-right: 4.81rem;
-              width: 50%;
-            }
-            .title {
-              color: $dark;
-              font-family: $poppins;
-              font-size: 1.875rem;
-              font-style: normal;
-              font-weight: 700;
-              line-height: normal;
-            }
-            .guide {
-              padding-top:1.25rem;
-              display: flex;
-              flex-direction: column;
-              gap: 0.63rem;
-              .text {
-                span {
-                  color: $orange;
-                  font-family: $poppins;
                   font-size: 1.0625rem;
-                  font-style: normal;
                   font-weight: 700;
-                  line-height: normal;
                 }
-
-                color: $dark;
-                font-family: $poppins;
-                font-size: 1.0625rem;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-              }
-            }
-
-            .information {
-              padding-top:1.25rem;
-              display: flex;
-              flex-direction: column;
-              gap: 0.63rem;
-
-              .text {
-                 .link {
-                  color: #131111;
-                  font-style: italic;
+                &.bold,.italic {
+                  color: $dark;
                   font-weight: 600;
                 }
-                color: $dark;
-                font-family: $poppins;
-                font-size: 1rem;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-               
-              }
-              .text-bold {
-                color: $dark;
-                font-family: $poppins;
-                font-size: 1.125rem;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 131%; /* 1.47375rem */
-
-                .bold {
+                .italic {
                   font-style: italic;
-                  font-weight: 700;
                 }
               }
             }
-
-            .btn-container {
-              padding-top: 1.25rem;
+            .btn-wrapper {
               display: flex;
-              gap:1.75rem;
-              padding-bottom: 5.31rem;
-              .how-it-works-btn {
+              gap:1.19rem;
+              .btn,.consultation-btn {
                 @include btn;
+                a {
+                  text-decoration: none;
+                  color: $dark;
+                }
               }
               .consultation-btn {
-                @include btn;
-                background: transparent;
-                border:2px solid $orange;
+                  background: transparent;
+                  border:2px solid $orange;
               }
-            }
-          }
-          .img-container {
-            width:100%;
-            min-height: 50rem;
-            @include img-cover(center);
-            @media screen and (min-width:1200px) {
-              width: 50%;
             }
           }
         }
       }
     }
-
-    #smart-pv-plug, #our-app {
-      position: relative;
-      @media screen and (min-width: 1200px) {
-        margin-top:6.25rem;
-      }
-      .smart-pv-plug-content,.app-content {
-        width:100%;
-        @media screen and (min-width:1200px) {
-          max-width: 69.5625rem;
-        }
-        .showcase {
-          .img-wrapper {
-              @include flex-center;
-              width: 100%;
-              height: 18.6875rem;
-              flex-shrink: 0;
-              background: #C4C4C4;
-              @include img-cover(center);
-            }
-          .content {
-            background-color: $white;
-            display: flex;
-            gap: 1.37rem;
-            // min-height: 17.5625rem;
-            padding-top: 2.81rem;
-            padding-left: 4.44rem;
-            padding-right: 4.5rem;
-            padding-bottom: 2.75rem;
-            .simple-design,.our-app {
-              display: flex;
-              flex-direction: column;
-              gap: 0.62;
-              .title {
-                border-top: 1px solid $dark;
-                max-width: 17.125rem;
-                color: $dark;
-                font-family: $poppins;
-                padding-top: 0.63rem;
-                font-size: 1.125rem;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 131%; /* 1.47375rem */
-              }
-              .app-title {
-                max-width: 37.4375rem;
-              }
-              .simple-design-text-wrapper,.our-app-text-wrapper{
-                display: flex;
-                padding-top: 0.62rem;
-                flex-direction: column;
-                gap: 0.65rem;
-
-                .text {
-                  max-width: 59.625rem;
-                  .bold {
-                    font-weight: 700;
-                  }
-                  .italic {
-                    font-style: italic;
-                  }
-                  color: $dark;
-                  /* body */
-                  font-family: $poppins;
-                  font-size: 1rem;
-                  font-style: normal;
-                  font-weight: 300;
-                  line-height: normal;
-                  padding-bottom:1.31rem;
-                }
-              }
-
-              .buy-now {
-                @include btn;
-              }
-
-            }
-          }
-          .app-content {
-            padding-bottom: 2.75rem;
-          }
-        }
-      }
-    }
-  }
-  #our-app {
-    padding-bottom: 6.37rem;
   }
 }

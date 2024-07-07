@@ -17,86 +17,90 @@
       <div class="hero-content">
         <h1 class="hero-title">A New Era of Plug & Play Solar and Battery kits</h1>
         <div class="hero-btn-wrapper">
-          <button class="buy-now-btn">Buy now</button>
-          <button class="configure-now-btn">Configure now</button>
+          <button class="buy-now-btn">
+            <a href="#">Buy now</a>
+          </button>
+          <button class="configure-now-btn">
+            <a href="#">Configure now</a>
+          </button>
         </div>
       </div>
     <div class="hero-icons">
-      <div class="solar-panel">
+      <div class="icon">
         <img src="./src/images/solar-panels.svg" alt="solar-panels">
         <h3 class="icon-title">Solar Panels</h3>
       </div>
-      <div class="battery">
+      <div class="icon">
         <img src="./src/images/battery.svg" alt="battery">
         <h3 class="icon-title">Battery</h3>
       </div>
-      <div class="power-meter">
+      <div class="icon">
         <img src="./src/images/power-meter.svg" alt="power-meter">
-        <h3 class="icon-title power-meter-title">Power Meter</h3>
+        <h3 class="icon-title last-title">Power Meter</h3>
       </div>
     </div>
   </section>
   <!-- Innovative solar system -->
-  <div class="innovative-solar-system">
-    <p class="innovative-solar-system-text"><span class="bold">Innovative solar systems for generating electricity.</span> Our unique solutions include patented flexible battery storage and top-tier solar panels, offering easy installation and cost savings.
+  <div class="solar-system">
+    <p class="text"><span class="bold">Innovative solar systems for generating electricity.</span> Our unique solutions include patented flexible battery storage and top-tier solar panels, offering easy installation and cost savings.
     </p>
-    <p class="innovative-solar-system-text"><span class="bold">For the first time even renters can join us in this revolution!</span> Reduce your carbon footprint and monthly bills effortlessly.</p>
+    <p class="text"><span class="bold">For the first time even renters can join us in this revolution!</span> Reduce your carbon footprint and monthly bills effortlessly.</p>
   </div>
   <!-- Video -->
-  <section class="video how-it-works-video" style="background-image: url('./src/images/video.png');"></section>
+  <video class="video how-it-works-video" poster="./src/images/video.png"></video>
   <!-- Products -->
-   <section class="products">
-  <h3 class="products-title">Our products</h3>
-  <main class="products-wrapper">
-    <div class="card solar-panels">
-      <div class="img-wrapper" style="background-image: url('./src/images/solar-panel-img.png');"></div>
-      <div class="content">
-        <div class="content-img">
-          <img src="./src/images/solar-panels.svg" alt="solar-panel">
+  <section class="products">
+    <h3 class="products-title">Our products</h3>
+    <main class="products-wrapper">
+      <div class="card">
+        <div class="img-wrapper" style="background-image: url('./src/images/solar-panel-img.png');"></div>
+        <div class="content">
+          <div class="content-img">
+            <img src="./src/images/solar-panels.svg" alt="solar-panel">
+          </div>
+          <h4 class="title">Meet The Solar Panels</h4>
+          <p class="text">
+            <span>Ultra thin Panels with Smart Inverter.</span>
+            <span>Lightweight (3kg), Semi-flexible and Bi-facial.</span>
+            <span>Completely Modular, in steps of 400Watt (400W - 800W - 1200W -1600W - 2000W).</span>
+            <span>Solar production will reduce if excess generation exceeds household usage to prevent feeding electricity back to the utility grid.</span>
+          </p>
+          <button class="btn">Learn more</button>
         </div>
-        <h4 class="title">Meet The Solar Panels</h4>
-        <p class="text">
-          <span>Ultra thin Panels with Smart Inverter.</span>
-          <span>Lightweight (3kg), Semi-flexible and Bi-facial.</span>
-          <span>Completely Modular, in steps of 400Watt (400W - 800W - 1200W -1600W - 2000W).</span>
-          <span>Solar production will reduce if excess generation exceeds household usage to prevent feeding electricity back to the utility grid.</span>
-        </p>
-        <button class="btn">Learn more</button>
       </div>
-    </div>
-    <div class="card battery">
-      <div class="img-wrapper" style="background-image: url('./src/images/battery-img.png');"></div>
-      <div class="content">
-        <div class="content-img">
-          <img src="./src/images/battery.svg" alt="battery">
+      <div class="card card-reverse">
+        <div class="img-wrapper" style="background-image: url('./src/images/battery-img.png');"></div>
+        <div class="content">
+          <div class="content-img">
+            <img src="./src/images/battery.svg" alt="battery">
+          </div>
+          <h4 class="title">Meet the Battery</h4>
+          <p class="text">
+            <span>On-grid and off-grid capabilities.</span>
+            <span>Store your power for when you need it most.</span>
+            <span>Plug into any standard wall outlet in your home and it communicates with your solar system.</span>
+            <span>During a power outage or for portable use, easily detach the battery from the smart base and place it where needed.</span>
+          </p>
+          <button class="btn">Learn more</button>
         </div>
-        <h4 class="title">Meet the Battery</h4>
-        <p class="text">
-          <span>On-grid and off-grid capabilities.</span>
-          <span>Store your power for when you need it most.</span>
-          <span>Plug into any standard wall outlet in your home and it communicates with your solar system.</span>
-          <span>During a power outage or for portable use, easily detach the battery from the smart base and place it where needed.</span>
-        </p>
-        <button class="btn">Learn more</button>
       </div>
-    </div>
-    <div class="card power-meter">
-      <div class="img-wrapper" style="background-image: url('./src/images/power-meter-img.png');"></div>
-      <div class="content">
-        <div class="content-img">
-          <img src="./src/images/power-meter.svg" alt="power-meter">
+      <div class="card">
+        <div class="img-wrapper" style="background-image: url('./src/images/power-meter-img.png');"></div>
+        <div class="content">
+          <div class="content-img">
+            <img src="./src/images/power-meter.svg" alt="power-meter">
+          </div>
+          <h4 class="title">Meet the Power meter</h4>
+          <p class="text">
+            <span>Measures home usage, enabling solar panels to offset purchased electricity.</span>
+            <span>Ensures optimal energy balancing between solar and battery through communication.</span>
+            <span>Utilizes Wi-Fi and MHz communication for reliable connectivity.</span>
+            <span>Maintains communication during Wi-Fi interruptions or low signal.</span>
+          </p>
+          <button class="btn">Learn more</button>
         </div>
-        <h4 class="title">Meet the Power meter</h4>
-        <p class="text">
-          <span>Measures home usage, enabling solar panels to offset purchased electricity.</span>
-          <span>Ensures optimal energy balancing between solar and battery through communication.</span>
-          <span>Utilizes Wi-Fi and MHz communication for reliable connectivity.</span>
-          <span>Maintains communication during Wi-Fi interruptions or low signal.</span>
-        </p>
-        <button class="btn">Learn more</button>
       </div>
-    </div>
-  </main>
+    </main>
 </section>
 <!-- Features -->
    <section class="features-section">
@@ -105,7 +109,7 @@
           <!-- first swiper on mobile -->
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/plugs-and-play.png')"></div>
-            <div class="mobile-card mobile-plug-and-play">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/orange-line.svg" alt="orange-line">
               </div>
@@ -115,7 +119,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/smart-technology.png')"></div>
-            <div class="mobile-card mobile-smart-technology">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="gray-line">
               </div>
@@ -125,7 +129,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/setup-at-home.png')"></div>
-            <div class="mobile-card mobile-home-setup">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="gray-line">
               </div>
@@ -135,7 +139,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/power-supply.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -146,7 +150,7 @@
           <!-- second swiper on mobile -->
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/system-reaction.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -156,7 +160,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/no-interconnection.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -166,7 +170,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/code-safe.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -176,7 +180,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/flexibility.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -187,7 +191,7 @@
           <!-- third mobile swiper -->
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/open-api.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -197,7 +201,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/communication-safety.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -207,7 +211,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/mobility.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -217,7 +221,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/no-adventures.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -228,7 +232,7 @@
           <!-- Fourth mobile -->
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/lifepo4-battery.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -238,7 +242,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/no-cobalt.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -248,7 +252,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/aluminum.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -258,7 +262,7 @@
           </div>
           <div class="swiper-slide">
             <div class="img-wrapper" style="background-image: url('./src/images/no-energy.png')"></div>
-            <div class="mobile-card mobilepower-supply">
+            <div class="mobile-card">
               <div class="img-line-wrapper">
                 <img class="mobile-line-image" src="./src/images/gray-line.svg" alt="orange-line">
               </div>
@@ -274,34 +278,34 @@
           <div class="swiper-slide firstSwiper">
             <div class="swiper mySwiper first-swiper">
             <div class="swiper-wrapper first-swiper-wrapper">
-              <div class="swiper-slide plug-and-play-slide" style="background-image: url('./src/images/plugs-and-play.png');"></div>
-              <div class="swiper-slide smart-technology-slide" style="background-image: url('./src/images/smart-technology.png');"></div>
-              <div class="swiper-slide setup-at-home-slide" style="background-image: url('./src/images/setup-at-home.png');"></div>
-              <div class="swiper-slide power-supply-slide" style="background-image: url('./src/images/power-supply.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/plugs-and-play.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/smart-technology.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/setup-at-home.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/power-supply.png');"></div>
             </div>
             <div class="content">
-              <div class="card plug-and-play">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
                 </div>
                 <h4 class="desktop-title">Plug&Play</h4>
                 <p class="desktop-text">Our solar sets and batteries are fully plug&play, meaning you don't need anything but an outlet.</p>
               </div>
-              <div class="card smart-technology">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
                 </div>
                 <h4 class="desktop-title">Smart Technology</h4>
                 <p class="desktop-text">We were the first to fully integrate our solar and battery system with a powermeter. This way, you can accurately control every aspect in milliseconds.</p>
               </div>
-              <div class="card home-setup">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
                 </div>
                 <h4 class="desktop-title">Setup at Home</h4>
                 <p class="desktop-text">Our solar and battery system are not connected directly. Instead, they use your home power grid to exchange power when needed. You can place your battery wherever you like it best.</p>
               </div>
-              <div class="card power-supply">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
                 </div>
@@ -315,34 +319,34 @@
           <div class="swiper-slide secondSwiper">
             <div class="swiper mySwiper second-swiper">
             <div class="swiper-wrapper second-swiper-wrapper">
-              <div class="swiper-slide system-reaction-slide" style="background-image: url('./src/images/system-reaction.png');"></div>
-              <div class="swiper-slide no-interconnection-slide" style="background-image: url('./src/images/no-interconnection.png');"></div>
-              <div class="swiper-slide code-safe-slide" style="background-image: url('./src/images/code-safe.png');"></div>
-              <div class="swiper-slide flexibility-slide" style="background-image: url('./src/images/flexibility.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/system-reaction.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/no-interconnection.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/code-safe.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/flexibility.png');"></div>
             </div>
             <div class="content">
-              <div class="card system-reaction">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
                 </div>
                 <h4 class="desktop-title">System reaction time of <1 second for accuracy</h4>
                 <p class="desktop-text">Unlike competitors in the market, our products use our proprietary communication system to talk to each other, sending data every 0.1 seconds. This ensures that you won’t accidentally use or transmit power when you don’t want to.</p>
               </div>
-              <div class="card no-interconnection">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
                 </div>
                 <h4 class="desktop-title">No Interconnection Agreement via Zero-Export Functionality</h4>
                 <p class="desktop-text">Our products communicate every 0.1 seconds, eliminating the need for an interconnection agreement by avoiding power export. Unlike slow WiFi, our direct communication ensures instant control.</p>
               </div>
-              <div class="card code-safe">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
                 </div>
                 <h4 class="desktop-title">National Electric Code Safe</h4>
                 <p class="desktop-text">We have designed the Safety Gate Adapter, which is an intelligent breaker. Use this, if you don’t have a dedicated outlet (leading directly to the breaker box without any other outlets). It constantly monitors that line and turns off our products, if you need more power than is advisable in connection with solar input.</p>
               </div>
-              <div class="card flexibility">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
                 </div>
@@ -356,34 +360,34 @@
           <div class="swiper-slide thirdSwiper">
             <div class="swiper mySwiper third-swiper">
             <div class="swiper-wrapper third-swiper-wrapper">
-              <div class="swiper-slide open-api-slide" style="background-image: url('./src/images/open-api.png');"></div>
-              <div class="swiper-slide communication-safety-slide" style="background-image: url('./src/images/communication-safety.png');"></div>
-              <div class="swiper-slide mobility-slide" style="background-image: url('./src/images/mobility.png');"></div>
-              <div class="swiper-slide no-adventures-slide" style="background-image: url('./src/images/no-adventures.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/open-api.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/communication-safety.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/mobility.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/no-adventures.png');"></div>
             </div>
             <div class="content">
-              <div class="card open-api">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
                 </div>
                 <h4 class="desktop-title">Open API</h4>
                 <p class="desktop-text">Since we’re all geeks here, we have, of course, opened up our software to you, the user. This allows you to pull your own data and connect with your devices.</p>
               </div>
-              <div class="card communication-safety">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
                 </div>
                 <h4 class="desktop-title">Communication Safety</h4>
                 <p class="desktop-text">CraftStrom products do not require your home WiFi to balance your energy household. Once you setup all your devices at home, they will create their own communication network that can’t be hacked through your home internet.</p>
               </div>
-              <div class="card mobility">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
                 </div>
                 <h4 class="desktop-title">Mobility</h4>
                 <p class="desktop-text">We believe in empowering our customers to live whatever lifestyle suits you best. This includes the design and setup of our products. Because life sometimes takes you places, for work or leisure, rest assured, you can take all our products with you in a matter of minutes.</p>
               </div>
-              <div class="card no-adventures">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
                 </div>
@@ -397,34 +401,34 @@
           <div class="swiper-slide fourthSwiper">
             <div class="swiper mySwiper fourth-swiper">
             <div class="swiper-wrapper fourth-swiper-wrapper">
-              <div class="swiper-slide life-battery-slide" style="background-image: url('./src/images/lifepo4-battery.png');"></div>
-              <div class="swiper-slide no-cobalt-slide" style="background-image: url('./src/images/no-cobalt.png');"></div>
-              <div class="swiper-slide aluminum-slide" style="background-image: url('./src/images/aluminum.png');"></div>
-              <div class="swiper-slide no-energy-slide" style="background-image: url('./src/images/no-energy.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/lifepo4-battery.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/no-cobalt.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/aluminum.png');"></div>
+              <div class="swiper-slide" style="background-image: url('./src/images/no-energy.png');"></div>
             </div>
             <div class="content">
-              <div class="card life-battery">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/orange-line.svg" alt="orange-line">
                 </div>
                 <h4 class="desktop-title">Super stable LiFePO4 battery cells won’t catch on fire</h4>
                 <p class="desktop-text">Unlike Lithium cells used in your cell phone, this type of cells is stable and won’t catch fire when dropped or otherwise damaged.</p>
               </div>
-              <div class="card no-cobalt">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
                 </div>
                 <h4 class="desktop-title">No Cobalt in our battery cells</h4>
                 <p class="desktop-text">Our battery cells don’t contain any Cobalt, which is typically mined by child labor in unsecured, illegal mines in the Congo. </p>
               </div>
-              <div class="card aluminum">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="gray-line">
                 </div>
                 <h4 class="desktop-title">Aluminum Body</h4>
                 <p class="desktop-text">We believe in using only the best materials. Our product bodies are all made from high grade Alu for feel and safety. No more cheap, cracked plastic housings. The Alu body of the battery will keep you safe!</p>
               </div>
-              <div class="card no-energy">
+              <div class="card">
                 <div class="img-line-wrapper">
                   <img class="line-image" src="./src/images/gray-line.svg" alt="orange-line">
                 </div>
@@ -488,7 +492,7 @@
   </div>
 </section>
 <!-- Popular kits -->
-<section class="popular-kits-section" style="overflow: hidden;">
+<section class="popular-kits-section">
     <h2 class="popular-kits-title">Our Popular Kits</h2>
     <div class="popularKitsSwiper swiper-container">
         <div class="swiper-wrapper">
@@ -683,87 +687,9 @@
         <!-- Add Pagination -->
       <div class="swiper-pagination video-pagination"></div>
     </div>
-    <!-- <div class="swiper-container desktop-swiper">
-      <div class="swiper-wrapper"> -->
-        <!-- Slide 1 -->
-        <!-- <div class="swiper-slide">
-          <div class="video-1">
-            <p class="content">
-              <img src="./src/images/one.svg" alt="">
-              <span>How to install solar panels & inverters </span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
-          </div>
-          <div class="video-2">
-            <p class="content">
-              <img src="./src/images/two.svg" alt="">
-              <span>How to install power meter </span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
-          </div>
-          <div class="video-3">
-            <p class="content">
-              <img src="./src/images/three.svg" alt="">
-              <span>How to install our app</span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
-          </div>
-        </div>
-        <! Slide 2 -->
-        <!-- <div class="swiper-slide">
-          <div class="video-1">
-            <p class="content">
-              <img src="./src/images/one.svg" alt="">
-              <span>How to install solar panels & inverters </span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
-          </div>
-          <div class="video-2">
-            <p class="content">
-              <img src="./src/images/two.svg" alt="">
-              <span>How to install power meter </span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
-          </div>
-          <div class="video-3">
-            <p class="content">
-              <img src="./src/images/three.svg" alt="">
-              <span>How to install our app</span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
-          </div>
-        </div> -->
-        <!-- Slide 3 -->
-        <!-- <div class="swiper-slide">
-          <div class="video-1">
-            <p class="content">
-              <img src="./src/images/one.svg" alt="">
-              <span>How to install solar panels & inverters </span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-1.png');"></div>
-          </div>
-          <div class="video-2">
-            <p class="content">
-              <img src="./src/images/two.svg" alt="">
-              <span>How to install power meter </span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-2.png');"></div>
-          </div>
-          <div class="video-3">
-            <p class="content">
-              <img src="./src/images/three.svg" alt="">
-              <span>How to install our app</span>
-            </p>
-            <div class="video" style="background-image: url('./src/images/video-3.png');"></div>
-          </div>
-        </div>
-      </div> -->
-      <!-- Add Pagination -->
-      <!-- <div class="swiper-pagination"></div> -->
-    <!-- </div>  -->
   </section>
   <!-- Blog -->
-     <section class="blog" style="overflow: hidden;">
+  <section class="blog" style="overflow: hidden;">
     <h4 class="title">Blog</h4>
         <div class="swiper blogSwiper">
           <div class="swiper-wrapper">
