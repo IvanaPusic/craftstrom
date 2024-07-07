@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const title2 = document.querySelector('.title-2');
   const title3 = document.querySelector('.title-3');
 
+  // Initialize titles and arrows
   onGridImgContainer.style.display = 'none';
   onGridNightImgContainer.style.display = 'none';
   offGridImgContainer.style.display = 'none';
@@ -173,66 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach((section, index) => {
       if (section.id === current) {
         swiper.slideTo(index);
-        if (section.id === 'choose') {
-          chooseLinks.forEach(item => {
-            item.classList.add("active");
-            chooseDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
-          plugInLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-          produceLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-          saveLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-        }
-        if (section.id === 'plug-in') {
-          plugInLinks.forEach(item => {
-            item.classList.add("active");
-            pluginDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
-          chooseLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-          produceLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-          saveLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-        }
-        if (section.id === 'produce') {
-          produceLinks.forEach(item => {
-            item.classList.add("active");
-            produceDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
-          plugInLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-          chooseLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-          saveLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-        }
-        if (section.id === 'save') {
-          produceLinks.forEach(item => {
-            item.classList.remove("active");
-            produceDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
-          plugInLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-          chooseLinks.forEach(item => {
-            item.classList.remove("active");
-          });
-          saveLinks.forEach(item => {
-            item.classList.add("active");
-          });
-        }
+        section.links.forEach(link => {
+          link.classList.add('active');
+          document.getElementById(section.id).scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        sections.filter(sec => sec.id !== current).forEach(sec => {
+          sec.links.forEach(link => link.classList.remove('active'));
+        });
       }
     });
   };
@@ -240,86 +188,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial slide update based on URL hash
   swiper.slideTo(getInitialSlideIndex());
 
-  const sections = [
-    { id: 'choose', link: chooseLinks },
-    { id: 'plug-in', link: plugInLinks },
-    { id: 'produce', link: produceLinks },
-    { id: 'save', link: saveLinks },
+  const allLinks = [
+    ...chooseLinks,
+    ...plugInLinks,
+    ...produceLinks,
+    ...saveLinks,
   ];
 
-  chooseLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      chooseLinks.forEach(item => {
-        item.classList.add("active");
-        chooseDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-      plugInLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-      produceLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-      saveLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-    });
-  });
+  const allArticles = [
+    chooseDiv,
+    pluginDiv,
+    produceDiv,
+    saveDiv,
+  ];
 
-  plugInLinks.forEach(link => {
+  allLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      plugInLinks.forEach(item => {
-        item.classList.add("active");
-        pluginDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-      chooseLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-      produceLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-      saveLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-    });
-  });
+      const targetId = link.getAttribute("href").substring(1);
+      const targetArticle = document.getElementById(targetId);
 
-  produceLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      produceLinks.forEach(item => {
-        item.classList.add("active");
-        produceDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+      allArticles.forEach(article => {
+        article.classList.remove("active");
       });
-      plugInLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-      chooseLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-      saveLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-    });
-  });
 
-  saveLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      saveLinks.forEach(item => {
-        item.classList.add("active");
-        saveDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-      plugInLinks.forEach(item => {
+      targetArticle.classList.add("active");
+      targetArticle.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      allLinks.forEach(item => {
         item.classList.remove("active");
       });
-      produceLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-      chooseLinks.forEach(item => {
-        item.classList.remove("active");
-      });
+
+      link.classList.add("active");
     });
   });
 
@@ -329,8 +229,12 @@ document.addEventListener('DOMContentLoaded', () => {
     swiper.slideTo(index);
   });
 
-  // Set initial slide for "Produce" and "Save" sections based on URL hash
-  if (window.location.hash === '#produce') {
+  // Set initial slide for specific sections based on URL hash
+  if (window.location.hash === '#choose') {
+    swiper.slideTo(0);
+  } else if (window.location.hash === '#plug-in') {
+    swiper.slideTo(1);
+  } else if (window.location.hash === '#produce') {
     swiper.slideTo(2);
   } else if (window.location.hash === '#save') {
     swiper.slideTo(3);

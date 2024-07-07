@@ -53,8 +53,10 @@ const firstSwiper = new Swiper(".first-swiper", {
   nested: true,
   on: {
     slideChange: function () {
+      const swiperContainer = this.el.closest('.swiper');
+      const dataIndex = Number(swiperContainer.dataset.index);
       console.log('First Swiper active index:', this.activeIndex);
-      updateActiveState(this.activeIndex, 0);
+      updateActiveState(this.activeIndex, dataIndex);
     }
   }
 });
@@ -66,8 +68,10 @@ const secondSwiper = new Swiper(".second-swiper", {
   nested: true,
   on: {
     slideChange: function () {
+      const swiperContainer = this.el.closest('.swiper');
+      const dataIndex = Number(swiperContainer.dataset.index);
       console.log('Second Swiper active index:', this.activeIndex);
-      updateActiveState(this.activeIndex, 4);
+      updateActiveState(this.activeIndex, dataIndex);
     }
   }
 });
@@ -79,8 +83,10 @@ const thirdSwiper = new Swiper(".third-swiper", {
   nested: true,
   on: {
     slideChange: function () {
+      const swiperContainer = this.el.closest('.swiper');
+      const dataIndex = Number(swiperContainer.dataset.index);
       console.log('Third Swiper active index:', this.activeIndex);
-      updateActiveState(this.activeIndex, 8);
+      updateActiveState(this.activeIndex, dataIndex);
     }
   }
 });
@@ -92,8 +98,10 @@ const fourthSwiper = new Swiper(".fourth-swiper", {
   nested: true,
   on: {
     slideChange: function () {
+      const swiperContainer = this.el.closest('.swiper');
+      const dataIndex = Number(swiperContainer.dataset.index);
       console.log('Fourth Swiper active index:', this.activeIndex);
-      updateActiveState(this.activeIndex, 12);
+      updateActiveState(this.activeIndex,dataIndex);
     }
   }
 });
@@ -156,13 +164,13 @@ if (mobileSwiper.activeIndex === 0) {
 if (firstSwiper.activeIndex === 0) {
   addColor(titles[0], texts[0]);
 }
-if (secondSwiper.activeIndex === 0) {
+if (secondSwiper.activeIndex === 1) {
   addColor(titles[4], texts[4]);
 }
-if (thirdSwiper.activeIndex === 0) {
+if (thirdSwiper.activeIndex === 2) {
   addColor(titles[8], texts[8]);
 }
-if (fourthSwiper.activeIndex === 0) {
+if (fourthSwiper.activeIndex === 3) {
   addColor(titles[12], texts[12]);
 }
 
@@ -197,8 +205,8 @@ function updateActiveStateMobile(activeIndex) {
 
 title1.addEventListener('click', function () {
   content1.style.display = 'block';
-  solarImg.src = './src/images/on-grid-day-img.png';
-  arrow1Img.src = './src/images/arrow_up.svg';
+  solarImg.src = this.dataset.srcset ;
+  arrow1Img.src = this.dataset.srcset;
   title1.style.color = "#F9A41A";
   onGridImgContainer.style.display = 'block';
   offGridImgContainer.style.display = 'none';
@@ -209,8 +217,8 @@ title1.addEventListener('click', function () {
 
 title2.addEventListener('click', function () {
   content2.style.display = 'block';
-  solarImg.src = './src/images/on-grid-night-img.png';
-  arrow2Img.src = './src/images/arrow_up.svg';
+  solarImg.src = this.dataset.srcset;
+  arrow2Img.src = this.dataset.srcset;
   title2.style.color = "#F9A41A";
   onGridNightImgContainer.style.display = 'block';
   onGridImgContainer.style.display = 'none';
@@ -221,8 +229,8 @@ title2.addEventListener('click', function () {
 
 title3.addEventListener('click', function () {
   content3.style.display = 'block';
-  solarImg.src = './src/images/off-grid-img.png';
-  arrow3Img.src = './src/images/arrow_up.svg';
+  solarImg.src = this.dataset.srcset;
+  arrow3Img.src = this.dataset.srcset ;
   title3.style.color = "#F9A41A";
   offGridImgContainer.style.display = 'block';
   onGridNightImgContainer.style.display = 'none';
@@ -233,21 +241,21 @@ title3.addEventListener('click', function () {
 
 content1.addEventListener('click', function () {
   content1.style.display = 'none';
-  arrow1Img.src = './src/images/arrow_drop_down.svg';
+  arrow1Img.src = this.dataset.srcset;
   solarSystemTitles[0].style.opacity = 0.7;
   onGridImgContainer.style.display = 'none';
 });
 
 content2.addEventListener('click', function () {
   content2.style.display = 'none';
-  arrow2Img.src = './src/images/arrow_drop_down.svg';
+  arrow2Img.src = this.dataset.srcset;
   solarSystemTitles[1].style.opacity = 0.7;
   onGridNightImgContainer.style.display = 'none';
 });
 
 content3.addEventListener('click', function () {
   content3.style.display = 'none';
-  arrow3Img.src = './src/images/arrow_drop_down.svg';
+  arrow3Img.src = this.dataset.srcset;
   solarSystemTitles[2].style.opacity = 0.7;
   offGridImgContainer.style.display = 'none';
 });

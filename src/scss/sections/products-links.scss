@@ -132,7 +132,7 @@ body {
               color: rgba(255, 255, 255, 0.40);
               text-align: center;
               font-family: $poppins;
-              font-size: 1.25rem;
+              font-size: 1.35rem;
               font-style: normal;
               font-weight: 500;
               line-height: normal;
@@ -141,7 +141,7 @@ body {
 
             .active {
               color: $white;
-              font-size: 1.875rem;
+              font-size: 1.55rem;
             }
           }
         }
@@ -149,7 +149,9 @@ body {
 
       .products-wrapper-content {
         width: 100%;
-
+        @media screen and (min-width: 1200px) {
+          margin-left: 6.44rem;
+        }
         #solar-panels,#battery,#power-meter,#safety-gate-adapter,#inverter,#smart-pv-plug, #app {
             @media screen and (min-width:1200px){
               margin-bottom: 6.25rem;
@@ -157,7 +159,9 @@ body {
           // --------------SHOWCASE -----------------------
           .showcase {
             @media screen and (min-width: 1024px) {
-              max-width: 69.5625rem;
+              min-width: 69.5625rem;
+              max-width:72.6875rem;
+
             }
              &.battery-showcase {
               @media screen and (min-width: 1200px) {
@@ -308,8 +312,31 @@ body {
 
             .content {
               display: none;
-              &.safety-gate-content {
+              &.safety-gate-content,&.pv-plug-content,&.app-content {
                 display: block;
+                background-color: $white;
+                padding-inline: 1rem;
+                padding-top:2.75rem;
+                padding-bottom: 2.56rem;
+                .safety-gate-card,.smart-pv-card,.app-card{
+                  width: 100% !important; 
+                  .safety-gate-title,.smart-pv-title,.app-title {
+                    max-width: 17.125rem;
+                    padding-bottom: 0.63rem;
+                  }
+                  .safety-gate-text,.smart-pv-text,.app-text {
+                    padding-bottom: 0.63rem;
+                    a {
+                      color:$dark;
+                      font-style: italic;
+                      font-weight: 600;
+                    }
+                  }
+                }
+              }
+              &.inverter-content {
+                padding-left:2rem;
+                padding-right: 2rem;
               }
               @media screen and (min-width: 1024px) {
                 width: 100%;
@@ -320,10 +347,14 @@ body {
                 padding-bottom: 1.94rem;
                 padding-inline: 4.44rem;
               }
-
+              .safety-gate-card,.smart-pv-card,.app-card {
+                width:100%;
+              }
               .card {
                 min-width: 13.3125rem;
                 max-width: 14.375rem;
+              }
+              .card,.safety-gate-card,.safety-features-card,.smart-pv-card,.app-card{
                 .label {
                   color: $orange;
                   font-family: $poppins;
@@ -358,7 +389,7 @@ body {
                     .bold {
                       font-weight: 700;
                     }
-                    &.safety-gate-text {
+                    &.safety-gate-text,&.smart-pv-text {
                       @media screen and (min-width:1200px) {
                         width:100%;
                       }
@@ -367,6 +398,10 @@ body {
                 }
                 .btn {
                   @include btn;
+                  a {
+                    text-decoration: none;
+                    color:$dark;
+                  }
                 }
               }
             }
@@ -378,7 +413,9 @@ body {
           padding-inline: 1rem;
           padding-top: 2.5rem;
           .specification-category {
-          
+            @media screen and (min-width: 1200px) {
+              max-width: 75%;
+            }
             border-bottom: 1px solid $white;
             padding-bottom: 1.75rem;
             .title {
@@ -460,6 +497,11 @@ body {
             max-width:72.6875rem;
             display: flex;
             flex-direction: row-reverse;
+          }
+          .img-wrapper {
+            width: 45%;
+            height: inherit;
+            @include img-cover(center);
           }
           .how-it-works-swiper {
             width: 100%;

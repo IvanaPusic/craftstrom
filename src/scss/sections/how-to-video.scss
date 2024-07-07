@@ -59,18 +59,9 @@ body {
         }
 
         .video {
-          // width: 26.875rem;
-          // height: 35.5rem;
           padding-top: 3.25rem;
         }
       }
     }
-  }
-}
-
-
-@media screen and (max-height: 708px) {
-  iframe {
-    height: 130vh;
   }
 }

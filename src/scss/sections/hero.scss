@@ -92,23 +92,29 @@
   }
   .hero-icons {
     @include flex-center;
+    margin: 0 auto;
     @media screen and (min-width: 900px) {
       padding-top: 8.95rem;
     }
     gap:1.75rem;
-    .icon-title {
-      color: $white;
-      text-align: center;
-      font-family: $poppins;
-      font-size: 0.88819rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1.7315rem; /* 194.951% */
-      text-transform: capitalize;
+    .icon {
+      @include flex-center;
+      flex-direction: column;
+      .icon-title {
+        color: $white;
+        text-align: center;
+        font-family: $poppins;
+        font-size: 0.88819rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.7315rem; /* 194.951% */
+        text-transform: capitalize;
       &.last-title {
         padding-top: 0.54rem;
       }
     }
+    }
+
   }
 }
 

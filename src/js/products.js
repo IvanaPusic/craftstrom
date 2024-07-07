@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const solarPanelsLinks = document.querySelectorAll('.solar-panels');
-  const batteryLinks = document.querySelectorAll('.battery');
-  const powerMeterLinks = document.querySelectorAll('.power-meter');
-  const safetyGateLinks = document.querySelectorAll('.safety-gate-adapter');
-  const inverterLinks = document.querySelectorAll('.inverter');
-  const smartPvLinks = document.querySelectorAll('.smart-pv-plug');
-  const ourAppLinks = document.querySelectorAll('.our-app');
+  const solarPanelsLinks = document.querySelectorAll('.solar-panels-link');
+  const batteryLinks = document.querySelectorAll('.battery-link');
+  const powerMeterLinks = document.querySelectorAll('.power-meter-link');
+  const safetyGateLinks = document.querySelectorAll('.safety-gate-link');
+  const inverterLinks = document.querySelectorAll('.inverter-link');
+  const smartPvLinks = document.querySelectorAll('.smart-pv-link');
+  const ourAppLinks = document.querySelectorAll('.app-link');
   const articles = document.querySelectorAll('article');
   const links = document.querySelectorAll('.link');
 
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
   });
 
+  console.log(links)
   const getInitialSlideIndex = () => {
     const hash = window.location.hash;
     switch (hash) {
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return 4;
       case '#smart-pv-plug':
         return 5;
-      case '#our-app':
+      case '#app':
         return 6;
       default:
         return 0;
