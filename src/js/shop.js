@@ -2,10 +2,11 @@ const select = document.querySelector('select');
 const kitsLink = document.querySelector('.kits-link');
 const individualProductsLink = document.querySelector('.individual-products-link');
 const kitsSection = document.querySelector('.kits');
-const individualProductsSection = document.querySelector('.individual-products')
-console.log('select',select);
-console.log('kits',kitsLink);
-console.log('individual products',individualProductsLink);
+const individualProductsSection = document.querySelector('.individual-products');
+const selectSection = document.querySelector('.select-section');
+const heroSection = document.querySelector('.hero');
+const singleProductSection = document.querySelector('.single-product-section')
+const buttons = document.querySelectorAll('.card-btn a');
 
 const kitsSwiper = new Swiper('.kitsLinksSwiper',{
    slidesPerView: 1.7,
@@ -19,6 +20,7 @@ const individualProductsSwiper = new Swiper('.individualProductsLinksSwiper',{
       nextEl: ".swiper-button-next",
     },
 });
+
 
 select.addEventListener("click", () => {
   if(select.value === 'kits') {
@@ -47,3 +49,13 @@ individualProductsLink.addEventListener("click", () => {
   kitsLink.classList.remove("active");
 })
 
+buttons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    // e.preventDefault();
+    singleProductSection.style.display = 'block';
+    kitsSection.style.display = 'none';
+    individualProductsSection.style.display = 'none';
+    selectSection.style.display = 'none';
+    heroSection.style.display = 'none';
+  })
+})
