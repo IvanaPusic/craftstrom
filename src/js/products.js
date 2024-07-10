@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   const contentSwiper = new Swiper('.content-swiper', {
     slidesPerView: 1.2,
-    // direction: 'horizontal',
     pagination: {
         el: ".swiper-pagination",
         type: "progressbar",

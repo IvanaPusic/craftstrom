@@ -7,15 +7,12 @@ body {
 }
 
 .products-links {
-  // overflow: hidden;
   position: relative;
   scroll-behavior: smooth;
 
   .wrapper {
     .card {
       @include img-cover(center);
-      // height: 14.375rem;
-
       .content {
         padding-top: 4.44rem;
         padding-left: 3.5rem;
@@ -110,8 +107,6 @@ body {
           flex-direction: column;
           position: sticky;
           top: 0;
-          // margin-top: 4rem;
-          // position: relative;
           height: 100%;
         }
 
@@ -189,7 +184,7 @@ body {
                       font-weight: 600;
                       line-height: normal;
                     }
-                  }
+                }
             }
             .showcase-swiper,
             .content-swiper {
@@ -281,10 +276,6 @@ body {
                       font-style: normal;
                       font-weight: 300;
                       line-height: normal;
-
-                      .bold {
-                        font-weight: 700;
-                      }
                     }
                   }
                 }
@@ -385,10 +376,6 @@ body {
                     font-style: normal;
                     font-weight: 300;
                     line-height: normal;
-
-                    .bold {
-                      font-weight: 700;
-                    }
                     &.safety-gate-text,&.smart-pv-text {
                       @media screen and (min-width:1200px) {
                         width:100%;
@@ -450,7 +437,6 @@ body {
                 .container {
                   display: flex;
                   flex-direction: column;
-                  // gap: 0.63rem;
                   .text {
                     color: $white;
                     font-family: $poppins;
@@ -459,9 +445,6 @@ body {
                     font-weight: 400;
                     line-height: normal;
                     padding-bottom: 0.63rem;
-                  }
-                  .bold {
-                    font-weight: 700;
                   }
                 }
                 .category-title {
@@ -549,17 +532,16 @@ body {
                 font-weight: 300;
                 line-height: normal;
                 padding-bottom:2.5rem;
-                .orange,&.bold {
+                a {
+                  color: $dark;
+                  display: inline-block;
+                  font-weight: 700;
+                  font-style: italic;
+                }
+                .orange{
                   color: $orange;
                   font-size: 1.0625rem;
                   font-weight: 700;
-                }
-                &.bold,.italic {
-                  color: $dark;
-                  font-weight: 600;
-                }
-                .italic {
-                  font-style: italic;
                 }
               }
             }
