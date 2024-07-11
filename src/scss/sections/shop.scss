@@ -86,7 +86,7 @@ body {
           }
           .active {
             color: $white;
-            font-size: 1.875rem;
+            font-size: 1.575rem;
           }
         }
       }
@@ -94,6 +94,9 @@ body {
    .kits-wrapper-content,.individual-wrapper-content {
       width: 100%;
       padding-top: 1.44rem;
+      @media screen and (min-width:1200px) {
+        margin-left:6.44rem;
+      }
       #solar-kits,#solar-battery-kits,#battery-kits,#battery, #solar-panels,#power-meter, #safety-gate-adapter,#inverter, #smart-pv-plug, #cables{
         padding-left:1.37rem;
         padding-right: 1.31rem;
@@ -101,6 +104,7 @@ body {
           display: flex;
           flex-wrap: wrap;
           gap: 1.5rem;
+
         }
         .card {
           margin-top:2.5rem;
@@ -239,15 +243,30 @@ body {
 
 .single-product-section {
   display: none;
+  @media screen and (min-width:1200px) {
+   padding-top: 15.94rem;
+    
+  }
   .breadcrumb {
     display: none;
     @media screen and (min-width:1200px) {
       display: inline-block;
+      color: $white;
+      text-align: center;
+      padding-left: 3.13rem;
+      padding-bottom: 4.62rem;
+      font-family: $poppins;
+      font-size: 0.89563rem;
+      font-style: italic;
+      font-weight: 300;
+      line-height: normal;
     }
   }
   .single-product {
     @media screen and (min-width:1200px) {
       display: flex;
+      padding-inline: 3.13rem;
+      gap: 3.19rem;
     }
     .single-product-info {
        @media screen and (min-width: 1200px) {
@@ -329,6 +348,7 @@ body {
           display: flex;
           border-radius: 4.8125rem;
           border: none;
+          gap: 0.75rem;
           a {
             color: $dark;
             text-align: center;
@@ -338,6 +358,7 @@ body {
             font-weight: 600;
             line-height: normal;
             text-decoration: none;
+            margin: auto 0;
           }
         }
       }
@@ -359,6 +380,7 @@ body {
               padding-top: 0.56rem;
               padding-bottom: 1.56rem;
               justify-content: space-between;
+              cursor: pointer;
               .title {
                 color: $white;
                 font-family: $poppins;
@@ -375,7 +397,43 @@ body {
               }
             }
             .detail-info {
-              
+              display: none;
+              .detail-info-title {
+                color: $white;
+                font-family: $poppins;
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 131%; /* 1.6375rem */
+                padding-top:1.25rem;
+                padding-bottom: 0.62rem;
+              }
+              .detail-category {
+                    padding-bottom: 0.81rem;
+
+                .category-label {
+                  color: $orange;
+                  font-family: $poppins;
+                  font-size: 0.875rem;
+                  font-style: normal;
+                  font-weight: 300;
+                  padding-bottom: 0.19rem;
+                  line-height: normal;
+                }
+                .detail-category-wrapper {
+                  .text, a {
+                    color: $white;
+                    font-family: $poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                  }
+                  a {
+                    font-weight: 400;
+                  }
+                }
+              }
             }
           }
         }
@@ -386,7 +444,242 @@ body {
     display: none;
     @media screen and (min-width:1200px) {
       display: block;
+      width: 50%;
       background-color: $white;
+      padding-inline: 1.97rem;
+      position: relative;
+      .wrapper {
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-bottom: 3rem;
+        .title {
+          color: $dark;
+          font-family: $poppins;
+          font-size: 1.5625rem;
+          font-style: normal;
+          padding-top: 4.91rem;
+          padding-bottom: 0.91rem;
+          font-weight: 500;
+          line-height: 131%; /* 2.04688rem */
+        }
+        .price {
+          color: $orange;
+          font-family: $poppins;
+          font-size: 1.60688rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          padding-bottom: 1.31rem;
+        }
+        .description {
+          color: $dark;
+          font-family: $poppins;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+        }
+        .delivery {
+          color: #030000;
+          font-family: $poppins;
+          font-size: 0.8125rem;
+          font-style: normal;
+          font-weight: 400;
+          padding-bottom: 1.31rem;
+          padding-top: 1.31rem;
+          line-height: normal;
+        }
+        .count-wrapper {
+          display: flex;
+          padding-bottom: 1.51rem;
+          padding-top: 1.51rem;
+          .btn {
+            padding:1rem;
+            border:none; 
+            outline: none;
+            @include img-contain(center);
+            cursor: pointer;
+          }
+          .count-number {
+            color: #000;
+            font-family: $montseratt;
+            font-size: 1.41506rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            padding-inline: 0.54rem;
+          }
+        }
+        .cart-btn {
+          padding-top: 1.12rem;
+          padding-bottom: 1.12rem;
+          padding-inline: 2.47rem;
+          background-color: $orange;
+          cursor: pointer;
+          display: flex;
+          border-radius: 4.8125rem;
+          border: none;
+          gap: 0.75rem;
+          a {
+            color: $dark;
+            text-align: center;
+            font-family: $montseratt;
+            font-size: 0.98213rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: auto 0;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .recommended-products {
+    padding-top: 5.31rem;
+    padding-left: 1rem;
+    padding-bottom: 2.62rem;
+    .title {
+      color: $white;
+      text-align: center;
+      font-family: $poppins;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .recommended-products-swiper {
+      width:100%;
+      padding-top: 2.56rem;
+      height: 100%;
+      @media screen and (min-width:1200px) {
+        display: none;
+      }
+      .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap:0.69rem;
+        padding-bottom: 2.69rem;
+        .swiper-slide {
+          .card-img-wrapper {
+            width: 100%;
+            min-height: 18.6875rem;
+            @include img-cover(center);
+          }
+          .card-content {
+            background-color: $white;
+            padding-inline: 1.84rem;
+            padding-top: 3.12rem;
+            padding-bottom: 2.5rem;
+            .card-title {
+              border-top: 1px solid $dark;
+              max-width: 55%;
+              padding-top: 0.62rem;
+              color: $dark;
+              font-family: $poppins;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 131%; /* 1.47375rem */
+            }
+            .card-text-wrapper {
+               padding-top: 0.63rem;
+               padding-bottom: 1.25rem;
+              .card-text {
+                color: $dark;
+                font-family: $poppins;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+              }
+            }
+            .card-btn {
+              @include btn;
+              a {
+                text-decoration: none;
+                color: $dark;
+              }
+            }
+          }
+        }
+      }
+      .swiper-horizontal > .swiper-pagination-progressbar,
+      .swiper-pagination-progressbar.swiper-pagination-horizontal {
+        top: auto;
+        bottom: 1.06rem;
+        width: 50%;
+        border-radius: 0.53125rem;
+        margin: 0 auto;
+        right: 0;
+        min-width: 16.4375rem;
+        max-width: 16.4375rem;
+        background: #D9D8D8;
+
+        .swiper-pagination-progressbar-fill {
+          background-color: $dark;
+          min-width: 4.8125rem;
+          border-radius: 0.53125rem;
+          height: 0.2rem;
+        }
+      }
+    }
+    .recommended-products-wrapper {
+      display: none;
+      @media screen and (min-width: 1200px) {
+        display: flex;
+        width: 100%;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2.56rem;
+        .card {
+          max-width: 19.8125rem;
+           .card-img-wrapper {
+            width: 100%;
+            min-height: 18.6875rem;
+            @include img-cover(center);
+          }
+          .card-content {
+            background-color: $white;
+            padding-inline: 1.84rem;
+            padding-top: 3.12rem;
+            padding-bottom: 2.5rem;
+            .card-title {
+              border-top: 1px solid $dark;
+              max-width: 55%;
+              padding-top: 0.62rem;
+              color: $dark;
+              font-family: $poppins;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 131%; /* 1.47375rem */
+            }
+            .card-text-wrapper {
+               padding-top: 0.63rem;
+               padding-bottom: 1.25rem;
+              .card-text {
+                color: $dark;
+                font-family: $poppins;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+              }
+            }
+            .card-btn {
+              @include btn;
+              a {
+                text-decoration: none;
+                color: $dark;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

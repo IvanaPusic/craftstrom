@@ -17,6 +17,14 @@
       .card {
         @media screen and (min-width:920px) {
            max-width: 19.1rem;
+           .img-wrapper {
+            img {
+              display: inline-block;
+              min-height: 4rem;
+              max-width: 4rem;
+              max-height: 4rem;
+            }
+           }
           .card-title {
            @media screen and (min-width:920px) {
               color: #000;
@@ -72,6 +80,15 @@
         display: flex;
         flex-direction: column;
         gap: 0.62rem;
+        .img-wrapper {
+         img {
+          display: inline-block;
+          min-width: 4rem;
+          min-height: 4rem;
+          max-width: 4rem;
+          max-height: 4rem;
+         }
+        }
         .card-title {
           color: #000;
           font-family: $poppins;

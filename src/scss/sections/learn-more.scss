@@ -91,8 +91,8 @@ body {
           .video {
             max-width: 26.875rem;
             min-width: 26.875rem;
-            height: 35.5rem;
-            // padding-top: 3.25rem;
+            min-height: 35.5rem;
+            max-height: 35.5rem;
             @include img-contain(center);
           }
         }
@@ -117,18 +117,7 @@ body {
       display: none;
     }
     .learnMore {
-      // position: relative;
-      // display: block;
-      // width:100%;
-      // height: 100%;
-      //   .swiper-pagination {
-      //     margin-top:12rem;
-      //   }
       .swiper-wrapper {
-        // display: flex;
-        // gap:1;
-        // width:100%;
-        // height: 100%;
         .swiper-slide {
           .video-1,
           .video-2,
@@ -141,7 +130,7 @@ body {
 
             .video {
               width: 26.875rem;
-              height: 35.5rem;
+              min-height: 35.5rem;
               padding-top: 3.25rem;
             }
           }
