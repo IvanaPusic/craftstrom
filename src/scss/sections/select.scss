@@ -61,6 +61,7 @@ body {
       justify-content: center;
       align-items: center;
       gap:1rem;
+      padding-bottom: 0.55rem;
       .divider {
         font-weight: 300;
       }
@@ -76,11 +77,9 @@ body {
         text-decoration: none;
        }
        a:active, a:focus, a:hover{
-        padding-bottom: 0.55rem;
         border-bottom: 1px solid $orange;
        }
        .active {
-        padding-bottom: 0.55rem;
         border-bottom: 1px solid $orange;
        }
     }

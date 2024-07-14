@@ -17,7 +17,7 @@ body {
       height: 4.125rem;
       width: 100%;
       position:sticky;
-      top:0;
+      top: 0;
       left:0;
       z-index: 10;
       background: $orange;
@@ -56,7 +56,7 @@ body {
         display: flex;
         flex-direction: column;
         position:sticky;
-        top: 0;
+        top: 160px;
         margin-top: 4rem;
         // position:relative;
         height: 100%;
@@ -66,16 +66,7 @@ body {
         list-style-type: none;
         .kits-list-item,.individual-list-item {
           padding-left: 3.13rem;
-          .solar-kits-link,
-          .battery-kits-link,
-          .solar-battery-kits-link,
-          .solar-panels-link,
-          .battery-link,
-          .safety-gate-adapter-link,
-          .inverter-link,
-          .smart-pv-plug-link,
-          .cables-link,
-          .power-meter-link {
+          .sidebar-link {
             color: rgba(255, 255, 255, 0.40);
             text-align: center;
             font-family: $poppins;
@@ -98,7 +89,7 @@ body {
       @media screen and (min-width:1200px) {
         margin-left:6.44rem;
       }
-      #solar-kits,#solar-battery-kits,#battery-kits,#battery, #solar-panels,#power-meter, #safety-gate-adapter,#inverter, #smart-pv-plug, #cables{
+      .category-section {
         padding-left:1.37rem;
         padding-right: 1.31rem;
         @media screen and (min-width: 1200px) {
@@ -139,7 +130,7 @@ body {
 
               }
             }
-            .card-text {
+            p {
               color: $dark;
               font-family: $poppins;
               font-size: 1rem;
@@ -153,7 +144,8 @@ body {
               flex-direction: column;
               gap: 0.33rem;
               padding-bottom: 0.63rem;
-              .card-text {
+              min-height: 320px;
+              p {
                 color: $dark;
                 font-family: $poppins;
                 font-size: 1rem;
@@ -182,7 +174,7 @@ body {
           }
         }
       }
-      #solar-panels, #power-meter, #safety-gate-adapter,#inverter, #smart-pv-plug {
+      .single-product {
         .card {
           @media screen and (min-width: 1200px) {
             min-width: 69.5625rem;
@@ -199,7 +191,7 @@ body {
               .card-title {
                 border-top: none;
               }
-              .card-text {
+              p {
                 max-width: 34.625rem;
               }
               .card-btn-wrapper {
@@ -210,7 +202,7 @@ body {
           }
         }
       }
-      #battery {
+      .two-products {
         @media screen and (min-width:1200px) {
           display: flex;
           flex-direction: row;
@@ -225,7 +217,7 @@ body {
               .card-title {
                 border-top: none;
               }
-              .card-text {
+              p {
                 text-align: center;
               }
               .card-btn-wrapper {
@@ -360,82 +352,6 @@ body {
             line-height: normal;
             text-decoration: none;
             margin: auto 0;
-          }
-        }
-      }
-      .details {
-        padding-inline: 1rem;
-        .label {
-          color: $orange;
-          padding-top: 1.5rem;
-          font-family: Poppins;
-          font-size: 0.84375rem;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 131%; /* 1.10531rem */
-        }
-        .details-wrapper {
-          .detail {
-            .title-button-wrapper {
-              display: flex;
-              padding-top: 0.56rem;
-              padding-bottom: 1.56rem;
-              justify-content: space-between;
-              cursor: pointer;
-              .title {
-                color: $white;
-                font-family: $poppins;
-                font-size: 1.5625rem;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 131%; /* 2.04688rem */
-              }
-              .open-btn {
-                border: none;
-                outline: none;
-                background-color: transparent;
-                cursor: pointer;
-              }
-            }
-            .detail-info {
-              display: none;
-              .detail-info-title {
-                color: $white;
-                font-family: $poppins;
-                font-size: 1.25rem;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 131%; /* 1.6375rem */
-                padding-top:1.25rem;
-                padding-bottom: 0.62rem;
-              }
-              .detail-category {
-                    padding-bottom: 0.81rem;
-
-                .category-label {
-                  color: $orange;
-                  font-family: $poppins;
-                  font-size: 0.875rem;
-                  font-style: normal;
-                  font-weight: 300;
-                  padding-bottom: 0.19rem;
-                  line-height: normal;
-                }
-                .detail-category-wrapper {
-                  .text, a {
-                    color: $white;
-                    font-family: $poppins;
-                    font-size: 0.875rem;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: normal;
-                  }
-                  a {
-                    font-weight: 400;
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -588,7 +504,7 @@ body {
             .card-text-wrapper {
                padding-top: 0.63rem;
                padding-bottom: 1.25rem;
-              .card-text {
+              p {
                 color: $dark;
                 font-family: $poppins;
                 font-size: 1rem;
@@ -662,7 +578,7 @@ body {
             .card-text-wrapper {
                padding-top: 0.63rem;
                padding-bottom: 1.25rem;
-              .card-text {
+              p {
                 color: $dark;
                 font-family: $poppins;
                 font-size: 1rem;
@@ -676,6 +592,143 @@ body {
               a {
                 text-decoration: none;
                 color: $dark;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.single-product {
+  .add-to-cart-btn {
+    padding-top: 1.12rem;
+    padding-bottom: 1.12rem;
+    padding-inline: 2.47rem;
+    background-color: $orange;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    border-radius: 4.8125rem;
+    border: none;
+    gap: 0.75rem;
+    a {
+      color: $dark;
+      text-align: center;
+      font-family: $montseratt;
+      font-size: 0.98213rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: auto 0;
+      text-decoration: none;
+    }
+  }
+}
+
+.woocommerce div.product div.images img {
+  width: 100%;
+  max-width: 600px; /* Set a maximum width for the main product image */
+  height: auto;
+}
+
+.woocommerce div.product div.images {
+  width: 100%;
+  max-width: 600px; /* Set a maximum width for the image container */
+  margin: 0 auto; /* Center the image container */
+}
+
+.woocommerce div.product div.thumbnails img {
+  width: 100%;
+  max-width: 100px; /* Set a maximum width for the thumbnails */
+  height: auto;
+}
+
+
+.woocommerce-variation-price .price {
+  margin-left: 0 !important;
+}
+
+.single-product .quantity {
+  .dec.button,
+  .inc.button {
+    background-color: #319900;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #FFF;
+  }
+}
+
+.single-product {
+  .details {
+    .label {
+      color: $orange;
+      padding-top: 1.5rem;
+      font-family: Poppins;
+      font-size: 0.84375rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 131%; /* 1.10531rem */
+    }
+    .details-wrapper {
+      .detail {
+        .title-button-wrapper {
+          display: flex;
+          padding-top: 0.56rem;
+          padding-bottom: 1.56rem;
+          justify-content: space-between;
+          cursor: pointer;
+          .title {
+            color: $white;
+            font-family: $poppins;
+            font-size: 1.5625rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 131%; /* 2.04688rem */
+          }
+          .open-btn {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+        .detail-info {
+          display: none;
+          .detail-info-title {
+            color: $white;
+            font-family: $poppins;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 131%; /* 1.6375rem */
+            padding-top:1.25rem;
+            padding-bottom: 0.62rem;
+          }
+          .detail-category {
+                padding-bottom: 0.81rem;
+
+            .category-label {
+              color: $orange;
+              font-family: $poppins;
+              font-size: 0.875rem;
+              font-style: normal;
+              font-weight: 300;
+              padding-bottom: 0.19rem;
+              line-height: normal;
+            }
+            .detail-category-wrapper {
+              .text, a {
+                color: $white;
+                font-family: $poppins;
+                font-size: 0.875rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+              }
+              a {
+                font-weight: 400;
               }
             }
           }

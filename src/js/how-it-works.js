@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const chooseLinks = document.querySelectorAll('.choose');
-  const plugInLinks = document.querySelectorAll(".plug-in");
-  const produceLinks = document.querySelectorAll(".produce");
-  const saveLinks = document.querySelectorAll(".save");
-  const chooseDiv = document.getElementById("choose");
-  const pluginDiv = document.getElementById("plug-in");
-  const produceDiv = document.getElementById("produce");
-  const saveDiv = document.getElementById("save");
+  // const plugInLinks = document.querySelectorAll(".plug-in");
+  // const produceLinks = document.querySelectorAll(".produce");
+  // const saveLinks = document.querySelectorAll(".save");
+  // const chooseDiv = document.getElementById("choose");
+  // const pluginDiv = document.getElementById("plug-in");
+  // const produceDiv = document.getElementById("produce");
+  // const saveDiv = document.getElementById("save");
   const articles = document.querySelectorAll("article");
   const links = document.querySelectorAll(".info-links-wrapper .info-list a");
 
@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const title1 = document.querySelector('.title-1');
   const title2 = document.querySelector('.title-2');
   const title3 = document.querySelector('.title-3');
+
+  const allArticles = [...chooseLinks].map((link) => document.getElementById(link.getAttribute('href').substring(1)));
+
+  console.log(allSection);
 
   // Initialize titles and arrows
   onGridImgContainer.style.display = 'none';
@@ -190,17 +194,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const allLinks = [
     ...chooseLinks,
-    ...plugInLinks,
-    ...produceLinks,
-    ...saveLinks,
+    // ...plugInLinks,
+    // ...produceLinks,
+    // ...saveLinks,
   ];
 
-  const allArticles = [
-    chooseDiv,
-    pluginDiv,
-    produceDiv,
-    saveDiv,
-  ];
+  // const allArticles = [
+  //   chooseDiv,
+  //   pluginDiv,
+  //   produceDiv,
+  //   saveDiv,
+  // ];
 
   allLinks.forEach(link => {
     link.addEventListener("click", function (e) {
