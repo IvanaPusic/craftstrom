@@ -31,6 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const allArticles = [...chooseLinks].map((link) => document.getElementById(link.getAttribute('href').substring(1)));
 
+  addEventListener("scroll", (event) => {
+    allArticles.forEach((article) => {
+      if (isScrolledIntoView(article)) {
+        allArticles.forEach((article) => article.classList.remove("active"));
+        article.classList.add("active");
+      }
+    });
+  });
+
+
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+
   console.log(allSection);
 
   // Initialize titles and arrows
