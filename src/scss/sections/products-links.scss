@@ -9,6 +9,7 @@ body {
 .products-links {
   position: relative;
   scroll-behavior: smooth;
+  padding: 0;
 
   .wrapper {
     .card {
@@ -56,11 +57,12 @@ body {
       @media screen and (min-width: 1300px) {
         display: none;
         padding-top: 2.62rem;
+        top: 160px;
       }
       height: 4.125rem;
       width: 100%;
       position: sticky;
-      top: 0;
+      top: 80px;
       left: 0;
       z-index: 10;
       background: $orange;
@@ -106,7 +108,8 @@ body {
           display: flex;
           flex-direction: column;
           position: sticky;
-          top: 0;
+          top: 80px;
+          width: 25%;
           height: 100%;
         }
 
@@ -116,14 +119,7 @@ body {
           .products-list-item {
             padding-left: 3.13rem;
 
-            .solar-panels-link,
-            .battery-link,
-            .safety-gate-link,
-            .power-meter-link,
-            .smart-pv-link,
-            .safety-gate-adapter-link,
-            .inverter-link,
-            .app-link {
+            .product-item {
               color: rgba(255, 255, 255, 0.40);
               text-align: center;
               font-family: $poppins;
@@ -146,8 +142,17 @@ body {
         width: 100%;
         @media screen and (min-width: 1200px) {
           margin-left: 6.44rem;
+          width: 75%;
         }
-        #solar-panels,#battery,#power-meter,#safety-gate-adapter,#inverter,#smart-pv-plug, #app {
+
+        .anchor {
+          display: block;
+          position: relative;
+          top: -170px;
+          visibility: hidden;
+        } 
+
+        .section-article {
             @media screen and (min-width:1200px){
               margin-bottom: 6.25rem;
             }
@@ -285,7 +290,7 @@ body {
                     font-weight: 500;
                     line-height: normal;
                   }
-                  .battery-title,.title {
+                  .title {
                     color: $dark;
                     font-family: $poppins;
                     font-size: 1.125rem;
@@ -299,7 +304,7 @@ body {
                   }
 
                   .text-wrapper {
-                    .text {
+                    p {
                       color: $dark;
                       /* body */
                       font-family: $poppins;
@@ -376,7 +381,7 @@ body {
                 min-width: 13.3125rem;
                 max-width: 14.375rem;
               }
-              .card,.safety-gate-card,.safety-features-card,.smart-pv-card,.app-card{
+              .card,.one-slider {
                 .label {
                   color: $orange;
                   font-family: $poppins;
@@ -399,7 +404,7 @@ body {
                 }
 
                 .text-wrapper {
-                  .text {
+                  p {
                     color: $dark;
                     /* body */
                     font-family: $poppins;
@@ -440,7 +445,7 @@ body {
               padding-bottom: 0.63rem;
               padding-top: 1.75rem;
             }
-            .title,.text {
+            .title,p {
               color: $white;
               /* headlines */
               font-family: $poppins;
@@ -449,7 +454,7 @@ body {
               font-weight: 500;
               line-height: 131%; /* 2.04688rem */
             }
-            .text {
+            p {
               font-size: 1rem;
               font-weight: 300;
               line-height: normal;
@@ -468,7 +473,7 @@ body {
                 .container {
                   display: flex;
                   flex-direction: column;
-                  .text {
+                  p {
                     color: $white;
                     font-family: $poppins;
                     font-size: 0.875rem;
@@ -555,7 +560,7 @@ body {
               padding-bottom: 2.5rem;
             }
             .content-wrapper {
-              .text {
+              p {
                 color: $dark;
                 font-family: $poppins;
                 font-size: 1rem;
@@ -579,6 +584,14 @@ body {
             .btn-wrapper {
               display: flex;
               gap:1.19rem;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              @media screen and (min-width: 1200px) {
+                flex-direction: row;
+              }
+             
               .btn,.consultation-btn {
                 @include btn;
                 a {

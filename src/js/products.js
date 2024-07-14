@@ -1,21 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const solarPanelsLinks = document.querySelectorAll('.solar-panels-link');
-  const batteryLinks = document.querySelectorAll('.battery-link');
-  const powerMeterLinks = document.querySelectorAll('.power-meter-link');
-  const safetyGateLinks = document.querySelectorAll('.safety-gate-link');
-  const inverterLinks = document.querySelectorAll('.inverter-link');
-  const smartPvLinks = document.querySelectorAll('.smart-pv-link');
-  const ourAppLinks = document.querySelectorAll('.app-link');
-  const articles = document.querySelectorAll('article');
-  const links = document.querySelectorAll('.link');
+  // const solarPanelsLinks = document.querySelectorAll('.solar-panels-link');
+  // const batteryLinks = document.querySelectorAll('.battery-link');
+  // const powerMeterLinks = document.querySelectorAll('.power-meter-link');
+  // const safetyGateLinks = document.querySelectorAll('.safety-gate-link');
+  // const inverterLinks = document.querySelectorAll('.inverter-link');
+  // const smartPvLinks = document.querySelectorAll('.smart-pv-link');
+  // const ourAppLinks = document.querySelectorAll('.app-link');
+  // const articles = document.querySelectorAll('article');
+  // const links = document.querySelectorAll('.link');
 
-  const solarPanelArticle = document.getElementById('solar-panels');
-  const batteryArticle = document.getElementById('battery');
-  const powerMeterArticle = document.getElementById('power-meter');
-  const safetyGateArticle = document.getElementById('safety-gate-adapter');
-  const inverterArticle = document.getElementById('inverter');
-  const smartPvArticle = document.getElementById('smart-pv-plug');
-  const ourAppArticle = document.getElementById('our-app');
+  const chooseLinks = document.querySelectorAll('.swiper-slide .product-item');
+  const allLinks = document.querySelectorAll('.product-list-item .product-item');
+ 
+  const selectors = [...chooseLinks, ...allLinks];
+  console.log(plugInLinks, produceLinks, saveLinks);
+
+  const allArticles = [...chooseLinks].map((link) => document.getElementById(link.getAttribute('href').substring(1)));
+
+
+
+  selectors.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const targetArticle = document.getElementById(targetId);
+
+      allArticles.forEach(article => {
+        article.classList.remove("active");
+      });
+
+      targetArticle.classList.add("active");
+      targetArticle.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      allLinks.forEach(item => {
+        item.classList.remove("active");
+      });
+
+      link.classList.add("active");
+    });
+  });
+
+
+  // const solarPanelArticle = document.getElementById('solar-panels');
+  // const batteryArticle = document.getElementById('battery');
+  // const powerMeterArticle = document.getElementById('power-meter');
+  // const safetyGateArticle = document.getElementById('safety-gate-adapter');
+  // const inverterArticle = document.getElementById('inverter');
+  // const smartPvArticle = document.getElementById('smart-pv-plug');
+  // const ourAppArticle = document.getElementById('our-app');
 
   const showcaseSwiper = new Swiper('.showcase-swiper',{
     spaceBetween: 20,
@@ -86,26 +118,26 @@ document.addEventListener('DOMContentLoaded', () => {
     productLinksswiper.slideTo(index);  // Update productLinksswiper as well
   });
 
-  window.parent.addEventListener("scroll", () => {
-    var current = "";
-    const pageYOffset = window.parent.scrollY;
-    articles.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight / 2;
-      if (sectionTop <= pageYOffset) {
-        current = section.getAttribute("id");
-      }
-    });
+  // window.parent.addEventListener("scroll", () => {
+  //   var current = "";
+  //   const pageYOffset = window.parent.scrollY;
+  //   articles.forEach((section) => {
+  //     const sectionTop = section.offsetTop;
+  //     const sectionHeight = section.offsetHeight / 2;
+  //     if (sectionTop <= pageYOffset) {
+  //       current = section.getAttribute("id");
+  //     }
+  //   });
 
-    links.forEach((li) => {
-      li.classList.remove("active");
-      if (li.classList.contains(current)) {
-        li.classList.add("active");
-      }
-    });
+  //   links.forEach((li) => {
+  //     li.classList.remove("active");
+  //     if (li.classList.contains(current)) {
+  //       li.classList.add("active");
+  //     }
+  //   });
 
-    updateActiveSection(current);
-  });
+  //   updateActiveSection(current);
+  // });
 
   const updateActiveSection = (current) => {
     const sections = [
@@ -135,72 +167,72 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const allLinks = [
-    ...solarPanelsLinks,
-    ...batteryLinks,
-    ...powerMeterLinks,
-    ...safetyGateLinks,
-    ...inverterLinks,
-    ...smartPvLinks,
-    ...ourAppLinks
-  ];
+  // const allLinks = [
+  //   ...solarPanelsLinks,
+  //   ...batteryLinks,
+  //   ...powerMeterLinks,
+  //   ...safetyGateLinks,
+  //   ...inverterLinks,
+  //   ...smartPvLinks,
+  //   ...ourAppLinks
+  // ];
 
-  const allArticles = [
-    solarPanelArticle,
-    batteryArticle,
-    powerMeterArticle,
-    safetyGateArticle,
-    inverterArticle,
-    smartPvArticle,
-    ourAppArticle
-  ];
+  // const allArticles = [
+  //   solarPanelArticle,
+  //   batteryArticle,
+  //   powerMeterArticle,
+  //   safetyGateArticle,
+  //   inverterArticle,
+  //   smartPvArticle,
+  //   ourAppArticle
+  // ];
 
-  allLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
-      const targetArticle = document.getElementById(targetId);
+  // allLinks.forEach(link => {
+  //   link.addEventListener("click", function (e) {
+  //     e.preventDefault();
+  //     const targetId = link.getAttribute("href").substring(1);
+  //     const targetArticle = document.getElementById(targetId);
 
-      allArticles.forEach(article => {
-        article.classList.remove("active");
-      });
+  //     allArticles.forEach(article => {
+  //       article.classList.remove("active");
+  //     });
 
-      targetArticle.classList.add("active");
-      targetArticle.scrollIntoView({ behavior: "smooth", block: "start" });
+  //     targetArticle.classList.add("active");
+  //     targetArticle.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      allLinks.forEach(item => {
-        item.classList.remove("active");
-      });
+  //     allLinks.forEach(item => {
+  //       item.classList.remove("active");
+  //     });
 
-      link.classList.add("active");
-    });
-  });
+  //     link.classList.add("active");
+  //   });
+  // });
 
-  const mainContentDiv = document.querySelector(".main-content");
-  const productLinks = document.querySelectorAll(".content-link");
-  const wrapper = document.querySelector(".wrapper");
+  // const mainContentDiv = document.querySelector(".main-content");
+  // const productLinks = document.querySelectorAll(".content-link");
+  // const wrapper = document.querySelector(".wrapper");
 
-  mainContentDiv.style.display = "none";
-  wrapper.style.display = "block";
+  // mainContentDiv.style.display = "none";
+  // wrapper.style.display = "block";
 
-  productLinks.forEach(link => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
+  // productLinks.forEach(link => {
+  //   link.addEventListener("click", function (event) {
+  //     event.preventDefault();
 
-      mainContentDiv.style.display = "block";
-      wrapper.style.display = "none";
+  //     mainContentDiv.style.display = "block";
+  //     wrapper.style.display = "none";
 
-      const targetId = link.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
+  //     const targetId = link.getAttribute("href").substring(1);
+  //     const targetSection = document.getElementById(targetId);
 
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
+  //     if (targetSection) {
+  //       targetSection.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   });
+  // });
 
-  // Initial slide update based on URL hash
-  productLinksswiper.slideTo(getInitialSlideIndex());
+  // // Initial slide update based on URL hash
+  // productLinksswiper.slideTo(getInitialSlideIndex());
 
   // Set initial slide for specific sections based on URL hash
   if (window.location.hash === '#solar-panels') {

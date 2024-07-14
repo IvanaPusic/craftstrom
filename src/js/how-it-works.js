@@ -1,122 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
   const chooseLinks = document.querySelectorAll('.choose');
-  // const plugInLinks = document.querySelectorAll(".plug-in");
-  // const produceLinks = document.querySelectorAll(".produce");
-  // const saveLinks = document.querySelectorAll(".save");
-  // const chooseDiv = document.getElementById("choose");
-  // const pluginDiv = document.getElementById("plug-in");
-  // const produceDiv = document.getElementById("produce");
-  // const saveDiv = document.getElementById("save");
-  const articles = document.querySelectorAll("article");
-  const links = document.querySelectorAll(".info-links-wrapper .info-list a");
-
-  const arrow1Img = document.querySelector('.arrow-1-img');
-  const arrow2Img = document.querySelector('.arrow-2-img');
-  const arrow3Img = document.querySelector('.arrow-3-img');
-
-  let solarImg = document.querySelector('.solar-type-img');
-  const solarSystemTitles = document.querySelectorAll('.solar-system-title');
-
-  const onGridImgContainer = document.querySelector('.on-grid-img-container');
-  const onGridNightImgContainer = document.querySelector('.on-grid-night-img-container');
-  const offGridImgContainer = document.querySelector('.off-grid-img-container');
-
-  const content1 = document.querySelector('.content-1');
-  const content2 = document.querySelector('.content-2');
-  const content3 = document.querySelector('.content-3');
-
-  const title1 = document.querySelector('.title-1');
-  const title2 = document.querySelector('.title-2');
-  const title3 = document.querySelector('.title-3');
+ 
+  console.log(plugInLinks, produceLinks, saveLinks);
 
   const allArticles = [...chooseLinks].map((link) => document.getElementById(link.getAttribute('href').substring(1)));
 
-  addEventListener("scroll", (event) => {
-    allArticles.forEach((article) => {
-      if (isScrolledIntoView(article)) {
-        allArticles.forEach((article) => article.classList.remove("active"));
-        article.classList.add("active");
+  const slideTitles = document.querySelectorAll('.solar-system-title');
+
+  slideTitles.forEach((title, index) => {
+    title.addEventListener('click', (event) => {
+      console.log(event.currentTarget.classList);
+            
+      const currentHeader = event.currentTarget.querySelector('.arrow');
+      if (currentHeader.classList.contains('arrow-up')) {
+        currentHeader.classList.remove('arrow-up');
+        currentHeader.classList.add('arrow-down');
+      } else {
+        currentHeader.classList.remove('arrow-down');
+        currentHeader.classList.add('arrow-up');
       }
+     
+      const headers = document.querySelectorAll('.solar-system-title .arrow');
+      headers.forEach((header) => {
+        if (header !== event.currentTarget) {
+          header.classList.remove('arrow-up');
+          header.classList.add('arrow-down');
+        }
+      });
+
+      const content = document.querySelectorAll(`.types-of-solar-system .content`);
+      content.forEach((item) => {
+        item.classList.remove('show');
+      });
+      const slideContent = document.querySelector(`.types-of-solar-system .content-${index + 1}`);
+      slideContent.classList.add('show');
+      
+      const image = document.querySelectorAll('.image-container .slide-img');
+      console.log(image);
+      image.forEach((item) => {
+        item.classList.remove('show');
+      });
+      const slideImage = document.querySelector(`.image-container #system-img-${index}`);
+      slideImage.classList.add('show');
     });
   });
 
-
-  function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-  }
-
-  console.log(allSection);
-
-  // Initialize titles and arrows
-  onGridImgContainer.style.display = 'none';
-  onGridNightImgContainer.style.display = 'none';
-  offGridImgContainer.style.display = 'none';
-  content1.style.display = 'block';
-  title1.style.color = '#F9A41A';
-  arrow1Img.src = './src/images/arrow_up.svg';
-
-  title1.addEventListener('click', function () {
-    content1.style.display = 'block';
-    solarImg.src = './src/images/on-grid-day-img.png';
-    arrow1Img.src = './src/images/arrow_up.svg';
-    title1.style.color = "#F9A41A";
-    onGridImgContainer.style.display = 'block';
-    offGridImgContainer.style.display = 'none';
-    onGridNightImgContainer.style.display = 'none';
-    content2.style.display = 'none';
-    content3.style.display = 'none';
-  });
-
-  title2.addEventListener('click', function () {
-    content2.style.display = 'block';
-    solarImg.src = './src/images/on-grid-night-img.png';
-    arrow2Img.src = './src/images/arrow_up.svg';
-    title2.style.color = "#F9A41A";
-    onGridNightImgContainer.style.display = 'block';
-    onGridImgContainer.style.display = 'none';
-    offGridImgContainer.style.display = 'none';
-    content1.style.display = 'none';
-    content3.style.display = 'none';
-  });
-
-  title3.addEventListener('click', function () {
-    content3.style.display = 'block';
-    solarImg.src = './src/images/off-grid-img.png';
-    arrow3Img.src = './src/images/arrow_up.svg';
-    title3.style.color = "#F9A41A";
-    offGridImgContainer.style.display = 'block';
-    onGridNightImgContainer.style.display = 'none';
-    onGridImgContainer.style.display = 'none';
-    content2.style.display = 'none';
-    content1.style.display = 'none';
-  });
-
-  content1.addEventListener('click', function () {
-    content1.style.display = 'none';
-    arrow1Img.src = './src/images/arrow_drop_down.svg';
-    solarSystemTitles[0].style.opacity = 0.7;
-    onGridImgContainer.style.display = 'none';
-  });
-
-  content2.addEventListener('click', function () {
-    content2.style.display = 'none';
-    arrow2Img.src = './src/images/arrow_drop_down.svg';
-    solarSystemTitles[1].style.opacity = 0.7;
-    onGridNightImgContainer.style.display = 'none';
-  });
-
-  content3.addEventListener('click', function () {
-    content3.style.display = 'none';
-    arrow3Img.src = './src/images/arrow_drop_down.svg';
-    solarSystemTitles[2].style.opacity = 0.7;
-    offGridImgContainer.style.display = 'none';
-  });
 
   const getInitialSlideIndex = () => {
     const hash = window.location.hash;
@@ -161,70 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  window.parent.addEventListener("scroll", () => {
-    let current = "";
-    const pageYOffset = window.parent.scrollY;
-
-    // Determine which section is currently active
-    articles.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight / 2;
-      if (sectionTop <= pageYOffset) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    // Update active class in links
-    links.forEach((li) => {
-      li.classList.remove("active");
-      if (li.classList.contains(current)) {
-        li.classList.add("active");
-      }
-    });
-
-    // Update swiper slide based on active section
-    updateActiveSection(current);
-  });
-
-  // Function to update Swiper slide based on active section
-  const updateActiveSection = (current) => {
-    const sections = [
-      { id: 'choose', links: chooseLinks },
-      { id: 'plug-in', links: plugInLinks },
-      { id: 'produce', links: produceLinks },
-      { id: 'save', links: saveLinks },
-    ];
-
-    sections.forEach((section, index) => {
-      if (section.id === current) {
-        swiper.slideTo(index);
-        section.links.forEach(link => {
-          link.classList.add('active');
-          document.getElementById(section.id).scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-        sections.filter(sec => sec.id !== current).forEach(sec => {
-          sec.links.forEach(link => link.classList.remove('active'));
-        });
-      }
-    });
-  };
 
   // Initial slide update based on URL hash
   swiper.slideTo(getInitialSlideIndex());
 
   const allLinks = [
-    ...chooseLinks,
-    // ...plugInLinks,
-    // ...produceLinks,
-    // ...saveLinks,
+    ...chooseLinks
   ];
-
-  // const allArticles = [
-  //   chooseDiv,
-  //   pluginDiv,
-  //   produceDiv,
-  //   saveDiv,
-  // ];
 
   allLinks.forEach(link => {
     link.addEventListener("click", function (e) {
