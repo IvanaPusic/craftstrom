@@ -90,6 +90,7 @@ body {
 
         .btn {
           @include btn;
+            text-decoration: none;
         }
       }
     }

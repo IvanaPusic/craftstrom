@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const chooseLinks = document.querySelectorAll('.choose');
+  const links = document.querySelectorAll('.link');
  
-  console.log(plugInLinks, produceLinks, saveLinks);
-
-  const allArticles = [...chooseLinks].map((link) => document.getElementById(link.getAttribute('href').substring(1)));
-
+  const allArticles = [...links].map((link) => document.getElementById(link.getAttribute('href').substring(1)));
+  console.log(allArticles)
   const slideTitles = document.querySelectorAll('.solar-system-title');
 
   slideTitles.forEach((title, index) => {
@@ -46,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+
   const getInitialSlideIndex = () => {
     const hash = window.location.hash;
     switch (hash) {
@@ -63,11 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const swiper = new Swiper('.infoSwiper', {
-    slidesPerView: 1.7,
+    slidesPerView: 3.5,
     initialSlide: getInitialSlideIndex(),
     navigation: {
       nextEl: ".swiper-button-next",
     },
+
   });
 
   const productContentSwiper = new Swiper('.product-content-swiper', {});
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   swiper.slideTo(getInitialSlideIndex());
 
   const allLinks = [
-    ...chooseLinks
+    ...links
   ];
 
   allLinks.forEach(link => {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const targetId = link.getAttribute("href").substring(1);
       const targetArticle = document.getElementById(targetId);
-
+      console.log(targetArticle)
       allArticles.forEach(article => {
         article.classList.remove("active");
       });
@@ -118,20 +118,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
   // Update Swiper slide based on the URL hash on page load
-  window.addEventListener('hashchange', () => {
-    const index = getInitialSlideIndex();
-    swiper.slideTo(index);
-  });
+  // window.addEventListener('hashchange', () => {
+  //   const index = getInitialSlideIndex();
+  //   swiper.slideTo(index);
+  // });
 
   // Set initial slide for specific sections based on URL hash
-  if (window.location.hash === '#choose') {
-    swiper.slideTo(0);
-  } else if (window.location.hash === '#plug-in') {
-    swiper.slideTo(1);
-  } else if (window.location.hash === '#produce') {
-    swiper.slideTo(2);
-  } else if (window.location.hash === '#save') {
-    swiper.slideTo(3);
-  }
+  // if (window.location.hash === '#choose') {
+  //   swiper.slideTo(0);
+  // } else if (window.location.hash === '#plug-in') {
+  //   swiper.slideTo(1);
+  // } else if (window.location.hash === '#produce') {
+  //   swiper.slideTo(2);
+  // } else if (window.location.hash === '#save') {
+  //   swiper.slideTo(3);
+  // }
 });

@@ -31,7 +31,10 @@ body {
       line-height: 3.10094rem; /* 106.522% */
     }
     hr {
-      width: 85%;
+      width: 100%;
+      @media screen and (min-width:1200px) {
+        width: 85%;
+      }
     }
     .card {
       padding-right: 1.31rem;
@@ -55,13 +58,15 @@ body {
         display: flex;
 
         .arrow-down::after {
-          content: url("/wp-content/themes/craftstrom/dist/images/arrow_drop_down.svg");
+          // /wp-content/themes/craftstrom/dist/images/arrow_drop_down.svg
+          content: url("../../images/down_arrow.svg");
           margin-left: 0.5rem;
           width: 10px;
           height: 10px;
         }
         .arrow-up::after {
-          content: url("/wp-content/themes/craftstrom/dist/images/arrow_up.svg");
+          // /wp-content/themes/craftstrom/dist/images/arrow_up.svg
+          content: url("../../images/arrow_up.svg");
           margin-left: 0.5rem;
           width: 10px;
           height: 10px;
@@ -121,6 +126,7 @@ body {
     display: none;
     @media screen and (min-width: 1200px) {
       display: block;
+      width:100%;
       @include img-cover(right);
       margin-left: 3.96rem;
       padding-top: 6.06rem;

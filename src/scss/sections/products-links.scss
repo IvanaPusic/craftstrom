@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 body {
   margin: 0;
@@ -34,7 +34,7 @@ body {
 
         .content-link {
           display: inline-block;
-          color: #FFF;
+          color: #fff;
           font-family: $montseratt;
           font-size: 1rem;
           font-style: normal;
@@ -52,7 +52,6 @@ body {
     padding-top: 1.81rem;
     scroll-behavior: smooth;
     padding-bottom: 4.56rem;
-
     .productLinksSwiper {
       @media screen and (min-width: 1300px) {
         display: none;
@@ -62,7 +61,7 @@ body {
       height: 4.125rem;
       width: 100%;
       position: sticky;
-      top: 80px;
+      top:0;
       left: 0;
       z-index: 10;
       background: $orange;
@@ -80,7 +79,7 @@ body {
 
         .swiper-slide {
           a {
-            color: rgba(255, 255, 255, 0.40);
+            color: rgba(255, 255, 255, 0.4);
             font-family: $poppins;
             font-size: 1.25rem;
             font-style: normal;
@@ -90,7 +89,7 @@ body {
           }
 
           .active {
-            color: #FFF;
+            color: #fff;
             font-size: 1.3125rem;
           }
         }
@@ -120,7 +119,7 @@ body {
             padding-left: 3.13rem;
 
             .product-item {
-              color: rgba(255, 255, 255, 0.40);
+              color: rgba(255, 255, 255, 0.4);
               text-align: center;
               font-family: $poppins;
               font-size: 1.35rem;
@@ -150,20 +149,19 @@ body {
           position: relative;
           top: -170px;
           visibility: hidden;
-        } 
+        }
 
         .section-article {
-            @media screen and (min-width:1200px){
-              margin-bottom: 6.25rem;
-            }
+          @media screen and (min-width: 1200px) {
+            margin-bottom: 6.25rem;
+          }
           // --------------SHOWCASE -----------------------
           .showcase {
             @media screen and (min-width: 1024px) {
               min-width: 69.5625rem;
-              max-width:72.6875rem;
-
+              max-width: 72.6875rem;
             }
-             &.battery-showcase {
+            &.battery-showcase {
               @media screen and (min-width: 1200px) {
                 margin-top: 6.25rem;
               }
@@ -175,21 +173,21 @@ body {
               justify-content: center;
               align-items: center;
               @include img-cover(center);
-                .btn {
-                  @include btn;
-                  background-color: transparent;
-                  border: 2px solid $white;
-                    a {
-                      text-decoration: none;
-                      color: $white;
-                      text-align: center;
-                      font-family: $montseratt;
-                      font-size: 0.98213rem;
-                      font-style: normal;
-                      font-weight: 600;
-                      line-height: normal;
-                    }
+              .btn {
+                @include btn;
+                background-color: transparent;
+                border: 2px solid $white;
+                a {
+                  text-decoration: none;
+                  color: $white;
+                  text-align: center;
+                  font-family: $montseratt;
+                  font-size: 0.98213rem;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: normal;
                 }
+              }
             }
             .video-container {
               width: 100%;
@@ -204,22 +202,22 @@ body {
               .btn {
                 position: absolute;
                 top: 50%;
-                left:50%;
+                left: 50%;
                 transform: translate(-50%, -50%);
                 display: inline-block;
-                 @include btn;
-                  background-color: transparent;
-                  border: 2px solid $white;
-                    a {
-                      text-decoration: none;
-                      color: $white;
-                      text-align: center;
-                      font-family: $montseratt;
-                      font-size: 0.98213rem;
-                      font-style: normal;
-                      font-weight: 600;
-                      line-height: normal;
-                    }
+                @include btn;
+                background-color: transparent;
+                border: 2px solid $white;
+                a {
+                  text-decoration: none;
+                  color: $white;
+                  text-align: center;
+                  font-family: $montseratt;
+                  font-size: 0.98213rem;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: normal;
+                }
               }
             }
             .showcase-swiper,
@@ -327,7 +325,7 @@ body {
                 right: 0;
                 min-width: 16.4375rem;
                 max-width: 16.4375rem;
-                background: #D9D8D8;
+                background: #d9d8d8;
 
                 .swiper-pagination-progressbar-fill {
                   background-color: $dark;
@@ -339,22 +337,30 @@ body {
 
             .content {
               display: none;
-              &.safety-gate-content,&.pv-plug-content,&.app-content {
+              &.safety-gate-content,
+              &.pv-plug-content,
+              &.app-content {
                 display: block;
                 background-color: $white;
                 padding-inline: 1rem;
-                padding-top:2.75rem;
+                padding-top: 2.75rem;
                 padding-bottom: 2.56rem;
-                .safety-gate-card,.smart-pv-card,.app-card{
-                  width: 100% !important; 
-                  .safety-gate-title,.smart-pv-title,.app-title {
+                .safety-gate-card,
+                .smart-pv-card,
+                .app-card {
+                  width: 100% !important;
+                  .safety-gate-title,
+                  .smart-pv-title,
+                  .app-title {
                     max-width: 17.125rem;
                     padding-bottom: 0.63rem;
                   }
-                  .safety-gate-text,.smart-pv-text,.app-text {
+                  .safety-gate-text,
+                  .smart-pv-text,
+                  .app-text {
                     padding-bottom: 0.63rem;
                     a {
-                      color:$dark;
+                      color: $dark;
                       font-style: italic;
                       font-weight: 600;
                     }
@@ -362,26 +368,30 @@ body {
                 }
               }
               &.inverter-content {
-                padding-left:2rem;
+                padding-left: 2rem;
                 padding-right: 2rem;
               }
               @media screen and (min-width: 1024px) {
                 width: 100%;
                 background-color: $white;
                 display: flex;
+                justify-content: center;
                 gap: 1.38rem;
                 padding-top: 2.19rem;
                 padding-bottom: 1.94rem;
                 padding-inline: 4.44rem;
               }
-              .safety-gate-card,.smart-pv-card,.app-card {
-                width:100%;
+              .safety-gate-card,
+              .smart-pv-card,
+              .app-card {
+                width: 100%;
               }
               .card {
                 min-width: 13.3125rem;
                 max-width: 14.375rem;
               }
-              .card,.one-slider {
+              .card,
+              .one-slider {
                 .label {
                   color: $orange;
                   font-family: $poppins;
@@ -390,7 +400,8 @@ body {
                   font-weight: 500;
                   line-height: normal;
                 }
-                .battery-title,.title {
+                .battery-title,
+                .title {
                   color: $dark;
                   font-family: $poppins;
                   font-size: 1.125rem;
@@ -412,9 +423,10 @@ body {
                     font-style: normal;
                     font-weight: 300;
                     line-height: normal;
-                    &.safety-gate-text,&.smart-pv-text {
-                      @media screen and (min-width:1200px) {
-                        width:100%;
+                    &.safety-gate-text,
+                    &.smart-pv-text {
+                      @media screen and (min-width: 1200px) {
+                        width: 100%;
                       }
                     }
                   }
@@ -423,7 +435,7 @@ body {
                   @include btn;
                   a {
                     text-decoration: none;
-                    color:$dark;
+                    color: $dark;
                   }
                 }
               }
@@ -445,7 +457,8 @@ body {
               padding-bottom: 0.63rem;
               padding-top: 1.75rem;
             }
-            .title,p {
+            .title,
+            p {
               color: $white;
               /* headlines */
               font-family: $poppins;
@@ -458,17 +471,16 @@ body {
               font-size: 1rem;
               font-weight: 300;
               line-height: normal;
-              @media screen and (min-width:1200px) {
+              @media screen and (min-width: 1200px) {
                 max-width: 69.0625rem;
               }
             }
             .category-wrapper {
-               padding-bottom: 0.81rem;
-               @media screen and (min-width: 1200px){
-                  display: flex;
-                  gap:2.19rem;
-                  
-                }
+              padding-bottom: 0.81rem;
+              @media screen and (min-width: 1200px) {
+                display: flex;
+                gap: 2.19rem;
+              }
               .category {
                 .container {
                   display: flex;
@@ -492,14 +504,15 @@ body {
                   line-height: normal;
                   padding-bottom: 0.19rem;
                 }
-                .category-text, a {
+                .category-text,
+                a {
                   color: $white;
                   font-family: $poppins;
                   font-size: 0.875rem;
                   font-style: normal;
                   font-weight: 400;
                   line-height: normal;
-                  @media screen and (min-width:1200px) {
+                  @media screen and (min-width: 1200px) {
                     max-width: 18rem;
                   }
                 }
@@ -512,8 +525,8 @@ body {
         }
         // --------------------- HOW IT WORKS --------------------------
         .how-it-works {
-          @media screen and (min-width:1200px) {
-            max-width:72.6875rem;
+          @media screen and (min-width: 1200px) {
+            max-width: 72.6875rem;
             display: flex;
             flex-direction: row-reverse;
           }
@@ -530,12 +543,12 @@ body {
               width: 45%;
             }
             .swiper-wrapper {
-              width:100%;
+              width: 100%;
               height: 100%;
               .swiper-slide {
                 min-height: 18.75rem;
                 @include img-cover(center);
-                @media screen and (min-width:1200px) {
+                @media screen and (min-width: 1200px) {
                   width: 100%;
                 }
               }
@@ -544,7 +557,7 @@ body {
           .how-it-works-content {
             padding-inline: 1.09rem;
             padding-top: 2.5rem;
-            padding-bottom:2.5rem;
+            padding-bottom: 2.5rem;
             background-color: $white;
             @media screen and (min-width: 1200px) {
               width: 55%;
@@ -567,14 +580,14 @@ body {
                 font-style: normal;
                 font-weight: 300;
                 line-height: normal;
-                padding-bottom:2.5rem;
+                padding-bottom: 2.5rem;
                 a {
                   color: $dark;
                   display: inline-block;
                   font-weight: 700;
                   font-style: italic;
                 }
-                .orange{
+                .orange {
                   color: $orange;
                   font-size: 1.0625rem;
                   font-weight: 700;
@@ -583,7 +596,7 @@ body {
             }
             .btn-wrapper {
               display: flex;
-              gap:1.19rem;
+              gap: 1.19rem;
               flex-direction: column;
               justify-content: center;
               align-items: center;
@@ -591,8 +604,9 @@ body {
               @media screen and (min-width: 1200px) {
                 flex-direction: row;
               }
-             
-              .btn,.consultation-btn {
+
+              .btn,
+              .consultation-btn {
                 @include btn;
                 a {
                   text-decoration: none;
@@ -600,8 +614,8 @@ body {
                 }
               }
               .consultation-btn {
-                  background: transparent;
-                  border:2px solid $orange;
+                background: transparent;
+                border: 2px solid $orange;
               }
             }
           }

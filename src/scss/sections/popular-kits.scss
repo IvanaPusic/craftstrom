@@ -42,7 +42,6 @@ body {
     }
     .swiper-wrapper {
       display: flex;
-      gap:1rem;
       .swiper-slide {
         @include flex-center;
         height: 100%;
@@ -99,7 +98,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-bottom: 18.75rem;
+            margin-bottom: 10rem;
             padding-left:1rem;
             @media screen and (min-width:1200px) {
               max-width: 90rem;

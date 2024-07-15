@@ -11,7 +11,8 @@ body {
   background: #131111;
 }
 .video {
-  width: 100%;
+  max-width: 100%;
+  display: block;
   border-bottom: 1px solid $white;
   @media screen and (min-width: 900px) {
     border-bottom: none;
@@ -22,5 +23,7 @@ body {
 }
 
 .how-it-works-video {
+  max-width: 100%;
+  display: block;
   @include img-contain(center);
 }

@@ -9,7 +9,7 @@
   }
   .content {
     display: none;
-    @media screen and (min-width: 920px){
+    @media screen and (min-width: 1200px){
       @include flex-center;
       padding-top: 3.25rem;
       padding-inline: 3.5rem;
@@ -65,7 +65,7 @@
   .benefitsSwiper {
     display: block;
     height: 100%;
-    @media screen  and (min-width:920px) {
+    @media screen  and (min-width:1200px) {
       display: none;
     }
     .swiper-wrapper {

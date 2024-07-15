@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background: #131111;
+  overflow-x: hidden;
 }
 .info {
   position:relative;
@@ -60,14 +61,12 @@ body {
         margin-top: 1rem;
         width: 20%;
         height: 100%;
+        padding-left: 3.13rem;
       }
       .info-list {
         list-style-type: none;
         .info-list-item {
-          .choose,
-          .plug-in,
-          .produce,
-          .save {
+          .link {
             color: rgba(255, 255, 255, 0.40);
             text-align: center;
             font-family: $poppins;
@@ -87,9 +86,6 @@ body {
    .info-wrapper-content {
       width: 100%;
       padding-top: 1.44rem;
-      @media screen and (min-width: 1024px) {
-        margin-left: 6.66rem;
-      }
       .anchor {
         display: block;
         position: relative;
@@ -107,21 +103,22 @@ body {
         .card {
           border-bottom: 1px solid $white;
           padding-bottom: 2.19rem;
-          @media screen and (min-width: 1024px) {
+          @media screen and (min-width: 1024px) and (max-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+          }
+           @media screen and (min-width: 1201px){
             display: flex;
             justify-content: space-between;
+            align-items: center;
           }
           &.configure-card {
             border-bottom: none;
           }
-          &.plugin-card, &.produce-card, &.save-card {
-            @media screen and (min-width: 1024px) {
-              flex-direction: row-reverse;
-            }
-          }
          .card-content {
             padding-inline: 1rem;
-            .card-title {
+            padding-bottom: 1rem;
+            h3 {
               color: $white;
               /* headlines */
               padding-bottom: 1.25rem;
@@ -130,12 +127,8 @@ body {
               font-style: normal;
               font-weight: 500;
               line-height: 131%; /* 2.04688rem */
-              &.calculator-title,&.configurator-title {
-                padding-top: 2.19rem;
-              }
-              
             }
-            .card-text {
+            p {
               color: #FFF;
               font-family: $poppins;
               font-size: 1rem;
@@ -154,23 +147,30 @@ body {
                 line-height: 147.405%; /* 1.47406rem */
                 padding-bottom: 0.63rem;
               }
-              &.requirements-text-wrapper,
-              &.calculator-text-wrapper,
-              &.configurator-text-wrapper {
+              &.requirements-text-wrapper {
                 @media screen and (min-width:1024px) {
-                  margin-left: 20px;
-                  max-width: 28.25rem;
+                  // margin-left: 20px;
+                  width: 65%;
                 }
               }
             }
           }
           .smaller-image {
-              margin-right: 100px;
+              padding-left:1rem;
+              width: 100%;
               max-width: 400px;
+              @media screen and (min-width:1200px) {
+                margin-right: 100px;
+                height: 90%;
+                padding:0;
+              }
           }
           .bigger-image {
-              margin-right: 100px;
+              width: 100%;
               max-width: 900px;
+              @media screen and (min-width: 1200px) {
+                 margin-right: 100px;
+              }
           }
 
          .card-img-wrapper {
@@ -233,13 +233,17 @@ body {
         .card {
           border-bottom: none;
           .card-content {
-           .card-title {
+           h3 {
              padding-top: 1.88rem;
            }
-           .card-text-wrapper {
-            @media screen and (min-width:1024px) {
-              width: 65%;
+           
+           .card-text-wrapper,p {
+             @media screen and (min-width:1024px) {
+              width: 85%;
             }
+           }
+           .card-text-wrapper {
+            padding-left: 1rem;
            }
           }
           .card-img-wrapper {
