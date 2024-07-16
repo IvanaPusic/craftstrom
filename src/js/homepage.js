@@ -30,31 +30,9 @@ const mobileTitles = document.querySelectorAll('.mobile-title');
 const mobileTexts = document.querySelectorAll('.mobile-text');
 const mobileImages = document.querySelectorAll('.mobile-line-image');
 
-const arrow1Img = document.querySelector('.arrow-1-img');
-const arrow2Img = document.querySelector('.arrow-2-img');
-const arrow3Img = document.querySelector('.arrow-3-img');
+const slideTitles = document.querySelectorAll('.solar-system-title');
 
-const solarImg = document.querySelector('.solar-type-img');
-const solarSystemTitles = document.querySelectorAll('.solar-system-title');
-
-const onGridImgContainer = document.querySelector('.on-grid-img-container');
-const onGridNightImgContainer = document.querySelector('.on-grid-night-img-container');
-const offGridImgContainer = document.querySelector('.off-grid-img-container');
-
-const content1 = document.querySelector('.content-1');
-const content2 = document.querySelector('.content-2');
-const content3 = document.querySelector('.content-3');
-
-const title1 = document.querySelector('.title-1');
-const title2 = document.querySelector('.title-2');
-const title3 = document.querySelector('.title-3');
-
-onGridImgContainer.style.display = 'none';
-onGridNightImgContainer.style.display = 'none';
-offGridImgContainer.style.display = 'none';
-content1.style.display = 'block';
-title1.style.color = '#F9A41A';
-arrow1Img.src = '/wp-content/themes/craftstrom/dist/images/arrow_up.svg';
+// arrow1Img.src = '/wp-content/themes/craftstrom/dist/images/arrow_up.svg';
 
 const mainSwiper = new Swiper('.mainSwiper', {
   pagination: {
@@ -111,7 +89,7 @@ const learnMoreSwiper = new Swiper('.learnMore', {
   slidesPerView:1,
   spaceBetween:0,
   breakpoints: {
-    1024: {
+    1300: {
       slidesPerView:3,
       spaceBetween:5,
     },
@@ -181,60 +159,40 @@ function updateActiveStateMobile(activeIndex) {
   addColor(mobileTitles[activeIndex], mobileTexts[activeIndex]);
 }
 
-title1.addEventListener('click', function () {
-  content1.style.display = 'block';
-  solarImg.src = this.dataset.srcset ;
-  arrow1Img.src = this.dataset.arrowimg;
-  title1.style.color = "#F9A41A";
-  onGridImgContainer.style.display = 'block';
-  offGridImgContainer.style.display = 'none';
-  onGridNightImgContainer.style.display = 'none';
-  content2.style.display = 'none';
-  content3.style.display = 'none';
-});
+  slideTitles.forEach((title, index) => {
+    title.addEventListener('click', (event) => {
+      console.log(event.currentTarget.classList);
+            
+      const currentHeader = event.currentTarget.querySelector('.arrow');
+      if (currentHeader.classList.contains('arrow-up')) {
+        currentHeader.classList.remove('arrow-up');
+        currentHeader.classList.add('arrow-down');
+      } else {
+        currentHeader.classList.remove('arrow-down');
+        currentHeader.classList.add('arrow-up');
+      }
+     
+      const headers = document.querySelectorAll('.solar-system-title .arrow');
+      headers.forEach((header) => {
+        if (header !== event.currentTarget) {
+          header.classList.remove('arrow-up');
+          header.classList.add('arrow-down');
+        }
+      });
 
-title2.addEventListener('click', function () {
-  content2.style.display = 'block';
-  solarImg.src = this.dataset.srcset;
-  arrow2Img.src = this.dataset.arrowimg;
-  title2.style.color = "#F9A41A";
-  onGridNightImgContainer.style.display = 'block';
-  onGridImgContainer.style.display = 'none';
-  offGridImgContainer.style.display = 'none';
-  content1.style.display = 'none';
-  content3.style.display = 'none';
-});
-
-title3.addEventListener('click', function () {
-  console.log('this', this.dataset);
-  content3.style.display = 'block';
-  solarImg.src = this.dataset.srcset;
-  arrow3Img.src = this.dataset.arrowimg ;
-  title3.style.color = "#F9A41A";
-  offGridImgContainer.style.display = 'block';
-  onGridNightImgContainer.style.display = 'none';
-  onGridImgContainer.style.display = 'none';
-  content2.style.display = 'none';
-  content1.style.display = 'none';
-});
-
-content1.addEventListener('click', function () {
-  content1.style.display = 'none';
-  arrow1Img.src = this.dataset.srcset;
-  solarSystemTitles[0].style.opacity = 0.7;
-  onGridImgContainer.style.display = 'none';
-});
-
-content2.addEventListener('click', function () {
-  content2.style.display = 'none';
-  arrow2Img.src = this.dataset.srcset;
-  solarSystemTitles[1].style.opacity = 0.7;
-  onGridNightImgContainer.style.display = 'none';
-});
-
-content3.addEventListener('click', function () {
-  content3.style.display = 'none';
-  arrow3Img.src = this.dataset.srcset;
-  solarSystemTitles[2].style.opacity = 0.7;
-  offGridImgContainer.style.display = 'none';
-});
+      const content = document.querySelectorAll(`.types-of-solar-system .content`);
+      content.forEach((item) => {
+        item.classList.remove('show');
+      });
+      const slideContent = document.querySelector(`.types-of-solar-system .content-${index + 1}`);
+      slideContent.classList.add('show');
+      
+      const image = document.querySelectorAll('.image-container .slide-img');
+      console.log(image);
+      image.forEach((item) => {
+        item.classList.remove('show');
+      });
+      const slideImage = document.querySelector(`.image-container #system-img-${index}`);
+      slideImage.classList.add('show');
+    });
+  });

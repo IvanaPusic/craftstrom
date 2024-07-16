@@ -4,19 +4,69 @@ document.addEventListener('DOMContentLoaded', () => {
   const contentLinks = document.querySelectorAll('.content-link')
   const mainContent = document.querySelector('.main-content');
   const allLinks = document.querySelectorAll(
-    '.product-list-item .product-item'
+    '.product-item'
   );
 
-  const selectors = [...chooseLinks, ...allLinks];
+  const selectors = [...allLinks];
 
-  const allArticles = [...chooseLinks].map((link) =>
+  const allArticles = [...allLinks].map((link) =>
     document.getElementById(link.getAttribute('href').substring(1))
   );
+  
+  const activateAndScroll = (targetId) => {
+    const targetArticle = document.getElementById(targetId);
+    
+    // Scroll to the target article
+    targetArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Remove active class from all product links
+    allLinks.forEach((item) => {
+      item.classList.remove('active');
+    });
+
+    // Add active class to all corresponding links
+    const correspondingProductLinks = [...allLinks].filter(item => item.getAttribute('href').substring(1) === targetId);
+    correspondingProductLinks.forEach(link => {
+      link.classList.add('active');
+    });
+    
+    // Update swiper position based on the first matching link
+    if (correspondingProductLinks.length > 0) {
+      const swiperIndex = selectors.indexOf(correspondingProductLinks[0]);
+      if (swiperIndex !== -1) {
+        productLinksswiper.slideTo(swiperIndex);
+      }
+    }
+  };
 
   contentLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
       mainContent.style.display = 'block';
-      wrapper.style.display = 'none'
+      wrapper.style.display = 'none';
+      
+      const targetId = link.getAttribute('href').substring(1);
+      activateAndScroll(targetId);
+    });
+  });
+
+  selectors.forEach((link) => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetArticle = document.getElementById(targetId);
+
+      allArticles.forEach((article) => {
+        article.classList.remove('active');
+      });
+      targetArticle.classList.add('active');
+      targetArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      allLinks.forEach((item) => {
+        item.classList.remove('active');
+      });
+
+      link.classList.add('active');
     });
   });
 

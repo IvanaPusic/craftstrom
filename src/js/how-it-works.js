@@ -98,23 +98,22 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   allLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
+      const targetId = link.getAttribute('href').substring(1);
       const targetArticle = document.getElementById(targetId);
-      console.log(targetArticle)
-      allArticles.forEach(article => {
-        article.classList.remove("active");
+
+      allArticles.forEach((article) => {
+        article.classList.remove('active');
+      });
+      targetArticle.classList.add('active');
+      targetArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      allLinks.forEach((item) => {
+        item.classList.remove('active');
       });
 
-      targetArticle.classList.add("active");
-      targetArticle.scrollIntoView({ behavior: "smooth", block: "start" });
-
-      allLinks.forEach(item => {
-        item.classList.remove("active");
-      });
-
-      link.classList.add("active");
+      link.classList.add('active');
     });
   });
 

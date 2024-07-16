@@ -14,6 +14,7 @@ body {
   .wrapper {
     .card {
       @include img-cover(center);
+
       .content {
         padding-top: 4.44rem;
         padding-left: 3.5rem;
@@ -52,16 +53,18 @@ body {
     padding-top: 1.81rem;
     scroll-behavior: smooth;
     padding-bottom: 4.56rem;
+
     .productLinksSwiper {
       @media screen and (min-width: 1300px) {
         display: none;
         padding-top: 2.62rem;
         top: 160px;
       }
+
       height: 4.125rem;
       width: 100%;
       position: sticky;
-      top:0;
+      top: 0;
       left: 0;
       z-index: 10;
       background: $orange;
@@ -108,7 +111,7 @@ body {
           flex-direction: column;
           position: sticky;
           top: 80px;
-          width: 25%;
+          width: 20%;
           height: 100%;
         }
 
@@ -139,9 +142,14 @@ body {
 
       .products-wrapper-content {
         width: 100%;
-        @media screen and (min-width: 1200px) {
-          margin-left: 6.44rem;
+
+        @media screen and (min-width: 1200px) and (max-width: 1300px) {
+          width: 100%;
+        }
+
+        @media screen and (min-width: 1301px) {
           width: 75%;
+          padding-right: 3.13rem;
         }
 
         .anchor {
@@ -152,20 +160,12 @@ body {
         }
 
         .section-article {
-          @media screen and (min-width: 1200px) {
-            margin-bottom: 6.25rem;
-          }
           // --------------SHOWCASE -----------------------
           .showcase {
-            @media screen and (min-width: 1024px) {
-              min-width: 69.5625rem;
-              max-width: 72.6875rem;
+            @media screen and (min-width: 1200px) {
+              margin-bottom: 6.25rem;
             }
-            &.battery-showcase {
-              @media screen and (min-width: 1200px) {
-                margin-top: 6.25rem;
-              }
-            }
+
             .img-wrapper {
               width: 100%;
               min-height: 18.75rem;
@@ -173,10 +173,12 @@ body {
               justify-content: center;
               align-items: center;
               @include img-cover(center);
+
               .btn {
                 @include btn;
                 background-color: transparent;
                 border: 2px solid $white;
+
                 a {
                   text-decoration: none;
                   color: $white;
@@ -189,16 +191,19 @@ body {
                 }
               }
             }
+
             .video-container {
               width: 100%;
               position: relative;
               display: flex;
               justify-content: center;
               align-items: center;
+
               video {
                 width: 100%;
                 height: 100%;
               }
+
               .btn {
                 position: absolute;
                 top: 50%;
@@ -208,6 +213,7 @@ body {
                 @include btn;
                 background-color: transparent;
                 border: 2px solid $white;
+
                 a {
                   text-decoration: none;
                   color: $white;
@@ -220,6 +226,7 @@ body {
                 }
               }
             }
+
             .showcase-swiper,
             .content-swiper {
               width: 100%;
@@ -280,6 +287,7 @@ body {
                   gap: 0.62rem;
                   padding-left: 4.44rem;
                   padding-bottom: 5.44rem;
+
                   .label {
                     color: $orange;
                     font-family: $poppins;
@@ -288,6 +296,7 @@ body {
                     font-weight: 500;
                     line-height: normal;
                   }
+
                   .title {
                     color: $dark;
                     font-family: $poppins;
@@ -297,6 +306,7 @@ body {
                     font-weight: 500;
                     line-height: 131%; /* 1.47375rem */
                   }
+
                   .title {
                     border-top: 1px solid $dark;
                   }
@@ -337,59 +347,29 @@ body {
 
             .content {
               display: none;
-              &.safety-gate-content,
-              &.pv-plug-content,
-              &.app-content {
-                display: block;
-                background-color: $white;
-                padding-inline: 1rem;
-                padding-top: 2.75rem;
-                padding-bottom: 2.56rem;
-                .safety-gate-card,
-                .smart-pv-card,
-                .app-card {
-                  width: 100% !important;
-                  .safety-gate-title,
-                  .smart-pv-title,
-                  .app-title {
-                    max-width: 17.125rem;
-                    padding-bottom: 0.63rem;
-                  }
-                  .safety-gate-text,
-                  .smart-pv-text,
-                  .app-text {
-                    padding-bottom: 0.63rem;
-                    a {
-                      color: $dark;
-                      font-style: italic;
-                      font-weight: 600;
-                    }
-                  }
-                }
-              }
-              &.inverter-content {
-                padding-left: 2rem;
-                padding-right: 2rem;
-              }
+
               @media screen and (min-width: 1024px) {
                 width: 100%;
                 background-color: $white;
                 display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 gap: 1.38rem;
                 padding-top: 2.19rem;
                 padding-bottom: 1.94rem;
                 padding-inline: 4.44rem;
               }
+
               .safety-gate-card,
               .smart-pv-card,
               .app-card {
                 width: 100%;
               }
+
               .card {
-                min-width: 13.3125rem;
-                max-width: 14.375rem;
+                min-width: 15%;
+                max-width: 20%;
               }
+
               .card,
               .one-slider {
                 .label {
@@ -400,18 +380,16 @@ body {
                   font-weight: 500;
                   line-height: normal;
                 }
-                .battery-title,
+
                 .title {
+                  border-top: 1px solid $dark;
                   color: $dark;
                   font-family: $poppins;
                   font-size: 1.125rem;
                   padding-top: 0.62rem;
                   font-style: normal;
                   font-weight: 500;
-                  line-height: 131%; /* 1.47375rem */
-                }
-                .title {
-                  border-top: 1px solid $dark;
+                  line-height: 131%;
                 }
 
                 .text-wrapper {
@@ -423,20 +401,58 @@ body {
                     font-style: normal;
                     font-weight: 300;
                     line-height: normal;
-                    &.safety-gate-text,
-                    &.smart-pv-text {
-                      @media screen and (min-width: 1200px) {
-                        width: 100%;
-                      }
-                    }
                   }
                 }
+
                 .btn {
                   @include btn;
+
                   a {
                     text-decoration: none;
                     color: $dark;
                   }
+                }
+              }
+            }
+
+            .one-slider-wrap {
+              display: block;
+              background-color: $white;
+              padding-left: 4.44rem;
+              padding-right: 5.5rem;
+              padding-top: 2.75rem;
+              padding-bottom: 2.56rem;
+
+              .one-slider {
+                width: 100% !important;
+
+                hr {
+                  color: $dark;
+
+                  @media screen and (min-width: 1200px) {
+                    width: 18%;
+                  }
+                }
+
+                .title {
+                  padding-bottom: 0.63rem;
+                  border: none;
+                }
+
+                .text {
+                  padding-bottom: 0.63rem;
+                }
+
+                p {
+                  a {
+                    color: $dark;
+                    font-style: italic;
+                    font-weight: 600;
+                  }
+                }
+
+                .btn {
+                  margin-top: 1.31rem;
                 }
               }
             }
@@ -447,16 +463,20 @@ body {
         .specification {
           padding-inline: 1rem;
           padding-top: 2.5rem;
+
           .specification-category {
-            @media screen and (min-width: 1200px) {
-              max-width: 75%;
+            &.last-category {
+              border-bottom: none;
             }
+
             border-bottom: 1px solid $white;
             padding-bottom: 1.75rem;
+
             .title {
               padding-bottom: 0.63rem;
               padding-top: 1.75rem;
             }
+
             .title,
             p {
               color: $white;
@@ -467,24 +487,30 @@ body {
               font-weight: 500;
               line-height: 131%; /* 2.04688rem */
             }
+
             p {
               font-size: 1rem;
               font-weight: 300;
               line-height: normal;
+
               @media screen and (min-width: 1200px) {
                 max-width: 69.0625rem;
               }
             }
+
             .category-wrapper {
               padding-bottom: 0.81rem;
+
               @media screen and (min-width: 1200px) {
                 display: flex;
                 gap: 2.19rem;
               }
+
               .category {
                 .container {
                   display: flex;
                   flex-direction: column;
+
                   p {
                     color: $white;
                     font-family: $poppins;
@@ -495,6 +521,7 @@ body {
                     padding-bottom: 0.63rem;
                   }
                 }
+
                 .category-title {
                   color: $orange;
                   font-family: $poppins;
@@ -504,6 +531,7 @@ body {
                   line-height: normal;
                   padding-bottom: 0.19rem;
                 }
+
                 .category-text,
                 a {
                   color: $white;
@@ -512,56 +540,64 @@ body {
                   font-style: normal;
                   font-weight: 400;
                   line-height: normal;
+
                   @media screen and (min-width: 1200px) {
                     max-width: 18rem;
                   }
                 }
               }
             }
-            &.warranty-manual {
-              border-bottom: none;
-            }
           }
         }
+
         // --------------------- HOW IT WORKS --------------------------
         .how-it-works {
           @media screen and (min-width: 1200px) {
-            max-width: 72.6875rem;
+            margin-bottom: 6.25rem;
             display: flex;
             flex-direction: row-reverse;
           }
+
           .img-wrapper {
             width: 45%;
             height: inherit;
             @include img-cover(center);
           }
+
           .how-it-works-swiper {
             width: 100%;
             height: 100%;
+
             @media screen and (min-width: 1200px) {
               height: inherit;
               width: 45%;
             }
+
             .swiper-wrapper {
               width: 100%;
               height: 100%;
+
               .swiper-slide {
                 min-height: 18.75rem;
                 @include img-cover(center);
+
                 @media screen and (min-width: 1200px) {
                   width: 100%;
                 }
               }
             }
           }
+
           .how-it-works-content {
             padding-inline: 1.09rem;
             padding-top: 2.5rem;
             padding-bottom: 2.5rem;
             background-color: $white;
+
             @media screen and (min-width: 1200px) {
               width: 55%;
             }
+
             .title {
               color: $dark;
               font-family: $poppins;
@@ -572,6 +608,7 @@ body {
               text-align: center;
               padding-bottom: 2.5rem;
             }
+
             .content-wrapper {
               p {
                 color: $dark;
@@ -581,12 +618,14 @@ body {
                 font-weight: 300;
                 line-height: normal;
                 padding-bottom: 2.5rem;
+
                 a {
                   color: $dark;
                   display: inline-block;
                   font-weight: 700;
                   font-style: italic;
                 }
+
                 .orange {
                   color: $orange;
                   font-size: 1.0625rem;
@@ -594,6 +633,7 @@ body {
                 }
               }
             }
+
             .btn-wrapper {
               display: flex;
               gap: 1.19rem;
@@ -608,11 +648,13 @@ body {
               .btn,
               .consultation-btn {
                 @include btn;
+
                 a {
                   text-decoration: none;
                   color: $dark;
                 }
               }
+
               .consultation-btn {
                 background: transparent;
                 border: 2px solid $orange;
