@@ -662,6 +662,10 @@ body {
 
 .single-product {
   .details {
+
+    &.hide {
+      display: none;
+    }
     .label {
       color: $orange;
       padding-top: 1.5rem;
@@ -719,7 +723,7 @@ body {
               line-height: normal;
             }
             .detail-category-wrapper {
-              .text, a {
+              p, a {
                 color: $white;
                 font-family: $poppins;
                 font-size: 0.875rem;
@@ -736,4 +740,20 @@ body {
       }
     }
   }
+}
+
+.single-product {
+  // .sticky-container {
+  //   position: -webkit-sticky; /* For Safari */
+  //   position: sticky;
+  //   top: 0; /* Adjust based on your needs, e.g., below a fixed header */
+  //   z-index: 10; /* Ensure it's above other content */
+  // }
+  // .single-product {
+  //   div {
+  //     &.product {
+  //       overflow: visible;
+  //     }
+  //   }
+  // }
 }

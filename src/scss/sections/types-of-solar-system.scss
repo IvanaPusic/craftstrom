@@ -88,37 +88,6 @@ body {
           display: block;
         }
       }
-
-      .on-grid-img-container,
-      .on-grid-night-img-container,
-      .off-grid-img-container {
-        width: 100%;
-        background-color: $dark;
-      }
-
-      .on-grid-img-container {
-        height: 49.154375rem;
-        @include img-contain(center);
-        @media screen and (min-width: 1200px) {
-          display: none !important;
-        }
-      }
-
-      .on-grid-night-img-container {
-        height: 32.3775rem;
-        @include img-contain(center);
-        @media screen and (min-width: 1200px) {
-          display: none !important;
-        }
-      }
-
-      .off-grid-img-container {
-        height: 35.20875rem;
-        @include img-contain(center);
-        @media screen and (min-width: 1200px) {
-          display: none !important;
-        }
-      }
     }
   }
 
@@ -137,7 +106,6 @@ body {
       img {
         width: 100%;
         height: 100%;
-        display: none;
 
         &.show {
           display: block;

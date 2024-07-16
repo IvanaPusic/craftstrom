@@ -6,17 +6,18 @@ body {
   background: #131111;
 }
 .features-section {
-  padding-inline:2.81rem;
+  padding-inline: 1rem;
   @media screen and (min-width: 1200px){
+    padding: 0;
     padding-inline: 3.12rem;
-    padding-bottom: 6.23rem;
   }
   .mainSwiper {
     width:100%;
     height: 100%; 
-    padding-bottom: 3rem;
+    // padding-bottom: 3rem;
     .swiper-pagination {
       margin-top: 7rem;
+      position: relative;
     }
      /* Custom pagination bullets */
     .swiper-pagination-bullet {
@@ -36,7 +37,7 @@ body {
     .swiper-wrapper {
       width:100%;
       height: 100%;
-      .firstSwiper,.secondSwiper,.thirdSwiper,.fourthSwiper {
+      .outer-swiper {
         @media screen and (max-width:1200px) {
           display:none
         }
@@ -45,45 +46,64 @@ body {
         .mySwiper {
           width:100%;
           height: 100%;
-          .first-swiper-wrapper,.second-swiper-wrapper,.third-swiper-wrapper,.fourth-swiper-wrapper {
+          .swiper-wrapper {
              height: 100%;
               .swiper-slide {
                 min-height: 30.375rem;
-                @media screen and (min-width: 1200px) {
-                   @include img-cover(center);
+                width: 100%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
                 }
-             }
+              }
           }
           .content {
             width: 100%;
-              display: flex;
-              justify-content: center;
-              padding-top: 2.94rem;
-              gap: 2.25rem;
-              .card {
-                .desktop-title {
-                  color:$white;
-                  opacity: 0.75;
-                  font-family: $poppins;
-                  font-size: 1.25rem;
-                  font-style: normal;
-                  font-weight: 600;
-                  padding-top:0.62rem;
-                  padding-bottom: 0.62rem;
-                  line-height: normal;
-                  max-width: 19.0625rem;
+            display: flex;
+            justify-content: center;
+            padding-top: 2.94rem;
+            gap: 2.25rem;
+            
+            .card {
+              .line-img {
+                width: 100%;
+                height: 10px;
+                &.inactive::after {
+                  content: url("/wp-content/themes/craftstrom/dist/images/gray-line.svg");
+                  height: 10px;
+                  
                 }
-                .desktop-text {
-                  color: $white;
-                  opacity: 0.75;
-                  font-family: $poppins;
-                  font-size: 1rem;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: normal;
-                  max-width: 19.125rem;
+                
+                &.active::after {
+                  content: url("/wp-content/themes/craftstrom/dist/images/orange-line.svg");
+                  height: 10px;
                 }
               }
+              .desktop-title {
+                color:$white;
+                opacity: 0.75;
+                font-family: $poppins;
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 600;
+                padding-top:0.62rem;
+                padding-bottom: 0.62rem;
+                line-height: normal;
+                max-width: 19.0625rem;
+              }
+              .desktop-text {
+                color: $white;
+                opacity: 0.75;
+                font-family: $poppins;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                max-width: 19.125rem;
+              }
+            }
           }
         }
       }

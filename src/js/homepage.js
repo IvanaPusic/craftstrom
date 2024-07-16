@@ -1,4 +1,26 @@
-import { addColor, removeColor } from './features.js';
+const addColor = (titles, texts) => {
+  titles.style.color = '#F9A41A';
+  titles.style.opacity = 1;
+  texts.style.color = '#fff';
+  texts.style.opacity = 1;
+};
+
+const removeColor = (titles1, titles2, titles3, texts1, texts2, texts3) => {
+  texts1.style.color = '#fff';
+  titles1.style.color = '#fff';
+  texts1.style.opacity = 0.7;
+  titles1.style.opacity = 0.7;
+
+  texts2.style.color = '#fff';
+  titles2.style.color = '#fff';
+  texts2.style.opacity = 0.7;
+  titles2.style.opacity = 0.7;
+
+  texts3.style.color = '#fff';
+  titles3.style.color = '#fff';
+  texts3.style.opacity = 0.7;
+  titles3.style.opacity = 0.7;
+};
 
 const titles = document.querySelectorAll('.desktop-title');
 const texts = document.querySelectorAll('.desktop-text');
@@ -7,8 +29,32 @@ const images = document.querySelectorAll('.line-image');
 const mobileTitles = document.querySelectorAll('.mobile-title');
 const mobileTexts = document.querySelectorAll('.mobile-text');
 const mobileImages = document.querySelectorAll('.mobile-line-image');
-const slideTitles = document.querySelectorAll('.solar-system-title');
 
+const arrow1Img = document.querySelector('.arrow-1-img');
+const arrow2Img = document.querySelector('.arrow-2-img');
+const arrow3Img = document.querySelector('.arrow-3-img');
+
+const solarImg = document.querySelector('.solar-type-img');
+const solarSystemTitles = document.querySelectorAll('.solar-system-title');
+
+const onGridImgContainer = document.querySelector('.on-grid-img-container');
+const onGridNightImgContainer = document.querySelector('.on-grid-night-img-container');
+const offGridImgContainer = document.querySelector('.off-grid-img-container');
+
+const content1 = document.querySelector('.content-1');
+const content2 = document.querySelector('.content-2');
+const content3 = document.querySelector('.content-3');
+
+const title1 = document.querySelector('.title-1');
+const title2 = document.querySelector('.title-2');
+const title3 = document.querySelector('.title-3');
+
+onGridImgContainer.style.display = 'none';
+onGridNightImgContainer.style.display = 'none';
+offGridImgContainer.style.display = 'none';
+content1.style.display = 'block';
+title1.style.color = '#F9A41A';
+arrow1Img.src = '/wp-content/themes/craftstrom/dist/images/arrow_up.svg';
 
 const mainSwiper = new Swiper('.mainSwiper', {
   pagination: {
@@ -22,62 +68,29 @@ const mainSwiper = new Swiper('.mainSwiper', {
   }
 });
 
-const firstSwiper = new Swiper(".first-swiper", {
+const firstSwiper = new Swiper(".inner-swiper", {
   observer: true,
   observeParents: true,
   spaceBetween: 20,
   nested: true,
   on: {
     slideChange: function () {
-      const swiperContainer = this.el.closest('.swiper');
-      const dataIndex = Number(swiperContainer.dataset.index);
       console.log('First Swiper active index:', this.activeIndex);
-      updateActiveState(this.activeIndex, dataIndex);
-    }
-  }
-});
+      console.log('First Swiper element:', this.slides[this.activeIndex - 1]);
+      const slide = this.slides[this.activeIndex - 1];
+      const slideId = slide.dataset.slide;
+      console.log('Slide id:', slideId);
+      const allSlidesWithSlideIndex = document.querySelectorAll(`[data-slideIndex]`);
+      console.log('All slides with slide index:', allSlidesWithSlideIndex);
+      allSlidesWithSlideIndex.forEach(slide => {
+        slide.classList.remove('active');
+        slide.classList.add('inactive');
+      });
 
-const secondSwiper = new Swiper(".second-swiper", {
-  observer: true,
-  observeParents: true,
-  spaceBetween: 20,
-  nested: true,
-  on: {
-    slideChange: function () {
-      const swiperContainer = this.el.closest('.swiper');
-      const dataIndex = Number(swiperContainer.dataset.index);
-      console.log('Second Swiper active index:', this.activeIndex);
-      updateActiveState(this.activeIndex, dataIndex);
-    }
-  }
-});
-
-const thirdSwiper = new Swiper(".third-swiper", {
-  observer: true,
-  observeParents: true,
-  spaceBetween: 20,
-  nested: true,
-  on: {
-    slideChange: function () {
-      const swiperContainer = this.el.closest('.swiper');
-      const dataIndex = Number(swiperContainer.dataset.index);
-      console.log('Third Swiper active index:', this.activeIndex);
-      updateActiveState(this.activeIndex, dataIndex);
-    }
-  }
-});
-
-const fourthSwiper = new Swiper(".fourth-swiper", {
-  observer: true,
-  observeParents: true,
-  spaceBetween: 20,
-  nested: true,
-  on: {
-    slideChange: function () {
-      const swiperContainer = this.el.closest('.swiper');
-      const dataIndex = Number(swiperContainer.dataset.index);
-      console.log('Fourth Swiper active index:', this.activeIndex);
-      updateActiveState(this.activeIndex,dataIndex);
+      const activeSlide = document.querySelector(`[data-slideIndex="${slideId}"]`);
+      console.log('Active slide:', activeSlide);
+      activeSlide.classList.remove('inactive');
+      activeSlide.classList.add('active');
     }
   }
 });
@@ -96,13 +109,9 @@ const mobileSwiper = new Swiper(".mobileSwiper", {
 
 const learnMoreSwiper = new Swiper('.learnMore', {
   slidesPerView:1,
-  spaceBetween:20,
+  spaceBetween:0,
   breakpoints: {
     1024: {
-      slidesPerView:2,
-      spaceBetween:5,
-    },
-    1200: {
       slidesPerView:3,
       spaceBetween:5,
     },
@@ -141,22 +150,11 @@ const blogSwiper = new Swiper('.blogSwiper', {
 if (mobileSwiper.activeIndex === 0) {
   addColor(mobileTitles[0], mobileTexts[0]);
 }
-if (firstSwiper.activeIndex === 0) {
-  addColor(titles[0], texts[0]);
-}
-if (secondSwiper.activeIndex === 1) {
-  addColor(titles[4], texts[4]);
-}
-if (thirdSwiper.activeIndex === 2) {
-  addColor(titles[8], texts[8]);
-}
-if (fourthSwiper.activeIndex === 3) {
-  addColor(titles[12], texts[12]);
-}
+
 
 function updateActiveState(activeIndex, offset) {
-  const activeImage = './src/images/orange-line.svg';
-  const inactiveImage = './src/images/gray-line.svg';
+  const activeImage = '/wp-content/themes/craftstrom/dist/images/orange-line.svg';
+  const inactiveImage = '/wp-content/themes/craftstrom/dist/images/gray-line.svg';
 
   images.forEach((img, index) => {
     if (index >= offset && index < offset + 4) {
@@ -172,8 +170,8 @@ function updateActiveState(activeIndex, offset) {
 }
 
 function updateActiveStateMobile(activeIndex) {
-  const activeImage = './src/images/orange-line.svg';
-  const inactiveImage = './src/images/gray-line.svg';
+  const activeImage = '/wp-content/themes/craftstrom/dist/images/orange-line.svg';
+  const inactiveImage = '/wp-content/themes/craftstrom/dist/images/gray-line.svg';
 
   mobileImages.forEach((img, index) => {
     img.src = (index === activeIndex) ? activeImage : inactiveImage;
@@ -183,98 +181,60 @@ function updateActiveStateMobile(activeIndex) {
   addColor(mobileTitles[activeIndex], mobileTexts[activeIndex]);
 }
 
-slideTitles.forEach((title, index) => {
-    title.addEventListener('click', (event) => {
-      console.log(event.currentTarget.classList);
-            
-      const currentHeader = event.currentTarget.querySelector('.arrow');
-      console.log('current header', currentHeader)
-      if (currentHeader.classList.contains('arrow-up')) {
-        currentHeader.classList.remove('arrow-up');
-        currentHeader.classList.add('arrow-down');
-      } else {
-        currentHeader.classList.remove('arrow-down');
-        currentHeader.classList.add('arrow-up');
-      }
-     
-      const headers = document.querySelectorAll('.solar-system-title .arrow');
-      headers.forEach((header) => {
-        if (header !== event.currentTarget) {
-          header.classList.remove('arrow-up');
-          header.classList.add('arrow-down');
-        }
-      });
+title1.addEventListener('click', function () {
+  content1.style.display = 'block';
+  solarImg.src = this.dataset.srcset ;
+  arrow1Img.src = this.dataset.arrowimg;
+  title1.style.color = "#F9A41A";
+  onGridImgContainer.style.display = 'block';
+  offGridImgContainer.style.display = 'none';
+  onGridNightImgContainer.style.display = 'none';
+  content2.style.display = 'none';
+  content3.style.display = 'none';
+});
 
-      const content = document.querySelectorAll(`.types-of-solar-system .content`);
-      content.forEach((item) => {
-        item.classList.remove('show');
-      });
-      const slideContent = document.querySelector(`.types-of-solar-system .content-${index + 1}`);
-      slideContent.classList.add('show');
-      
-      const image = document.querySelectorAll('.image-container .slide-img');
-      console.log(image);
-      image.forEach((item) => {
-        item.classList.remove('show');
-      });
-      const slideImage = document.querySelector(`.image-container #system-img-${index}`);
-      slideImage.classList.add('show');
-    });
-  });
+title2.addEventListener('click', function () {
+  content2.style.display = 'block';
+  solarImg.src = this.dataset.srcset;
+  arrow2Img.src = this.dataset.arrowimg;
+  title2.style.color = "#F9A41A";
+  onGridNightImgContainer.style.display = 'block';
+  onGridImgContainer.style.display = 'none';
+  offGridImgContainer.style.display = 'none';
+  content1.style.display = 'none';
+  content3.style.display = 'none';
+});
 
-// title1.addEventListener('click', function () {
-//   content1.style.display = 'block';
-//   solarImg.src = this.dataset.srcset ;
-//   arrow1Img.src = this.dataset.srcset;
-//   title1.style.color = "#F9A41A";
-//   onGridImgContainer.style.display = 'block';
-//   offGridImgContainer.style.display = 'none';
-//   onGridNightImgContainer.style.display = 'none';
-//   content2.style.display = 'none';
-//   content3.style.display = 'none';
-// });
+title3.addEventListener('click', function () {
+  console.log('this', this.dataset);
+  content3.style.display = 'block';
+  solarImg.src = this.dataset.srcset;
+  arrow3Img.src = this.dataset.arrowimg ;
+  title3.style.color = "#F9A41A";
+  offGridImgContainer.style.display = 'block';
+  onGridNightImgContainer.style.display = 'none';
+  onGridImgContainer.style.display = 'none';
+  content2.style.display = 'none';
+  content1.style.display = 'none';
+});
 
-// title2.addEventListener('click', function () {
-//   content2.style.display = 'block';
-//   solarImg.src = this.dataset.srcset;
-//   arrow2Img.src = this.dataset.srcset;
-//   title2.style.color = "#F9A41A";
-//   onGridNightImgContainer.style.display = 'block';
-//   onGridImgContainer.style.display = 'none';
-//   offGridImgContainer.style.display = 'none';
-//   content1.style.display = 'none';
-//   content3.style.display = 'none';
-// });
+content1.addEventListener('click', function () {
+  content1.style.display = 'none';
+  arrow1Img.src = this.dataset.srcset;
+  solarSystemTitles[0].style.opacity = 0.7;
+  onGridImgContainer.style.display = 'none';
+});
 
-// title3.addEventListener('click', function () {
-//   content3.style.display = 'block';
-//   solarImg.src = this.dataset.srcset;
-//   arrow3Img.src = this.dataset.srcset ;
-//   title3.style.color = "#F9A41A";
-//   offGridImgContainer.style.display = 'block';
-//   onGridNightImgContainer.style.display = 'none';
-//   onGridImgContainer.style.display = 'none';
-//   content2.style.display = 'none';
-//   content1.style.display = 'none';
-// });
+content2.addEventListener('click', function () {
+  content2.style.display = 'none';
+  arrow2Img.src = this.dataset.srcset;
+  solarSystemTitles[1].style.opacity = 0.7;
+  onGridNightImgContainer.style.display = 'none';
+});
 
-// content1.addEventListener('click', function () {
-//   content1.style.display = 'none';
-//   arrow1Img.src = this.dataset.srcset;
-//   solarSystemTitles[0].style.opacity = 0.7;
-//   onGridImgContainer.style.display = 'none';
-// });
-
-// content2.addEventListener('click', function () {
-//   content2.style.display = 'none';
-//   arrow2Img.src = this.dataset.srcset;
-//   solarSystemTitles[1].style.opacity = 0.7;
-//   onGridNightImgContainer.style.display = 'none';
-// });
-
-// content3.addEventListener('click', function () {
-//   content3.style.display = 'none';
-//   arrow3Img.src = this.dataset.srcset;
-//   solarSystemTitles[2].style.opacity = 0.7;
-//   offGridImgContainer.style.display = 'none';
-// });
+content3.addEventListener('click', function () {
+  content3.style.display = 'none';
+  arrow3Img.src = this.dataset.srcset;
+  solarSystemTitles[2].style.opacity = 0.7;
+  offGridImgContainer.style.display = 'none';
+});
