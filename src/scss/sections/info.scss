@@ -156,6 +156,7 @@ body {
           }
           .smaller-image {
               padding-left:1rem;
+              padding-right: 1rem;
               width: 100%;
               max-width: 400px;
               @media screen and (min-width:1200px) {
@@ -167,8 +168,11 @@ body {
           .bigger-image {
               width: 100%;
               max-width: 900px;
+              padding-left: 1rem;
+              padding-right: 1rem;
               @media screen and (min-width: 1200px) {
                  margin-right: 100px;
+                 padding: 0;
               }
           }
 
@@ -243,6 +247,7 @@ body {
            }
            .card-text-wrapper {
             padding-left: 1rem;
+            margin-left: 0;
            }
           }
           .card-img-wrapper {
