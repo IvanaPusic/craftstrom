@@ -13,8 +13,13 @@ body {
 
   .wrapper {
     .card {
-      @include img-cover(center);
-
+      // @include img-cover(center);
+      min-height: 10rem;
+      background-size: 100% 100%;
+      display: flex;
+      align-items:center;
+      background-repeat: no-repeat;
+      background-position: center;
       .content {
         padding-top: 4.44rem;
         padding-left: 3.5rem;
@@ -60,8 +65,6 @@ body {
         padding-top: 2.62rem;
         top: 160px;
       }
-
-      height: 4.125rem;
       width: 100%;
       position: sticky;
       top: 0;
@@ -69,8 +72,9 @@ body {
       z-index: 10;
       background: $orange;
 
-      .swiper-button-next {
-        color: $dark;
+      
+      .swiper-button-next::after {
+        content: "";
       }
 
       .swiper-wrapper {
@@ -81,10 +85,11 @@ body {
         padding-bottom: 0.94rem;
 
         .swiper-slide {
+          text-align: center;
           a {
             color: rgba(255, 255, 255, 0.4);
             font-family: $poppins;
-            font-size: 1.25rem;
+            font-size: 1.1125rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -93,7 +98,7 @@ body {
 
           .active {
             color: #fff;
-            font-size: 1.3125rem;
+            font-size: 1.125rem;
           }
         }
       }
@@ -285,8 +290,8 @@ body {
                   padding-top: 2.19rem;
                   flex-direction: column;
                   gap: 0.62rem;
-                  padding-left: 4.44rem;
-                  padding-bottom: 5.44rem;
+                  padding-left: 2rem;
+                  padding-bottom: 2.5rem;
 
                   .label {
                     color: $orange;
@@ -356,7 +361,7 @@ body {
                 gap: 1.38rem;
                 padding-top: 2.19rem;
                 padding-bottom: 1.94rem;
-                padding-inline: 4.44rem;
+                padding-inline:3rem;
               }
 
               .safety-gate-card,
@@ -418,11 +423,13 @@ body {
             .one-slider-wrap {
               display: block;
               background-color: $white;
-              padding-left: 4.44rem;
-              padding-right: 5.5rem;
+              padding-inline: 2rem;
               padding-top: 2.75rem;
               padding-bottom: 2.56rem;
-
+              @media screen and (min-width: 1200px) {
+                padding-left: 3rem;
+                padding-right: 5.5rem;
+              }
               .one-slider {
                 width: 100% !important;
 
@@ -474,7 +481,6 @@ body {
 
             .title {
               padding-bottom: 0.63rem;
-              padding-top: 1.75rem;
             }
 
             .title,
@@ -637,7 +643,6 @@ body {
             .btn-wrapper {
               display: flex;
               gap: 1.19rem;
-              flex-direction: column;
               justify-content: center;
               align-items: center;
 
