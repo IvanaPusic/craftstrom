@@ -157,11 +157,13 @@ body {
           .smaller-image {
               padding-left:1rem;
               width: 100%;
-              max-width: 400px;
+              max-width: 300px;
               @media screen and (min-width:1200px) {
                 margin-right: 100px;
                 height: 90%;
                 padding:0;
+                max-width: 350px;
+
               }
           }
           .bigger-image {
@@ -229,6 +231,8 @@ body {
       .content-wrap {
         padding-left:0;
         padding-right: 0;
+        padding-inline: 1rem;
+
         .card {
           border-bottom: none;
           .card-content {

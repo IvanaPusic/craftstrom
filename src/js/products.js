@@ -108,6 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   const productLinksswiper = new Swiper('.productLinksSwiper', {
     slidesPerView: 2.5,
+    breakpoints: {
+      600: {
+      slidesPerView: 3,
+
+      }
+    },
     spaceBetween:10,
     navigation: {
       nextEl: '.swiper-button-next',
