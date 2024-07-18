@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const singleProductSection = document.querySelector('.single-product-section');
   const buttons = document.querySelectorAll('.card-btn a');
   const links = document.querySelectorAll('.sidebar-link');
-  const sections = document.querySelectorAll('section[id]'); // assuming your sections have ids
 
   const allArticles = [...links].map(link => document.getElementById(link.getAttribute('href').substring(1)));
 
@@ -143,4 +142,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const sections = document.querySelectorAll('.category-section');
+  const sidebarLinks = document.querySelectorAll('.individual-products-list .sidebar-link');
+  const sidebarKitsLinks = document.querySelectorAll('.kits-links-wrapper .sidebar-link');
+  const offset = 360; // Adjust this value as needed to activate the link earlier
+
+  const sectionPositions = Array.from(sections).map(section => {
+    return {
+      id: section.id,
+      top: section.getBoundingClientRect().top + window.scrollY
+    };
+  });
+
+  // const handleScroll = () => {
+  //   const scrollPosition = window.scrollY + offset;
+
+  //   sectionPositions.forEach((section, index) => {
+  //     if (scrollPosition >= section.top &&
+  //       (index === sectionPositions.length - 1 || scrollPosition < sectionPositions[index + 1].top)) {
+
+  //       sidebarLinks.forEach(link => link.classList.remove('active'));
+  //       sidebarKitsLinks.forEach(link => link.classList.remove('active'));
+
+  //       const activeLink = document.querySelector(`.individual-products-list .sidebar-link[href="#${section.id.split('-')[0]}"]`);
+  //       const activeKitsLink = document.querySelector(`.kits-links-wrapper .sidebar-link[href="#${section.id.split('-')[0]}"]`);
+        
+  //       if (activeLink) {
+  //         activeLink.classList.add('active');
+  //       }
+        
+  //       if (activeKitsLink) {
+  //         activeKitsLink.classList.add('active');
+  //       }
+  //     }
+  //   });
+  // };
+
+  // window.addEventListener('scroll', handleScroll);
+  // handleScroll();
 });

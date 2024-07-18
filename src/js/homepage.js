@@ -161,38 +161,61 @@ function updateActiveStateMobile(activeIndex) {
 
   slideTitles.forEach((title, index) => {
     title.addEventListener('click', (event) => {
-      console.log(event.currentTarget.classList);
-            
-      const currentHeader = event.currentTarget.querySelector('.arrow');
+      const dataIndex = event.currentTarget.dataset.key;
+
+      const inActiveTitles = document.querySelectorAll('.solar-system-title .title');
+      inActiveTitles.forEach((title) => {
+        title.classList.remove('active');
+      });
+      event.currentTarget.querySelector('.title').classList.add('active');
+
+      const currentHeader = event.currentTarget.querySelector('#arrow-' + dataIndex);
       if (currentHeader.classList.contains('arrow-up')) {
-        currentHeader.classList.remove('arrow-up');
-        currentHeader.classList.add('arrow-down');
+          currentHeader.classList.remove('arrow-up');
+          currentHeader.classList.add('arrow-down');
       } else {
-        currentHeader.classList.remove('arrow-down');
-        currentHeader.classList.add('arrow-up');
+          currentHeader.classList.remove('arrow-down');
+          currentHeader.classList.add('arrow-up');
       }
      
       const headers = document.querySelectorAll('.solar-system-title .arrow');
       headers.forEach((header) => {
-        if (header !== event.currentTarget) {
-          header.classList.remove('arrow-up');
-          header.classList.add('arrow-down');
+        const headerID = header.getAttribute('id');
+        const id = 'arrow-' + dataIndex;
+        if (headerID !== id) {
+          header.classList.add('arrow-up');
+          header.classList.remove('arrow-down');
         }
       });
 
+      const slideContent = document.querySelector(`.types-of-solar-system .content-${dataIndex}-js`);
+      const isOpenedContent = slideContent.classList.contains('show');
       const content = document.querySelectorAll(`.types-of-solar-system .content`);
       content.forEach((item) => {
         item.classList.remove('show');
       });
-      const slideContent = document.querySelector(`.types-of-solar-system .content-${index + 1}`);
-      slideContent.classList.add('show');
+      if (!isOpenedContent) {
+        slideContent.classList.add('show');
+      }
       
-      const image = document.querySelectorAll('.image-container .slide-img');
-      console.log(image);
+      const mobileImage = document.querySelector(`.mobile-image-wrap-${dataIndex}-js`);
+      const isOpened = mobileImage.classList.contains('show');
+      const image = document.querySelectorAll(`.mobile-image-wrap`);
       image.forEach((item) => {
         item.classList.remove('show');
       });
-      const slideImage = document.querySelector(`.image-container #system-img-${index}`);
-      slideImage.classList.add('show');
+      if(!isOpened) {
+        mobileImage.classList.add('show');
+      }
+
+      const desktopImages = document.querySelectorAll(`.image-container .slide-img`);
+      console.log(desktopImages);
+      desktopImages.forEach((item) => {
+        item.classList.remove('show');
+      });
+
+      const desktopImage = document.querySelector(`.image-container #system-img-${dataIndex}`);
+      desktopImage.classList.add('show');
+
     });
   });

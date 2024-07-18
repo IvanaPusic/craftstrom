@@ -24,17 +24,23 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    padding-top: 2.5rem;
   }
 
   .products-wrapper {
-
+   
     .card {
       display: flex;
       flex-direction: column;
       gap: 1.88rem;
+      @media screen and (min-width:768px) and (max-width:1023px) {
+        padding-top: 1.88rem;
+        flex-direction:row-reverse;
+      } 
       @media screen and (min-width:1024px) {
         flex-direction: row;
         padding-top: 4.19rem;
+        gap: 4.38rem;
         &.card-reverse {
           flex-direction: row-reverse;
         }
@@ -43,8 +49,15 @@ body {
         width: 100%;
         min-height: 18.75rem;
         @include img-contain(center);
+         @media screen and (min-width:768px) and (max-width:1023px) {
+          width: 50%;
+          height: auto;
+          @include img-cover(center);
+          margin-right: 25px;
+        } 
         @media screen and (min-width:1024px) {
-          max-width: 51.375rem;
+          width: 50%;
+          @include img-cover(center);
         }
       }
 
@@ -54,9 +67,11 @@ body {
         max-width: 25.5rem;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.5625rem;
+        gap: 1.25rem;
         padding: 25px 25px;
-
+        @media screen and (min-width:1200px) {
+          padding: 0 25px 25px 25px;
+        }
         img {
           max-width: 40px;
         }
