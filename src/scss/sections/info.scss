@@ -57,7 +57,7 @@ body {
         flex-direction: column;
         position:sticky;
         top: 160px;
-        margin-top: 1rem;
+        margin-top: 3rem;
         width: 20%;
         height: 100%;
         padding-left: 3.13rem;
@@ -94,10 +94,18 @@ body {
       .content-wrap {
         padding-left:1.37rem;
         padding-right: 1.31rem;
+        hr {
+         width: 95%;
+         margin: 0 auto;
+          @media screen and (min-width:1200px) {
+            margin:0;
+          }
+        }
         @media screen and (min-width: 1200px) {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
+          // padding-bottom: 7.94rem;
         }
         .card {
           border-bottom: 1px solid $white;
@@ -147,9 +155,9 @@ body {
                 padding-bottom: 0.63rem;
               }
               &.requirements-text-wrapper {
-                @media screen and (min-width:1024px) {
+                @media screen and (min-width:1200px) {
                   // margin-left: 20px;
-                  width: 65%;
+                  width: 55%;
                 }
               }
             }
@@ -169,12 +177,12 @@ body {
           }
           .bigger-image {
               width: 100%;
-              max-width: 900px;
-              padding-left: 1rem;
-              padding-right: 1rem;
+              height: auto;
               @media screen and (min-width: 1200px) {
                  margin-right: 100px;
                  padding: 0;
+                width: 50%;
+
               }
           }
 
@@ -235,18 +243,21 @@ body {
       .content-wrap {
         padding-left:0;
         padding-right: 0;
-        padding-inline: 1rem;
+        // padding-inline: 1rem;
 
         .card {
           border-bottom: none;
+          @media screen and (min-width:1200px) {
+            gap: 2rem;
+          }
           .card-content {
            h3 {
              padding-top: 1.88rem;
            }
            
-           .card-text-wrapper,p {
+           .card-text-wrapper {
              @media screen and (min-width:1024px) {
-              width: 85%;
+              width: 65%;
             }
            }
            .card-text-wrapper {

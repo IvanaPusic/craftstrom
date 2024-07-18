@@ -92,20 +92,17 @@
   }
   .hero-icons {
     @include flex-center;
-
-    margin: 0 auto;
+    gap:1.75rem;
     @media screen and (min-width: 900px) {
-      padding-top: 8.95rem;
+      padding-top: 3.19rem;
     }
-
+    @media screen and (min-width:1200px) {
+      gap: 2.82rem;
+    }
     
     .icon {
       @include flex-center;
       flex-direction: column;
-      padding-inline: 1.75rem;
-      @media screen and (min-width:1200px) {
-        padding-inline: 2.82rem;
-      }
       .icon-wrap {
         width: 50px;
         height: 60px;

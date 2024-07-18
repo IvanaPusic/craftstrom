@@ -39,6 +39,9 @@ body {
     }
     .card {
       padding-right: 1.31rem;
+      &:first-of-type {
+        padding-top:2rem;
+      }
       &.on-grid {
         padding-top: 1.81rem;
       }
@@ -116,6 +119,8 @@ body {
           width: 100%;
           height: 100%;
           display: block;
+          background-color: $dark;
+          padding: 1rem;
           @media screen and (min-width:1200px) {
             display: none;
           }
