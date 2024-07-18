@@ -7,7 +7,7 @@ body {
 .learn-more {
   background-color: $white;
   position: relative;
-  padding-bottom: 5.05rem;
+  padding-bottom: 7.05rem;
   @media screen and (min-width:1200px) {
     padding-bottom: 6.05rem; 
   }
@@ -34,6 +34,7 @@ body {
       display: block;
     .video-pagination {
       display: inline-block;
+      bottom: 40px;
     }
     /* Custom pagination bullets */
     .swiper-pagination-bullet {
@@ -61,9 +62,7 @@ body {
         justify-content: center;
         gap: 1.56rem;
 
-        .video-1,
-        .video-2,
-        .video-3 {
+        .video-wrap {
           .content {
             @include flex-center;
             gap: 0.6rem;
@@ -89,11 +88,11 @@ body {
             }
           }
           .video {
-            max-width: 26.875rem;
-            min-width: 26.875rem;
-            min-height: 35.5rem;
-            max-height: 35.5rem;
-            @include img-contain(center);
+            // max-width: 26.875rem;
+            // min-width: 26.875rem;
+            // min-height: 35.5rem;
+            // max-height: 35.5rem;
+            // @include img-contain(center);
           }
         }
       }
@@ -119,9 +118,7 @@ body {
     .learnMore {
       .swiper-wrapper {
         .swiper-slide {
-          .video-1,
-          .video-2,
-          .video-3 {
+          .video-wrap {
             .content {
               span {
                 font-size: 1.04938rem;

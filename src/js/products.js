@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const chooseLinks = document.querySelectorAll('.swiper-slide .product-item');
-  const wrapper = document.querySelector('.wrapper');
-  const contentLinks = document.querySelectorAll('.content-link')
+  
+  
   const mainContent = document.querySelector('.main-content');
   const allLinks = document.querySelectorAll(
     '.product-item'
@@ -39,7 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  contentLinks.forEach(link => {
+  const mainContentDiv = document.querySelector(".main-content");
+  const productLinks = document.querySelectorAll(".content-link");
+  const wrapper = document.querySelector(".wrapper");
+
+  mainContentDiv.style.display = "none";
+  wrapper.style.display = "block";
+
+  productLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       mainContent.style.display = 'block';

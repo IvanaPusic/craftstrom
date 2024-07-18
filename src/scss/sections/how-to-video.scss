@@ -34,9 +34,7 @@ body {
       justify-content: center;
       gap: 1.56rem;
 
-      .video-1,
-      .video-2,
-      .video-3 {
+      .video-wrap {
         .content {
           padding-bottom: 3.25rem;
           @include flex-center;

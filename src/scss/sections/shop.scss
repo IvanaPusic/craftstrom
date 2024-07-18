@@ -17,7 +17,7 @@ body {
       height: 4.125rem;
       width: 100%;
       position:sticky;
-      top: 0;
+      top: 80px;
       left:0;
       z-index: 10;
       background: $orange;
@@ -704,6 +704,7 @@ body {
             font-style: normal;
             font-weight: 500;
             line-height: 131%; /* 2.04688rem */
+            margin-bottom: 0;
           }
           .open-btn {
             border: none;

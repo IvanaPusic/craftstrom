@@ -12,6 +12,7 @@ body {
 }
 .types-of-solar-system {
   display: flex;
+  padding: 0;
   .main-content {
     background: #262626;
     width: 100%;
@@ -47,26 +48,40 @@ body {
       padding-bottom: 1.31rem;
       padding-left: 0.81rem;
       .solar-system-title {
-        padding-bottom: 0.44rem;
-        color: rgba(249, 164, 26, 0.60);
-        font-family: $montseratt;
-        font-size: 1.25rem;
-        font-style: italic;
-        font-weight: 700;
-        cursor: pointer;
-        line-height: normal;
         display: flex;
+
+        .title {
+          padding-bottom: 0.44rem;
+          color: rgba(249, 164, 26, 0.60);
+          font-family: $montseratt;
+          font-size: 1.25rem;
+          font-style: italic;
+          font-weight: 700;
+          cursor: pointer;
+          line-height: normal;
+          display: flex;
+
+          &.active {
+            color: #F9A41A;
+            font-family: $montseratt;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: normal;
+          }
+        }
+        
 
         .arrow-down::after {
           // /wp-content/themes/craftstrom/dist/images/arrow_drop_down.svg
-          content: url("../../images/down_arrow.svg");
+          content: url("/wp-content/themes/craftstrom/dist/images/down_arrow.svg");
           margin-left: 0.5rem;
           width: 10px;
           height: 10px;
         }
         .arrow-up::after {
           // /wp-content/themes/craftstrom/dist/images/arrow_up.svg
-          content: url("../../images/arrow_up.svg");
+          content: url("/wp-content/themes/craftstrom/dist/images/arrow_up.svg");
           margin-left: 0.5rem;
           width: 10px;
           height: 10px;
@@ -87,6 +102,28 @@ body {
         &.show {
           display: block;
         }
+      }
+      .mobile-image-wrap {
+        display: none;
+        @media screen and (min-width: 1200px) {
+          display: none;
+        }
+
+        &.show {
+          display: block;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          @media screen and (min-width:1200px) {
+            display: none;
+          }
+          &.show {
+            display: block;
+          }
+        }
+      
       }
     }
   }

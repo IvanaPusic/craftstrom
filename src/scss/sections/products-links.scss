@@ -56,10 +56,11 @@ body {
 
   .main-content {
     position: relative;
-    padding-top: 1.81rem;
     scroll-behavior: smooth;
 
     .productLinksSwiper {
+      display: flex;
+      align-items: center;
       @media screen and (min-width: 1300px) {
         display: none;
         padding-top: 2.62rem;
@@ -67,7 +68,7 @@ body {
       }
       width: 100%;
       position: sticky;
-      top: 0;
+      top: 80px;
       left: 0;
       z-index: 10;
       background: $orange;
@@ -91,26 +92,15 @@ body {
             font-family: $poppins;
             font-style: normal;
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 1.5rem;
             line-height: normal;
             text-decoration: none;
-            @media screen and (max-width:471px) {
-              font-size: 0.9rem;
-            }
-            @media screen and (min-width:472px) {
-              font-size: 1.103rem; 
-            }
+            display: block;
+            text-wrap: nowrap;
           }
 
           .active {
             color: #fff;
-            font-size: 1rem;
-            @media screen and (max-width:471px) {
-              font-size: 0.9rem;
-            }
-            @media screen and (min-width:472px) {
-              font-size: 1.105rem;
-            }
           }
         }
       }
@@ -127,7 +117,7 @@ body {
           display: flex;
           flex-direction: column;
           position: sticky;
-          top: 80px;
+          top: 160px;
           width: 20%;
           height: 100%;
         }
