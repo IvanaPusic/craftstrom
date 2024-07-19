@@ -12,29 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const allArticles = [...links].map(link => document.getElementById(link.getAttribute('href').substring(1)));
 
-  // Intersection Observer setup
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      const sectionId = entry.target.id;
-      const correspondingLink = document.querySelector(`.sidebar-link[href="#${sectionId}"]`);
-
-      if (entry.isIntersecting) {
-        correspondingLink.classList.add('active');
-      } else {
-        correspondingLink.classList.remove('active');
-      }
-    });
-  }, observerOptions);
-
-  allArticles.forEach(section => {
-    observer.observe(section);
-  });
 
   links.forEach(link => {
     link.addEventListener('click', function (e) {
@@ -56,15 +33,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+    const getInitialSlideIndexKits = () => {
+    const hash = window.location.hash;
+    switch (hash) {
+      case '#plugplay-solar-kits':
+        return 0;
+      case '#solar-battery-kits':
+        return 1;
+      case '#battery-kits':
+        return 2;
+      case '#solar-offgrid-kits':
+        return 3;
+      default:
+        return 0;
+    }
+  };
+    const getInitialSlideIndexProducts = () => {
+    const hash = window.location.hash;
+    switch (hash) {
+      case '#diy-solar-batteries':
+        return 0;
+      case '#bifacial-solar-panels':
+        return 1;
+      case '#smart-solar-micro-inverter':
+        return 2;
+      case '#smart-powermeters':
+        return 3;
+      case '#nec-smart-breakers':
+        return 3;
+      case '#cables':
+        return 3;
+      default:
+        return 0;
+    }
+  };
   const kitsSwiper = new Swiper('.kitsLinksSwiper', {
-    slidesPerView: 3,
+    slidesPerView: 2.5,
+    initialSlide: getInitialSlideIndexKits(),
     navigation: {
       nextEl: ".swiper-button-next",
     },
   });
 
   const individualProductsSwiper = new Swiper('.individualProductsLinksSwiper', {
-    slidesPerView: 3,
+    slidesPerView: 2.5,
+    initialSlide: getInitialSlideIndexProducts(),
     navigation: {
       nextEl: ".swiper-button-next",
     },
@@ -144,8 +157,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const sections = document.querySelectorAll('.category-section');
   const sidebarLinks = document.querySelectorAll('.individual-products-list .sidebar-link');
-  const sidebarKitsLinks = document.querySelectorAll('.kits-links-wrapper .sidebar-link');
-  const offset = 360; // Adjust this value as needed to activate the link earlier
+  const mobileLinks = document.querySelectorAll('.swiper-wrapper .swiper-slide .sidebar-link');
+
+   let offset = 0; // Initial offset value
+
+  const calculateOffset = () => {
+    const headerHeight = document.querySelector('.kitsLinksSwiper')?.offsetHeight || 0;
+    console.log("header height", headerHeight)
+    const additionalOffset = 10; // Add any additional offset if needed
+    offset = headerHeight + additionalOffset;
+  };
+
+  calculateOffset(); // Calculate initial offset
+  window.addEventListener('resize', calculateOffset); // Recalculate offset on resize
 
   const sectionPositions = Array.from(sections).map(section => {
     return {
@@ -154,30 +178,35 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   });
 
-  // const handleScroll = () => {
-  //   const scrollPosition = window.scrollY + offset;
+  console.log("sectionPositions", sectionPositions)
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + offset;
 
-  //   sectionPositions.forEach((section, index) => {
-  //     if (scrollPosition >= section.top &&
-  //       (index === sectionPositions.length - 1 || scrollPosition < sectionPositions[index + 1].top)) {
+    sectionPositions.forEach((section, index) => {
+      if (scrollPosition >= section.top && (index === sectionPositions.length - 1 || scrollPosition < sectionPositions[index + 1].top)) {
+        sidebarLinks.forEach(link => link.classList.remove('active'));
+        mobileLinks.forEach(link => link.classList.remove('active'));
 
-  //       sidebarLinks.forEach(link => link.classList.remove('active'));
-  //       sidebarKitsLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.individual-products-list .sidebar-link[href="#${section.id.split('-')[0]}"]`);
+        const activeKitsLink = document.querySelector(`.kits-links-wrapper .sidebar-link[href="#${section.id.split('-')[0]}"]`);
+        const mobileActiveLink = document.querySelector(`.swiper-wrapper .swiper-slide sidebar-link[href="#${section.id.split('-')[0]}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+        if (activeKitsLink) {
+          activeKitsLink.classList.add('active');
+        }
+        if (mobileActiveLink) {
+          console.log(index);
+          swiper.slideTo(index);
+          mobileActiveLink.classList.add('active');
+        }
+      }
+    });
+  };
 
-  //       const activeLink = document.querySelector(`.individual-products-list .sidebar-link[href="#${section.id.split('-')[0]}"]`);
-  //       const activeKitsLink = document.querySelector(`.kits-links-wrapper .sidebar-link[href="#${section.id.split('-')[0]}"]`);
-        
-  //       if (activeLink) {
-  //         activeLink.classList.add('active');
-  //       }
-        
-  //       if (activeKitsLink) {
-  //         activeKitsLink.classList.add('active');
-  //       }
-  //     }
-  //   });
-  // };
+  window.addEventListener('scroll', handleScroll);
 
-  // window.addEventListener('scroll', handleScroll);
-  // handleScroll();
+  // Call handleScroll initially to set the correct active link on page load
+  handleScroll();
 });

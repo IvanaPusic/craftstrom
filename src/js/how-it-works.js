@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('.link');
- 
   const allArticles = [...links].map((link) => document.getElementById(link.getAttribute('href').substring(1)));
   const slideTitles = document.querySelectorAll('.solar-system-title');
 
@@ -65,8 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
-
   const getInitialSlideIndex = () => {
     const hash = window.location.hash;
     switch (hash) {
@@ -89,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation: {
       nextEl: ".swiper-button-next",
     },
-
   });
 
   const productContentSwiper = new Swiper('.product-content-swiper', {});
@@ -111,13 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
-  // Initial slide update based on URL hash
-  swiper.slideTo(getInitialSlideIndex());
-
-  const allLinks = [
-    ...links
-  ];
+  const allLinks = [...links];
 
   allLinks.forEach(link => {
     link.addEventListener('click', function (e) {
@@ -141,48 +131,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const sections = document.querySelectorAll('.section-js');
   const sidebarLinks = document.querySelectorAll('.info-links-wrapper .link');
+  const mobileLinks = document.querySelectorAll('.swiper-wrapper .swiper-slide .link');
+  
+  let offset = 0; // Initial offset value
 
-  const offset = 360; // Adjust this value as needed to activate the link earlier
+  const calculateOffset = () => {
+    const headerHeight = document.querySelector('.infoSwiper')?.offsetHeight || 0;
+    console.log("header height", headerHeight)
+    const additionalOffset = 10; // Add any additional offset if needed
+    offset = headerHeight + additionalOffset;
+  };
+
+  calculateOffset(); // Calculate initial offset
+  window.addEventListener('resize', calculateOffset); // Recalculate offset on resize
 
   const sectionPositions = Array.from(sections).map(section => {
-      return {
-          id: section.id,
-          top: section.getBoundingClientRect().top + window.scrollY
-      };
+    return {
+      id: section.id,
+      top: section.getBoundingClientRect().top + window.scrollY
+    };
   });
 
+  console.log("sectionPositions", sectionPositions)
   const handleScroll = () => {
-      const scrollPosition = window.scrollY + offset;
+    const scrollPosition = window.scrollY + offset;
 
-      sectionPositions.forEach((section, index) => {
-          if (scrollPosition >= section.top && (index === sectionPositions.length - 1 || scrollPosition < sectionPositions[index + 1].top)) {
-              sidebarLinks.forEach(link => link.classList.remove('active'));
-              const activeLink = document.querySelector(`.info-links-wrapper .link[href="#${section.id.split('-')[0]}"]`);
-              if (activeLink) {
-                  activeLink.classList.add('active');
-              }
-          }
-      });
+    sectionPositions.forEach((section, index) => {
+      if (scrollPosition >= section.top && (index === sectionPositions.length - 1 || scrollPosition < sectionPositions[index + 1].top)) {
+        sidebarLinks.forEach(link => link.classList.remove('active'));
+        mobileLinks.forEach(link => link.classList.remove('active'));
+
+        const activeLink = document.querySelector(`.info-links-wrapper .link[href="#${section.id.split('-')[0]}"]`);
+        const mobileActiveLink = document.querySelector(`.swiper-wrapper .link[href="#${section.id.split('-')[0]}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+        if (mobileActiveLink) {
+          console.log(index);
+          swiper.slideTo(index);
+          mobileActiveLink.classList.add('active');
+        }
+      }
+    });
   };
 
   window.addEventListener('scroll', handleScroll);
 
   // Call handleScroll initially to set the correct active link on page load
   handleScroll();
-  // Update Swiper slide based on the URL hash on page load
-  // window.addEventListener('hashchange', () => {
-  //   const index = getInitialSlideIndex();
-  //   swiper.slideTo(index);
-  // });
-
-  // Set initial slide for specific sections based on URL hash
-  // if (window.location.hash === '#choose') {
-  //   swiper.slideTo(0);
-  // } else if (window.location.hash === '#plug-in') {
-  //   swiper.slideTo(1);
-  // } else if (window.location.hash === '#produce') {
-  //   swiper.slideTo(2);
-  // } else if (window.location.hash === '#save') {
-  //   swiper.slideTo(3);
-  // }
 });

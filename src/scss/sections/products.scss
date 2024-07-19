@@ -64,27 +64,39 @@ body {
       .content {
         overflow: hidden;
         display: flex;
-        max-width: 25.5rem;
         flex-direction: column;
         align-items: flex-start;
         gap: 1.25rem;
         padding: 25px 25px;
         @media screen and (min-width:1200px) {
           padding: 0 25px 25px 25px;
+          max-width: 35%;
+
         }
-        img {
-          max-width: 40px;
+        .content-wrapper {
+          @include flex-center;
+          align-items: center;
+          gap:1.25rem;
+          img {
+            max-width: 40px;
+            margin: auto 0;
+          }
+
+          .title {
+            color: $white;
+            font-family: $poppins;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 2.35106rem;
+            text-transform: capitalize;
+            margin: auto 0;
+            @media screen and (min-width:1200px) {
+              font-size: 1.673rem;
+            }
+          }
         }
 
-        .title {
-          color: $white;
-          font-family: $poppins;
-          font-size: 1.673rem;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 2.35106rem;
-          text-transform: capitalize;
-        }
 
         .text {
           color: $white;

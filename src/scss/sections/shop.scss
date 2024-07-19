@@ -14,7 +14,7 @@ body {
         display: none;
         padding-top:2.62rem;
       }
-      height: 4.125rem;
+      min-height: 4.125rem;
       width: 100%;
       position:sticky;
       top: 80px;
@@ -35,27 +35,15 @@ body {
           a {
             color: rgba(255, 255, 255, 0.40);
             font-family: $poppins;
-            font-size: 1.25rem;
+            font-size: 1.04rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
             text-decoration: none;
-              @media screen and (max-width:471px) {
-              font-size: 0.9rem;
-            }
-            @media screen and (min-width:472px) {
-              font-size: 1.125rem; 
-            }
+           
           }
           .active {
             color: #FFF;
-            font-size: 1.3125rem;
-             @media screen and (max-width:471px) {
-              font-size: 0.9rem;
-            }
-            @media screen and (min-width:472px) {
-              font-size: 1.15rem;
-            }
           }
       }
     }
